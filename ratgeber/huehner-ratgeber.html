@@ -1,0 +1,1789 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Hühner halten leicht gemacht – Dein Einstieg als Hühnermama</title>
+<link rel="stylesheet" href="fonts/fonts-inline.css">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+
+@page { size: A4; margin: 0; }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+body {
+  font-family:'EB Garamond', Georgia, serif;
+  color:#3a2f26;
+  background:#e6ddcc;
+}
+
+/* ---------- Seitengerüst ---------- */
+.page {
+  position:relative;
+  width:210mm;
+  height:296.9mm;
+  overflow:hidden;
+  background:#f7f0e2;
+  page-break-after:always;
+  break-after:page;
+}
+.page:last-child { page-break-after:auto; break-after:auto; }
+
+.page::before {   /* Papierkorn */
+  content:'';
+  position:absolute; inset:0;
+  background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADmVT4XAAAyVUlEQVR42hWZ6dZyYBhG38NGmTMr89RAhpAhRJkd29f3p7WqlXge93XtXX++kCH4cojRQduTVYmZ5PZCGR3NEB3mbiW/Mp5Eyclhw1C1X1739h27lmQR7tyHzRVnxvIYCt8Sxu9h1L8x8txhqNdcnxHUPo50j2pX1sqynjg2+Xbhqu1SPlJDIE6CYYBfybn+AXy5JHd2RN5ZlmfUJ0dlTK1FOkQoQPid2A5XU8GO4o6hv+3n4xE8FTofcYLUOebX3eySzhQfH/qyDoEum7mhTP1jt7t0jhw1UUzolNEpofoBPhHBPJXPqQrIrM0J8cjuhJbv/iJh21gIpGaukrWdrd0G03fWkkUf76kc2EWYR6iWAOHEdwzqT/OHQi35Ah+GZofV/jAql2ZcPoM1OUrDlUxW33HzhWsuI8S8zbX6IfuKuliNeVgqjzsZQ+H2rqFnMN1GjDYo4s85w9KZfTm5sIy9T15Q6YWfIdIhdMxh3mC4lWcWnk1adBBJ8bxZvTXD6RxB9h6Ehk0eO6uhqn7NBk8zQoXLI4QFcbsSUSIdrtYNfkviuQGcONh8a+9pDwkIUqK7DIo1AKRD8n85nEGuaxCz8PR74crD42vg5gEyiB3MxVTaINBifR3gjQ0LOWOdjTumarz7FP9cYQXnA9vlwA/6PR+07226tm3LbIpHdNDtjQ/N+amqOMnPTsyOFzo2+m+2E4Fvk7t8GaV3JgD+/DBjFPBmJ1j2xOPXBblQyFWwztV4l5PXLt82lUCKhrt+kY09dmV4dW0nN91PxhxFXB36TW+C5sVtskWeQvJuJo4CFc9iVtNziPaXmB1mjTxbz7ypPIjdv7ovgGdz21iULggT9fcmNhhgjb3L2nNFH3B3lp+ODoCL+77crW42N2tXeCgk9yVhG6/E6PdhGWcKcBswtVc82Wh150b1kv4tUT5DtB1fIqiUNXeaOAayNLd7L02C+kgBxIWISkZNH15FIp2SrI3sx3/drrByON23GGrLWBifA9i5X1wA2xlU1z7tqmd7CXQF07+/Y2JUMtEqsP1nW33xReEOoR7KvjkZXPk2F+Z2u5wT21Hq36CawlX2scy2htk4tHsK6IwmgW8Gg8gynoynxgGoSNv/JSEPq/ZeBf0ikTxc3ffbBysO2SYspJidi6tXIt6jLKFYyXIVqMQXTebxW2RBZOMzMhmOfHQVpyNGPb+Ky8KfO/IkRT1XOkmD80l8PhjBkuG9zzzfm1d61uuZNEN9goBvazbv01+XUxj7qGKyHkYYZon7SCBDyu0wWma/16OORbboX968PXxUZzDvyV6RcvHip0eHnpG4mSh7yRInTfg4IGrjhNwm27sDe124VeUYI+zXgCEEeLjU9Fj0wuXUuBM50BKaA8afc+cPRKN66q0jAKPLLpdMEaXATeELZRrK0+hhLvJZgLRqieakU46xZwIHOW/V5Nw0YgCPjqmIvvwMzHTpuhnYVYanZfiR3+9oSoz43W+UYAzGYmXBnpSlqvR+T14/B/ag3u7hy4GiP/uKJP7QXXfFrpoOUYcsGnk9VsCsXBEg+h6+Uh+NjnjVjP5IE1/KfxzyjHztEtV1XutwTI03u+wjfxKazT+2tW2wQWsO8tkVBMufItH0ZYc6UspT4F23uigUdVGf7R7MK324tdAfb+eAVZWGITHv6u4cSisX7dfnDRWT5IPPL7W3V01UpujwXtVuhJIpLN6qlI3MA7UvaY6CeFk+HEp381nPWu3IYnKn84+ivW1s9zDOqf2SPsDlYbn+5/siYsF9ooTPzREIqvjN/jvwhtREgpovR3JzlV6biZpmnNLguh79tPzX6o8rIPptf2uTV4lL8Q6Cg8P4+fJ7rWTDQxx286Zeq/Blb8jt9ujzYDgPkdozgXx3WRLOt3xFcpcCYLlDhzXlCQ1+nw7SvjyACffnOa5U7u9QhfQTzJR5g4FPoSs2iug0AXwBIENqDNtBF6uRkJgnbv3bRvYgChJPzzt+0XtSd0eejsXy82zOwe2CBqDgvaz0mRrNFfCd80uErzx/2fpoIdbtmyqGh2ataoPP90oufw/MyCZn8j+DImsyKd3iRz4JFtwnVNISwn0XXSbosFe/mnN5HRrW3oeKlBI7ZJ+8v1jGkPbdIIdMasTE1E97+4FuO8QZP+iBvwOKW1Odn9hPJvmkx9rkwVbeizqecM3hCeFN6Bt/HzrmAx2Vmo2vhXNZWMLufAuOzpe6vz+0MKLa58rYSlw5pnl43koRvfFQPYQjVwPzVYoruNAuEidNxkkhyP5yUjnZU0BsKtApCq49CRYf7mxJ8V5MgMfUTDjzsPwU/YVnM+7m5Y+DLFKXjpRn76CD7EDtZNZUdDjBZ6bthwvNMDm3GgbfZkfoWc77DInD3AwqP0f8iX9YLzCmZgnzK2WAdK7M3jC8P5/X/cFmJrAy4SvtRUcGHc9Eu/A1M7K34nqxyPX61p/KFr//NvfTeTvrBxPj+szAx29s/O/5qt1QSNywqEanZ/2gJl0owwenXKZDd2YLCig2ps+E8kKnzfv6uD2y+ekDfVq70uLyVWqQgW/56gvcIXbvLt5STVP1bB9w1IDYL5qLZMgFufzm9V84k8f4HuPeeKJv4ViK821UB7mQUOoBFyDgbYCbHcCdcuq38zLySsHw4jRSuwN+nL5thYI+bz4ux/35gEVy84QQPYNrxLR0WDzdgbdb2j1mPfXCy7+/xT4dH6kE3LKYDpZnkGPM3yvarKfcXiOz2l92oWCypHJe2bo1xeSh5anqdoNqNKxTJ4uVjxrLjOR6fu54D3ySJ8OXKSweXBnzSP3K5tdH3rKX0y6Oil1r5Y+DdKPPOpzDYqW4Qgpv3snoJ7uKAPoKIxa9v/+pEVlm+mUmo1cdDs2IqK+R/cqwc1pFc3Us9PiIClLxOO77MU1grLnI5XgzYLbXUWhzlb6B8VeF0Yur0F5Di37dxrcjDoPtlwgc6lt95dUHH+TVtghut8v4WyLNv1vOT6XH3fjlwJbYJgpTOaL1r150Cd4QuTon4fojawmwH1/8FUfHMsRq8HRMb0AdKR2x+tP7tQg5gQZumXw4N5x3st4QfFLGs1lnDm1Iykbr9kGe7a+xvfWVHokCr7lhG+iRemfrUe5ILkHzPxNJYFB7uwz3IhX6cYxD0GbMZJwfX/hxeGw+vbfsh9xANQ19adyRhO2W8vZyrsHfhn2Hz36PS1knNpkx4XEwax4La8e4Ddrn4w4En8CArDfM8+fnGRucx8ztD8rrEF9NHnfDeLT+oi0P0PCXQ4llRgKnAu+8ydwjxruevYW4TJzcR/t4Yd/76WKv0PFsQhqSN8p1OCgmyiIEHnKAfF5Af6f5/u6bhye0hMmgz+0W3N3vaBmIJCSo/Ew+4le0CIHhfPbe9r7E03xh7T+wO8SCkZM7jkHXQZWcWDiJ8y6y6l6Lnm/N31EglkeokRapvrMhpzKNh+q/Lm6viZ8z517JAPha4r3REDWGa6ni3B0tgJwrDI/Dsc3IMsyCvamAe24wKgpC7hjNfLn5BZz0lV//Bnp+9Hik6fj5BDpnDFZGpIjPoA+/1+sWFOf8dV/Lp/B8FjxgDnZqKjS5R3K/3u5voOvGcE3N9IFl89nHV91xumj66Dw2x7M6H2PzJLxPsJ/GL6YQ7JSKH9PkNuQluzV08zlNwh/Axt/J/JVsakMK4KAnb734tunU5NyTCvu6JXCdxvCtqOyH+WTlBFMDnGjSbC77HdW2VdmdsDr7ciNoKPkK37bg+WZIHQepntTeqBJ80K3kCoT3A3kCpOUyOeT9abvZ+GM91/pLq9X2FBZRl6T98nGovJE7uGCFv7/o9U1R33mtqqhUMQiH/+j02Os3bRF5dTq0B4VESt2uXwLKwWJzM+6C5/ibJhjZ3k+Fm76SSitIVZDT+wejzjN++0bQ77K+F/f3FtedDXf/dwAiWXCRUxA1HyuIT7SLvQ8bLWbtfg+Ph4ItH3gixsffTn9cwTlQJi3052Vl/NYSF3iwY+Waq6y5DOYBpJCvapBHwdm9som+MYRmWCNq4eEB1k5uSLQSeC+KPWnx41GIOFXRgz8M+Oz7OcAwBYkLMhL7nnNcpD1Wz9FdaMw2TOVt9kiWhWlOGuHLA9wvRHdl4b75YNWIx+9MbwF5lupiMRkNTqXnORDiox5lXn8fZDGbQeBEWW/7cdjGlLNLfAzq8y320gnt+/gPQpm08Ubhvfc/HHDm5RHOThfztu7KrSDSPr74Yo8sEadMqOhNRw9xn7F09jrFr3PKibP7szvTajMU4h0WLktX4JcszuYr4zQgvHiP2LGw7VDQ3vHE5FmYZ30YSfwyFVdOC7HiDxsAs8q1Cyvo5sBc9+mVfV6w8azp3iEmYujX374GvLnmMqDNHl5a+qPfwmA2NPW67PTTbji/EuxC0vlzLHQ0WQIb/3DV+y2HMp0frzI+QbWiOMoNgrCHWoKL8xDvD4+CT49y96b+QkqIuy8R3juWmu3xqT5sSL78ulOsOA6ktSXdgWQLqwvuh+1XBSz1kVIHVqnfNYZ0x9zsOp7pU8w0gEzfWwcF2LdIbupw4cBCC32og8TP4uhTYwrgO2JYcGS9vTNA3UnDW2XUv5/orNPjQJoHMrm43o3vAxkgcJjWpue7UAkI3XEVKt1qm7PdaOenB7EWO/9igcUChcb6CAAzJBaR2t9fYYwtzFvUZmSxionUtCvoVMypPl4zK7R3pOrwGJa5OIYtIB7jPN2Pl7/mdPjNZHGqD+/QV3dPnVKj4ALKOCl6jgTznwP6tEkdxW7gmX3E64lL7CQ+TrR1vKY7Xdafsdk5AHJIE/O66+ovTb+/ZM58PyfjVaOMjJ3jujNDFB/1j5bSaDWj5nQc79qB+Djt+4/Fm/tBvcQY031saQTHXbdfjJ6L+acPJ5IBvYlG219rTnbvCpbvjmD8MbBPMn41Te4U733W/X1xCgsoEU1AcN7d9uQck7mUAjdxPno0XkeiKWxdOBcH5BfFN/x64kp8Tt2Rbqz+b04mucLtVLLNIp5tHO00H6y7UGp9oyLVtcg5I4l/08Dq2pnej1xe4t07WB9RdT99IDFL6NumWkri2iL2hhVwKc47DDgRFnAyTo4J7WiCVIQuwKfofis/ToASjuiQGOKwQTh8/3gZEV7PG2R4eHfABLlpDbKrOFDWqLfpDK9pCdCdsdPHm/aWJdVzWBHV29DL7pOH3skb4o+mcLLaneIzwxR3s4dT2LP6YPaoN/dPmSzNHaHe5IXbs1i7d7Gwmgg+OyD7KzdT+P1PXIqjeXr+biDGem806Tw7Xbq2mcLKX2oMrZ09doJ/P4VyiQJGBNo/0zbu59hNHll6pQ2wsJCj4NmDn1YeZ64hGp3u3Ips77BrtTC2sAPj73ZGgmM9orS590m97h55P9DFPk0J/hmqGq8xs2+rHfsipR+SPg46qseVmOKl4rvBKH3XAeTTowRtdIyg6gAN2tgKGi/UuxfnXIzy9xQhgfBoLrYx/RZeoVvt/BqRL1CTWMnf30dtDQtLMcTiUbmeqP3YSb4zw00qP3/1t7t0k9KN/HA08McTyw+PV/DIhHYD4M9jzCtX3AA+zn09FLctl640t/M/df8DCijaFv9DB/bTgZInFi/g5aciYgrhsopyvGfoaOUwFL9tpFDJcP98kSfW3ROoyOwh/0i3IiX9KQ8lZio/K+zG+OxOR0mI0Gbe1xvY1FCYjTwy8f3pKQLDCMSlnBbBR7yn8lkD/LsTiuv3Qnxh4UWUt+EFkByVXuiqtokmOex7V8OcS6KOw/y6vO95x8D8DVnZR2o5w77+7Ehir/21HXELJY6RBic8inqn2w6qiy72XGrtUHZ39Gm0n1lxxInZ7vmR67r+nBy2PhDDQ5LSXH8Nntvpvrurb+b6TuKPsp5iWXZvFlaC6ob/vp4x6etBBs7Ii7zcwbGMFglUTr/AYc6j//fMd9iLPo/8K4Z2yGt5ikm8cY/EXnlRFASaEb3h0BftCqLmizMB82GSn+cr6GAdaQZzLymYQwRkSLw8fGws4eRVv9h9HeGeEdHrAAcINcljfjTUynmTZgvo2UEpyOUaB9Y50Pd/eVlhAoGjq+wc0uFry4e+uWEdy2Ofit1JME77JqKfo2NcXMS6PgEsuVam4NB0SuqAAD8I714vijepn5BNHqN+GdgBKisJXm4XpkmmzhrXdL3d8r398bXm4b1jMlaNyo6h84aGf3Gxr2bPCMOOkr5Uopy/MBuW9bUU7oIkPi6oFexPyOslC8nI0Od6zGwoe0opmNB+wO5lFTJuPz42Op/Z+xM5vhlTq70yBg06yM2XFZjpftrcc/dpQSRtjdMvKUXqR3xeqwEYSf5JCVAVw/sWTcnxMM49ndxWVX8+gsuVSOh48bmADsUSivUcEJWliXPHOL2PCbpLdT+H+7X7bTp2kpyB+wX8bVu4D81dPFdZ9frOxn2zHVGK2I/8GTtNEGTU5HsxJeUe7tgwwXDoj0HE28Ul1fqyAejV8Mjtw6drm74V/XIeLc7LYP2g1Uk7RsN398hVMepzcRZe0s8ZFetxcC4R87mm2r0CXJvbNvZ4O1RtVckHoTiNwl2vnhfhIMlit8j18D1ASr2nlkrzjFOUUJ8/TPQEezugiGKphG2TzleyAbfVE6ugdZAOqOYL6Wq0vz+LJdO9H1DV1dxdTkWhIVprjQyRVCDofEW5Y91K5TPgBqW1Pxkh9rOWK3zzVpEmMXeXnLKhZJipdb/1k6qMVPE/aTb9XWi4cRShfl5iYTq+hLPJQCWxr90ao6jcHaA0ZjsS2gmDTpCbPOHcraxt844c1sJD6cML0y79Taqg69t3t8tIHKY+NBL6Pg4373cV48WsWlvlNhYk7FPsyHl7OriU1M0lLGfZ609Jrnk+ZvKTH8N2T5j4KT6/u8BLpPV0JIVZ+4TULPCbHlxd4qxmYKWnLVinwMHIbXN3aMuBtJqrhiZ7BvpufC6s7TnKRZkMKvnmI0MyUPvAdi7V3DRte6dPtMWqnPrjnqD5wKc/9NTgWLODPsVAFgaHFGbofcsMHUB/X/2wGdwd0Ne3Tw7pHXw6Bdavc0p9DznVV8OO7ly4vACdFbUpdUMCbzXzXfXe+I+7wDeQ91Frd3TMVJ99/mDV0zMSmtM1geZzjzAikG2Y/xfgQsq5K8y8B/7LaIJnAIhzkOrJZ6V7xjc/I5W4RLAgRvEAzz9c21WsKTLKJVHFATInWOuNFA29y0LFrKL3ErNP7FZeb4xW+fVV/rgpyTRY/bJ7J6OMQRwrGfikYcoQmeAV4x979Zv2+uFO9gAVu8vSJ9oLaguFJHUvVcrkXcVPSse8iW6KqDyaw/r6lc+9b/b9qCIiGrmEZvZuvRQLDmMnlUyF2Y0xfvNfOgMTX3+fX5LGOEutJL4jLsNkN74s5iF4GncQrKu/xO0N3VWjzyMlwN36O7Rabep3/wOjDnBuXP2j76+keFkIHW6RzJ+KK53wB9cei/P7GtqgHhi+UjnhzruC45nTYjoJmVF62WTTe/E8wWHpSF0fcJZzMC1rr8wmu/RRn6Cy8Zq6PxkOYeI3yl9hnE+HSUhZVws64hNmagR9v4qyDsxbP4QCJd9joqBW2H223Tl01538PRFq9JIxYoZZaP7W9mVXnGf4zLWqavG7M/stYqAq0YHq4Zzrvyd+zNmhvJwJk37Hh3EZpelP4yAyMO4Gg5TSnvx8tMJV+bY7wpEaMGpNMcE08cgZ6EuEDV4lVplTPGX8y0lcsoZ8OuubExPvTVBArq2PmmZjd/WTNqSYjt48+tKwumMPYFlYA2PUoeaTtTQFmA/RdnEawv1fw/jq0VuE8WxfGuHm1NpRrlktOGVe3mVCjLzs0xyo6Zlj4/c4q9wpXB2gkjCH1Kjb1vvW7RIhNAwdnZmoZPO7hm/Ys5nssbkHxb9ezqQBE2kkVeHZOk7j7URvp52ZjGPHbWV7/IMTErrzO1Ri3Rs1iIWw3u4nrjk2+e+VJ7f5m5kn5By8D8vG2Ach8AtoORyk0rmj/IVJolB4v+HQ9cfDHX3M+WOLmwuHe4RcwfB83VapWEjOorga+LUqaArpIohz9rkAxt397uO/im3YOQC+2yaA4SdLdj3MdDiZ+4bTEPVSe/MafbUKL5gxYteXauqmHkL55YqCc+k+3WP3bq85fGh9adh9T8Y5oQPgET3pMAg8/gRh7XrXBwpItGJxAnvZ4YsT46kNReXuZkPJH4Ka2/w+hPhiRwcefzfmablMYWcXCrFbF5SvQ6kobi8ZIFeWtX9AsIvvEPr/t2uqUXGDMvRDTfvVvRPzTvTTRvqtT9NTuJmwRNF1Kffqpfa6HcQg0U2ryYa+WnjViAIM95hO+mtbIMf3UyXvZlaJCl99yKujAJY/oHsXpHbPuawfUMPvxfZ+XlroGkYQhtfAXNIfkjmDT3KZzExnfGAqjzNInAz95IcZGlXs0CvuBChhoTaGB4dPo3ji5IHyVuaLkHt1z85Gmf2Z50gI36fGGVvU1Vbj424xsLI4rbOQ2IvA6sSp+gEcy+dKJ/Z9Hhq8HjCI7q1+OGZ4M8BdWuV0xiDFxeljHdFKelGcnC4NOy0Or1kSuYvAz2q/HFVT4jO8i+6kjs3Q7kBQiflXzmGSvVZxgV1VO2a1UXU6/n0VZ7dyerjpH8OuExfPpb4fHD/WdfQZLnP45N4QGV+Fx90vekBg1UTPgydbT7AZ7PkF85Lye02HRLlMhv49n74brXZ4Odg4c3j0+i9nElvoWURU/npB/5xbgMocc7z+CsU+mtz45jqQV5fIuyL3FjOediPYNGcNWnOk7m9/SiVJuOTg54ARL1GnDBPxSfz5s/z9xK7joWt80ieZnAoR00GCB9NZv5rRWIADQfzkOCp9CE1AUsph2v/RB/2EENTVTtf80e1NrEGTqk1fEuJ3oAANzn3pW/JK2+y4W/Rnbz4Cm3MTy8N3OzesHVdMY4N8U7Q22Xv3+93KDpoe132LfDPAfygkNG7dwxLJbJek1ADvn80E8XDEkOtRJs/tXxHy0gNgsJrypUBoYY2n8DWNv4R/Wvl+9W1Xf19KbzVE8faJU+z8Qc8eRRy+go+8Puok4R3r3eix7dnnBkUpbI94In7Na02L59uq22CRxPj5W61jgyEPnF/Q3tHREAovo0IdHn83/Bf2rRVfEAvTni8vmePV10C8x+V46MCfY93HSWQT7iFv7SnE/I9y+ywogrY+fno8Y2xR6+29XeYPr/LzQOQVjBYcvPHOUFJtVfr5dEFHmd0iOYKjWHIr7b4szOVbBDf9/Xj9lcSN/vCRJIWGYUktbxN4/1prMu4S+pdHWOIlow2pLDaayfv4M1g5uZ7vFffit/6iMJfX7QLjquCjhPCd1FQaPRkxNG4/Emv/oMfunu3LYYOfEXyVUmRT1j0nDtATOup0NZ3A4u8Lax2hMTne6vD79PwQr1sLZ8lgOj3K8OEMft/ZrVq1PWi2h5kl9zrJJcVuiwd6LVupkOiaXD+P5EDOqxS3yofvJDUYzaZ0+wwsc/1TdXEPatF1vR5VjFQfAjnx8E/KTp5cG/QfPYHk1nibNP8ORgjYXO6v7QjNFyx1OnwWjh8RvMd7VsH3qCg7AKM97sTQsVFN9yN+7DFzFo+az+hKsPOx5Gc91+Fh5g6nu5CwnokA+IwffBQc56uKRhsD5/MG0lPf3cbm93H2z3XoHMJta7/KbeYf57yfxkVzejG84L+6BupbpUYtil/tt7B3C9Yeq2Ru1gikScApKNyS7zMOE1ZosH594kizI0CYbrgzG91XZHmOzs0r7z/3pa7JA6M+58x/s0t9vV4ket2Z7F8MLfer22OWNoB2JzBjQHIMBfemS+dEBzOxzsKHF3/7GvlHe57QcFT7bXEu2qS9gWwS1HlE3+MbmED4xTjF/frQvrfW8pJluIu3dKLvfFfWUdyW2RCfEg5Af1Z06nq20K074F/+durNsXIegDbj5xEvHjdEyTJxeCM0+bQnrwImcmTqHoD1GsL7w8YOv6jVaIHdt7a47BQb7uIGFOOJLaf3dy9vfaEG2U73tLc+ssSkHZ7NsScjeiflLr9xPCuTjv11c9JFwfuC/11LAh/pNZxV/qSXv3FIXwBRohDNSrQ7+7O5m2hZzmHykyASgW/bLqPNdXzYu9au3HlL0YwsWSofLhmYooplQPLJezAQeYh+tL+X/bsAEuCUzeUp0mwpqMuWMfDL6RNvn6a3gD9PhfPQKVd+fpTz70H5BkW43zT2jZJSylUxahua6YMr9S0D8FFM30AOJcP/xj1T6uCXfuc9Tj2mI1zJ50984s73MIBM0vMpxUI+pSYxtVWyhyuHdTuhUW3ZbSdlRu4A8qW4U/W3Q225DyPqEmILOproQxeIW9MxIO00TvjYKrupjEeIPl1NAU8XIXhjPvdlq0s6C/N0o1AyayCehaztPB2NuQO++y+Wb2OwGHxFC8z9/LOcWUf9dR/eUxdMxPmTnq9Z1gmhMRyEv2J3fpI39X3fYVbIn4wvd/bvE38hys/iPR+Q8QX6Y/PuE9potQC5nbNrd8PhRMzYWE+PQ32d8R1EV96H4ysjbvGS7QToyh0FGLtBlOvfgRt5iwM9i3XlVXee0OmH3HnFCb88JSD8m70HIOy99w2KwfBLCh/x1d+77+fHoSlApVG1X68TpsU53JSMvApa347x9/36micTTn1XTnrqYgAeNOP68/t8NlZcXuNQKFRUIkaXS3vdZuahkYDHRUJWxHdiOVX2+FZurx/UFX8PsziBYsF+NE+2qT3lnu/zqbliCX5/LMINfvUUh9wD7Of4Yl6g5GP//olvn7n5EkVhlavEQ/7oV9qiv7Kpfww3uGRv5f0ls1lx5y8ij1nv9PYVsfoY33440L0LylcXsqHsZkDWP8iQG5FkaA3FAzHVdwfutN7fYTuAsx2TKCDkx1akRx8nuA+/0UG1H79sitiHva2O3NFTHwZRTVR8vfHlcEZuOIdc4xfjX6mUbqDsJB8yzFupe1r+lE96RT4MuXvhws6H+5H0Lr8uGN6I+3GVdYX1/YsWIvEJ5ngzLDQB07Hypo/ctVtexJAUbIwf3/zWrYcA1iqKnxVl2jLpk1nBE/nMYwVQ71ve9MiLyHzlzuPOPZrmQfbh312bIeilkAaXAQM8KcPgILX2iY92f0nLzIfXvWxLQUQs4XwnE+cdOCUraa+JP55u4I8sVqILIHF7cBSfRl9CyR/f9BLMi3ewKbBI87o+kFDoyjyWEzpovDREAK+a3eanUro+6sF8OYOEniLEeHb7mJEE7GwctlUulPsfelfw6Nn6pivmv4V/00GHu71Unuf88yqw8GTX37reGbv87S0D4OVLjcCCQJ2ntL3Vx5oAX5QOXoH4Gx0o0l4fWJ0ePmdMfejXKqNgllZL34HnKNqKLInMOji2Qzwlp9fanOPx+JeGykbqesZxJOxWxuwnA4M8A7CoBhdOfj304qAut6vHLS8AmgXrT1vfdhTwQb5+h066a1bkjapuhra7XLrjDmmnF0Us+MPvO4lod+ApL1p2aJdXIEDSEZ5v9LAPpDU9Hoyipts/SvjNKO8wtSnXtIJxOsIQ3Hl7oc/Buv1qhn7/MItz12oS+tP3ebUrTb2WhncZi0dn+clNrHf1vM2Ws+YmlhXRXVpaujobwlBONes2lDet+4B7lEH6lPl73Pjgu50/CoRt7AI3f+PrLhdlOFex1k67eHwsvVG+J8oy7Otl3kPWbHk/WhhOBXYyopy8JRL/MlzT5MBtE4ePZqgppfkVZUzRV14s6VvzV3MHVVqRO/nPtnmI8uPbK8lXncOLS2nIiM7m65wYO31pyj+EO0rHtXqjKnd/Jzs4ORciU1bCTogMS2zZnbRVZRUcjo52vaDc6+SdrQEal43SSsc+oV1Qst8bRWTn1irxh97C3mGFmbTk1/7mFzSTOZtXiR+6nKIEeq2lMewqWfK5+7TqBVr+CVZ6UuBoibLscY2vX7tzd3INxgw5hxsC0HB4GUj91WFeSwJoMyeRRV84LXuHVdicj8nl4pzwyr0DC9NcoUs9JTf3SoUS5cj5XUtWANx2UrmTu1+fddr3LcJdQvy+mjjq92aVg78AeB4m7ewvKV+G9/glP/HXIzGmA77Bx+B6cbFkKft5y8HtM43RQdJYErvu4bUkaXNoblDlMZvDPRM93jeM/UQKt7pbnzuhaz4wn3nxYJ2jIsePqIYOwPW6K8JvpYWk/d5m/BN//nrTe/TG5t5O5etUsfaHpGQL3R+7/VBAOMwhw+PXiuycBURw0UsgN53ncUeoz8Ug82v2CXfwcU4daa8vI3ryzFJ7YGLg2h0PMgbtPQfFf0bV+B2Girlcx/io2TJG3cb7cKx/9PdDMjNiH54pmi9cmmTtS2PGBxytfG0u0hzpxL50q4nt7gasNAcyCM20Oj/cl7TQ7vU9tfWV8ybyOg95ZgCX5wUOXrtMQOYeuhzuqWj9TK19qDQZMqVAya3WmWX21Fr1evIM6tnY+d8zr8J3putC2+kj1dGnbYgcMg9SotFCrqjj17oGcfut8oYGu+x2JOZx7n+goYNLGudtaFlYCF/y6g2yy3L1UyeifZLaTpmLDOTBHdVG55gn2U53I3Gjs+zeUlic6kDYASm/on9YFIYATzJ9jdeVjlhzDnnGhbvdmubpLjssKTl4kK7okbCI6/l2Hf1AfVGA+twceaoBx2CY91ZF43Us0Onps41D9J7ZAAfSJDJkr4bV60gOd/ZUGCOMktThHInMpcVSSv8t2ln8eyWI0OqGHeIkF+94MfRubGVZRmnyL0t7nZJEs+fZONi3jwQyMKdyvQQmCU5c2HGUbt/1u3gdp7RM2L7tZDW/IFZ+zeypc5BViS8bCIX4WF8+WKBV79NwmI9RO3hU8Bg0AhjS9I/tCYIHvbk4PS6MzGtiY2EBFeEk//Glz+STCNpctkyQ6Z5XnCE4AjO99sMlZ4/oDvL2NLwjtyes1kbisISi1o3NFA+5rLgCKum02euXEtQnYQQltZavn2wILfG58q7kU+gmT3+B84BjFzWlT66EIXsxKsywg21n/pSyTpUdEEl4iZpX5Iebon15iH3MLbNkk4YN339RGXrtrsgq9XvYI5sUwDut6EEZY7m1QTdRjj9CgP8aDeKurx+DaqTRAw8n0OraBfQcofg/hsGvi+ibBP1TQO98kUGlxS66CvS7B47u9moSEdpMBnvBo639SZ+D86+GhsahS4nbluUnnYPtfsZmvm+jPjzebH2yDpmbvqeTzpRTzu8+r/mluB/Us5VIdxn6SAInawCDY4MK0J9ji7ltQWffYvLgQIHcV0Ljm6Wq5zPnL/bV0VtWGvMmOW7MbqQUZnlXzvGHAAADnEGjdXfZsyAFoJozm5vI3NpHbucTlVUo/NE62W5Rbs/3j4hHBqk/9aeH0Di4ss1it+wmouMf/vXL6Fy/8Y7keWhG0kMDcKu/7sInQvOzq4pZbFmLpkqzaq68aurl3qwF83OuSu0YIT7ZAZqNeB/Fy9eXPyORKPGTWgRP6qiQ46c/N752hsU4uTmEItmdAdfWST+a+/b8IsvLn448IXVZOTO/nM7W41NLnzU2xvX0VgZNfyRunX7rYUrtZDOfbWqrlxVwKN75ZVSa41V9jlwjzTfjdgEbwbkdeBl8fvmUv+yH0+VHzVQA2jcd2e+k1+Wat9m6nGyLUZk11Lzbzjv9HR4KNoEe9su45pscwytCvneHWhZOmEpYG+IqJ4XgP9gmdcdqFELy+E3XG+A+8PfGHoNmU4KfhSn76Dgp1KDeB3D3UhTveOhCJZBPAz8cGJZmzPhefuQXbxdPxwKe9o2ogUK28vRvkfriVsJVfn0nOtd/wOX9BjVB7DsX/q1vRLGsLi9nAuyT3NRb+4toj/XYI+Ce1JsXM1zPfctYT2+CjloLW/7bivt7cY++ovscaQuK3w8aOrzYlXUKwBmE3L/vSUXvnwFPqNPd/lMDNojT7G2GV7XbZ/fr/q22uaFLp2Arbpgz4sD7eBa1sRydo9DiTSqBT3qVOX9W5E+0nyKaNrsIQ+YmeBlzdMryuTCm/mMDqGq305nGy8Z/0sIjExj1F4kV4lxzMGoEfTU86vWnr3od/PzGvx1Qj6Lnnp2vd6bGHGe3mPDuQy8WaVRQOj6T/tKKeLHOllzPIuHeIWEaOGKvscr1ge32IJdTUfcjLhFcnxMOl+ylM94PUDtLM4mAOD2qXLqY7qzPDlhGZPfaoE/zt5N96wPWF9o92wOtf5HAXYTXDXvJzQufyjeTnJ4RizR1erlpMpMsyZSD8UQr+u/q2cH+gu/eWUcGK0LdML6zcPvGemxz1TFWqBG8HpJNOtdVC5qrbgacEN8dk9q58B0wh0H01b8PelS8gyio7H1Lspn5jSPtv0+j1OTfV6vevdAGSeV5Puxl1ZdE8I0oOH8wr3ww7n0mJY+EsbhCHI5LsHQ/46ttr8RjvSdTd0T7Dx28lulee/MeETZfY0+AoMvb/bsPROaMOn3/h776sMIgeFAE1WqR1ymLsO3ur/l44qlUYSLQK7BKnodKQKpj3g7QCV4JtistarsJyOfIiq+WB3skWYz+3NpI3mnhN7ifmCOlHVaMPDz08JEmlvAxTrXDj5v/uJfbfBR80shG8O9lJJ3gflPV55MEGm33B9X716q0t+85g4xgsCtIo/EQVbfTLCz37lGdFWJ5WQghLTd2sc+tLObfMxJ9832WXri9NzkVNLjimXl7jy612VX94FRjUbfz67PtIRpXDDIW66P1JQ7TH3xrZ/+OYsa0HYZMrqIhFq97XZIt3KIRbsYoHoUgAOwFAikQXz5RcMyjrLKeGx7a6OqZY+4PWUzo2adH7P3uOAFEuRN2vVKoOhpSMShnU6BeIJW3m6zu8n5oE1T7IorSy89a/JNcF0/uK9WpL7jh9BJ1Ja0NSlTcF0Faha3VfkrnF53uI57zb8yy+S9Em6/TPhUP415zjEDUC+m613mR9fH1A9X9Wfx6HaslN5k89/JtE8OnZ8L2GRgnJdvZ7xV4x3KuvF1E+FJ/8Mc9jrxyfDQ8U4r7FTiLBt2PEiQfcH9nuqevHGOIdM91F7EV4pWCZ65udqBufzKEB21U3spbEtyPebHSMlhHP3ravYL0VdefQF7eiKhX5JzFN3zDtKOh+6YhPm1zyGDfPwOc/de5ifzCOzQ3OYR+c8c7ckvNEQLXePfl6Z9Ea7fdXdq3HhoZObNgx05EfRd1q5HeIbltorsyGNMj+aNXf1s0BWK+3cktzn5CXqZIpj/5dEqKeRCVDmahd73cHxOZAcTbkOT5+lsBwgvf4Ouceje1Fy7+nXrL890HqQWVi5uB3urv/7+/7yj1K7WH+fkknx1hLaZyZ1xdbkbHm5tvgXac5wqCLkISNk5hiUunJBXOZui/ar4W7v+VXL5shJERB6lnH7He7K789yyPr7/zM2FhLwZ+aNORgNCS3ut8dUhbbftntasz1o2Fz6Luv/ox2Seqdrsg1h54gVPAhVW7CkqVnYRBB2lMKpKdfYKw99WLOLZL7nduSEqYS/ylolALNdhovosuDOP8xTjhke63iJH9KY8w4t8LQZCvlxre+vU7S1viZtL1dBN44k4idvtIMJht49spl1fP1LuKx7ImJegIBU99n1vOLmvcfKQk3oBhxE0UzNefqH+sNuNp4wfcM6qnGRQmtFwv6zVgbKdEcycrk+0V/JHuYT8BK2pdC6KI9/Ja75xO03IvLwt19Ejl+gpO2M1/5XRycRRy33WV7bKtjOvzJ0SaOwS2wiOfplx8ghBC+PtIzyrRBLiE4q7P1WWiR3D3fjahgCMDcevluNfv6tw7oKvbCfLns/KbFPiJ0WjpNtWfgs9A7CgEqccVLQH/DJoRDJLIS364kjXBtUuSd9mmlscP3KgvmfgcRinC+bP3ZJT9SCs5cQDQZwGXeyduUttjnssD2CWXuS7SPYTrO8C48ziyrrmhPLvmT2nA/KpH1yxjMJZ4KKn2fl7fW0rkZ/aLxifiUnxBqSGjdzsF+nN6Hlypt1T7amHlpLMiinn+w9pPhWDqRuQ+NZk++nkHGih0AW46wKykcwT1esjuyz52DoNMRWWpkF77aP3Biv60G9eQr5w8krlKEHVCiNp3WwRfNwpUDvYJANPQ4r/7L0reeM/8RlXlX9/C7iWlB3WlZ+AQSLNkfFaFaZbG5dhali+tUBapNR6iwzXXzFD9QrfLBe76m00q6afxKIP97vD0WNqnPwvvx0VpcyCG8Me5VRbWdjWfRZEPwj+u0a7pBze+n6eWCfr5++xJBR8KF+iNk0U3K+quyeEdQa4exHwYWN4HPpOT7hCmvhfLpFnxzeI7m7+AaVUWbswGl7Il453zLLoy6l0S/UOunB+/R/tMFULyPoBN2Vxc+04vFZelz3yXR/QCiCEkSJ+4nka4ejH9Fu1XSPu+X93Xmy+wuC3Oi7kt9nGGRoRb/PzUk5H3EufDboKt35ZRh/W1cUFEQztl7fJr4E2XOd8e+Xf4O0UbAir5kO/FtFNIy85eq3Q2US6cnNx0ZuV4vtyQc/XADf+p/uwJmAJZa/eQlT3WtQGGnr4SLcje3uRRqTXuTKk1trBpYhLVPvZytMyXp3R4MuaRLW/AE+X5bpaAPbO3nnjoVn8+11r6c6jBx2iE4YN2LrwgmjHBa/6ScCDZmpuu4Ud8O/DxCF8kXfStm6dHdXR57O6zGhbwuIZehUAE3WUpgTLAS2R7F1kL0rfQG+lFlvRxfO1GGg0F6s8LO9yPe34dJnPcKvfPkTW5B+3d1u+5GtLfusZ3Uwhd49v+UiYqZqmn37BfTn6h/JbIZp5GeCYKX/HvDCN8tNjUsiRQtkeDJ++WogGq29sKDx0k3K2V+5Cs3XJXOAt7gDpdSxx9eQbZ5/M+wnK53s9X6U/bQVVxck6Fl0yz/c1PiVRjiFed8ZATKsBP8Du90/eXBK93q6QPUM58DB4yykFHYWE1ZW2OHv0IVMG3rgz+e7plqGfxi1Ji40PFsyq4yggKGS8JNp7ogz88ASfcLHb0abbWn8afvz/R6+nZ9ReN5WH4xe3YgxCNcFyiiPBJozf2KPHhbPvuRJpO2Vv+epKGoSjKcOrYIyN9Rciq2EF5xg/nMjrAo/auHgiNKVyT1aqvM3d4p7W8g7g5TeMZKgF1R71jx8kx1ZGIf7XcxO+Jc1jTAAAAAElFTkSuQmCC");
+  background-size:22mm 22mm;
+  opacity:.17;
+  pointer-events:none;
+  z-index:3;
+}
+.page::after {   /* warme Vignette / Alterung */
+  content:'';
+  position:absolute; inset:0;
+  background:
+    radial-gradient(120% 90% at 50% 40%, rgba(255,255,255,.42) 0%, rgba(255,255,255,0) 58%),
+    radial-gradient(100% 80% at 8% 100%, rgba(150,116,68,.16) 0%, rgba(150,116,68,0) 55%),
+    radial-gradient(100% 80% at 96% 4%, rgba(150,116,68,.14) 0%, rgba(150,116,68,0) 52%);
+  pointer-events:none;
+  z-index:2;
+}
+
+.inner {
+  position:absolute;
+  inset:13mm 15mm 12mm 15mm;
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+}
+
+.frame {   /* doppelte Zierlinie */
+  position:absolute;
+  inset:9mm 11mm;
+  border:0.5pt solid #c3ac89;
+  z-index:1;
+}
+.frame::after {
+  content:'';
+  position:absolute;
+  inset:1.6mm;
+  border:1.6pt solid #d9c8a9;
+  border-left-width:.5pt; border-right-width:.5pt;
+}
+
+/* ---------- Typografie ---------- */
+.eyebrow {
+  font-size:7.6pt; letter-spacing:.22em; text-transform:uppercase;
+  font-weight:600; color:#9c8a72;
+}
+h1 { font-family:'Marcellus', serif; font-weight:400; }
+h2 {
+  font-family:'Marcellus', serif; font-weight:400;
+  font-size:20.5pt; color:#9c4a2b; line-height:1.12;
+  letter-spacing:.005em;
+}
+h3 {
+  font-size:9.4pt; font-weight:600; letter-spacing:.15em;
+  text-transform:uppercase; color:#5d6a44;
+  margin-bottom:2.2mm;
+}
+h4 { font-size:10.6pt; font-weight:600; color:#7a3d24; margin-bottom:1mm; }
+p  { font-size:10.25pt; line-height:1.52; text-align:justify; hyphens:auto; }
+p + p { margin-top:2.1mm; }
+strong { font-weight:600; color:#2f261e; }
+em { font-style:italic; }
+
+.lead { font-size:11.2pt; line-height:1.5; color:#54463a; }
+
+.hand {
+  font-family:'Caveat', cursive;
+  font-weight:600;
+  font-size:13.4pt;
+  color:#9c4a2b;
+  line-height:1.24;
+  text-align:left;
+}
+
+a { color:#8f4426; text-decoration:none; border-bottom:.5pt dotted #bb8a68; }
+
+/* ---------- Kopf- / Fußzeile ---------- */
+.runhead {
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:7.4pt; letter-spacing:.2em; text-transform:uppercase;
+  color:#a2907a; padding-bottom:1.6mm; margin-bottom:4.5mm;
+  border-bottom:.5pt solid #ddcdb2;
+}
+.runfoot {
+  margin-top:auto; padding-top:2.5mm;
+  border-top:.5pt solid #ddcdb2;
+  display:flex; align-items:center; justify-content:space-between;
+  font-size:7.4pt; letter-spacing:.16em; text-transform:uppercase; color:#a2907a;
+}
+.pno { font-family:'EB Garamond',serif; font-weight:600; font-size:10pt; letter-spacing:0; color:#9c4a2b; }
+
+.chaptitle { display:flex; align-items:flex-start; gap:4mm; margin-bottom:4mm; }
+.chapnum {
+  font-family:'Marcellus',serif; font-size:9pt; color:#b08a3e;
+  border:.5pt solid #cdb488; border-radius:50%;
+  width:9mm; height:9mm; min-width:9mm;
+  display:flex; align-items:center; justify-content:center;
+  margin-top:1.4mm;
+}
+
+/* ---------- Bausteine ---------- */
+.cols2 { display:flex; gap:6mm; }
+.cols3 { display:flex; gap:4.5mm; }
+.col { flex:1; }
+
+.kasten {
+  border:.5pt solid #bdc5a4;
+  background:rgba(206,214,182,.30);
+  padding:3.6mm 4.2mm;
+  position:relative;
+}
+.kasten h3 { color:#55613c; }
+.kasten p, .kasten li { font-size:9.6pt; line-height:1.45; }
+
+.tipp {
+  border:.5pt dashed #ce9f7f;
+  background:rgba(216,168,138,.20);
+  padding:3.6mm 4.2mm;
+}
+.tipp h3 { color:#93472a; }
+.tipp p, .tipp li { font-size:9.6pt; line-height:1.45; }
+
+ul, ol { margin-left:4.4mm; }
+li { font-size:10.15pt; line-height:1.46; margin-bottom:.95mm; }
+ul.tight li, ol.tight li { font-size:9.7pt; line-height:1.4; margin-bottom:.65mm; }
+ul.plain { list-style:none; margin-left:0; }
+ul.plain li { padding-left:4.6mm; position:relative; }
+ul.plain li::before {
+  content:'❧'; position:absolute; left:0; top:-.3mm;
+  color:#b08a3e; font-size:8pt;
+}
+
+table { width:100%; border-collapse:collapse; }
+th {
+  font-size:7.8pt; letter-spacing:.13em; text-transform:uppercase; font-weight:600;
+  color:#7c6a55; text-align:left; padding:1.6mm 2mm;
+  border-bottom:1pt solid #c9b490;
+}
+td {
+  font-size:9.45pt; line-height:1.38; padding:1.75mm 2mm; vertical-align:top;
+  border-bottom:.5pt solid #e0d2b8;
+}
+tr:last-child td { border-bottom:none; }
+td.num, th.num { text-align:right; white-space:nowrap; }
+.tbl-note { font-size:7.8pt; color:#95836c; margin-top:1.6mm; font-style:italic; }
+
+.rule-orn { display:flex; align-items:center; gap:2.5mm; margin:3.5mm 0; }
+.rule-orn::before, .rule-orn::after {
+  content:''; flex:1; height:.5pt; background:#cdb99a;
+}
+.rule-orn span { color:#b08a3e; font-size:8pt; letter-spacing:.3em; }
+
+.check { list-style:none; margin-left:0; }
+.check li {
+  position:relative; padding-left:6mm; margin-bottom:1.7mm;
+  font-size:9.4pt; line-height:1.35;
+}
+.check li::before {
+  content:''; position:absolute; left:0; top:.7mm;
+  width:3.2mm; height:3.2mm; border:.75pt solid #ab937a;
+}
+
+.pricetag {
+  font-family:'Marcellus',serif; font-size:9.6pt; color:#7a3d24; white-space:nowrap;
+}
+.pick {
+  display:inline-block; font-size:7pt; letter-spacing:.13em; text-transform:uppercase;
+  font-weight:600; color:#f7f0e2; background:#8a6a3a;
+  padding:.6mm 1.6mm; border-radius:.6mm; margin-bottom:1mm;
+}
+.pick.alt { background:#6d7a52; }
+.pick.thrift { background:#9c4a2b; }
+
+.notelines { margin-top:2mm; }
+.notelines div { border-bottom:.5pt solid #ddcdb2; height:6.6mm; }
+</style>
+</head>
+<body>
+
+<!-- ============================== 1 · TITEL ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner" style="align-items:center; text-align:center; justify-content:space-evenly; padding-top:2mm; padding-bottom:2mm;">
+
+    <div>
+      <div class="eyebrow" style="margin-bottom:2mm;">Ein Ratgeber für den Anfang</div>
+      <div class="rule-orn" style="width:56mm; margin:0 auto 8mm;"><span>✦</span></div>
+      <h1 style="font-size:37pt; line-height:1.1; color:#3a2f26;">Hühner halten<br>leicht gemacht</h1>
+      <div class="hand" style="font-size:22pt; text-align:center; margin-top:5mm;">Dein Einstieg als Hühnermama</div>
+
+      <svg viewBox="0 0 200 40" width="215" height="43" style="margin-top:8mm; opacity:.9;">
+        <g fill="none" stroke="#b08a3e" stroke-width="1.05">
+          <path d="M2 20 h58 M140 20 h58"/>
+          <path d="M72 22 C72 13 76 6 81 6 C86 6 90 13 90 22 C90 29 86 34 81 34 C76 34 72 29 72 22 Z"/>
+          <path d="M92 19 C92 9 96 1 100 1 C105 1 109 9 109 19 C109 27 105 32 100 32 C96 32 92 27 92 19 Z"/>
+          <path d="M111 22 C111 13 115 6 120 6 C125 6 129 13 129 22 C129 29 125 34 120 34 C115 34 111 29 111 22 Z"/>
+        </g>
+      </svg>
+    </div>
+
+    <svg viewBox="0 0 220 190" width="360" height="311" style="margin:0;">
+      <g fill="#463a2e">
+        <!-- Schwanzfedern -->
+        <path d="M52 100 C34 88 22 66 20 42 C36 58 54 72 66 80 Z"/>
+        <path d="M46 110 C26 104 10 86 4 62 C22 76 42 86 56 90 Z"/>
+        <path d="M58 92 C46 78 40 60 42 40 C54 56 66 68 74 74 Z"/>
+        <!-- Körper -->
+        <ellipse cx="106" cy="118" rx="54" ry="43" transform="rotate(-7 106 118)"/>
+        <!-- Hals -->
+        <path d="M126 92 C120 72 128 54 144 48 L164 70 C152 78 146 90 146 104 Z"/>
+        <!-- Kopf -->
+        <circle cx="152" cy="54" r="17"/>
+        <!-- Kamm -->
+        <path d="M139 39 c2,-9 7,-8 8,-2 c2,-9 8,-8 9,-2 c3,-8 9,-6 9,2 c-6,-1 -20,-1 -26,2 Z"/>
+        <!-- Schnabel -->
+        <path d="M168 52 l17 6 l-17 7 Z"/>
+        <!-- Kehllappen -->
+        <path d="M158 68 c7,2 9,12 1,14 c-8,2 -9,-11 -1,-14 Z"/>
+      </g>
+      <!-- Beine -->
+      <g stroke="#463a2e" stroke-width="3.4" fill="none" stroke-linecap="round">
+        <path d="M96 156 l-4 22"/><path d="M120 156 l2 22"/>
+      </g>
+      <g stroke="#463a2e" stroke-width="2.6" fill="none" stroke-linecap="round">
+        <path d="M92 178 l-9 5 M92 178 l9 5 M92 178 l0 6"/>
+        <path d="M122 178 l-9 5 M122 178 l9 5 M122 178 l0 6"/>
+      </g>
+      <!-- Flügel -->
+      <g fill="none" stroke="#f7f0e2" stroke-linecap="round" opacity=".5">
+        <path d="M80 110 c22,-14 47,-10 57,7" stroke-width="1.5"/>
+        <path d="M86 122 c19,-11 38,-8 49,3" stroke-width="1.2"/>
+        <path d="M94 133 c15,-8 29,-6 38,2" stroke-width="1"/>
+      </g>
+      <!-- Auge -->
+      <circle cx="156" cy="50" r="2.7" fill="#f7f0e2"/>
+      <!-- Grasbüschel -->
+      <g stroke="#8a6a3a" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".75">
+        <path d="M56 186 c4,-9 6,-14 5,-20 M62 186 c1,-8 4,-13 9,-17 M50 186 c-1,-7 -3,-11 -7,-14"/>
+        <path d="M152 186 c4,-9 6,-14 5,-20 M158 186 c1,-8 4,-13 9,-17 M146 186 c-1,-7 -3,-11 -7,-14"/>
+        <path d="M30 186 h160" stroke-width="1" opacity=".55"/>
+      </g>
+    </svg>
+
+    <div style="width:100%;">
+      <div class="rule-orn" style="width:70mm; margin:0 auto 4mm;"><span>✦ ✦ ✦</span></div>
+      <p style="text-align:center; font-size:11pt; line-height:1.5; color:#54463a; max-width:118mm; margin:0 auto;">
+        Alles, was du für den Start mit drei Hennen wirklich brauchst — Stall, Auslauf,
+        Futter, Gesundheit und Alltag. Mit Jahreskalender, Checklisten und
+        <strong>geprüften Produktempfehlungen zum Anklicken</strong>.
+      </p>
+      <div class="eyebrow" style="margin-top:7mm;">Für drei glückliche Hühner &nbsp;·&nbsp; Stand August 2026</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ============================== 2 · VORWORT & INHALT ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Willkommen</span><span>Hühner halten leicht gemacht</span></div>
+
+    <h2>Liebe Hühnermama</h2>
+    <div class="rule-orn" style="width:34mm; margin:3mm 0 4mm;"><span>✦</span></div>
+
+    <div class="cols2">
+      <div class="col" style="flex:1.25;">
+        <p class="lead">
+          Es gibt diesen einen Moment, den alle Hühnerhalter kennen: Du machst morgens
+          die Klappe auf, und drei Hennen kommen herausgepoltert, als hätten sie den Tag
+          erfunden. Ab da bist du verloren — im allerbesten Sinne.
+        </p>
+        <p style="margin-top:3mm;">
+          Hühner sind erstaunlich unkompliziert. Sie brauchen keinen Luxus, keine Heizung und
+          keine tägliche Stunde Pflege. Was sie brauchen, ist ein <strong>trockener, sicherer
+          Schlafplatz</strong>, <strong>Schutz vor Fuchs und Marder</strong> und
+          <strong>etwas zu tun</strong>. Wer diese drei Dinge ernst nimmt, hat schon fast alles
+          richtig gemacht.
+        </p>
+        <p>
+          Dieser Ratgeber führt dich der Reihe nach durch alles, was in den ersten Monaten wichtig
+          wird — ohne Fachchinesisch, dafür mit konkreten Maßen, Mengen und Produkten. Die
+          Empfehlungen ab Seite&nbsp;11 sind verlinkt: ein Klick, und du bist im Shop.
+        </p>
+        <p class="hand" style="margin-top:4mm;">
+          Nimm dir Zeit für die Vorbereitung — die Hühner<br>kommen zuletzt, nicht zuerst.
+        </p>
+      </div>
+
+      <div class="col" style="flex:1;">
+        <div class="kasten">
+          <h3>Die drei Dinge, die zählen</h3>
+          <p style="margin-bottom:2mm;"><strong>1 · Trocken.</strong> Nicht Kälte macht Hühner krank,
+          sondern Feuchtigkeit. Lüftung oben, kein Zug unten.</p>
+          <p style="margin-bottom:2mm;"><strong>2 · Sicher.</strong> Ein einziger unverschlossener
+          Abend kann die ganze Herde kosten. Marder öffnen einfache Haken.</p>
+          <p><strong>3 · Beschäftigt.</strong> Ein Huhn will scharren. Ein Laubhaufen schlägt
+          jedes gekaufte Spielzeug.</p>
+        </div>
+
+        <div style="margin-top:5mm; border:.5pt solid #d3c1a2; padding:3.6mm 4.2mm;">
+          <h3 style="color:#8a6a3a;">Inhalt</h3>
+          <table style="margin-top:1mm;">
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">1 · Bevor es losgeht</td><td class="num" style="border:none; padding:1.1mm 0;">3</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">2 · Der Stall</td><td class="num" style="border:none; padding:1.1mm 0;">4</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">3 · Auslauf &amp; Sicherheit</td><td class="num" style="border:none; padding:1.1mm 0;">5</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">4 · Futter &amp; Wasser</td><td class="num" style="border:none; padding:1.1mm 0;">6</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">5 · Der Alltag</td><td class="num" style="border:none; padding:1.1mm 0;">7</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">6 · Gesundheit</td><td class="num" style="border:none; padding:1.1mm 0;">8</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">7 · Durch das Jahr</td><td class="num" style="border:none; padding:1.1mm 0;">9</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">8 · Glückliche Hühner</td><td class="num" style="border:none; padding:1.1mm 0;">10</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;"><strong>Einkaufsführer I &amp; II</strong></td><td class="num" style="border:none; padding:1.1mm 0;">11–12</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">Recht, Behörden &amp; Kosten</td><td class="num" style="border:none; padding:1.1mm 0;">13</td></tr>
+            <tr><td style="padding:1.1mm 0; border:none; font-size:9.4pt;">Startklar-Checkliste</td><td class="num" style="border:none; padding:1.1mm 0;">14</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin-top:6mm;"><span>✦</span></div>
+
+    <div class="cols3" style="margin-top:1mm;">
+      <div class="col" style="text-align:center;">
+        <svg viewBox="0 0 60 60" width="46" height="46"><g fill="none" stroke="#8a6a3a" stroke-width="1.5" stroke-linecap="round">
+          <path d="M30 10 C40 10 46 22 46 33 C46 44 39 51 30 51 C21 51 14 44 14 33 C14 22 20 10 30 10 Z"/>
+        </g></svg>
+        <div class="eyebrow" style="margin-top:1mm;">≈ 200 Eier</div>
+        <p style="text-align:center; font-size:9pt; margin-top:1mm; line-height:1.35;">pro Henne und Jahr —<br>bei guter Rasse und Haltung</p>
+      </div>
+      <div class="col" style="text-align:center;">
+        <svg viewBox="0 0 60 60" width="46" height="46"><g fill="none" stroke="#8a6a3a" stroke-width="1.5" stroke-linecap="round">
+          <circle cx="30" cy="30" r="19"/><path d="M30 17 v14 l9 6"/>
+        </g></svg>
+        <div class="eyebrow" style="margin-top:1mm;">20 Minuten</div>
+        <p style="text-align:center; font-size:9pt; margin-top:1mm; line-height:1.35;">Zeitaufwand am Tag —<br>morgens und abends zusammen</p>
+      </div>
+      <div class="col" style="text-align:center;">
+        <svg viewBox="0 0 60 60" width="46" height="46"><g fill="none" stroke="#8a6a3a" stroke-width="1.5" stroke-linecap="round">
+          <path d="M12 46 h36"/><path d="M18 46 V26 l12 -10 l12 10 v20"/><path d="M26 46 v-12 h8 v12"/>
+        </g></svg>
+        <div class="eyebrow" style="margin-top:1mm;">30 m² Auslauf</div>
+        <p style="text-align:center; font-size:9pt; margin-top:1mm; line-height:1.35;">für drei Hennen —<br>Faustregel 10 m² pro Tier</p>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Willkommen</span><span class="pno">2</span></div>
+  </div>
+</div>
+
+<!-- ============================== 3 · KAPITEL 1 ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 1</span><span>Bevor es losgeht</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">I</div>
+      <div>
+        <h2>Bevor es losgeht</h2>
+        <p class="hand" style="margin-top:1.5mm;">Vier Entscheidungen, die alles Weitere bestimmen.</p>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Wie viele Hühner?</h3>
+        <p>
+          Hühner sind Herdentiere — ein einzelnes Huhn wird unglücklich und krank.
+          <strong>Drei ist das Minimum</strong>, und du startest genau richtig damit. Bedenke aber:
+          Fällt eine Henne aus, bleiben nur zwei übrig, und dann steht schnell ein Neuzugang an.
+          <strong>Vier bis fünf Tiere</strong> sind sozial stabiler, und Arbeit wie Kosten steigen
+          kaum. Wenn dein Auslauf es hergibt, plane von Anfang an eine mehr ein.
+        </p>
+
+        <h3 style="margin-top:5mm;">Braucht es einen Hahn?</h3>
+        <p>
+          Nein. Hennen legen auch ohne Hahn — nur eben unbefruchtete Eier. Ein Hahn bringt
+          Ordnung in die Herde und passt auf, kostet aber Nachbarschaftsfrieden: Er kräht ab
+          etwa vier Uhr morgens, und in Wohngebieten ist das der häufigste Streitpunkt.
+          <strong>Für den Anfang: ohne Hahn.</strong>
+        </p>
+
+        <h3 style="margin-top:5mm;">Woher die Hühner kommen sollten</h3>
+        <ul class="plain tight" style="margin-top:1mm;">
+          <li><strong>Rassegeflügelzüchter</strong> in deiner Nähe — beste Wahl. Gesunde,
+            geimpfte Tiere und jemand, den du bei Fragen anrufen kannst.</li>
+          <li><strong>Vereine für Legehennen aus der Haltung</strong> (z.&nbsp;B. „Rettet das Huhn")
+            — großes Herz, aber die Tiere sind erschöpft und brauchen erfahrene Pflege.</li>
+          <li><strong>Junghennen vom Geflügelhof</strong>, ca. 18 Wochen alt, geimpft — der
+            unkomplizierteste Start.</li>
+          <li><em>Lieber nicht:</em> Kleinanzeigen ohne Impfnachweis und ohne Blick in den Stall.</li>
+        </ul>
+
+        <div class="tipp" style="margin-top:5mm;">
+          <h3>Alle auf einmal</h3>
+          <p>Kaufe deine Hühner am selben Tag beim selben Halter. Eine Herde, die gemeinsam
+          einzieht, klärt die Rangordnung in ein paar Tagen. Jeder spätere Neuzugang bedeutet
+          Wochen mit Streit, Quarantäne und Federn.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3>Welche Rasse passt zu dir?</h3>
+        <p style="margin-bottom:2.5mm;">
+          Für den Einstieg zählen drei Eigenschaften: <strong>ruhig, robust, flugfaul</strong>.
+          Legeleistung ist zweitrangig — auch 150 Eier sind für einen Haushalt reichlich.
+        </p>
+
+        <table>
+          <thead>
+            <tr><th>Rasse</th><th class="num">Eier/Jahr</th><th>Warum sie passt</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Bielefelder Kennhuhn</strong></td><td class="num">≈ 230</td>
+              <td>Groß, gelassen, fliegt praktisch nicht. Küken sind ab Tag&nbsp;1 nach Geschlecht
+              unterscheidbar. Der Anfänger-Klassiker.</td></tr>
+            <tr><td><strong>Sussex</strong></td><td class="num">≈ 180</td>
+              <td>Friedlich, zutraulich, kälteunempfindlich. Wird schnell handzahm — ideal,
+              wenn Kinder mit dabei sind.</td></tr>
+            <tr><td><strong>Australorp</strong></td><td class="num">≈ 200</td>
+              <td>Aufgeweckt, freundlich, legt auch im Winter ordentlich. Etwas agiler,
+              braucht einen höheren Zaun.</td></tr>
+            <tr><td><strong>Wyandotte</strong></td><td class="num">≈ 170</td>
+              <td>Kompakt, wetterfest, sehr ruhig. Der kleine Rosenkamm friert im Winter
+              nicht so leicht ab.</td></tr>
+            <tr><td><strong>Orpington</strong></td><td class="num">≈ 160</td>
+              <td>Das Plüschtier unter den Hühnern. Extrem gutmütig, dafür brütig und
+              nicht gerade eine Legemaschine.</td></tr>
+            <tr><td><strong>Hybride</strong><br><span style="font-size:8.2pt; color:#7c6a55;">(z.&nbsp;B. Lohmann Braun)</span></td><td class="num">≈ 280</td>
+              <td>Sehr viele Eier, sehr zahm, günstig. Aber: hoher Verschleiß, kürzere
+              Lebenserwartung, oft nach 2–3 Jahren Legepause.</td></tr>
+          </tbody>
+        </table>
+        <div class="tbl-note">Legeleistung sind Richtwerte; Haltung, Futter und Alter verändern sie deutlich.</div>
+
+        <div class="kasten" style="margin-top:5mm;">
+          <h3>Ein Wort zum Alter</h3>
+          <p>Junghennen legen ab etwa <strong>20–22 Wochen</strong>. Im ersten Jahr legen sie am
+          meisten, danach sinkt die Leistung jährlich um grob 15–20&nbsp;%. Ein Huhn kann
+          <strong>6–8 Jahre</strong> alt werden — überlege dir vorher, wie du mit den
+          Rentnerinnen umgehen möchtest.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Bevor es losgeht</span><span class="pno">3</span></div>
+  </div>
+</div>
+
+<!-- ============================== 4 · KAPITEL 2 · STALL ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 2</span><span>Der Stall</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">II</div>
+      <div>
+        <h2>Der Stall</h2>
+        <p class="hand" style="margin-top:1.5mm;">Ein Schlafzimmer, kein Wohnzimmer.</p>
+      </div>
+    </div>
+
+    <p style="margin-bottom:3.5mm;">
+      Der häufigste Anfängerfehler ist ein zu großer, zu schöner, zu dichter Stall. Hühner
+      verbringen den Tag draußen — drinnen wird nur geschlafen und gelegt. Wichtig sind
+      deshalb nur vier Dinge: <strong>trocken, dunkel-ruhig, gut belüftet, absolut
+      raubtiersicher.</strong>
+    </p>
+
+    <div class="cols2">
+      <div class="col" style="flex:1.05;">
+        <h3>Die Maße für drei Hennen</h3>
+        <table>
+          <tbody>
+            <tr><td style="width:38%;"><strong>Stallfläche</strong></td>
+              <td>mind. 1 m², angenehm 1,5–2 m² <span style="color:#7c6a55;">(Faustregel: 3–4 Hühner je m²)</span></td></tr>
+            <tr><td><strong>Sitzstangen</strong></td>
+              <td>20–25 cm je Huhn → mind. 1 m gesamt</td></tr>
+            <tr><td><strong>Stangenprofil</strong></td>
+              <td>Kantholz 4–5 cm, Kanten gerundet — Hühner umfassen nicht, sie hocken auf</td></tr>
+            <tr><td><strong>Stangenhöhe</strong></td>
+              <td>50–80 cm, <strong>alle auf gleicher Höhe</strong> und höher als die Nester</td></tr>
+            <tr><td><strong>Abstände</strong></td>
+              <td>≈ 30 cm zur Wand, 40–50 cm zwischen zwei Stangen</td></tr>
+            <tr><td><strong>Legenest</strong></td>
+              <td>1 Nest reicht <span style="color:#7c6a55;">(Regel: eins je 3–4 Hennen)</span>, ca. 30 × 30 × 35 cm, dunkel</td></tr>
+            <tr><td><strong>Hühnerklappe</strong></td>
+              <td>ca. 25–30 cm breit, 35–40 cm hoch</td></tr>
+            <tr><td><strong>Einstreu</strong></td>
+              <td>3–5 cm Hanf-, Lein- oder Hobelspäne</td></tr>
+          </tbody>
+        </table>
+
+        <div class="kasten" style="margin-top:4.5mm;">
+          <h3>Warum Stangen höher als Nester?</h3>
+          <p>Hühner schlafen instinktiv am höchsten Punkt. Liegt das Nest oben, wird darin
+          geschlafen — und damit gekotet. Verkotete Nester bedeuten schmutzige Eier und
+          Milbenparadiese. Nest tief, Stange hoch: Dieser eine Handgriff spart dir viel Ärger.</p>
+        </div>
+
+        <p class="hand" style="margin-top:4mm;">
+          Keine Heizung. Wirklich keine. Hühner tragen<br>eine Daunenjacke und vertragen Frost besser als Zug.
+        </p>
+      </div>
+
+      <div class="col">
+        <!-- Stall-Skizze -->
+        <div style="border:.5pt solid #d3c1a2; padding:3mm; background:rgba(255,255,255,.32);">
+          <div class="eyebrow" style="margin-bottom:2mm; text-align:center;">So ist der Stall innen aufgeteilt</div>
+          <svg viewBox="0 0 300 206" width="100%" height="132">
+            <g stroke="#6b5b4c" fill="none" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+              <!-- Haus -->
+              <path d="M18 76 L150 14 L282 76"/>
+              <path d="M34 74 v122 h232 V74"/>
+              <path d="M34 196 h232"/>
+              <!-- Lüftungsschlitze im Giebel -->
+              <path d="M124 50 h52 M124 58 h52" stroke-dasharray="6 4"/>
+              <!-- Sitzstangen -->
+              <circle cx="176" cy="112" r="9"/><circle cx="228" cy="112" r="9"/>
+              <!-- Kotbrett -->
+              <path d="M152 136 h108 v10 H152 Z"/>
+              <!-- Nest -->
+              <path d="M48 148 h70 v48 H48 Z"/>
+              <path d="M64 196 v-18 a19 19 0 0 1 38 0 v18" stroke-dasharray="3.5 3"/>
+              <!-- Einstreu -->
+              <path d="M34 188 h232" stroke-dasharray="2 5" stroke-width="1"/>
+              <!-- Klappe -->
+              <path d="M240 162 h26 v34 h-26 Z" stroke-width="1.3"/>
+            </g>
+            <!-- Nummern -->
+            <g font-family="EB Garamond, serif" font-size="12" font-weight="600">
+              <circle cx="150" cy="54" r="10" fill="#9c4a2b"/><text x="150" y="58.5" text-anchor="middle" fill="#f7f0e2">1</text>
+              <circle cx="202" cy="112" r="10" fill="#9c4a2b"/><text x="202" y="116.5" text-anchor="middle" fill="#f7f0e2">2</text>
+              <circle cx="132" cy="141" r="10" fill="#9c4a2b"/><text x="132" y="145.5" text-anchor="middle" fill="#f7f0e2">3</text>
+              <circle cx="83" cy="170" r="10" fill="#9c4a2b"/><text x="83" y="174.5" text-anchor="middle" fill="#f7f0e2">4</text>
+              <circle cx="253" cy="179" r="10" fill="#9c4a2b"/><text x="253" y="183.5" text-anchor="middle" fill="#f7f0e2">5</text>
+            </g>
+          </svg>
+          <div style="display:flex; gap:3mm; margin-top:2mm; font-size:8.4pt; line-height:1.35; color:#6b5b4c;">
+            <div style="flex:1;">
+              <strong>1</strong> Lüftung ganz oben<br>
+              <strong>2</strong> Sitzstangen, höher als das Nest<br>
+              <strong>3</strong> Kotbrett zum Abziehen
+            </div>
+            <div style="flex:1;">
+              <strong>4</strong> Legenest, dunkel und tief<br>
+              <strong>5</strong> Klappe mit sicherem Riegel<br>
+              <span style="color:#a2907a;">— — 3–5 cm Einstreu</span>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top:5mm;">Lüftung ohne Zug</h3>
+        <p>
+          Drei Hühner atmen erstaunlich viel Feuchtigkeit aus. Ohne Abzug schlägt sie sich an
+          Wänden nieder — und genau das führt zu Erkältungen und Schimmel. Setze die
+          <strong>Lüftungsöffnung ganz oben</strong> an, am besten auf der windabgewandten Seite,
+          und vergittere sie mit Volierendraht. Auf Höhe der schlafenden Hühner darf es
+          <strong>nicht ziehen</strong>. Merksatz: Es soll oben rausziehen, nicht unten reinpfeifen.
+        </p>
+
+        <div class="tipp" style="margin-top:4.5mm;">
+          <h3>Fertigstall oder selbst bauen?</h3>
+          <p><strong>Gekaufte Ställe</strong> aus dem Baumarkt sind meist zu klein („für 6 Hühner"
+          heißt real: für 2–3), das Holz ist dünn und die Riegel sind nicht mardersicher. Wenn
+          du kaufst: großzügig dimensionieren und die Verschlüsse sofort ersetzen.
+          <strong>Selbst gebaut</strong> ist oft günstiger und besser — ein umgebautes Gartenhaus
+          oder ein alter Schrank auf Stelzen ist ein hervorragender Hühnerstall. Innen glatt
+          streichen oder mit Sumpfkalk weißen: Das nimmt Milben die Verstecke.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin:4mm 0 3mm;"><span>✦</span></div>
+
+    <h3>Der 60-Sekunden-Stallcheck</h3>
+    <div class="cols2" style="gap:5mm; margin-top:1mm;">
+      <div class="col">
+        <table>
+          <tbody>
+            <tr><td style="width:26%;"><strong>Riecht es?</strong></td>
+              <td>Beißender Ammoniakgeruch heißt: zu feucht, zu wenig Luft, zu selten entmistet.</td></tr>
+            <tr><td><strong>Ist es feucht?</strong></td>
+              <td>Kondens am Fenster, klumpige Streu, nasse Ecken unter der Tränke — sofort handeln.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <table>
+          <tbody>
+            <tr><td style="width:26%;"><strong>Zieht es?</strong></td>
+              <td>Handrücken in Stangenhöhe halten. Spürbarer Zug dort ist schlecht.</td></tr>
+            <tr><td><strong>Krabbelt es?</strong></td>
+              <td>Finger unter die Sitzstange: graue Beläge oder rote Spuren = Milbenalarm.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Der Stall</span><span class="pno">4</span></div>
+  </div>
+</div>
+
+<!-- ============================== 5 · KAPITEL 3 · AUSLAUF ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 3</span><span>Auslauf &amp; Sicherheit</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">III</div>
+      <div>
+        <h2>Auslauf &amp; Sicherheit</h2>
+        <p class="hand" style="margin-top:1.5mm;">Hier entscheidet sich, ob deine Hühner alt werden.</p>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Wie viel Platz und wie er aussehen soll</h3>
+        <p>
+          Faustregel für die Hobbyhaltung: <strong>mindestens 10 m² pro Huhn</strong>, für drei
+          Hennen also rund 30 m². Zum Vergleich: Die Bio-Verordnung verlangt 4 m² — das ist die
+          gesetzliche Untergrenze, nicht das Ziel.
+        </p>
+        <p>
+          Viel wichtiger als die reine Fläche ist aber die <strong>Struktur</strong>. Hühner
+          stammen vom südostasiatischen Bankivahuhn ab, einem Waldrandtier. Eine leere
+          Rasenfläche ist für sie bedrohlich offen — sie bleiben dann ängstlich am Rand kleben
+          und nutzen den Auslauf gar nicht. Was hilft:
+        </p>
+        <ul class="plain tight" style="margin-top:2mm;">
+          <li>Büsche, Sträucher, Stauden oder ein alter Christbaum als Deckung</li>
+          <li>Ein überdachter Bereich — Hühner mögen keinen Dauerregen</li>
+          <li>Schattenplatz für den Sommer, windgeschützte Sonnenecke für den Winter</li>
+          <li>Hochbeete, Baumstämme, Sitzäste zum Hinaufhüpfen</li>
+        </ul>
+        <p style="margin-top:2.5mm;">
+          Deckung schützt gleichzeitig vor dem Habicht: Was er nicht anfliegen kann, schlägt er
+          auch nicht.
+        </p>
+
+        <div class="kasten" style="margin-top:4.5mm;">
+          <h3>Die fünf Regeln der Nacht</h3>
+          <ol class="tight" style="margin-top:1mm;">
+            <li>Stall <strong>jeden</strong> Abend schließen — ohne Ausnahme.</li>
+            <li>Riegel oder Drehverschluss statt Haken: Marder öffnen Haken.</li>
+            <li>Lüftungsöffnungen mit Volierendraht sichern, nicht offen lassen.</li>
+            <li>Kein Futter über Nacht im Freien — es lockt Ratten und Marder an.</li>
+            <li>Eine automatische Klappe nimmt dir die Regel ab, aber nicht die Verantwortung:
+              einmal die Woche Funktion prüfen.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3>Wer deinen Hühnern gefährlich wird</h3>
+        <table>
+          <thead><tr><th>Gefahr</th><th>Wann</th><th>Was wirklich hilft</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Fuchs</strong></td><td>Dämmerung<br>&amp; Nacht</td>
+              <td>Elektronetz oder 1,80&nbsp;m Zaun mit Untergrabschutz; nachts Stall zu</td></tr>
+            <tr><td><strong>Marder</strong></td><td>Nacht</td>
+              <td>Echter Riegel, feiner Volierendraht (max. 12–13 mm), keine Lücke &gt; 5 cm</td></tr>
+            <tr><td><strong>Habicht<br>&amp; Bussard</strong></td><td>Tag</td>
+              <td>Deckung im Auslauf, Netz über kleinen Ausläufen, dunkle statt weiße Hühner</td></tr>
+            <tr><td><strong>Ratte</strong></td><td>Nacht</td>
+              <td>Futter in Metalltonne, Trittautomat, nichts offen stehen lassen</td></tr>
+            <tr><td><strong>Hund<br>&amp; Katze</strong></td><td>Tag</td>
+              <td>Solider Zaun; ausgewachsene Hühner sind für Katzen meist zu groß</td></tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top:5mm;">Der Zaun — zwei gute Wege</h3>
+        <p style="margin-bottom:2mm;">
+          <strong>Elektro-Geflügelnetz (112 cm).</strong> In 20 Minuten aufgebaut, jederzeit
+          versetzbar, hält Fuchs zuverlässig fern — der Stromschlag erzieht nachhaltig. Ideal,
+          wenn du den Auslauf wechseln willst. Braucht ein Weidezaungerät und regelmäßiges
+          Freischneiden am Boden.
+        </p>
+        <p>
+          <strong>Fester Zaun.</strong> Mindestens 1,60–1,80 m hoch, aus punktgeschweißtem
+          Volierendraht (12 × 12 mm im unteren Meter). Entscheidend ist der
+          <strong>Untergrabschutz</strong>: 30–40 cm tief eingraben — oder, viel einfacher, den
+          Draht als 40 cm breite „L-Schürze" flach nach außen legen und mit Erde oder Steinen
+          beschweren. Der Fuchs gräbt direkt am Zaun, nicht 40 cm davor.
+        </p>
+        <p style="margin-top:2mm;">
+          <em>Nicht geeignet:</em> Kaninchendraht und einfaches Sechseckgeflecht — Marder beißen
+          sich hindurch, Füchse reißen es auf.
+        </p>
+
+        <p class="hand" style="margin-top:4mm;">
+          Konkrete Netze, Geräte und Drähte<br>findest du auf Seite 11.
+        </p>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Auslauf &amp; Sicherheit</span><span class="pno">5</span></div>
+  </div>
+</div>
+
+<!-- ============================== 6 · KAPITEL 4 · FUTTER ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 4</span><span>Futter &amp; Wasser</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">IV</div>
+      <div>
+        <h2>Futter &amp; Wasser</h2>
+        <p class="hand" style="margin-top:1.5mm;">Ein Ei besteht zu großen Teilen aus dem, was gestern im Napf war.</p>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Die Grundversorgung</h3>
+        <table>
+          <tbody>
+            <tr><td style="width:34%;"><strong>Alleinfutter</strong></td>
+              <td>110–130 g pro Huhn und Tag, immer verfügbar. Als Mehl, Korn oder Pellet — Pellets
+              verhindern, dass die Hühner die Rosinen herauspicken.</td></tr>
+            <tr><td><strong>Wasser</strong></td>
+              <td>250–300 ml pro Tier und Tag, bei Hitze bis 500 ml. <strong>Täglich frisch</strong>,
+              Tränke erhöht aufhängen.</td></tr>
+            <tr><td><strong>Grit</strong></td>
+              <td>Kleine Quarzsteinchen für den Muskelmagen — Hühner haben keine Zähne, sie mahlen
+              mit Steinen.</td></tr>
+            <tr><td><strong>Kalk</strong></td>
+              <td>Muschel- oder Kalkgrit in separater Schale zur freien Aufnahme. Eine Eierschale
+              kostet die Henne rund 2 g Kalzium — jeden Tag.</td></tr>
+            <tr><td><strong>Körner</strong></td>
+              <td>Eine Handvoll nachmittags, im Stroh verstreut. Nicht als Hauptfutter — sonst
+              fehlen Eiweiß und Mineralien.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="kasten" style="margin-top:4.5mm;">
+          <h3>Warum Grit und Kalk getrennt?</h3>
+          <p><strong>Grit</strong> ist unlöslicher Kies und bleibt im Magen — er ersetzt die
+          Zähne. <strong>Kalkgrit</strong> ist Kalzium und wird verdaut — er baut die Eierschale.
+          Ein Huhn braucht beides und nimmt sich instinktiv genau so viel, wie es benötigt.
+          Deshalb: separate Schale, immer gefüllt, nie ins Futter mischen.</p>
+        </div>
+
+        <p class="hand" style="margin-top:4mm;">
+          Wirf die Körner ins Stroh statt in die Schale.<br>
+          Aus zwei Minuten Fressen werden vierzig Minuten Suchen.
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>Was darf ins Huhn?</h3>
+        <table>
+          <thead><tr><th style="width:30%;">Gern</th><th style="width:30%;">In Maßen</th><th>Niemals</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Salat, Kohl, Grünkohl<br>
+                  Gurke, Zucchini, Kürbis<br>
+                  Äpfel, Beeren<br>
+                  gekochte Kartoffeln<br>
+                  Haferflocken<br>
+                  Kräuter, Löwenzahn<br>
+                  Brennnessel (getrocknet)<br>
+                  Mehlwürmer</td>
+              <td>Brot (trocken, wenig)<br>
+                  Reis &amp; Nudeln (gekocht)<br>
+                  Sonnenblumenkerne<br>
+                  Mais<br>
+                  Quark, Joghurt<br>
+                  Traubenkerne, Obstreste</td>
+              <td><strong>Küchen- &amp; Speiseabfälle</strong><br>
+                  <span style="font-size:8.4pt; color:#7c6a55;">in Deutschland verboten</span><br>
+                  Avocado (Persin)<br>
+                  rohe Kartoffeln, Schalen<br>
+                  rohe Bohnen, Rhabarberblätter<br>
+                  Schimmeliges, Salziges<br>
+                  Kaffee, Schokolade, Alkohol</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="tbl-note">Grünes und Obst sind Zugabe, nicht Mahlzeit: höchstens rund 10 % der Tagesration.</div>
+
+        <div class="kasten" style="margin-top:4.5mm;">
+          <h3>Achtung, Rechtsfalle</h3>
+          <p>Das Verfüttern von <strong>Speiseabfällen</strong> — Tellerreste, gekochte
+          Küchenabfälle, alles, was mit Fleisch in Berührung kam — ist bei Nutztieren europaweit
+          verboten, und Hühner gelten auch im Garten als Nutztiere. Erlaubt sind rohes,
+          unbehandeltes Obst und Gemüse. Grund ist der Seuchenschutz.</p>
+        </div>
+
+        <h3 style="margin-top:5mm;">Die Tränke</h3>
+        <p>
+          Häng die Tränke so auf, dass sie etwa auf <strong>Rückenhöhe der Hühner</strong> steht —
+          dann wird nicht hineingescharrt und nicht hineingekotet. Stülptränken sind günstig,
+          Nippeltränken bleiben sauberer. Im Winter reicht eine
+          <strong>Heizplatte unter der Tränke</strong>.
+        </p>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin:5mm 0 4mm;"><span>✦</span></div>
+
+    <div class="cols3">
+      <div class="col tipp">
+        <h3>Fehler 1 · Zu viele Körner</h3>
+        <p>Körner sind das Süßigkeitenregal des Huhns: arm an Eiweiß und Kalzium. Wer vor allem
+        Weizen füttert, bekommt dünnschalige Eier und fette Hennen. <strong>Alleinfutter ist die
+        Mahlzeit, Körner sind der Nachtisch.</strong></p>
+      </div>
+      <div class="col tipp">
+        <h3>Fehler 2 · Brot als Hauptsache</h3>
+        <p>Altbrot ist salzig, quillt im Kropf und schimmelt leicht. Wenig trockenes Brot ist
+        unbedenklich, viel nicht. Gekochte Reste vom Teller sind ohnehin
+        <strong>gesetzlich verboten</strong>.</p>
+      </div>
+      <div class="col tipp">
+        <h3>Fehler 3 · Stehendes Wasser</h3>
+        <p>Eine Tränke, die nur nachgefüllt statt ausgespült wird, bildet binnen Tagen einen
+        Biofilm — die häufigste Durchfallquelle. <strong>Täglich ausspülen</strong>, wöchentlich
+        heiß ausbürsten.</p>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Futter &amp; Wasser</span><span class="pno">6</span></div>
+  </div>
+</div>
+
+<!-- ============================== 7 · KAPITEL 5 · ALLTAG ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 5</span><span>Der Alltag</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">V</div>
+      <div>
+        <h2>Der Alltag</h2>
+        <p class="hand" style="margin-top:1.5mm;">Zwanzig Minuten am Tag — mehr ist es wirklich nicht.</p>
+      </div>
+    </div>
+
+    <div class="cols3" style="margin-bottom:5mm;">
+      <div class="col kasten">
+        <h3>Jeden Tag</h3>
+        <ul class="tight" style="margin-top:1mm;">
+          <li>Klappe öffnen &amp; abends schließen</li>
+          <li>Wasser wechseln, Tränke ausspülen</li>
+          <li>Futter kontrollieren</li>
+          <li>Kotbrett abziehen <span style="color:#7c6a55;">(1 Minute)</span></li>
+          <li>Eier einsammeln</li>
+          <li><strong>Kurz alle drei anschauen:</strong> Gang, Kamm, Gefieder, Verhalten</li>
+        </ul>
+      </div>
+      <div class="col kasten">
+        <h3>Jede Woche</h3>
+        <ul class="tight" style="margin-top:1mm;">
+          <li>Nester neu einstreuen</li>
+          <li>Sandbad auflockern, Kieselgur nachstreuen</li>
+          <li>Sitzstangen &amp; Ritzen auf Milben prüfen</li>
+          <li>Automatische Klappe testen</li>
+          <li>Zaun und Netzspannung kontrollieren</li>
+          <li>Grit- und Kalkschale auffüllen</li>
+        </ul>
+      </div>
+      <div class="col kasten">
+        <h3>Alle 4–8 Wochen</h3>
+        <ul class="tight" style="margin-top:1mm;">
+          <li>Einstreu komplett tauschen</li>
+          <li>Stall auskehren, feucht wischen</li>
+          <li>Sandbad erneuern</li>
+          <li>Krallen und Kamm anschauen</li>
+          <li>Futtervorrat prüfen (rattensicher?)</li>
+          <li>Newcastle-Impfung nach Plan</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Zweimal im Jahr: die Großreinigung</h3>
+        <p>
+          Einmal im Frühjahr und einmal im Herbst wird der Stall komplett leergeräumt: Einstreu
+          raus, Sitzstangen und Nester heraus, alles auskehren und mit heißem Wasser schrubben.
+          Danach gut durchtrocknen lassen und die Ritzen mit <strong>Kieselgur</strong> einstäuben
+          oder die Wände mit <strong>Sumpfkalk</strong> weißen. Das ist kein Kosmetikprogramm,
+          sondern deine wirksamste Milbenvorsorge.
+        </p>
+
+        <h3 style="margin-top:5mm;">Rund ums Ei</h3>
+        <ul class="plain tight" style="margin-top:1mm;">
+          <li><strong>Legestart</strong> mit 20–22 Wochen, oft mit ein paar winzigen
+            „Übungseiern" ohne Dotter.</li>
+          <li><strong>Sammeln</strong>: einmal täglich, am besten mittags. Länger liegende Eier
+            werden schmutzig oder angepickt.</li>
+          <li><strong>Nicht waschen!</strong> Auf der Schale sitzt die Cuticula, eine natürliche
+            Schutzschicht. Wer sie abwäscht, macht das Ei verderblich. Grobes nur trocken
+            abreiben.</li>
+          <li><strong>Lagern</strong>: ungewaschen bei Zimmertemperatur rund 2–3 Wochen,
+            im Kühlschrank deutlich länger — dann aber dort bleiben lassen.</li>
+          <li><strong>Frischetest</strong>: Ei in ein Glas Wasser legen. Liegt es flach, ist es
+            frisch. Steht es auf, ist es älter. Schwimmt es oben, gehört es in den Müll.</li>
+          <li><strong>Datieren</strong> mit Bleistift auf der Schale — nach zwei Wochen weiß
+            niemand mehr, welches wann kam.</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <div class="tipp">
+          <h3>Wenn du wegfährst</h3>
+          <p>Bis zu <strong>zwei Tage</strong> kommen Hühner mit einer automatischen Klappe, einem
+          vollen Futterautomaten und einer großen Tränke allein zurecht — vorausgesetzt, der
+          Auslauf ist absolut sicher. <strong>Alles darüber braucht einen Menschen</strong>, der
+          täglich nach dem Rechten sieht: Wasser kippt um, ein Huhn verheddert sich, ein Ei
+          zerbricht im Nest.</p>
+          <p style="margin-top:2mm;">Nachbarn machen das meist gerne — bezahle in Eiern. Leg einen
+          Zettel an den Stall: Was, wie viel, wann, und deine Handynummer.</p>
+        </div>
+
+        <h3 style="margin-top:5mm;">Wie du zutraulich wirst</h3>
+        <p>
+          Hühner sind Fluchttiere. Wer ihnen hinterherläuft, bleibt für immer die Bedrohung.
+          Der Weg ist stattdessen: <strong>hinsetzen und warten.</strong> Setz dich mit einer
+          Handvoll Mehlwürmer oder Sonnenblumenkernen in den Auslauf und tu gar nichts. Nach
+          ein paar Tagen kommt die Mutigste. Nach zwei Wochen sitzt sie auf deinem Knie.
+        </p>
+        <p style="margin-top:2mm;">
+          Hochheben nur, wenn es sein muss — und dann richtig: beide Flügel sanft an den Körper
+          legen, Huhn mit der Hand unter der Brust stützen, Beine zwischen den Fingern.
+        </p>
+
+        <p class="hand" style="margin-top:4mm;">
+          Jedes Huhn hat einen Charakter. Nach drei Wochen<br>
+          weißt du, wer die Chefin ist, wer die Diebin<br>
+          und wer immer als Letzte reinkommt.
+        </p>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Der Alltag</span><span class="pno">7</span></div>
+  </div>
+</div>
+
+<!-- ============================== 8 · KAPITEL 6 · GESUNDHEIT ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 6</span><span>Gesundheit</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">VI</div>
+      <div>
+        <h2>Gesundheit</h2>
+        <p class="hand" style="margin-top:1.5mm;">Hühner verstecken Krankheit, so lange sie können. Schau täglich hin.</p>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Warnsignale — und was sie bedeuten</h3>
+        <table>
+          <thead><tr><th style="width:42%;">Beobachtung</th><th>Mögliche Ursache</th></tr></thead>
+          <tbody>
+            <tr><td>Aufgeplustert, apathisch, abseits</td><td>Immer ernst nehmen — Infekt, Schmerz, Legenot</td></tr>
+            <tr><td>Blasser oder bläulicher Kamm</td><td>Blutarmut (Milben!), Kreislauf, Infektion</td></tr>
+            <tr><td>Frisst nicht, trinkt viel</td><td>Kropfproblem, Infektion, Hitze</td></tr>
+            <tr><td>Nachts unruhig, meidet den Stall</td><td>Fast immer Rote Vogelmilbe</td></tr>
+            <tr><td>Durchfall, verklebte Kloake</td><td>Futterwechsel, Kokzidien, Wurmbefall</td></tr>
+            <tr><td>Röcheln, Niesen, Nasenausfluss</td><td>Atemwegsinfekt — Tierarzt</td></tr>
+            <tr><td>Pinguinhaltung, Pressen</td><td>Legenot — dringend, warm &amp; feucht halten, Tierarzt</td></tr>
+            <tr><td>Raue, verdickte Beinschuppen</td><td>Kalkbeinmilbe — Beine ölen, behandeln</td></tr>
+          </tbody>
+        </table>
+
+        <div class="tipp" style="margin-top:4.5mm;">
+          <h3>Sofort zum Tierarzt</h3>
+          <p>Bei Atemgeräuschen, blutigem Durchfall, Lähmungen, Legenot über wenige Stunden oder
+          wenn <strong>mehrere Tiere gleichzeitig</strong> krank wirken. Frag gezielt nach einem
+          <strong>geflügelkundigen Tierarzt</strong> — nicht jede Kleintierpraxis behandelt Hühner.
+          Such dir die Nummer heraus, <em>bevor</em> du sie brauchst.</p>
+        </div>
+
+        <h3 style="margin-top:4.5mm;">Die Mauser</h3>
+        <p>
+          Ab dem zweiten Lebensjahr wechseln Hühner im <strong>Spätsommer bis Herbst</strong> ihr
+          gesamtes Gefieder. Das dauert 6–12 Wochen, sieht erbärmlich aus und kostet enorm Kraft:
+          Federn bestehen fast nur aus Eiweiß. Die Hennen legen in dieser Zeit
+          <strong>gar nicht</strong> — das ist normal und gesund. Unterstütze sie mit etwas
+          eiweißreichem Zusatzfutter und lass sie in Ruhe. Anfassen tut jetzt weh.
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>Die Rote Vogelmilbe</h3>
+        <p>
+          Das mit Abstand häufigste Problem der Hobbyhaltung. Die Milbe lebt <em>nicht</em> am Huhn,
+          sondern in den Ritzen des Stalls und kommt nur nachts zum Blutsaugen. Deshalb siehst du
+          sie tagsüber nicht — und übersiehst den Befall, bis er groß ist.
+        </p>
+        <p style="margin-top:2mm;"><strong>So erkennst du sie:</strong> weißes Küchenpapier abends
+        unter die Sitzstange kleben und morgens anschauen — rote Schlieren beim Zerreiben sind
+        Blut. Graue, aschige Beläge in Ritzen sind Milbennester. Und: Die Hühner wollen abends
+        nicht mehr in den Stall.</p>
+
+        <div class="kasten" style="margin-top:3.5mm;">
+          <h3>Bekämpfung in vier Schritten</h3>
+          <ol class="tight" style="margin-top:1mm;">
+            <li><strong>Ausräumen.</strong> Einstreu, Nester, Sitzstangen raus. Alles Brennbare
+              entsorgen, nicht kompostieren.</li>
+            <li><strong>Hitze &amp; Wasser.</strong> Stall heiß abwaschen, Sitzstangen abflammen
+              oder auskochen. Vollständig trocknen lassen.</li>
+            <li><strong>Kieselgur.</strong> Trocken in jede Ritze, unter die Stangen, in die Nester
+              stäuben. Wirkt nur staubtrocken — und nur mechanisch, Resistenzen gibt es nicht.
+              <em>Atemschutz tragen.</em></li>
+            <li><strong>Nach 5–7 Tagen wiederholen.</strong> Kein Mittel wirkt gegen die Eier.
+              Eine einmalige Behandlung ist immer vergeblich.</li>
+          </ol>
+        </div>
+        <p style="margin-top:2.5mm;">
+          <strong>Vorbeugen ist leichter als bekämpfen:</strong> glatte, gestrichene oder gekalkte
+          Flächen, wenige Ritzen, <strong>abnehmbare Sitzstangen</strong> und ein großzügiges
+          Sandbad mit Kieselgur. Im Hochsommer wöchentlich kontrollieren — bei Wärme verdoppelt
+          sich eine Population in Tagen.
+        </p>
+
+        <h3 style="margin-top:4.5mm;">Deine Hausapotheke</h3>
+        <ul class="plain tight" style="margin-top:1mm;">
+          <li>Kieselgur mit Stäuberflasche</li>
+          <li>Wund- und Blauspray (deckt rote Stellen ab — Hühner picken auf Blut)</li>
+          <li>Einweghandschuhe, Schere, Pinzette</li>
+          <li>Elektrolyt- oder Vitaminpulver fürs Trinkwasser</li>
+          <li>Kokosöl oder Vaseline gegen Kalkbeine</li>
+          <li>Eine Transportbox als Kranken- und Quarantänestation</li>
+          <li>Telefonnummer des geflügelkundigen Tierarztes</li>
+        </ul>
+
+        <p class="hand" style="margin-top:3.5mm;">
+          Neue Hühner immer 2–3 Wochen getrennt halten,<br>bevor sie zur Herde dürfen.
+        </p>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Gesundheit</span><span class="pno">8</span></div>
+  </div>
+</div>
+
+<!-- ============================== 9 · KAPITEL 7 · JAHR ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 7</span><span>Durch das Jahr</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">VII</div>
+      <div>
+        <h2>Durch das Jahr</h2>
+        <p class="hand" style="margin-top:1.5mm;">Jede Jahreszeit hat ihre eine wichtige Aufgabe.</p>
+      </div>
+    </div>
+
+    <div class="cols2" style="gap:6mm;">
+      <div class="col">
+        <div style="border-left:1.6pt solid #8fa06a; padding-left:4mm;">
+          <h3 style="color:#5d7a3c;">Frühling · März bis Mai</h3>
+          <p style="font-size:9.7pt;">
+            Die Legeleistung springt mit dem Licht wieder an — im Frühjahr bekommst du die
+            meisten Eier des Jahres. Jetzt ist die Zeit für die <strong>Großreinigung</strong> und
+            den Kalkanstrich, bevor es warm wird und die Milben starten. Der Auslauf ist nach dem
+            Winter oft kahl und matschig: neu einsäen oder Fläche wechseln. Manche Henne wird
+            <strong>brütig</strong> — sie sitzt tagelang platt im Nest und faucht. Ohne Hahn bringt
+            das nichts: Nest abends verschließen, sie kühl und beschäftigt halten.
+          </p>
+        </div>
+
+        <div style="border-left:1.6pt solid #d0a24a; padding-left:4mm; margin-top:4.5mm;">
+          <h3 style="color:#a97c22;">Sommer · Juni bis August</h3>
+          <p style="font-size:9.7pt;">
+            <strong>Hitze ist gefährlicher als Frost.</strong> Hühner können nicht schwitzen; ab
+            etwa 30&nbsp;°C hecheln sie mit offenem Schnabel und stellen die Flügel ab. Sorge für
+            tiefen Schatten, kühles Wasser an zwei Stellen und feuchte, schattige Erde zum
+            Eingraben. Gleichzeitig ist Sommer <strong>Milbenhochsaison</strong> — jetzt wöchentlich
+            kontrollieren. Und: Das Sandbad muss trocken bleiben, sonst wird es zur Pfütze.
+          </p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div style="border-left:1.6pt solid #b06a3a; padding-left:4mm;">
+          <h3 style="color:#93472a;">Herbst · September bis November</h3>
+          <p style="font-size:9.7pt;">
+            Die <strong>Mauser</strong> kommt, die Eier bleiben aus — beides normal. Jetzt die
+            zweite Großreinigung, den Stall auf Winterdichtigkeit prüfen und die Heizplatte
+            hervorholen. Laub nicht wegwerfen, sondern zu einem <strong>Haufen im Auslauf</strong>
+            schichten: die beste Beschäftigung des Winters. Ab Oktober steigt die
+            <strong>Geflügelpest-Gefahr</strong> — Meldungen des Landkreises im Blick behalten.
+          </p>
+        </div>
+
+        <div style="border-left:1.6pt solid #7f93a8; padding-left:4mm; margin-top:4.5mm;">
+          <h3 style="color:#5b7189;">Winter · Dezember bis Februar</h3>
+          <p style="font-size:9.7pt;">
+            Hühner vertragen Frost erstaunlich gut — bis etwa −15&nbsp;°C, wenn der Stall
+            <strong>trocken und zugfrei</strong> ist. Was du brauchst: eine
+            <strong>frostfreie Tränke</strong> und einen geräumten, windgeschützten Auslaufbereich.
+            Was du <em>nicht</em> brauchst: eine Heizung — sie macht das Klima feucht und die Tiere
+            empfindlich. Auch auf <strong>Kunstlicht</strong> verzichtest du besser: Die Legepause
+            hält deine Hennen lange gesund.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin:4.5mm 0 3.5mm;"><span>✦</span></div>
+
+    <div class="cols2">
+      <div class="col kasten">
+        <h3>Wenn die Aufstallung kommt</h3>
+        <p>Bei Geflügelpest-Fällen in der Region ordnen Landkreise eine <strong>Stallpflicht</strong>
+        an — dann müssen alle Hühner in den Stall oder unter ein dichtes Dach mit seitlichem
+        Schutz, damit kein Wildvogelkot hineingelangt. Das kann Wochen dauern.</p>
+        <p style="margin-top:2mm;">Bereite dich vor, <em>bevor</em> es soweit ist: ein überdachter,
+        seitlich abgehängter Auslaufbereich von wenigen Quadratmetern reicht als Notlösung. Auf
+        Langeweile reagieren eingesperrte Hühner mit Federpicken — Heuballen, Picksteine,
+        Sandbad und verstreutes Futter sind dann Pflichtprogramm.</p>
+      </div>
+      <div class="col tipp">
+        <h3>Der Winter-Kurzcheck</h3>
+        <ul class="tight" style="margin-top:1mm;">
+          <li>Tränke frostfrei — Heizplatte angeschlossen und geprüft</li>
+          <li>Einstreu dicker als im Sommer, dafür öfter kontrolliert</li>
+          <li>Kein Zug auf Höhe der Sitzstangen</li>
+          <li>Schnee vor der Klappe geräumt, Bereich trocken</li>
+          <li>Etwas mehr Körner am Nachmittag — Verdauung wärmt über Nacht</li>
+          <li>Automatische Klappe: Batterien im Kalten prüfen</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin:4mm 0 3mm;"><span>✦</span></div>
+
+    <h3>Plötzlich keine Eier — die sechs Gründe</h3>
+    <div class="cols2" style="gap:6mm; margin-top:1mm;">
+      <div class="col">
+        <table>
+          <tbody>
+            <tr><td style="width:32%;"><strong>1 · Mauser</strong></td>
+              <td>Herbst, 6–12 Wochen Pause. Normal, nichts zu tun.</td></tr>
+            <tr><td><strong>2 · Wenig Licht</strong></td>
+              <td>Unter etwa 12 Stunden Tageslicht stellen viele Hennen ein.</td></tr>
+            <tr><td><strong>3 · Alter</strong></td>
+              <td>Ab dem dritten Jahr sinkt die Leistung deutlich.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col">
+        <table>
+          <tbody>
+            <tr><td style="width:32%;"><strong>4 · Brütigkeit</strong></td>
+              <td>Sitzt platt im Nest und faucht — legt erst danach wieder.</td></tr>
+            <tr><td><strong>5 · Stress</strong></td>
+              <td>Milben, Futterwechsel, ein Fuchs am Zaun, ein Neuzugang.</td></tr>
+            <tr><td><strong>6 · Heimliches Nest</strong></td>
+              <td>Bei Freilauf der häufigste Fall: Such unter Hecke und Holzstapel.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Durch das Jahr</span><span class="pno">9</span></div>
+  </div>
+</div>
+
+<!-- ============================== 10 · KAPITEL 8 · GLÜCK ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Kapitel 8</span><span>Glückliche Hühner</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">VIII</div>
+      <div>
+        <h2>Glückliche Hühner</h2>
+        <p class="hand" style="margin-top:1.5mm;">Sie sollen nicht nur leben. Sie sollen ihr Leben genießen.</p>
+      </div>
+    </div>
+
+    <p style="margin-bottom:4mm;">
+      Ein Huhn hat fünf Grundbedürfnisse, und keines davon lässt sich kaufen:
+      <strong>scharren, picken, staubbaden, sonnen und aufbaumen</strong>. Alles, was diese
+      fünf Dinge möglich macht, ist mehr wert als jedes Spielzeug aus dem Zooladen. Das
+      Schönste daran: Fast alles davon liegt schon in deinem Garten herum.
+    </p>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Die Klassiker, die nichts kosten</h3>
+        <ul class="plain tight" style="margin-top:1mm;">
+          <li><strong>Der Laubhaufen.</strong> Unschlagbar. Ein Haufen Herbstlaub oder halb
+            verrotteter Kompost beschäftigt drei Hühner täglich stundenlang und liefert
+            Insekten und Würmer gratis dazu.</li>
+          <li><strong>Rasenschnitt, Heu, Wurzelballen, alte Blumenerde</strong> — alles, was
+            auseinandergenommen werden kann.</li>
+          <li><strong>Futter im Stroh verstreuen</strong> statt in den Napf.</li>
+          <li><strong>Wechselauslauf</strong> mit mobilem Netz: zwei Flächen abwechselnd nutzen,
+            dann bleibt Gras stehen und es gibt immer frisches Grün.</li>
+          <li><strong>Sitzäste und Baumstämme</strong> in verschiedenen Höhen. Hühner lieben
+            Erhöhungen — Übersicht bedeutet für sie Sicherheit.</li>
+          <li><strong>Ein Sonnenplatz</strong> mit Windschutz. Hühner legen sich flach auf die
+            Seite, strecken ein Bein weg und wirken wie tot. Das ist reines Glück.</li>
+        </ul>
+
+        <div class="tipp" style="margin-top:4.5mm;">
+          <h3>Das perfekte Staubbad — Rezept</h3>
+          <p>Eine flache Wanne, ein alter Sandkasten oder eine abgetrennte Ecke,
+          <strong>unbedingt überdacht</strong>. Hinein kommen:</p>
+          <p style="margin-top:1.5mm;">
+            <strong>3 Teile</strong> trockener Spielsand ·
+            <strong>1 Teil</strong> Gartenerde ·
+            <strong>1 Teil</strong> kalte Holzasche <span style="color:#7c6a55;">(unbehandeltes Holz)</span> ·
+            eine gute Handvoll <strong>Kieselgur</strong>
+          </p>
+          <p style="margin-top:1.5mm;">Lieber zu groß als zu klein — drei Hühner baden gern
+          gemeinsam. Alle paar Wochen auflockern und Kieselgur nachstreuen. Das Staubbad ist
+          Gefiederpflege, Parasitenschutz und Wellness in einem.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3>Kleine Anschaffungen mit großer Wirkung</h3>
+        <ul class="plain tight" style="margin-top:1mm;">
+          <li><strong>Hühnerschaukel</strong> — sieht albern aus, wird aber tatsächlich benutzt,
+            besonders von jungen Hennen.</li>
+          <li><strong>Pickstein</strong> zum Aufhängen: Mineralien und Beschäftigung zugleich,
+            und ein wirksames Mittel gegen Federpicken.</li>
+          <li><strong>Aufgehängter Kohlkopf</strong> oder Maiskolben an der Schnur — das
+            „Hühnertetherball".</li>
+          <li><strong>Leckerli-Ball</strong> oder ein Bambusrohr mit Mehlwürmern.</li>
+          <li><strong>Ein Kräuterbeet am Rand</strong>, mit Draht abgedeckt: Oregano, Thymian,
+            Petersilie, Löwenzahn wachsen durch und werden von oben abgeknabbert.</li>
+          <li><strong>Im Winter</strong> ein Heunetz oder ein Grünkohlstrunk gegen die
+            Langeweile der dunklen Monate.</li>
+        </ul>
+
+        <div class="kasten" style="margin-top:4.5mm;">
+          <h3>Hühnisch für Anfänger</h3>
+          <p style="margin-bottom:1.5mm;"><strong>Leises, gleichmäßiges Gluckern</strong> —
+          alles in Ordnung, die Herde ist zufrieden.</p>
+          <p style="margin-bottom:1.5mm;"><strong>Lautes „Gack-gack-gaGACK"</strong> nach dem Legen
+          — das Legelied. Stolz, kein Problem.</p>
+          <p style="margin-bottom:1.5mm;"><strong>Kurzes, hartes Knattern, alle erstarren</strong>
+          — Warnruf Luft. Schau nach oben: Greifvogel.</p>
+          <p style="margin-bottom:1.5mm;"><strong>Wiederholtes „Bock-bock"</strong>, alle rennen
+          — Warnruf Boden. Fuchs, Hund oder Katze.</p>
+          <p><strong>Tiefes Brummen und Fauchen im Nest</strong> — brütige Henne. Bitte nicht stören.</p>
+        </div>
+
+        <p class="hand" style="margin-top:4.5mm;">
+          Wenn deine Hühner abends von selbst<br>
+          in den Stall marschieren und sich in einer Reihe<br>
+          auf die Stange setzen — dann hast du alles richtig gemacht.
+        </p>
+      </div>
+    </div>
+
+    <div class="runfoot"><span>Glückliche Hühner</span><span class="pno">10</span></div>
+  </div>
+</div>
+
+<!-- ============================== 11 · EINKAUFSFÜHRER I ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Einkaufsführer I</span><span>Die großen Anschaffungen</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">✦</div>
+      <div>
+        <h2>Einkaufsführer I</h2>
+        <p class="hand" style="margin-top:1.5mm;">Die großen Anschaffungen — alle Namen sind anklickbar.</p>
+      </div>
+    </div>
+
+    <h3>Automatische Hühnerklappe</h3>
+    <p style="font-size:9.7pt; margin-bottom:2.5mm;">
+      Die lohnendste Anschaffung überhaupt. Sie öffnet morgens bei Dämmerung und schließt
+      abends, wenn alle drin sind — du musst nie wieder pünktlich zu Hause sein. Achte auf
+      <strong>zwei Dinge</strong>: eine <strong>Nothalt-Funktion</strong> (stoppt und öffnet
+      wieder, wenn ein Huhn unter der Klappe sitzt) und einen <strong>Schieber, der von unten
+      nicht aufzuschieben ist</strong> — sonst hebt der Marder ihn an.
+    </p>
+    <table>
+      <thead><tr><th style="width:30%;">Modell</th><th class="num" style="width:15%;">Preis</th><th>Warum</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pick">Unsere Empfehlung</span><br>
+            <a href="https://jost-technik.de/HK-BAT%20Klappensteller%20mit%20Batteriebetrieb---119.html"><strong>JOSTechnik HK-BAT</strong></a><br>
+            <span style="font-size:8.4pt; color:#7c6a55;">Set mit Alu-Tür 129 €</span></td>
+          <td class="num"><span class="pricetag">ab 115 €</span></td>
+          <td>Deutscher Hersteller, unaufgeregt gute Technik. Dämmerungssensor <em>und</em>
+            Zeitschaltuhr kombinierbar, echte Nothalt-Funktion, Wochenendfunktion. Läuft mit
+            4 AA-Batterien, Netzteil oder Solar. Beste Mischung aus Preis, Sicherheit und
+            Zuverlässigkeit.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Ohne Steckdose</span><br>
+            <a href="https://jost-technik.de/HK-BAT%20Klappensteller%20mit%20Batteriebetrieb---119.html"><strong>JOSTechnik HK-BAT Solar-Set</strong></a></td>
+          <td class="num"><span class="pricetag">ab 174 €</span></td>
+          <td>Dieselbe Steuerung mit Solarpanel und Lithium-Akku — für Ställe ohne Stromanschluss.
+            Optional mit Anlocklicht, das die Nachzügler abends hereinholt.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Komfort &amp; App</span><br>
+            <a href="https://www.omlet.de/intelligenter-automatischer-tueroeffner-fuer-huehnerstall/"><strong>Omlet Smart Autodoor</strong></a></td>
+          <td class="num"><span class="pricetag">ab ca. 210 €</span></td>
+          <td>WLAN und App-Steuerung, Sicherheitssensor, Stalllicht, funktioniert bis −20&nbsp;°C
+            und lässt sich an nahezu jeden Stall montieren. Die teuerste, aber komfortabelste
+            Lösung — sinnvoll, wenn du oft unterwegs bist.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rule-orn" style="margin:5mm 0 4mm;"><span>✦</span></div>
+
+    <h3>Zaun &amp; Auslaufschutz</h3>
+    <table>
+      <thead><tr><th style="width:30%;">Produkt</th><th class="num" style="width:15%;">Preis</th><th>Warum</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pick">Unsere Empfehlung</span><br>
+            <a href="https://www.weidezaun.info/voss-farming-gefluegelnetz-komplett-set-25m-netz-12-230v-weidezaungeraet.html"><strong>VOSS.farming Geflügelnetz-Komplettset 25 m</strong></a><br>
+            <span style="font-size:8.4pt; color:#7c6a55;">Netz + Weidezaungerät + Prüfer + Erdstab</span></td>
+          <td class="num"><span class="pricetag">218,90 €</span></td>
+          <td>Alles in einem Karton, sofort einsatzbereit. 112 cm hoch, unten engmaschig, 9
+            Fiberglaspfähle mit Doppelspitze. Für 3 Hühner umschließen 25 m rund 40 m² —
+            genau richtig, und jederzeit versetzbar.</td>
+        </tr>
+        <tr>
+          <td><span class="pick thrift">Preistipp</span><br>
+            <a href="https://www.weidezaun.info/voss-farming-farmnet-25m-huehnernetz-gefluegelnetz-112cm-9-pfaehle-2-spitzen-orange.html"><strong>VOSS.farming farmNET 25 m, 112&nbsp;cm</strong></a><br>
+            <span style="font-size:8.4pt; color:#7c6a55;">nur das Netz</span></td>
+          <td class="num"><span class="pricetag">76,90 €</span></td>
+          <td>Wenn du schon ein Weidezaungerät hast oder das Netz erst einmal ohne Strom als
+            reine Begrenzung nutzen willst. Ohne Strom hält es allerdings keinen Fuchs auf.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Fester Zaun</span><br>
+            <a href="https://www.aquagart.de/forst-weidezaun/volierendraht-verzinkt/volierendraht-verzinkt-12mm-x-12mm-1m-breit/"><strong>Volierendraht 12 × 12 mm, 1 m breit</strong></a></td>
+          <td class="num"><span class="pricetag">ab 73 € / 15 m</span></td>
+          <td>Punktgeschweißt und feuerverzinkt — <strong>das</strong> Material für den unteren
+            Meter des Zauns, für den Untergrabschutz und für alle Lüftungsöffnungen am Stall.
+            Marder beißen sich hier nicht durch.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rule-orn" style="margin:5mm 0 4mm;"><span>✦</span></div>
+
+    <h3>Futterautomat</h3>
+    <table>
+      <thead><tr><th style="width:30%;">Produkt</th><th class="num" style="width:15%;">Preis</th><th>Warum</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pick">Unsere Empfehlung</span><br>
+            <a href="https://www.weidezaun.info/feed-o-matic-gefluegelfutterautomat-mit-trittplatte-verzinkt-12kg.html"><strong>FEED-O-MATIC Trittautomat, 12 kg</strong></a></td>
+          <td class="num"><span class="pricetag">47,90 €</span></td>
+          <td>Der Deckel öffnet erst, wenn ein Huhn auf die Trittplatte steigt — Ratten, Mäuse
+            und Wildvögel kommen nicht ans Futter. Auslösegewicht von 450 g bis 2,5 kg
+            einstellbar, verzinktes Blech, Trennstege gegen Herausscharren. 12 kg reichen
+            drei Hennen gut vier Wochen.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="runfoot"><span>Einkaufsführer I</span><span class="pno">11</span></div>
+  </div>
+</div>
+
+<!-- ============================== 12 · EINKAUFSFÜHRER II ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Einkaufsführer II</span><span>Das Kleine, das viel bringt</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">✦</div>
+      <div>
+        <h2>Einkaufsführer II</h2>
+        <p class="hand" style="margin-top:1.5mm;">Das Kleine, das im Alltag den Unterschied macht.</p>
+      </div>
+    </div>
+
+    <h3>Tränke, Einstreu &amp; Stallhygiene</h3>
+    <table>
+      <thead><tr><th style="width:30%;">Produkt</th><th class="num" style="width:15%;">Preis</th><th>Warum</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pick">Tränke</span><br>
+            <a href="https://www.baywa.de/de/tierhaltung/stall-weide-technik/traenken-traenkebecken/traenken-traenkebecken/gefluegel/kerbl-gefluegeltraenkeeimer-12-l/p-000000000001272729/"><strong>Kerbl Geflügeltränkeeimer 12 l</strong></a></td>
+          <td class="num"><span class="pricetag">19,95 €</span></td>
+          <td>Robuster Kunststoff, Tragegriff, zum Aufhängen. 12 l reichen drei Hennen über eine
+            Woche — trotzdem täglich frisch machen. Aufgehängt auf Rückenhöhe bleibt das Wasser
+            deutlich länger sauber.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Winter</span><br>
+            <a href="https://www.raiffeisenmarkt.de/kerbl-heizplatte-fuer-gefluegeltraenken-2909"><strong>Kerbl Heizplatte, 25 cm / 15 W</strong></a></td>
+          <td class="num"><span class="pricetag">ca. 33 €</span></td>
+          <td>Wird einfach unter die vorhandene Tränke gestellt und hält sie frostfrei — mit
+            15 Watt und 24-V-Netzteil sparsam und sicher. Erspart dir im Januar zwei Gänge
+            am Tag mit dem Eishammer.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Einstreu</span><br>
+            <a href="https://hanfeinstreu.de/hanfeinstreu-fuer-huehner-nest-sauber-trocken/"><strong>Hanfeinstreu für Hühner</strong></a></td>
+          <td class="num"><span class="pricetag">nach Gebinde</span></td>
+          <td>Saugt deutlich mehr als Stroh oder Späne, bindet Ammoniakgeruch, staubt kaum und
+            ist kompostierbar. Etwas teurer im Einkauf, aber sparsamer im Verbrauch — und
+            staubarm heißt: bessere Atemwege für Huhn <em>und</em> Mensch.</td>
+        </tr>
+        <tr>
+          <td><span class="pick">Milbenschutz</span><br>
+            <a href="https://www.fressnapf.de/p/aniforte-kieselgur-pulver-inkl-staeuberflasche-2kg-1501086/"><strong>AniForte Kieselgur 2 kg + Stäuberflasche</strong></a></td>
+          <td class="num"><span class="pricetag">23,99 €</span></td>
+          <td>Das wichtigste Hygieneprodukt im Hühnerstall. Rein mechanische Wirkung, also keine
+            Resistenzen. Die mitgelieferte Stäuberflasche ist entscheidend — nur damit kommst du
+            in Ritzen und unter die Sitzstangen. <em>Beim Ausbringen Atemschutz tragen.</em></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="rule-orn" style="margin:4.5mm 0 3.5mm;"><span>✦</span></div>
+
+    <h3>Futter, Grit &amp; Wohlfühl-Extras</h3>
+    <table>
+      <thead><tr><th style="width:30%;">Produkt</th><th class="num" style="width:15%;">Preis</th><th>Warum</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="pick">Alleinfutter</span><br>
+            <a href="https://www.eggersmann-shop.de/huehnerfutter/alleinfutter/koernerpick-legehennen-pellets-oregano-25-kg-alleinfutter-fuer-legehennen"><strong>Eggersmann Körnerpick Legehennen-Pellets Oregano, 25 kg</strong></a></td>
+          <td class="num"><span class="pricetag">28,40 €</span></td>
+          <td>Gentechnikfreies Alleinfutter als 3-mm-Pellet — dadurch kann keine Henne die
+            Mineralien liegen lassen und nur die Körner picken. Mit Oreganoöl für Darm und
+            Immunsystem. 25 kg reichen drei Hennen etwa zwei Monate.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Kalk</span><br>
+            <a href="https://eierschachteln.de/products/Kalkgrit"><strong>Kalkgrit, biotauglich</strong></a></td>
+          <td class="num"><span class="pricetag">ab ca. 22 €</span></td>
+          <td>Zur freien Aufnahme in einer separaten Schale, ca. 5–10 g pro Henne und Tag. Sorgt
+            für feste Schalen und stabile Knochen. Ein Sack hält sehr lange.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Beschäftigung</span><br>
+            <a href="https://eierschachteln.de/products/pickstein-mit-loch"><strong>Pickstein 10 kg mit Loch zum Aufhängen</strong></a></td>
+          <td class="num"><span class="pricetag">20,99 €</span></td>
+          <td>Mineralien und Zeitvertreib in einem. Aufgehängt ist er attraktiver als am Boden —
+            und er ist das beste Gegenmittel gegen Federpicken, wenn es im Winter oder bei
+            Aufstallung eng wird.</td>
+        </tr>
+        <tr>
+          <td><span class="pick alt">Spaß</span><br>
+            <a href="https://www.eierschachteln.de/huehnerbeschaeftigung/"><strong>Beschäftigungsfutter — Luzerne, Kräuter-Picksteine, Pickbälle</strong></a></td>
+          <td class="num"><span class="pricetag">variabel</span></td>
+          <td>Luzerneballen zum Zerlegen, Kräuter-Picksteine, Körnermischungen und Pickbälle.
+            Nichts davon ist nötig — aber es rettet Winter- und Aufstallungstage, und Freude
+            ist ein guter Grund.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="tipp" style="margin-top:4mm;">
+      <h3>Was du <em>nicht</em> kaufen musst</h3>
+      <p><strong>Stallheizung</strong> (schadet mehr, als sie nützt) · <strong>Kunstlicht zur
+      Legesteigerung</strong> (die Winterpause hält die Hennen länger gesund) ·
+      <strong>Dauerdesinfektion</strong> (heißes Wasser und Trockenheit sind wirksamer) ·
+      <strong>Legehennen-„Kur"-Pulver</strong> auf Verdacht (bei Symptomen gehört ein Tierarzt
+      gefragt, kein Onlineshop) · <strong>der große Fertigstall „für 8 Hühner"</strong> aus dem
+      Baumarktprospekt — er ist meist für drei zu klein und für keinen sicher genug.</p>
+    </div>
+
+    <div class="runfoot"><span>Einkaufsführer II</span><span class="pno">12</span></div>
+  </div>
+</div>
+
+<!-- ============================== 13 · RECHT & KOSTEN ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Pflichten</span><span>Recht, Behörden &amp; Kosten</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">§</div>
+      <div>
+        <h2>Recht, Behörden &amp; Kosten</h2>
+        <p class="hand" style="margin-top:1.5mm;">Klingt nach Papierkram — ist an einem Nachmittag erledigt.</p>
+      </div>
+    </div>
+
+    <div class="cols2">
+      <div class="col">
+        <h3>Fünf Pflichten in Deutschland</h3>
+        <p style="font-size:9.7pt; margin-bottom:2.5mm;">
+          Auch für drei Hühner im Garten. Alles Weitere regelt dein Landkreis — ein Anruf
+          beim Veterinäramt klärt in fünf Minuten mehr als eine Stunde Internetsuche.
+        </p>
+        <table>
+          <tbody>
+            <tr><td style="width:34%;"><strong>1 · Veterinäramt</strong></td>
+              <td>Anmeldung der Haltung, in der Regel binnen zwei Wochen nach dem Einzug.
+                Meist kostenlos.</td></tr>
+            <tr><td><strong>2 · Tierseuchenkasse</strong></td>
+              <td>Anmeldung deines Bundeslandes plus jährliche Meldung des Bestands. Der Beitrag
+                ist für drei Tiere minimal — dafür trägt sie im Seuchenfall die Kosten.</td></tr>
+            <tr><td><strong>3 · Newcastle-Impfung</strong></td>
+              <td><strong>Pflicht, ohne Ausnahme</strong> — auch bei drei Hühnern im Garten.
+                Meist unkompliziert über das Trinkwasser; Impfstoff und Intervall legt dein
+                Tierarzt fest.</td></tr>
+            <tr><td><strong>4 · Bestandsregister</strong></td>
+              <td>Ein einfaches Heft genügt: Zu- und Abgänge mit Datum, Anzahl, Herkunft.
+                Mehrere Jahre aufbewahren.</td></tr>
+            <tr><td><strong>5 · Nachbarn &amp; Bau</strong></td>
+              <td>Hühner gelten als Kleintierhaltung und sind in Wohngebieten fast überall
+                zulässig; ein <strong>Hahn</strong> ist der häufigste Streitpunkt. Große feste
+                Ställe können baurechtlich relevant sein.</td></tr>
+          </tbody>
+        </table>
+
+        <div class="kasten" style="margin-top:3mm;">
+          <h3>Und die Eier?</h3>
+          <p>Eier aus eigener Haltung darfst du selbst essen und verschenken, so viel du magst.
+          Sobald du <strong>regelmäßig verkaufst</strong> — auch ab Hof —, greifen Kennzeichnungs-
+          und Vermarktungsregeln. Für drei Hennen kein Thema: Die Eier reichen ohnehin nie.</p>
+        </div>
+      </div>
+
+      <div class="col">
+        <h3>Was drei Hühner kosten</h3>
+        <p style="font-size:9.7pt; margin-bottom:2mm;"><strong>Einmalig zum Start</strong></p>
+        <table>
+          <tbody>
+            <tr><td>Stall <span style="color:#7c6a55;">(gekauft oder umgebaut)</span></td><td class="num">300 – 900 €</td></tr>
+            <tr><td>Zaun oder Elektronetz-Set</td><td class="num">80 – 220 €</td></tr>
+            <tr><td>Automatische Klappe</td><td class="num">115 – 210 €</td></tr>
+            <tr><td>Tränke, Heizplatte, Futterautomat</td><td class="num">ca. 100 €</td></tr>
+            <tr><td>Kieselgur, Grit, Einstreu, Hausapotheke</td><td class="num">ca. 80 €</td></tr>
+            <tr><td>Drei Junghennen</td><td class="num">45 – 105 €</td></tr>
+            <tr><td><strong>Summe</strong></td><td class="num"><strong>≈ 720 – 1.600 €</strong></td></tr>
+          </tbody>
+        </table>
+
+        <p style="font-size:9.7pt; margin:3.5mm 0 2mm;"><strong>Laufend pro Jahr</strong></p>
+        <table>
+          <tbody>
+            <tr><td>Futter <span style="color:#7c6a55;">(ca. 130 kg)</span></td><td class="num">150 – 190 €</td></tr>
+            <tr><td>Einstreu</td><td class="num">40 – 60 €</td></tr>
+            <tr><td>Grit, Kalk, Kieselgur</td><td class="num">ca. 40 €</td></tr>
+            <tr><td>Impfung, Tierarzt, Rücklage</td><td class="num">30 – 90 €</td></tr>
+            <tr><td>Tierseuchenkasse</td><td class="num">wenige €</td></tr>
+            <tr><td><strong>Summe</strong></td><td class="num"><strong>≈ 270 – 380 €</strong></td></tr>
+          </tbody>
+        </table>
+
+        <div class="tipp" style="margin-top:4mm;">
+          <h3>Was ein Ei wirklich kostet</h3>
+          <p>Drei gute Legehennen bringen im Jahr rund <strong>550 bis 650 Eier</strong>. Bei etwa
+          320 € laufenden Kosten macht das <strong>etwa 50 Cent pro Ei</strong> — deutlich mehr
+          als im Supermarkt.</p>
+          <p style="margin-top:2mm;">Rechne trotzdem nicht nach. Du bezahlst nicht für Eier. Du
+          bezahlst für orangefarbene Dotter, für gackernde Begrüßungen an der Gartentür und
+          dafür, abends fünf Minuten am Auslauf zu stehen und nichts zu tun.</p>
+        </div>
+
+        <p class="hand" style="margin-top:3mm;">
+          Melde die Hühner in derselben Woche an,<br>in der sie einziehen. Dann ist es erledigt.
+        </p>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin:3mm 0 2.2mm;"><span>✦</span></div>
+
+    <h3>Der eine Anruf, der alles klärt</h3>
+    <p style="font-size:9.9pt; margin-bottom:1.5mm;">
+      Ruf beim Veterinäramt deines Landkreises an und stell diese vier Fragen — danach hast du alles.
+    </p>
+    <div class="cols2" style="gap:6mm;">
+      <div class="col"><ul class="plain tight">
+        <li>„Wie melde ich eine Hobbyhaltung mit drei Hühnern an?"</li>
+        <li>„Welche Tierseuchenkasse ist für mich zuständig?"</li>
+      </ul></div>
+      <div class="col"><ul class="plain tight">
+        <li>„Welches Newcastle-Impfschema gilt hier?"</li>
+        <li>„Gibt es aktuell eine Aufstallungspflicht?"</li>
+      </ul></div>
+    </div>
+
+    <div class="runfoot"><span>Recht &amp; Kosten</span><span class="pno">13</span></div>
+  </div>
+</div>
+
+<!-- ============================== 14 · CHECKLISTE ============================== -->
+<div class="page">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="runhead"><span>Zum Abhaken</span><span>Startklar-Checkliste</span></div>
+
+    <div class="chaptitle">
+      <div class="chapnum">✓</div>
+      <div>
+        <h2>Startklar</h2>
+        <p class="hand" style="margin-top:1.5mm;">Ausdrucken, an den Stall hängen, abhaken.</p>
+      </div>
+    </div>
+
+    <div class="cols3">
+      <div class="col">
+        <h3>Vor dem Einzug</h3>
+        <ul class="check">
+          <li>Stall steht, ist trocken und dicht</li>
+          <li>Sitzstangen montiert — höher als das Nest</li>
+          <li>Legenest eingestreut und dunkel</li>
+          <li>Lüftung oben, vergittert, zugfrei</li>
+          <li>Kotbrett unter den Stangen</li>
+          <li>Riegel mardersicher <span style="color:#7c6a55;">(kein Haken!)</span></li>
+          <li>Auslauf gezäunt, Untergrabschutz gelegt</li>
+          <li>Deckung im Auslauf: Busch, Dach, Äste</li>
+          <li>Staubbad angelegt und überdacht</li>
+          <li>Tränke und Futterautomat aufgehängt</li>
+          <li>Futter, Grit und Kalkgrit da</li>
+          <li>Kieselgur und Hausapotheke da</li>
+          <li>Tierarzt herausgesucht und notiert</li>
+        </ul>
+
+        <h3 style="margin-top:5mm;">Wenn die ersten Eier kommen</h3>
+        <ul class="check">
+          <li>Nest wird angenommen <span style="color:#7c6a55;">(sonst Gipsei hineinlegen)</span></li>
+          <li>Eier täglich sammeln und mit Bleistift datieren</li>
+          <li>Nicht waschen — die Schutzschicht bleibt</li>
+          <li>Kalkgrit steht frei zur Verfügung</li>
+          <li>Eierkarton für die Nachbarn bereitlegen</li>
+        </ul>
+
+        <p class="hand" style="margin-top:4.5mm; font-size:12.5pt;">
+          Das erste eigene Ei ist winzig, schief<br>
+          und das schönste, das du je gesehen hast.
+        </p>
+      </div>
+
+      <div class="col">
+        <h3>Am Einzugstag</h3>
+        <ul class="check">
+          <li>Alle Hühner gemeinsam abgeholt</li>
+          <li>Impfnachweis erhalten</li>
+          <li>Abends direkt in den Stall setzen</li>
+          <li>Ersten Tag im Stall lassen — sie lernen,<br>wo „zu Hause" ist</li>
+          <li>Wasser sofort verfügbar</li>
+          <li>Ruhe geben, nur beobachten</li>
+        </ul>
+
+        <h3 style="margin-top:5mm;">Erste zwei Wochen</h3>
+        <ul class="check">
+          <li>Beim Veterinäramt angemeldet</li>
+          <li>Bei der Tierseuchenkasse angemeldet</li>
+          <li>Impfplan mit dem Tierarzt geklärt</li>
+          <li>Bestandsregister angelegt</li>
+          <li>Nachbarn informiert <span style="color:#7c6a55;">(mit Eiern)</span></li>
+          <li>Klappenautomatik eine Woche kontrolliert</li>
+          <li>Rangordnung beobachtet — wer frisst zuletzt?</li>
+          <li>Erste Milbenkontrolle unter der Stange</li>
+        </ul>
+      </div>
+
+      <div class="col">
+        <div class="kasten">
+          <h3>Die drei häufigsten Anfängerfehler</h3>
+          <p style="margin-bottom:2mm;"><strong>1.</strong> Der Stall wird zu warm und zu dicht
+          gebaut. Feuchtigkeit macht krank, nicht Kälte.</p>
+          <p style="margin-bottom:2mm;"><strong>2.</strong> Der Zaun hat keinen Untergrabschutz.
+          Der Fuchs gräbt direkt an der Kante.</p>
+          <p><strong>3.</strong> Die Milben werden zu spät bemerkt. Kontrolliere ab dem ersten
+          Tag wöchentlich, auch wenn nichts zu sehen ist.</p>
+        </div>
+
+        <h3 style="margin-top:5mm;">Notizen</h3>
+        <div class="notelines">
+          <div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div>
+        </div>
+
+        <div class="tipp" style="margin-top:5mm;">
+          <h3>Namen für die drei</h3>
+          <div class="notelines" style="margin-top:1mm;">
+            <div style="height:7.5mm;"></div><div style="height:7.5mm;"></div><div style="height:7.5mm;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-orn" style="margin:6mm 0 4mm;"><span>✦ ✦ ✦</span></div>
+
+    <div style="text-align:center;">
+      <svg viewBox="0 0 320 96" width="215" height="65" style="margin-bottom:1.5mm;">
+        <!-- drei kleine Hennen -->
+        <g fill="#7d6a55">
+          <g transform="translate(46,10) scale(0.30)">
+            <path d="M52 100 C34 88 22 66 20 42 C36 58 54 72 66 80 Z"/>
+            <ellipse cx="106" cy="118" rx="54" ry="43" transform="rotate(-7 106 118)"/>
+            <path d="M126 92 C120 72 128 54 144 48 L164 70 C152 78 146 90 146 104 Z"/>
+            <circle cx="152" cy="54" r="17"/>
+            <path d="M139 39 c2,-9 7,-8 8,-2 c2,-9 8,-8 9,-2 c3,-8 9,-6 9,2 c-6,-1 -20,-1 -26,2 Z"/>
+            <path d="M168 52 l17 6 l-17 7 Z"/>
+            <path d="M158 68 c7,2 9,12 1,14 c-8,2 -9,-11 -1,-14 Z"/>
+            <path d="M94 156 h5 v24 h-5 Z"/><path d="M119 156 h5 v24 h-5 Z"/>
+          </g>
+          <g transform="translate(122,4) scale(0.34)">
+            <path d="M52 100 C34 88 22 66 20 42 C36 58 54 72 66 80 Z"/>
+            <ellipse cx="106" cy="118" rx="54" ry="43" transform="rotate(-7 106 118)"/>
+            <path d="M126 92 C120 72 128 54 144 48 L164 70 C152 78 146 90 146 104 Z"/>
+            <circle cx="152" cy="54" r="17"/>
+            <path d="M139 39 c2,-9 7,-8 8,-2 c2,-9 8,-8 9,-2 c3,-8 9,-6 9,2 c-6,-1 -20,-1 -26,2 Z"/>
+            <path d="M168 52 l17 6 l-17 7 Z"/>
+            <path d="M158 68 c7,2 9,12 1,14 c-8,2 -9,-11 -1,-14 Z"/>
+            <path d="M94 156 h5 v24 h-5 Z"/><path d="M119 156 h5 v24 h-5 Z"/>
+          </g>
+          <g transform="translate(272,10) scale(-0.30,0.30)">
+            <path d="M52 100 C34 88 22 66 20 42 C36 58 54 72 66 80 Z"/>
+            <ellipse cx="106" cy="118" rx="54" ry="43" transform="rotate(-7 106 118)"/>
+            <path d="M126 92 C120 72 128 54 144 48 L164 70 C152 78 146 90 146 104 Z"/>
+            <circle cx="152" cy="54" r="17"/>
+            <path d="M139 39 c2,-9 7,-8 8,-2 c2,-9 8,-8 9,-2 c3,-8 9,-6 9,2 c-6,-1 -20,-1 -26,2 Z"/>
+            <path d="M168 52 l17 6 l-17 7 Z"/>
+            <path d="M158 68 c7,2 9,12 1,14 c-8,2 -9,-11 -1,-14 Z"/>
+            <path d="M94 156 h5 v24 h-5 Z"/><path d="M119 156 h5 v24 h-5 Z"/>
+          </g>
+        </g>
+        <path d="M30 86 h260" stroke="#cdb99a" stroke-width="1" fill="none"/>
+      </svg>
+      <p class="hand" style="text-align:center; font-size:16pt; line-height:1.35;">
+        Und jetzt: Mach die Klappe auf.<br>Der Rest kommt von ganz allein.
+      </p>
+    </div>
+
+    <div class="runfoot" style="align-items:flex-end;">
+      <span style="text-transform:none; letter-spacing:0; font-size:7pt; color:#a2907a; max-width:130mm; line-height:1.4; text-align:left;">
+        Preise, Verfügbarkeiten und Links: Stand August 2026, ohne Gewähr — keine Affiliate-Links,
+        keine Provisionen. Dieser Ratgeber ersetzt bei kranken Tieren keinen Tierarztbesuch.
+        Rechtliche Angaben gelten für Deutschland; Details regeln Bundesland und Landkreis.
+      </span>
+      <span class="pno">14</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
