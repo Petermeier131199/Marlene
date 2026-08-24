@@ -11,7 +11,7 @@ dadurch gestochen scharf.
 |---|---|
 | `innerself-detox-intro-1080p-30fps.mp4` | Intro, 1920x1080, 30 fps, 5,00 s, ohne Ton |
 | `innerself-detox-intro-1080p-25fps.mp4` | dieselbe Animation in 25 fps (deutsche Schnitt-Timeline) |
-| `intro-endbild.png` | letzter Frame als Standbild (z. B. Thumbnail) |
+| `intro-endbild.png` | letzter Frame als Standbild - zugleich die Titelbild-Variante mit korrekt konstruierter Blume des Lebens |
 | `cleanplate-ohne-schrift.png` | Hintergrundbild ohne jede Schrift, fuer weitere Varianten |
 
 ## Ablauf (Atemrhythmus)
@@ -38,3 +38,11 @@ Neu rendern (z. B. mit anderem Untertitel oder anderer Laenge):
 
 Texte, Farben und Positionen stehen in `titleart.py`, das Timing oben in
 `render.py`. Benoetigt Pillow, numpy und imageio-ffmpeg.
+
+## Blume des Lebens
+
+Die Blume des Lebens wird als Vektor gezeichnet, nicht aus dem Bild uebernommen:
+19 gleich grosse Kreise im Sechseckraster mit Mittelpunktsabstand r, sodass jeder
+Kreis durch die Mittelpunkte seiner Nachbarn laeuft - nur so entstehen die echten
+Bluetenblaetter. Aussen zwei duenne Begrenzungsringe bei 3r. Siehe
+`titleart.flower_of_life()`.

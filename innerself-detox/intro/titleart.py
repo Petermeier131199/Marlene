@@ -61,25 +61,35 @@ def layout(text, font, track, cx, cy):
     return out, total
 
 
-def flower_of_life(size, r, width=2):
-    """Blume des Lebens als weiche Linienzeichnung (L-Maske), 19 Kreise + Rahmen."""
+def flower_of_life(size, r=None, width=2):
+    """Echte Blume des Lebens: 19 gleich grosse Kreise im Sechseckraster.
+
+    Entscheidend ist der Mittelpunktsabstand: benachbarte Kreise liegen genau r
+    auseinander, jeder Kreis laeuft also durch die Mittelpunkte seiner Nachbarn.
+    Daraus entstehen die Bluetenblaetter. Aussen zwei duenne Ringe bei 3r.
+    """
     ss = 3  # Supersampling fuer saubere Kanten
-    img = Image.new("L", (size * ss, size * ss), 0)
+    if r is None:
+        r = size / 6.35
+    img = Image.new("L", (int(size * ss), int(size * ss)), 0)
     d = ImageDraw.Draw(img)
     c = size * ss / 2.0
     R = r * ss
     lw = max(1, int(width * ss))
+
+    # Sechseckraster mit Abstand R, alle Mittelpunkte bis 2R vom Zentrum -> 19 Kreise
     pts = []
-    for q in range(-3, 4):
-        for s in range(-3, 4):
-            x = R * 1.5 * q
-            y = R * math.sqrt(3) * (s + q / 2.0)
-            if math.hypot(x, y) <= 2 * R + 1:
+    for q in range(-4, 5):
+        for p in range(-4, 5):
+            x = R * (q + p * 0.5)
+            y = R * (math.sqrt(3) / 2.0) * p
+            if math.hypot(x, y) <= 2 * R + 1e-6:
                 pts.append((x, y))
     for x, y in pts:
         d.ellipse([c + x - R, c + y - R, c + x + R, c + y + R], outline=255, width=lw)
-    for rr in (2.62 * R, 2.78 * R):
+
+    # aeussere Begrenzungsringe
+    for rr in (3.0 * R, 3.15 * R):
         d.ellipse([c - rr, c - rr, c + rr, c + rr], outline=255, width=lw)
-    img = img.resize((size, size), Image.LANCZOS)
-    # weiche Vignette, damit die Linien nach aussen ausfransen
-    return img
+
+    return img.resize((int(size), int(size)), Image.LANCZOS)

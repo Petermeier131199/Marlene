@@ -53,7 +53,7 @@ GLYPHS, _ = T.layout(T.TITLE, TFONT, T.TITLE_TRACK, W / 2, T.TITLE_CY)
 SGLYPHS, _ = T.layout(T.SUB, SFONT, T.SUB_TRACK, W / 2, T.SUB_CY)
 
 FOL_SIZE = int(0.58 * H)
-FOL = T.flower_of_life(FOL_SIZE, int(FOL_SIZE * 0.163), width=2)
+FOL = T.flower_of_life(FOL_SIZE, width=2)
 
 
 def _radial_glow():
