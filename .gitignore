@@ -1,0 +1,6 @@
+# Schriften werden nicht mitversioniert - sie liegen frei bei Google Fonts (OFL),
+# die Download-Befehle stehen in der jeweiligen README.
+innerself-detox/intro/fonts/
+essverhalten-video/fonts/
+
+__pycache__/
