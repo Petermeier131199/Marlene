@@ -112,6 +112,33 @@ Dann:
 Texte, Farben und Timing stehen oben in `cards.py`, jede Karte in einer eigenen
 Funktion.
 
+## YouTube-Thumbnail
+
+`thumbnail.py` rendert 1280×720 im gleichen Look. Drei Textvarianten:
+
+| Datei | Zeile | Bemerkung |
+|---|---|---|
+| `out/thumbnail-c-ehrlich.jpg` | 40 MINUTEN **EHRLICH.** | **Empfehlung** – nennt die Länge, verspricht nichts Falsches |
+| `out/thumbnail-a-nackig.jpg` | SEELISCH **NACKIG.** | stärkster Haken, aber siehe unten |
+| `out/thumbnail-b-titel.jpg` | ÜBER ESSEN UND ÜBER MICH | ruhig; wiederholt allerdings nur den Titel |
+
+Zu Variante a: „nackig" neben diesem Thema zieht Klicks an, die niemandem
+nützen – dieselbe Überlegung, aus der der Videotitel nicht so heißt. Die
+Unterzeile fängt es ab, aber die Entscheidung liegt bei dir.
+
+Ein Thumbnail mit Gesicht schlägt reine Schrift auf YouTube deutlich – es wird
+auf dem Handy briefmarkengroß gesehen. Sobald du ein Standbild hast:
+
+    python3 thumbnail.py --foto standbild.png --fokus 0.62 --seite links
+
+`--fokus` verschiebt den Ausschnitt waagerecht (0 = links, 1 = rechts) und
+entscheidet, wo dein Gesicht landet; `--seite` sagt, auf welcher Hälfte die
+Schrift steht – das Gesicht gehört auf die andere. Ein cremefarbener Verlauf
+legt sich über die Textseite, damit die Schrift ruhigen Untergrund bekommt.
+
+Ziffern werden in Montserrat gesetzt und auf die Versalhöhe der Cormorant
+skaliert – aus demselben Grund wie beim Abbinder.
+
 ## Veröffentlichen
 
 Instagram scheidet für 40 Minuten aus – Reels gehen bis 3 Minuten, längere
