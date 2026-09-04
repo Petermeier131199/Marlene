@@ -157,18 +157,21 @@ Empfohlener Weg:
 4. **Alternative Vimeo** (ab ca. 7 €/Monat), falls dir stört, dass YouTube neben
    deinem Video eigene Empfehlungen ausspielt. Vimeo tut das nicht.
 
-### Textbaustein für die Videobeschreibung
+### Videobeschreibung
 
-> Triggerwarnung: In diesem Video spreche ich offen über Körperbild und
-> gestörtes Essverhalten. Wenn dich das Thema gerade selbst belastet, schau es
-> dir nicht allein an – oder lieber gar nicht.
->
-> Wenn du Unterstützung suchst:
-> Beratungstelefon Essstörungen – 0221 892031 (Mo–Do 10–22 Uhr, Fr–So 10–18 Uhr,
-> anonym und kostenfrei)
-> TelefonSeelsorge – 0800 111 0 111 oder 116 123 (rund um die Uhr, anonym und
-> kostenfrei)
-> Im Notfall: 112
+Fertig zum Kopieren in `youtube-beschreibung.txt`. Aufbau und Begründung:
+
+- **Die ersten zwei Zeilen sind die Triggerwarnung.** YouTube zeigt nur rund
+  drei Zeilen, alles weitere steckt hinter „…mehr" und wird kaum gelesen. Eine
+  Warnung, die man aufklappen muss, ist keine.
+- Danach erst der Text, der zum Schauen einlädt.
+- **Die Anlaufstellen stehen über den Kapiteln**, nicht ganz unten. Wer sie
+  braucht, sucht sie nicht.
+- **Kapitel** brauchen mindestens drei Zeitmarken, und die erste muss `0:00`
+  sein – sonst zeigt YouTube gar keine an. Die Platzhalter musst du mit
+  echten Zeitmarken füllen.
+- **Instagram-Link** ganz unten, nicht oben: oben würde er von der Warnung
+  ablenken.
 
 Angaben zum Beratungstelefon geprüft über
 [essstoerungen.bioeg.de](https://essstoerungen.bioeg.de/hilfe-finden/welche-beratung-gibt-es/telefonberatung/)
