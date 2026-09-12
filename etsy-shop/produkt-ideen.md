@@ -1,108 +1,133 @@
-# Produktideen – sortiert nach „was zuerst"
+# Produktideen – drei Nischen zur Auswahl
 
-Bewertung: **Aufwand** (Zeit bis verkaufsfertig) · **Nachfrage** · **Wettbewerb** ·
-**Haltbarkeit** (verkauft es sich auch 2029 noch?)
+Alles hier ist von Grund auf neu und unabhängig von anderen Projekten. Bewertung:
+**Aufwand** bis zum ersten Listing · **Zahlungsbereitschaft** · **Wettbewerb** ·
+**Haltbarkeit** (verkauft es sich 2030 noch?)
 
 ---
 
-## Säule A – Hühner & Selbstversorgung  ⟵ hier starten
+## Nische 1 – Personalisierte Erinnerungsdrucke ⟵ Empfehlung
 
-Warum diese Nische stark ist: Sie verlangt **Sachwissen**, das KI-Massenverkäufer
-nicht haben. Käufer haben gerade Geld für Stall und Tiere ausgegeben – 9 € für ein
-Paket, das Fehler verhindert, ist keine Kaufentscheidung, sondern eine Erleichterung.
-Und es ist ein Thema mit echtem Jahresrhythmus (Küken im Frühjahr, Mauser im Herbst,
-Winterfütterung), also planbar wiederkehrender Traffic.
+Ein Datum, ein Ort, ein Name werden in etwas Schönes übersetzt, das man aufhängt.
+Klassischer Etsy-Kern: Geschenk, emotional, nicht kopierbar, hohe Marge.
 
 | # | Produkt | Aufwand | Preis | Bemerkung |
 |---|---|---|---|---|
-| A1 | **Starter-Set Hühnerhaltung** (Ratgeber + Checkliste + Stallplaner + Legekalender) | **sehr gering – existiert zu 70 %** | 9–14 € | Das Flaggschiff. Zuerst online. |
-| A2 | Ratgeber-PDF einzeln | vorhanden | 4–6 € | Einstiegspreis, füttert A1 |
-| A3 | Ausstattungs-Checkliste zum Abhaken | vorhanden (`huehnerstall-ausstattung.md`) | 3 € | Bester Köder für erste Bewertungen |
-| A4 | **Legekalender / Eier-Tracker** (12 Monate, druckbar) | gering (Skript) | 3–5 € | Klassischer Dauerläufer |
-| A5 | Futter- & Kostenrechner (Excel/Google Sheets) | mittel | 5–8 € | Deine Finanz-Seite trifft die Hühner-Seite |
-| A6 | Küken-Aufzucht-Plan (Woche 1–8, Temperaturtabelle) | mittel | 5 € | Saison: ab Januar listen |
-| A7 | Notfall-Übersicht Krankheiten & Parasiten | mittel | 5 € | **Vorsicht:** keine Heilversprechen, immer „Tierarzt aufsuchen" |
-| A8 | Stallplan-Vorlage zum Selbstzeichnen (Raster + Maße) | gering | 4 € | |
-| A9 | Winter-Spezial (Frostschutz, Licht, Futterumstellung) | gering | 4 € | Ab September |
-| A10 | **Hühnerstall-Schilder / Eier-Etiketten** zum Ausdrucken, personalisierbar | gering (Skript!) | 6–9 € | Personalisierung = höherer Preis, Verschenk-Kaufanlass |
+| 1.1 | **Sternenkarte** zu Datum, Uhrzeit und Ort | mittel (Astronomie-Code) | 15–25 € | Der Klassiker – stark umkämpft, siehe unten |
+| 1.2 | **Stadtplan-Poster** eines Ortes (Kennenlernen, Hochzeit, Heimat) | mittel (OpenStreetMap) | 15–25 € | Weniger überlaufen als Sternenkarten |
+| 1.3 | **Koordinaten-Print** minimalistisch | gering | 9–14 € | Schnellster Einstieg, gleicher Datensatz wie 1.2 |
+| 1.4 | **Zeitstrahl „Unsere Geschichte"** – Meilensteine als Linie | gering | 14–22 € | Kaum Konkurrenz, hohe Emotionalität |
+| 1.5 | **Geburtsposter** (Name, Datum, Uhrzeit, Größe, Gewicht) | gering | 12–18 € | Riesiger, dauerhafter Markt |
+| 1.6 | **Zahlen-Poster zum Jahrgang** („Was 1985 sonst noch geschah") | mittel (Recherche-Datenbank) | 14–20 € | Sehr originell, fast keine deutsche Konkurrenz |
+| 1.7 | **Wortwolke / Namensbedeutung** typografisch gesetzt | gering | 9–14 € | |
+| 1.8 | **Erinnerungsdruck zum Todestag** („Der Himmel an diesem Tag") | mittel | 15–22 € | Sensibel, aber mit echter Nachfrage und ohne Preiskampf |
 
-**A10 ist unterschätzt:** „Frische Eier von …" mit eigenem Namen, im Look eurer
-Ratgeber-Typografie. Wird verschenkt, wird wiedergekauft, ist mit `render.py`-Logik
-in Minuten gebaut und hat fast keine Konkurrenz auf Deutsch.
+### Der ehrliche Teil zur Sternenkarte
+
+Suche „star map" auf Etsy und du bekommst Tausende Ergebnisse. Als reines Motiv ist
+das Rennen gelaufen. Drei Wege führen trotzdem hinein:
+
+1. **Deutsche Anlässe, die englischsprachige Shops nicht bedienen.** Einschulung,
+   Jugendweihe, Silberhochzeit, Firmung, Renteneintritt, Vereinsjubiläum,
+   Hüttenjubiläum, Bestehen der Gesellenprüfung. Das sind eigene Suchbegriffe mit
+   fast keiner Konkurrenz – und derselbe Generator bedient sie alle.
+2. **Astronomische Korrektheit als Verkaufsargument.** Ein großer Teil der
+   Sternenkarten dort ist dekorativ falsch (Sternbilder stimmen nicht zur Uhrzeit,
+   Horizont fehlt). Wer korrekt rechnet, kann genau das im Listing zeigen –
+   und Schenkende lesen so etwas.
+3. **Nicht das Motiv, sondern die Kombination verkaufen.** Sternenkarte *plus*
+   Stadtplan *plus* Zeitstrahl desselben Moments als Dreiersatz: 39 €, keine
+   Konkurrenz, und der Aufwand ist derselbe Datensatz.
+
+**Der eigentliche Hebel: 1.2 und 1.4 statt 1.1.** Weniger romantisch, aber
+deutlich freieres Feld.
+
+### Warum das technisch zu euch passt
+Alle acht Produkte sind **derselbe Generator** mit anderer Zeichenroutine:
+Eingabedaten → Layout → PDF in 5 Formaten → 5 Mockups. Nach dem ersten Produkt
+kostet jedes weitere Tage statt Wochen.
 
 ---
 
-## Säule B – Haushalt & Finanzen (deutschsprachig)
+## Nische 2 – Deutschsprachige Werkzeuge (Excel / Google Sheets)
 
-Der englische Markt für Budget-Planer ist verbrannt. Der **deutsche** nicht – und du
-hast beruflichen Zugang zu dem Thema. Entscheidend: **Vorlagen, keine Beratung.**
-Keine Anlageempfehlungen, keine Renditeversprechen, keine konkreten Produkte nennen.
-Ein Haushaltsbuch ist ein Werkzeug, kein Finanzrat.
+Kein Geschenk, sondern gelöste Probleme. Verkauft sich auf Etsy schwerer (falsche
+Kaufstimmung), dafür **völlig saisonunabhängig**, kaum Konkurrenz auf Deutsch und
+später der bessere Umsatz im eigenen Shop.
 
 | # | Produkt | Aufwand | Preis | Bemerkung |
 |---|---|---|---|---|
-| B1 | **Haushaltsbuch** (Google Sheets + Excel, automatisch rechnend) | mittel–hoch | 9–15 € | Bestseller-Kandidat, hohe Wiederkaufrate zum Jahreswechsel |
-| B2 | Finanzplaner für Paare (gemeinsame/getrennte Kasse) | mittel | 9–12 € | Klare Nische, kaum deutsche Konkurrenz |
-| B3 | Sparziel-Tracker zum Ausmalen (Urlaub, Auto, Notgroschen) | gering | 3–5 € | Emotional, wird auf Instagram geteilt |
-| B4 | Umschlagmethode / Cash-Stuffing-Set deutsch | gering | 5–8 € | Starker Trend, aber trendabhängig |
-| B5 | Jahresabschluss-Mappe (Belege, Fristen, Checklisten) | mittel | 7 € | Saison Januar–April |
-| B6 | Vorlagen-Set „Erstes Nebengewerbe" (EÜR-Basis, Rechnungsvorlage) | mittel | 12–19 € | Höchster Preis, weil B2B-nah |
+| 2.1 | **Nebenkostenabrechnung für Kleinvermieter** | hoch | 19–29 € | Höchste Zahlungsbereitschaft von allen. Achtung: Vorlage, keine Rechtsberatung |
+| 2.2 | **Umzugsplaner** (Checklisten, Fristen, Kostenübersicht) | mittel | 9–14 € | Sehr suchstark, klarer Anlass |
+| 2.3 | **Renovierungs- und Baukosten-Tracker** | mittel | 12–19 € | |
+| 2.4 | **Photovoltaik- / Wärmepumpen-Rechner** | hoch | 15–25 € | Starke deutsche Suchintention, technisch anspruchsvoll = wenig Konkurrenz |
+| 2.5 | **Autokosten-Rechner** (Leasing vs. Kauf, Gesamtkosten) | mittel | 9–14 € | |
+| 2.6 | **WG- und Vereinskasse** | gering | 7–12 € | |
+| 2.7 | **Notfallordner** („Wenn mir etwas passiert" – Unterlagen, Verträge, Zugänge) | mittel | 15–25 € | Dauerhaftes Thema, hohe Relevanz, **ohne** Rechtsberatung: nur Struktur, Verweis auf amtliche Muster |
+| 2.8 | **Schicht- und Urlaubsplaner** für kleine Teams | mittel | 12–19 € | |
 
-**Wichtig:** Tabellen als **Google-Sheets-Kopierlink im PDF** ausliefern (die
-XLSX zusätzlich als Datei). Das ist der etablierte Weg und bleibt unter 20 MB.
+**Auslieferung:** XLSX als Datei **plus** eine PDF-Anleitung mit
+Google-Sheets-Kopierlink. Bleibt unter 20 MB und bedient beide Nutzergruppen.
 
 ---
 
-## Säule C – Ritual & Journaling (Marke Innerself Detox)
+## Nische 3 – Anlass-Papeterie, editierbar
 
-Ziel hier ist **nicht** primär Etsy-Umsatz, sondern Markenaufbau und E-Mail-Adressen
-für den Kurs. Deshalb bewusst kleine, schöne, günstige Produkte in exakt eurer
-bestehenden Farbwelt (`#F5EDE0`, `#C9A45C`, `#C1734A`, `#9CA98F`, `#3A342E`).
+Einladungen, Tischkarten, Menükarten – vom Käufer selbst in Canva anpassbar.
 
 | # | Produkt | Aufwand | Preis | Bemerkung |
 |---|---|---|---|---|
-| C1 | **30-Tage-Innerself-Workbook** (druckbar + digital für GoodNotes) | mittel | 9–12 € | Direkte Vorstufe zum Kurs |
-| C2 | Morgen-/Abendritual-Karten (Set à 30) | gering (Skript) | 5–7 € | |
-| C3 | Blume-des-Lebens-Print in 6 Farbwelten, 3 Formaten | **sehr gering – Code existiert** | 4–6 € | `titleart.flower_of_life()` liefert echte Geometrie statt KI-Matsch |
-| C4 | Mond- & Jahreskreis-Planer | mittel | 7–9 € | Jährlich neu = jährlicher Umsatz |
-| C5 | Affirmationskarten zum Ausschneiden | gering | 4 € | |
-| C6 | Dankbarkeitsjournal, 90 Tage | mittel | 7 € | |
+| 3.1 | Einladungsset Hochzeit (Einladung, Menü, Tischkarte, Danksagung) | mittel | 15–25 € | |
+| 3.2 | Kindergeburtstag nach Motto | gering | 7–12 € | Hohe Frequenz, niedriger Preis |
+| 3.3 | Einschulung / Schultüte / Zeugnisfeier | gering | 7–14 € | Saison Mai–September, deutsch |
+| 3.4 | Trauerpapeterie (Traueranzeige, Danksagung) | mittel | 15–25 € | Wenig Konkurrenz, sensible Zielgruppe, sehr dankbar |
 
-C3 ist der schnellste Testballon des ganzen Shops: Der Code ist geschrieben, die
-Geometrie ist korrekt (das ist bei Blume-des-Lebens-Prints auf Etsy erstaunlich
-selten), und das Rendern von 18 Varianten ist ein Nachmittag.
+**Der Haken, den man kennen muss:** Editierbare Vorlagen erzeugen **Support**.
+Käufer, die Canva nicht bedienen können, schreiben dir – und zwar am Wochenende, in
+Eile, vor ihrer Feier. Das ist der Preis für diese Nische. Wer das nicht will, bleibt
+bei fertig gerenderten Dateien (Nische 1).
 
 ---
 
-## Was gerade wirklich gefragt ist – und was davon hält
+## Was gerade gefragt ist – und was davon hält
 
-| Kategorie | Nachfrage 2026 | Hält bis 2029+ | Urteil |
+| Kategorie | Nachfrage 2026 | Hält bis 2030 | Urteil |
 |---|---|---|---|
-| Fach-Printables mit echtem Wissen (Tierhaltung, Garten, Handwerk) | mittel | **ja** | ✅ eure Nische |
-| Deutschsprachige Tabellen/Tracker | mittel | **ja** | ✅ zweite Säule |
-| Personalisierte Druckvorlagen (Namen, Daten) | hoch | **ja** | ✅ Skript-Vorteil |
-| Canva-Vorlagen für Kleinunternehmer | hoch | ja | ⚠️ hart umkämpft, aber lukrativ |
-| Digitale Planer (GoodNotes/iPad) | hoch | ja | ⚠️ hoher Erstaufwand |
-| Einladungen/Karten (editierbar, Canva/Corjl) | sehr hoch | ja | ⚠️ Support-intensiv |
+| Personalisierte Drucke (Daten, Orte, Namen) | hoch | **ja** | ✅ Kern |
+| Made-to-Order digital mit echter Individualisierung | hoch | **ja** | ✅ Burggraben |
+| Deutschsprachige Fachwerkzeuge | mittel | **ja** | ✅ Grundrauschen |
+| Editierbare Papeterie (Canva/Corjl) | sehr hoch | ja | ⚠️ support-intensiv |
+| Digitale Planer (GoodNotes) | hoch | ja | ⚠️ hoher Erstaufwand, viel Konkurrenz |
+| SVG/Cricut-Dateien | hoch | ja | ⚠️ eigene Welt, eigener Shop |
 | Generische Wall Art / KI-Bilder | hoch | **nein** | ❌ überflutet |
 | „2026 Planner" ohne Nische | hoch | nein | ❌ Preiskampf |
-| Prompt-Bundles / KI-Kurse | Blase | nein | ❌ verstößt gegen Etsy-Regeln |
-| SVG/Cricut-Dateien | hoch | ja | ⚠️ eigene Welt, eigener Shop |
+| Prompt-Bundles, KI-Kurse | Blase | nein | ❌ gegen Etsy-Regeln |
 
-**Muster dahinter:** Alles, was eine KI in 30 Sekunden erzeugen kann, ist wertlos
-geworden. Alles, wofür man etwas **wissen** oder **besitzen** muss (Erfahrung mit
-Hühnern, Finanz-Know-how, eine eigene Bildsprache, eine Render-Pipeline), wird
-dadurch sogar mehr wert. Danach sollte jedes Produkt ausgewählt werden.
+**Das Muster:** Was eine KI in 30 Sekunden erzeugt, ist wertlos geworden. Was
+**Daten des Käufers**, **Fachwissen** oder **eine gebaute Maschine** voraussetzt,
+ist dadurch sogar mehr wert. Jedes Produkt an dieser Frage messen.
 
 ---
 
-## Die 30-Minuten-Prüfung vor jedem neuen Produkt
+## Auswahlverfahren – so entscheidest du, nicht ich
 
-1. Suchbegriff in die **Etsy-Suche**. Weniger als ~200 Treffer = Nische frei.
-   Über 10.000 = nur mit klarem Alleinstellungsmerkmal.
-2. Die ersten 10 Treffer ansehen: **Bewertungszahlen**. Wenn niemand über 50
-   Bewertungen hat, kauft dort niemand. Wenn alle über 2.000 haben, kommst du nicht rein.
-   Der Sweet Spot: einzelne Shops mit 100–800 Bewertungen.
-3. Nach **„Bestseller"-Badges** und Verkaufszahlen schauen – Etsy zeigt oft
-   „X Personen haben das im Warenkorb".
+Du musst die Nische mögen, sonst stirbt sie in Monat drei. Drei Filter:
+
+1. **Kann ich über dieses Thema 30 Listings schreiben, ohne mich zu langweilen?**
+   Wenn nein: raus. 30 ist das realistische Minimum für einen tragenden Shop.
+2. **Habe ich dazu irgendeinen Zugang?** Ein Hobby, ein Beruf, ein Lebensabschnitt,
+   ein Verein, eine Sache, die du selbst gebraucht hättest. Das ist kein Luxus –
+   es liefert die Detailgenauigkeit, die dich von Massenware trennt.
+3. **Verlangt es entweder Kundendaten oder Fachwissen?** Wenn nein, kann es kopiert
+   werden, und dann wird es kopiert.
+
+### Die 30-Minuten-Prüfung vor jedem einzelnen Produkt
+
+1. Suchbegriff in die **Etsy-Suche**. Unter ~200 Treffer = freies Feld. Über 10.000
+   = nur mit klarem Alleinstellungsmerkmal.
+2. Die ersten 10 Treffer: **Bewertungszahlen**. Niemand über 50 → dort kauft
+   niemand. Alle über 2.000 → da kommst du nicht rein. Sweet Spot: einzelne Shops
+   mit 100–800 Bewertungen.
+3. **Auf Deutsch gegenprüfen.** Oft ist die englische Suche voll und die deutsche
+   fast leer – das ist regelmäßig die ganze Geschäftsidee.
 4. Ehrliche Frage: **Kann ich es besser als Platz 3?** Wenn nein, nicht bauen.
