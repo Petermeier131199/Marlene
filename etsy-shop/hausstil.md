@@ -128,3 +128,72 @@ der Shop wie **ein** Werk und nicht wie ein Sortiment.
 1. Name des eigenen Blattes und der Kolumnistin/des Chronisten.
 2. Blumensprache-Katalog: 12–20 Pflanzen mit Bedeutung, Motiv und Anlass.
 3. Fragebogen für Linie 1 – je besser die Fragen, desto kürzer das Schreiben.
+
+---
+
+## 6. Schreibprinzipien – der eigentliche Kern
+
+Abgeleitet aus den vorhandenen Briefen. Das ist der Teil, den niemand kopieren
+kann, und deshalb der wertvollste Besitz des ganzen Projekts.
+
+**a) Der Brief handelt vom Schreibenden, nicht von der beschenkten Person.**
+Nicht „du bist wunderbar", sondern „das hat sich in mir verändert, seit es dich
+gibt". Lob ist austauschbar, eine Veränderung ist es nie. Das ist die Regel, die
+aus einem netten Text einen unvergesslichen macht.
+
+**b) Es gibt eine Bewegung, nicht nur einen Zustand.**
+Vorher – Wendepunkt – Jetzt. („Ich habe sie immer versteckt … mit jedem Mal heilt
+ein Stück … dann schaffe ich es, sie in die Welt zu strahlen.") Ein Brief ohne
+Bewegung ist eine Grußkarte.
+
+**c) Ein Bild wird durchgehalten, nicht gewechselt.**
+Ein einziges Motiv (etwas Zerbrechliches, das geteilt wird) trägt den ganzen Text.
+Drei Metaphern in einem Absatz löschen sich gegenseitig aus.
+
+**d) Der Schluss ist kürzer als der Rest.**
+Nach langen Sätzen ein kurzer. Das Gefühl entsteht im Bruch.
+
+**e) Datum statt Anrede.**
+Ein Datum oben macht den Text zum Dokument und erspart jede floskelhafte Anrede.
+
+**Unverhandelbar:** Diese Briefe selbst werden nie verkauft, nicht als Beispiel und
+nicht als Vorlage. Verkauft wird ausschließlich die **Methode** – und für
+Auftragsarbeiten jeweils ein neu geschriebener Text.
+
+---
+
+## 7. Der Fragebogen für Auftragsarbeiten
+
+Die Qualität des Textes entsteht bei den Fragen, nicht beim Schreiben. Gute
+Fragen verkürzen die Arbeit von drei Stunden auf anderthalb. Entwurf:
+
+1. Was hat dieser Mensch in **dir** verändert, seit es ihn in deinem Leben gibt?
+2. Woran hättest du es früher nicht geglaubt?
+3. Ein konkreter Moment, an den du oft denkst – was genau ist da passiert?
+4. Was sagst du dieser Person nie, obwohl es stimmt?
+5. Welches Wort würde sie über sich selbst niemals benutzen – du aber schon?
+6. Was soll die Person **fühlen**, wenn sie fertig gelesen hat?
+7. Zwei bis drei Dinge, die auf keinen Fall vorkommen dürfen.
+
+Frage 1 und 3 tragen den Text. Frage 7 verhindert die peinlichen Fehler.
+
+---
+
+## 8. Produkt: Das Briefjahr (Vorlagensystem)
+
+Der Adventskalender aus 24 selbst geschriebenen Briefen ist als **System**
+weiterzugeben, nicht als Inhalt:
+
+- 24 gestaltete Briefbögen im Hausstil (druckbar, A5/A6), leer.
+- 24 **Schreibimpulse** – je eine Frage oder ein Satzanfang, aufgebaut nach den
+  Prinzipien oben, in dramaturgischer Reihenfolge (leicht beginnen, in der Mitte
+  mutig werden, zum Schluss schlicht).
+- Eine kurze Anleitung: die fünf Regeln, was ein Brief nicht sein soll, wie man
+  anfängt, wenn man nicht anfangen kann.
+- Optional: Umschlagvorlagen und Zahlen 1–24.
+
+Preis 14–19 €, Saison September–November, unbegrenzt verkaufbar, kein Aufwand je
+Bestellung. Variante für das ganze Jahr: 12 Briefe, einer pro Monat.
+
+Damit wird genau das weitergegeben, was gefragt war – das Gespür, nicht das
+Geschenk. Die eigenen Worte bleiben privat, die Käuferin schreibt ihre eigenen.
