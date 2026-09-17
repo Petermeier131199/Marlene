@@ -20,6 +20,7 @@ Die Motivwand selbst ist in PLAN.md und den Entwuerfen dokumentiert.
 - Korpustiefe ist **58 cm** (nicht 35 cm).
 - Daneben eine **selbstgebaute Sitzbank**, die das Katzenklo verbirgt.
   Harte Randbedingung: **darf in der Tiefe nicht vor dem PAX stehen.**
+- **Nutzbare Wandlänge: 250 cm, inklusive PAX.**
 
 ## Schuhschrank – Konsequenz aus 58 cm Tiefe
 
@@ -36,82 +37,130 @@ Zwei Wege, das zu nutzen:
 
 Kapazitaet bei 50 cm Rahmenbreite: rund 28–32 Paar.
 
-## Sitzbank mit Katzenklo-Versteck
+## Die 250 cm aufteilen
 
-### Fertigmass
+250 cm nutzbare Wandlänge, PAX inklusive. Ein PAX ist 50 cm breit, es
+bleiben also **200 cm**. Das ist deutlich mehr, als die erste Planung
+(120 cm Bank) angenommen hatte.
 
-120 × 58 × 48 cm (B × T × H)
+Drei Aufteilungen sind sinnvoll:
 
-Hoehe **48 cm**, nicht 43 cm: bei 43 cm bleibt nur ca. 39 cm lichte
-Innenhoehe, das ist fuer eine Katze im Klo zu niedrig. 48 cm ist
-zugleich eine bequeme Sitzhoehe.
+| | Aufbau | Summe | Haken |
+|---|---|---|---|
+| **1** | Bank 150 + PAX 50 + PAX 50 | 250 cm | zweiter PAX bleibt im Flur |
+| 2 | Bank 200 + PAX 50 | 250 cm | kein Platz für Staubsauger/Besen |
+| 3 | Bank 120 + PAX 50 + 80 cm frei | 250 cm | 80 cm totes Wandstück |
 
-Tiefe 58 cm = exakt PAX-Tiefe. Die Rueckwand liegt deshalb **innen**
-zwischen den Seiten, nicht hinten aufgesetzt – sonst waere die Bank
-59,8 cm tief und stuende vor dem Schrank.
+**Empfehlung: Aufteilung 1.**
+
+Der Grund ist die offene Frage, die seit Anfang mitläuft: Staubsauger,
+Besen und Bügelbrett brauchen einen Platz, und in eine 48 cm hohe Bank
+passt nichts davon. Ein zweiter PAX als **Putzschrank** löst das auf
+einen Schlag – und 250 cm gehen ohne Rest auf.
+
+Das heisst allerdings: der zweite PAX bleibt im Flur und geht **nicht**
+ins Schlafzimmer. Was dort dafür vorgesehen war, braucht dann eine
+andere Lösung. Das ist die einzige echte Abwägung an dieser Stelle.
+
+Reihenfolge von der Terrassentür aus:
+**Bank – PAX Schuhe/Jacken (Spiegeltür) – PAX Putzschrank.**
+Man kommt herein, setzt sich, zieht die Schuhe aus und räumt sie in den
+Schrank direkt daneben.
+
+### Der zweite PAX als Putzschrank
+
+Innenmaß 46,4 × 56,4 × 196,8 cm. Bügelbrett (ca. 140 cm zusammengeklappt),
+Besen (130 cm) und Staubsauger stehen aufrecht darin.
+
+| Einbauhöhe | Element | Inhalt |
+|---|---|---|
+| 0 – 155 cm | **nichts** | Bügelbrett, Besen, Staubsauger, Wischmopp |
+| 155 cm | KOMPLEMENT Boden | Putzmittel |
+| 176 cm | KOMPLEMENT Boden | Vorräte, Selten-Gebrauchtes |
+
+Zusatzkosten: 2 × KOMPLEMENT Boden 50 × 58 (302.779.59) = **20 €**.
+Die Tür hat der Schrank schon – getauscht wird nur die des Schuhschranks.
+
+---
+
+## Sitzbank mit Katzenklo-Versteck, 150 cm
+
+### Fertigmaß
+
+150 × 58 × 48 cm (B × T × H)
+
+Höhe **48 cm**, nicht 43 cm: bei 43 cm bleibt nur ca. 39 cm lichte
+Innenhöhe, das ist für eine Katze im Klo zu niedrig. 48 cm ist zugleich
+eine bequeme Sitzhöhe.
+
+Tiefe 58 cm = exakt PAX-Tiefe. Die Rückwand liegt deshalb **innen**
+zwischen den Seiten, nicht hinten aufgesetzt – sonst wäre die Bank
+59,8 cm tief und stünde vor dem Schrank.
 
 ### Fachaufteilung
 
-Innenbreite gesamt 1164 mm, abzueglich Mittelwand 18 mm = 1146 mm.
+Innenbreite gesamt 146,4 cm, abzüglich zwei Mittelwänden = 142,8 cm.
 
-| Fach | Innenbreite | Innentiefe | Lichte Hoehe |
+| Fach | Innenbreite | Innentiefe | Lichte Höhe |
 |---|---|---|---|
-| links: Katzenklo | 620 mm | 562 mm | 437 mm |
-| rechts: Stauraum | 526 mm | 562 mm | 437 mm |
+| 1 – Katzenklo | 62,0 cm | 56,2 cm | 43,7 cm |
+| 2 – Stauraum | 40,4 cm | 56,2 cm | 43,7 cm |
+| 3 – Stauraum | 40,4 cm | 56,2 cm | 43,7 cm |
 
-Das linke Fach ist bewusst breiter als das rechte – es muss eine
-60 cm breite Wanne aufnehmen.
+Zwei Mittelwände, nicht eine: eine 25-mm-Platte über 150 cm trägt einen
+sitzenden Menschen nicht ohne Durchbiegen. Mit zwei Stützen ist die
+grösste freie Spannweite 40,4 cm – das hält.
 
 ### Zuschnittliste (18 mm beschichtete Platte, Sitzplatte 25 mm)
 
-| Teil | Mass (mm) | Anzahl |
+| Teil | Maß (mm) | Anzahl |
 |---|---|---|
 | Seitenwand | 580 × 455 | 2 |
-| Rueckwand (eingelassen, hinten buendig) | 1164 × 455 | 1 |
-| Boden | 1164 × 562 | 1 |
-| Mittelwand | 562 × 437 | 1 |
-| Tuerblatt links (Katzenklo) | 614 × 431 | 1 |
-| Tuerblatt rechts (Stauraum) | 520 × 431 | 1 |
-| Sitzplatte, 25 mm | 1200 × 580 | 1 |
+| Rückwand (eingelassen, hinten bündig) | 1464 × 455 | 1 |
+| Boden | 1464 × 562 | 1 |
+| Mittelwand | 562 × 437 | 2 |
+| Türblatt Fach 1 (Katzenklo) | 614 × 431 | 1 |
+| Türblatt Fach 2 | 398 × 431 | 1 |
+| Türblatt Fach 3 | 398 × 431 | 1 |
+| Sitzplatte, 25 mm | 1500 × 580 | 1 |
 
-Tuerblaetter eingelassen, 3 mm Luft ringsum.
+Türblätter eingelassen, 3 mm Luft ringsum.
 
-Die linke Tuer aussen anschlagen und ueber die volle Fachbreite
-oeffnen lassen: Tuer auf, Wanne auf dem Boden nach vorne
-herausziehen, ins Bad tragen. Eine aufklappbare Sitzplatte ist dann
-unnoetig – die waere nur eine sichtbare Fuge.
+Die Tür von Fach 1 aussen anschlagen und über die volle Fachbreite
+öffnen lassen: Tür auf, Wanne auf dem Boden nach vorne herausziehen,
+ins Bad tragen. Eine aufklappbare Sitzplatte ist dann unnötig – die wäre
+nur eine sichtbare Fuge.
 
 ### Kritische Details
 
-- **Katzeneinstieg:** rundes Loch 20 cm Durchmesser in der linken
-  Tuer, Unterkante 10 cm ueber dem Innenboden, horizontal mittig.
-- **Landestreifen:** die Wanne ist 40 cm tief, das Fach 56,2 cm.
-  Die 16,2 cm davor bleiben frei. Die Katze landet dort, steigt von
-  dort ueber den Wannenrand und streift beim Herausgehen die Pfoten
-  ab. Dort landet die Streu, nicht auf den Fliesen.
-- **Auskleidung:** Boden mit PVC oder Acrylglas auslegen, 3 cm
-  hochgestellter Rand. Mindestens der Landestreifen, besser der ganze
-  Fachboden.
-- **Belueftung:** zwei bis drei Loecher à 30 mm in der Rueckwand des
-  Katzenklo-Fachs, nahe der Oberkante.
+- **Katzeneinstieg:** rundes Loch 20 cm Durchmesser in der Tür von
+  Fach 1, Unterkante 10 cm über dem Innenboden, horizontal mittig.
+- **Landestreifen:** die Wanne ist 40 cm tief, das Fach 56,2 cm. Die
+  16,2 cm davor bleiben frei. Die Katze landet dort, steigt von dort
+  über den Wannenrand und streift beim Herausgehen die Pfoten ab. Dort
+  landet die Streu, nicht auf den Fliesen.
+- **Auskleidung:** Boden von Fach 1 mit PVC oder Acrylglas auslegen,
+  3 cm hochgestellter Rand.
+- **Belüftung:** zwei bis drei Löcher à 30 mm in der Rückwand von
+  Fach 1, nahe der Oberkante.
 
 ### Wanne
 
 **Edelstahl-Metzgerwanne / Fleischerwanne 60 × 40 × 20 cm**,
 Gastro-Bedarf, ca. 50–90 €.
 
-Warum nicht kleiner: Faustregel ist 1,5 × Koerperlaenge. Eine
-ausgewachsene Katze hat 45–50 cm Koerperlaenge, gebraucht wird also
-eher 65–75 cm; 50 × 40 cm ist die Untergrenze. Eine 40 × 30 cm Wanne
-ist Kitten-Format – bei 30 cm Breite kann sich die Katze nicht in der
-Wanne drehen, ohne ueber den Rand zu treten.
+Warum nicht kleiner: Faustregel ist 1,5 × Körperlänge. Eine ausgewachsene
+Katze hat 45–50 cm Körperlänge, gebraucht wird also eher 65–75 cm;
+50 × 40 cm ist die Untergrenze. Eine 40 × 30 cm Wanne ist Kitten-Format –
+bei 30 cm Breite kann sich die Katze nicht in der Wanne drehen, ohne über
+den Rand zu treten.
 
-Der uebliche Grund, klein zu kaufen (das Ding steht sichtbar im Raum),
-faellt hier weg: die Wanne verschwindet vollstaendig in der Bank.
-Also so gross wie das Fach hergibt.
+Der übliche Grund, klein zu kaufen (das Ding steht sichtbar im Raum),
+fällt hier weg: die Wanne verschwindet vollständig in der Bank. Also so
+gross wie das Fach hergibt.
 
-Edelstahl statt Kunststoff, weil Kunststoff ueber Jahre Geruch
-aufnimmt und irgendwann nicht mehr sauber wird.
+Edelstahl statt Kunststoff, weil Kunststoff über Jahre Geruch aufnimmt
+und irgendwann nicht mehr sauber wird.
 
 Bei 5–7 cm Streu bleibt ein wirksamer Rand von 13–15 cm.
 
@@ -119,20 +168,31 @@ Bei 5–7 cm Streu bleibt ein wirksamer Rand von 13–15 cm.
 
 | Posten | ca. |
 |---|---|
-| Zuschnitt 18 mm beschichtet + Sitzplatte 25 mm | 90–120 € |
-| Beschlaege, Scharniere, Griff | 20–30 € |
+| Zuschnitt 18 mm beschichtet + Sitzplatte 25 mm | 110–150 € |
+| Beschläge, Scharniere, Griffe | 30–40 € |
 | PVC/Acryl-Auskleidung | 15–25 € |
 | Edelstahlwanne 60 × 40 × 20 | 50–90 € |
-| **Summe** | **175–265 €** |
+| **Summe Bank** | **205–305 €** |
+
+## Gesamtkosten der Ankunftszone
+
+| | ca. |
+|---|---|
+| Schuhschrank-Innenleben + ÅHEIM Spiegeltür (Variante B) | 195 € |
+| Putzschrank-Innenleben (2 Böden) | 20 € |
+| Sitzbank 150 cm inkl. Wanne | 205–305 € |
+| **Summe** | **420–520 €** |
 
 ## Offen
 
-- **Breite des PAX** – 50, 75 oder 100 cm?
-- **Flurbreite an dieser Stelle.** 120 × 58 cm ist ein ordentlicher
-  Klotz; ob daneben noch Durchgang bleibt, haengt daran.
-- **Anzahl der Katzen.** Bei mehr als einer gilt n+1. Dann entweder
-  eine zweite Station woanders, oder die Bank auf 150 cm verlaengern
-  und zwei 60er-Wannen nebeneinander stellen (Fach 124 cm, Rest
-  Stauraum).
-- **Staubsauger, Besen, Buegelbrett** – wohin, wenn der zweite PAX
-  ins Schlafzimmer geht?
+- **Anzahl der Katzen.** Bei mehr als einer gilt n+1. Fach 1 ist 62 cm
+  breit und nimmt eine Wanne auf; eine zweite Station müsste woanders
+  stehen.
+- **Bleibt der zweite PAX im Flur?** Davon hängt die ganze Aufteilung ab
+  (siehe oben).
+- **Türanschlag** der Spiegeltür: zur Wand hin, nicht in den Durchgang.
+
+## Zeichnung
+
+Innenleben des Schuhschranks, maßstäblich:
+https://claude.ai/artifact/CVxMSx2rpuSTwe1TVJVqy8

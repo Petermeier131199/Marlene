@@ -97,9 +97,12 @@ mitmuss, den Boden bei 99,2 cm weglassen und die Schuhzone bei
 | 118,4 cm | KOMPLEMENT Boden | 4 Paar |
 | 137,6 cm | KOMPLEMENT Boden | 4 Paar |
 | 156,8 cm | KOMPLEMENT Boden | 4 Paar |
-| 176,0 cm | KOMPLEMENT Boden | Oberzone 20,8 cm: 2 × SKUBB Kasten |
+| 176,0 cm | KOMPLEMENT Boden | Oberzone 20,8 cm: 1 × SKUBB Kasten |
 
-**Kapazität: 32 Paar + 2 Kästen** (Schuhpflege, Saisonales).
+**Kapazität: 32 Paar + 1 Kasten** (Schuhpflege, Saisonales).
+
+Nur einer: der SKUBB misst 44 × 55 cm, das Innenmaß ist 46,4 × 56,4 cm –
+ein zweiter passt weder daneben noch dahinter.
 
 Fachhöhe der festen Böden: 19,2 cm lichte Höhe = 6 Raster. Reicht für
 Sneaker und Halbschuhe. Für flache Schuhe und Sandalen genügen 16,0 cm
@@ -111,10 +114,10 @@ Sneaker und Halbschuhe. Für flache Schuhe und Sandalen genügen 16,0 cm
 |---|---|---|---|---|
 | KOMPLEMENT Schuhregal, ausziehbar, weiß, 50 × 58 | 802.574.64 | 3 | 25 € | 75 € |
 | KOMPLEMENT Boden, weiß, 50 × 58 | 302.779.59 | 5 | 10 € | 50 € |
-| SKUBB Kasten, weiß, 44 × 55 × 19 | (im Laden prüfen) | 2 | ca. 10 € | 20 € |
+| SKUBB Kasten, weiß, 44 × 55 × 19 | (im Laden prüfen) | 1 | ca. 10 € | 10 € |
 | ÅHEIM Tür, Spiegelglas, 50 × 195 | 803.319.30 | 1 | 95 € | 95 € |
 | KOMPLEMENT Scharnier, sanft schließend (3er-Set) | 002.145.05 | 1 | 10 € | 10 € |
-| **Summe** | | | | **250 €** |
+| **Summe** | | | | **240 €** |
 
 ---
 
@@ -154,3 +157,8 @@ sonst steht die Spiegeltür im Weg, wenn man hereinkommt.
 - [KOMPLEMENT Kleiderstange, weiß, 50 cm](https://www.ikea.com/de/de/p/komplement-kleiderstange-weiss-90256893/)
 - [ÅHEIM Tür, Spiegelglas, 50×195](https://www.ikea.com/de/de/p/aheim-tuer-spiegelglas-80331930/)
 - [KOMPLEMENT Scharnier, sanft schließend](https://www.ikea.com/de/de/p/komplement-scharnier-sanft-schliessend-00214505/)
+
+## Zeichnung
+
+Maßstäbliche Ansichten beider Varianten, Draufsicht und Einbauhöhen:
+https://claude.ai/artifact/CVxMSx2rpuSTwe1TVJVqy8
