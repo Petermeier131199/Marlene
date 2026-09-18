@@ -5,7 +5,9 @@ vs-logo.png
 vs-blume.png
 *.ttf
 
-# 4K-Overlays mit Alphakanal sprengen das GitHub-Limit von 100 MB pro Datei.
-# Sie entstehen reproduzierbar aus render_ck.py; die Auslieferung laeuft
-# ueber den Download, kleinere Fassungen liegen unter assets/.
+# 4K-Master: reproduzierbar aus render_ck.py und zu gross fuer Git
+# (GitHub blockt ab 100 MB; eine Bauchbinde in 4K/60 mit Alphakanal liegt
+# unvermeidlich darueber). Versioniert werden die 1080p-Fassungen und die
+# Vorschauen unter vorschau/.
 assets/*.mov
+assets/*.mp4

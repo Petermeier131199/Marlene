@@ -28,7 +28,7 @@ def encode(name, frames, alpha, dauer):
         args = ["-c:v", "png", "-pix_fmt", "rgba"]
         pix_in = "rgba"
     else:
-        args = ["-c:v", "libx264", "-preset", "slow", "-crf", "15",
+        args = ["-c:v", "libx264", "-preset", "slow", "-crf", "18",
                 "-pix_fmt", "yuv420p", "-movflags", "+faststart"]
         pix_in = "rgb24"
     cmd = [FF, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", pix_in,
@@ -178,22 +178,19 @@ def faecher(dauer=1.2):
 _NOISE = None
 
 
-def _koernung(img, staerke=3.0):
-    """Feine Koernung gegen Streifenbildung in dunklen Verlaeufen.
+def _koernung(img, staerke=1.6):
+    """Feines Dither gegen Streifenbildung in den dunklen Verlaeufen.
 
-    Acht vorberechnete Rauschfelder im Wechsel - neues Rauschen je Frame waere
-    bei 4K der teuerste Schritt im ganzen Durchlauf.
+    Bewusst EIN feststehendes Rauschfeld fuer alle Frames. Streifenbildung ist
+    ein raeumliches Problem, kein zeitliches - und Rauschen, das sich je Bild
+    aendert, kostet bei 4K/60 ein Vielfaches an Datenrate, weil der Encoder
+    zwischen den Bildern nichts mehr fortschreiben kann.
     """
     global _NOISE
     if _NOISE is None:
-        rng = np.random.default_rng(7)
-        _NOISE = [rng.normal(0, staerke, (H, W, 1)).astype(np.float32) for _ in range(8)]
-    a = np.asarray(img, np.float32) + _NOISE[_koernung.i % 8]
-    _koernung.i += 1
-    return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8), "RGB")
-
-
-_koernung.i = 0
+        _NOISE = np.random.default_rng(7).normal(0, staerke, (H, W, 1)).astype(np.float32)
+    return Image.fromarray(
+        np.clip(np.asarray(img, np.float32) + _NOISE, 0, 255).astype(np.uint8), "RGB")
 
 
 def _karte_clip(name, bauen, dauer, ein=1.3, aus=1.0):
