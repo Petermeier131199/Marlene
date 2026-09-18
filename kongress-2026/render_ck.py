@@ -11,7 +11,9 @@ import imageio_ffmpeg
 import brandkit as B
 import layouts as L
 
-FPS = 60
+FPS = 30            # 60 / 30 geht glatt auf: keine ungleichmaessige
+                    # Bildverdopplung in einer 60p-Timeline
+AUSGABE = (1920, 1080)
 W, H = B.W, B.H
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 OUT = sys.argv[1] if len(sys.argv) > 1 else "out"
@@ -31,8 +33,11 @@ def encode(name, frames, alpha, dauer):
         args = ["-c:v", "libx264", "-preset", "slow", "-crf", "18",
                 "-pix_fmt", "yuv420p", "-movflags", "+faststart"]
         pix_in = "rgb24"
+    # Aufgebaut wird in 4K, ausgegeben in 1080p: das Herunterrechnen wirkt wie
+    # achtfaches Antialiasing, Schrift und Goldlinien bleiben dadurch sauber.
+    skala = ["-vf", f"scale={AUSGABE[0]}:{AUSGABE[1]}:flags=lanczos"]
     cmd = [FF, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", pix_in,
-           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", *args, pfad]
+           "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-", *skala, *args, pfad]
     p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
     n = int(round(dauer * FPS))
     for i in range(n):
@@ -259,7 +264,7 @@ def logo_eck():
     lay.alpha_composite(wort, (x, 150))
     a = lay.getchannel("A").point(lambda v: int(v * 0.82))
     lay.putalpha(a)
-    lay.save(os.path.join(OUT, "logo-eck.png"))
+    lay.resize(AUSGABE, Image.LANCZOS).save(os.path.join(OUT, "logo-eck.png"))
     print("  logo-eck.png")
 
 

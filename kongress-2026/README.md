@@ -3,7 +3,13 @@
 Grafikpaket für das Kongressvideo mit Vanessa Spaleck, Thema
 „Erkenne Deinen Seelenplan", Online-Event 01.–11. November 2026.
 
-Alles in **3840 × 2160, 60 fps**.
+Alles in **1920 × 1080, 30 fps**.
+
+Aufgebaut wird intern in 4K und erst beim Ausgeben auf 1080p heruntergerechnet –
+das wirkt wie achtfaches Antialiasing, Schrift und Goldlinien bleiben dadurch
+sauber. 30 statt 25 fps, weil 60 geteilt durch 30 glatt aufgeht: In einer
+60p-Timeline wird jedes Bild gleichmäßig verdoppelt, bei 25 fps würde es
+ungleichmäßig ruckeln.
 
 ## Dateien
 
@@ -42,8 +48,11 @@ Mehr ist nicht nötig – keine Maske, kein Blendmodus, keine Deckkraftkurve.
 
 MOV mit PNG-Codec und echtem Alphakanal, verlustfrei. Importiert direkt in
 Premiere Pro, DaVinci Resolve und Final Cut. Bei diesen Inhalten ist das
-kleiner als ProRes 4444 (gemessen 22 gegen 29 MB am selben Testclip) – eine
-ProRes-Fassung liefere ich auf Zuruf nach.
+kleiner als ProRes 4444 (gemessen 362 gegen 160 MB an derselben Bauchbinde) –
+eine ProRes-Fassung liefere ich auf Zuruf nach.
+
+In 4K/60 lagen dieselben Dateien bei 20 bis 265 MB und damit über dem, was
+GitHub annimmt; in 1080p/30 sind es zusammen rund 95 MB.
 
 Falls dein Schnittprogramm Alpha ignoriert und die Overlays schwarz erscheinen:
 Interpretation auf „Straight (Unmatted)" bzw. „Alpha-Kanal: Gerade" stellen.
