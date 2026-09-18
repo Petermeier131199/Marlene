@@ -1,0 +1,89 @@
+# Channeling Kongress 2026 – Einblendungen & Übergänge
+
+Grafikpaket für das Kongressvideo mit Vanessa Spaleck, Thema
+„Erkenne Deinen Seelenplan", Online-Event 01.–11. November 2026.
+
+Alles in **3840 × 2160, 60 fps**.
+
+## Dateien
+
+### Overlays (mit Alphakanal – auf eine Spur über dein Video legen)
+
+| Datei | Dauer | Einsatz |
+|---|---|---|
+| `bauchbinde-vanessa-spaleck.mov` | 8,0 s | Namenseinblendung unten links. Einmal nach ca. 10–20 s, bei langen Videos ein zweites Mal nach einem Kapitelwechsel. |
+| `uebergang-lichtbluete.mov` | 1,0 s | Hauptübergang für Kapitelwechsel. |
+| `uebergang-atemblende.mov` | 0,6 s | Schnitte innerhalb eines Kapitels. |
+| `uebergang-faecher.mov` | 1,2 s | Ihr Lotus-Fächer, sparsam einsetzen – einmal als Höhepunkt. |
+| `logo-eck.png` | Standbild | Dezente Dauereinblendung oben rechts. |
+
+### Vollbildkarten (eigener Hintergrund, einfach dazwischenschneiden)
+
+| Datei | Dauer | Einsatz |
+|---|---|---|
+| `titel-opener.mp4` | 6,5 s | Vorspann: Kongress-Logo, Termin, Speakerin. |
+| `kapitelkarte-beispiel.mp4` | 4,5 s | Muster für die Kapitel-Zwischentitel. |
+| `outro-anmeldung.mp4` | 8,0 s | Abspann mit Termin und Anmeldehinweis. |
+
+## So platzierst du die Übergänge
+
+Die drei Übergänge sind so gebaut, dass sie **in ihrer Mitte das Bild
+vollständig abdecken**. Dadurch funktionieren sie an jedem beliebigen Schnitt,
+egal was davor und danach liegt:
+
+1. Schnitt setzen, wo der Wechsel sein soll.
+2. Übergang auf die Spur darüber ziehen.
+3. Den Clip so schieben, dass **seine Mitte genau auf dem Schnitt liegt**
+   (bei der Lichtblüte also 0,5 s davor beginnen).
+
+Mehr ist nicht nötig – keine Maske, kein Blendmodus, keine Deckkraftkurve.
+
+## Format der Overlays
+
+MOV mit PNG-Codec und echtem Alphakanal, verlustfrei. Importiert direkt in
+Premiere Pro, DaVinci Resolve und Final Cut. Bei diesen Inhalten ist das
+kleiner als ProRes 4444 (gemessen 22 gegen 29 MB am selben Testclip) – eine
+ProRes-Fassung liefere ich auf Zuruf nach.
+
+Falls dein Schnittprogramm Alpha ignoriert und die Overlays schwarz erscheinen:
+Interpretation auf „Straight (Unmatted)" bzw. „Alpha-Kanal: Gerade" stellen.
+
+## Gestaltung
+
+Die Bildsprache verbindet beide Marken über ihr gemeinsames Element, die
+heilige Geometrie in warmem Gold:
+
+- **Kongress:** Original-Logo, Akzentorange `#C46312`, Saat des Lebens.
+- **Vanessa Spaleck:** Original-Wortmarke und Lotus-Fächer aus ihrem Logo,
+  Gold `#E0B020` bis `#E8C050`, Hausschrift Runalto.
+- **Gemeinsam:** warmes Schwarz `#141110`, Creme `#F7F1E6`.
+
+Die Wortmarke wird für dunkle Hintergründe von Schwarz auf Creme umgefärbt;
+Fächer und Wortmarke werden über die Farbe voneinander getrennt, weil sich im
+Original die unteren Blütenblätter mit der Schrift überlagern.
+
+## Rechte und Quellen
+
+Das Kongress-Logo stammt von der öffentlichen Website
+(`Logo_CK26_1080p_final_weiss_Schatten`, 1920 × 427 px). Es wird **nirgends
+hochskaliert** – auf der 4K-Fläche liegt es bei maximal 1680 px Breite und
+bleibt dadurch scharf. Für die finale Fassung lohnt trotzdem die Nachfrage beim
+Veranstalter nach einer Vektordatei.
+
+Ihre Schriften (`Runalto`, `Adorn Story Script`) und beide Logos liegen
+bewusst **nicht** im Repository, sondern werden von den Originalquellen geladen:
+`./fetch-assets.sh`.
+
+## Neu rendern
+
+```bash
+./fetch-assets.sh                 # Logos und Schriften holen
+python3 render_ck.py assets/      # alles neu rendern
+```
+
+Kapitelkarten mit eigenen Titeln:
+
+```python
+import render_ck as R
+R.kapitel("Dein Titel hier", "Kapitel 3", "kapitel-03.mp4")
+```

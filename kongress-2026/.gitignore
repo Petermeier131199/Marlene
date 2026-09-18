@@ -1,0 +1,11 @@
+# Fremde Marken- und Schriftdateien werden per fetch-assets.sh geladen,
+# nicht im Repository weiterverbreitet
+ck26-logo.png
+vs-logo.png
+vs-blume.png
+*.ttf
+
+# 4K-Overlays mit Alphakanal sprengen das GitHub-Limit von 100 MB pro Datei.
+# Sie entstehen reproduzierbar aus render_ck.py; die Auslieferung laeuft
+# ueber den Download, kleinere Fassungen liegen unter assets/.
+assets/*.mov
