@@ -261,8 +261,68 @@ def opener(dauer=6.5):
     _karte_clip("titel-opener.mp4", lambda: L.titel_opener(), dauer, ein=1.5, aus=1.2)
 
 
-def kapitel(titel, nummer, name, dauer=4.5):
-    _karte_clip(name, lambda: L.kapitelkarte(titel, nummer), dauer, ein=1.2, aus=1.0)
+def kapitel(titel, kennzeichen, name, unterzeile=None, dauer=4.5):
+    _karte_clip(name, lambda: L.kapitelkarte(titel, kennzeichen, unterzeile),
+                dauer, ein=1.2, aus=1.0)
+
+
+def themen_bauchbinde(titel, kennzeichen, name, dauer=6.0):
+    """Kleine Themeneinblendung unten links fuer das laufende Bild.
+
+    Bewusst anders aufgebaut als die Namens-Bauchbinde - Saat des Lebens statt
+    Lotus-Faecher, Titel in Runalto - damit der Zuschauer beide nicht verwechselt.
+    """
+    x0, basis = B.SAFE_X, 1680
+    kf = B.grotesk(52, "Medium")
+    kz = Image.new("RGBA", (int(B.breite(kennzeichen.upper(), kf, 18)) + 20, 110), (0, 0, 0, 0))
+    B.gesperrt(ImageDraw.Draw(kz), kennzeichen.upper(), kf, 0, 0, 18, B.GOLD + (255,))
+    kz_r, pad_k = _mit_schatten(kz, 12, 1.7)
+
+    tf = B.runalto(112)
+    tw = int(B.breite(titel, tf, 8))
+    tt = Image.new("RGBA", (tw + 20, 210), (0, 0, 0, 0))
+    B.gesperrt(ImageDraw.Draw(tt), titel, tf, 0, 0, 8, B.CREAM + (255,))
+    tt_r, pad_t = _mit_schatten(tt, 16, 1.5)
+
+    sym = B.einfaerben(B.saat_des_lebens(150, width=3), B.ORANGE_HL, 0.95)
+    sym_r, pad_s = _mit_schatten(sym, 12, 1.5)
+
+    breite = max(tw, 1500) + 220
+    gw, gh = int(breite * 2.0), 1100
+    gx, gy = int(x0 + breite * 0.5 - gw / 2), int(basis + 90 - gh / 2)
+    grund = B.verlauf_radial((gw, gh), (gw / 2, gh / 2), (breite * 0.78, 400),
+                             (10, 7, 5), 215, schwelle=5)
+    grund_a = grund.getchannel("A")
+
+    def frame(t):
+        aus = 1.0 if t < dauer - 1.4 else max(0.0, 1.0 - B.ease_in_out((t - (dauer - 1.4)) / 1.0))
+        p_k = min(1.0, max(0.0, (t - 0.00) / 0.55))
+        p_t = min(1.0, max(0.0, (t - 0.30) / 0.75))
+
+        lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        a_g = 0.95 * B.ease_out(p_k) * aus
+        if a_g > 0.004:
+            g = grund.copy()
+            g.putalpha(grund_a.point(lambda v: int(v * a_g)))
+            lay.alpha_composite(g, (gx, gy))
+
+        def mit(img, a):
+            if a <= 0.003:
+                return None
+            o = img.copy()
+            o.putalpha(o.getchannel("A").point(lambda v: int(v * a)))
+            return o
+
+        s = mit(sym_r, p_k * aus)
+        if s: lay.alpha_composite(s, (x0 - pad_s, basis - 4 - pad_s))
+        s = mit(kz_r, p_k * aus)
+        if s: lay.alpha_composite(s, (x0 + 200 - pad_k, basis - pad_k))
+        dx = int(60 * (1 - B.ease_out(p_t)))
+        s = mit(tt_r, p_t * aus)
+        if s: lay.alpha_composite(s, (x0 + 200 - dx - pad_t, basis + 92 - pad_t))
+        return lay
+
+    encode(name, frame, True, dauer)
 
 
 def outro(dauer=8.0):

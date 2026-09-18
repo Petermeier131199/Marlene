@@ -141,36 +141,35 @@ def titel_opener(p_geo=1.0, p_logo=1.0, p_datum=1.0, p_gast=1.0):
     return bg.convert("RGB")
 
 
-def kapitelkarte(titel, nummer=None, p=1.0, p_titel=None):
-    """Kapitel-Zwischentitel. Symbol oben, Nummer, Titel, Goldlinie."""
+def kapitelkarte(titel, kennzeichen=None, unterzeile=None, p=1.0, p_titel=None):
+    """Kapitel-Zwischentitel: Symbol, Kennzeichnung, Titel, Goldlinie, Unterzeile."""
     p_titel = p if p_titel is None else p_titel
     bg = _hintergrund_karte()
 
     s = 340
     m = B.saat_des_lebens(s, width=3)
     sym = B.einfaerben(m, B.ORANGE_HL, 0.85 * p)
-    bg.alpha_composite(B.schein(sym, 26, 0.7), (int(B.W / 2 - s / 2), int(B.H * 0.30 - s / 2)))
-    bg.alpha_composite(sym, (int(B.W / 2 - s / 2), int(B.H * 0.30 - s / 2)))
+    bg.alpha_composite(B.schein(sym, 26, 0.7), (int(B.W / 2 - s / 2), int(B.H * 0.318 - s / 2)))
+    bg.alpha_composite(sym, (int(B.W / 2 - s / 2), int(B.H * 0.318 - s / 2)))
 
-    if nummer:
-        f = B.runalto(62)
-        t = nummer.upper()
-        w = B.breite(t, f, 18)
-        lay = Image.new("RGBA", (B.W, 140), (0, 0, 0, 0))
-        B.gesperrt(ImageDraw.Draw(lay), t, f, 0, 0, 18, B.GOLD + (int(235 * p),))
-        bg.alpha_composite(lay.crop((0, 0, int(w) + 10, 140)),
-                           (int(B.W / 2 - w / 2), int(B.H * 0.435)))
+    def zeile(text, f, track, farbe, y, hoehe=300):
+        w = B.breite(text, f, track)
+        lay = Image.new("RGBA", (B.W + 800, hoehe), (0, 0, 0, 0))
+        B.gesperrt(ImageDraw.Draw(lay), text, f, 0, 0, track, farbe)
+        bg.alpha_composite(lay.crop((0, 0, int(w) + 10, hoehe)), (int(B.W / 2 - w / 2), int(y)))
 
-    f = B.runalto(152)
-    w = B.breite(titel, f, 12)
-    lay = Image.new("RGBA", (B.W + 600, 320), (0, 0, 0, 0))
-    B.gesperrt(ImageDraw.Draw(lay), titel, f, 0, 0, 12, B.CREAM + (int(252 * p_titel),))
-    bg.alpha_composite(lay.crop((0, 0, int(w) + 10, 320)),
-                       (int(B.W / 2 - w / 2), int(B.H * 0.505)))
+    if kennzeichen:
+        zeile(kennzeichen.upper(), B.grotesk(58, "Medium"), 20,
+              B.GOLD + (int(235 * p),), B.H * 0.458, 140)
 
-    y = int(B.H * 0.655)
+    zeile(titel, B.runalto(152), 12, B.CREAM + (int(252 * p_titel),), B.H * 0.525)
+
+    y = int(B.H * 0.688)
     lw = int(440 * B.ease_out(p))
     if lw > 2:
         ImageDraw.Draw(bg).rectangle([B.W / 2 - lw / 2, y, B.W / 2 + lw / 2, y + 3],
                                      fill=B.GOLD + (200,))
+    if unterzeile:
+        zeile(unterzeile, B.grotesk(56, "Light"), 8,
+              (238, 228, 208) + (int(230 * p),), B.H * 0.721, 140)
     return bg.convert("RGB")
