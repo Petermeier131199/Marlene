@@ -51,29 +51,53 @@ def encode(name, frames, alpha, dauer):
 
 
 # --------------------------------------------------------------- Bauchbinde
-def bauchbinde(dauer=8.0):
+def _schatten(img, radius=14, staerke=1.0, farbe=(0, 0, 0)):
+    """Weicher dunkler Schatten unter einem Element - traegt die Lesbarkeit
+    auch dort, wo der Abdunkler allein nicht reicht (helle Wand, Lampe)."""
+    sch = Image.new("RGBA", img.size, farbe + (0,))
+    sch.putalpha(img.getchannel("A"))
+    sch = sch.filter(ImageFilter.GaussianBlur(radius))
+    if staerke != 1.0:
+        sch.putalpha(sch.getchannel("A").point(lambda v: min(255, int(v * staerke))))
+    return sch
+
+
+def _mit_schatten(img, radius=14, staerke=1.6, versatz=(0, 6)):
+    """Element auf transparenter Flaeche, Schatten inklusive."""
+    pad = radius * 3
+    out = Image.new("RGBA", (img.width + 2 * pad, img.height + 2 * pad), (0, 0, 0, 0))
+    sch = _schatten(img, radius, staerke)
+    out.alpha_composite(sch, (pad + versatz[0], pad + versatz[1]))
+    out.alpha_composite(sch, (pad + versatz[0], pad + versatz[1]))   # zweifach = dichter
+    out.alpha_composite(img, (pad, pad))
+    return out, pad
+
+
+def _bauchbinde_frame():
     x0, basis = B.SAFE_X, 1660
-    wort = L.wortmarke_in(B.CREAM, 138)
+    wort_r, pad_w = _mit_schatten(L.wortmarke_in(B.CREAM, 138), 16, 1.5)
     fae = L.FAECHER.resize((int(L.FAECHER.width * 205 / L.FAECHER.height), 205), Image.LANCZOS)
-    breite = fae.width + 48 + wort.width
+    fae_r, pad_f = _mit_schatten(fae, 14, 1.4)
+    breite = fae.width + 48 + L.wortmarke_in(B.CREAM, 138).width
 
-    rolle = Image.new("RGBA", (int(B.breite("Medium  |  Speakerin  |  Coach", B.runalto(62), 7)) + 20, 130), (0, 0, 0, 0))
-    B.gesperrt(ImageDraw.Draw(rolle), "Medium  |  Speakerin  |  Coach", B.runalto(62), 0, 0, 7, B.GOLD_HELL + (255,))
+    rt = "MEDIUM  |  SPEAKERIN  |  COACH"
+    rf = B.grotesk(58, "Medium")
+    rolle = Image.new("RGBA", (int(B.breite(rt, rf, 11)) + 20, 130), (0, 0, 0, 0))
+    B.gesperrt(ImageDraw.Draw(rolle), rt, rf, 0, 0, 11, (246, 228, 168) + (255,))
+    rolle_r, pad_r = _mit_schatten(rolle, 12, 1.7)
 
-    # Verlauf nur so gross wie noetig und lokal eingesetzt: der Rest des Bildes
-    # bleibt exakt transparent, was die Dateigroesse drittelt
-    gw, gh = int(breite * 2.3), 1060
-    gx, gy = int(x0 + breite * 0.5 - gw / 2), int(basis + 130 - gh / 2)
-    grund = B.verlauf_radial((gw, gh), (gw / 2, gh / 2),
-                             (breite * 1.05, 470), (8, 6, 5), 150, schwelle=4)
+    # Abdunkler: deutlich kraeftiger und grosszuegiger als zuvor, von der
+    # unteren linken Ecke ausgehend und nach rechts oben auslaufend
+    gw, gh = int(breite * 2.6), 1500
+    gx, gy = int(x0 + breite * 0.5 - gw / 2), int(basis + 150 - gh / 2)
+    grund = B.verlauf_radial((gw, gh), (gw / 2, gh / 2), (breite * 1.25, 660),
+                             (10, 7, 5), 215, schwelle=4)
+    # zweiter, engerer Abdunkler direkt hinter dem Schriftblock: die weite
+    # Flaeche allein reicht gegen eine helle Wand mit Lampe nicht aus
+    eng = B.verlauf_radial((gw, gh), (gw / 2, gh / 2 + 40), (breite * 0.72, 330),
+                           (12, 8, 5), 170, schwelle=4)
+    grund = Image.alpha_composite(grund, eng)
     grund_a = grund.getchannel("A")
-
-    def mit(img, a, dx=0, dy=0):
-        if a <= 0.003:
-            return None
-        o = img.copy()
-        o.putalpha(o.getchannel("A").point(lambda v: int(v * a)))
-        return o
 
     def frame(t):
         aus = 1.0 if t < 6.6 else max(0.0, 1.0 - B.ease_in_out((t - 6.6) / 1.0))
@@ -82,7 +106,7 @@ def bauchbinde(dauer=8.0):
         p_rolle = min(1.0, max(0.0, (t - 0.75) / 0.60))
 
         lay = Image.new("RGBA", (W, H), (0, 0, 0, 0))
-        a_g = 0.85 * B.ease_out(p_text) * aus
+        a_g = 0.95 * B.ease_out(p_text) * aus
         if a_g > 0.004:
             g = grund.copy()
             g.putalpha(grund_a.point(lambda v: int(v * a_g)))
@@ -90,19 +114,31 @@ def bauchbinde(dauer=8.0):
 
         lw = int(breite * B.ease_out(p_linie))
         if lw > 2 and aus > 0:
-            ImageDraw.Draw(lay).rectangle(
-                [x0, basis + 208, x0 + lw, basis + 211], fill=B.GOLD + (int(215 * aus),))
+            linie = Image.new("RGBA", (max(lw, 1), 5), B.GOLD + (int(235 * aus),))
+            lay.alpha_composite(_schatten(linie, 8, 1.6), (x0, basis + 212))
+            lay.alpha_composite(linie, (x0, basis + 208))
+
+        def mit(img, a):
+            if a <= 0.003:
+                return None
+            o = img.copy()
+            o.putalpha(o.getchannel("A").point(lambda v: int(v * a)))
+            return o
 
         dx = int(70 * (1 - B.ease_out(p_text)))
-        s = mit(fae, p_text * aus)
-        if s: lay.alpha_composite(s, (x0 - dx, basis - 62))
-        s = mit(wort, p_text * aus)
-        if s: lay.alpha_composite(s, (x0 + fae.width + 48 - dx, basis + 30))
-        s = mit(rolle, p_rolle * aus)
-        if s: lay.alpha_composite(s, (x0 + 4, basis + 236))
+        s = mit(fae_r, p_text * aus)
+        if s: lay.alpha_composite(s, (x0 - dx - pad_f, basis - 62 - pad_f))
+        s = mit(wort_r, p_text * aus)
+        if s: lay.alpha_composite(s, (x0 + fae.width + 48 - dx - pad_w, basis + 30 - pad_w))
+        s = mit(rolle_r, p_rolle * aus)
+        if s: lay.alpha_composite(s, (x0 + 4 - pad_r, basis + 244 - pad_r))
         return lay
 
-    encode("bauchbinde-vanessa-spaleck.mov", frame, True, dauer)
+    return frame
+
+
+def bauchbinde(dauer=8.0):
+    encode("bauchbinde-vanessa-spaleck.mov", _bauchbinde_frame(), True, dauer)
 
 
 # --------------------------------------------------------------- Uebergaenge

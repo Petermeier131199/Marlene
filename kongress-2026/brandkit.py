@@ -29,6 +29,18 @@ def script(size):
     return font("AdornStoryScript.ttf", size)
 
 
+def grotesk(size, schnitt="Medium"):
+    """Kraeftige Groteske fuer kleine Zeilen.
+
+    Runalto ist eine Display-Schrift mit sehr feinen Haarstrichen - unter etwa
+    40 Pixeln Zeilenhoehe brechen die weg. Diese Groteske liegt ausserdem naeher
+    an ihrer Logo-Wortmarke als Runalto selbst.
+    """
+    f = font("Montserrat.ttf", size)
+    f.set_variation_by_name(schnitt)
+    return f
+
+
 # --- Bausteine -------------------------------------------------------------
 def gesperrt(draw, text, f, x, y, track, fill):
     """Text mit fester Sperrung zeichnen; gibt die Gesamtbreite zurueck."""

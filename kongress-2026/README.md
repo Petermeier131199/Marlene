@@ -65,7 +65,18 @@ heilige Geometrie in warmem Gold:
 - **Kongress:** Original-Logo, Akzentorange `#C46312`, Saat des Lebens.
 - **Vanessa Spaleck:** Original-Wortmarke und Lotus-Fächer aus ihrem Logo,
   Gold `#E0B020` bis `#E8C050`, Hausschrift Runalto.
+- **Kleine Zeilen** in einer kräftigen Groteske statt in Runalto: Runalto ist
+  eine Display-Schrift, deren Haarstriche unter etwa 40 px Zeilenhöhe
+  wegbrechen. Sie liegt damit sogar näher an ihrer Logo-Wortmarke.
 - **Gemeinsam:** warmes Schwarz `#141110`, Creme `#F7F1E6`.
+
+### Lesbarkeit auf hellem Bild
+
+Ihr Aufnahmeraum ist hell – weiße Wand, warme Stehlampe. Creme auf Weiß trägt
+dort nicht. Die Bauchbinde hat deshalb einen kräftigen, weich auslaufenden
+Abdunkler plus einen zweiten, engeren direkt hinter dem Schriftblock, und
+Wortmarke, Goldlinie und Rollenzeile liegen auf einem weichen Schatten. Damit
+liest sie sich auf hellem wie auf dunklem Hintergrund.
 
 Die Wortmarke wird für dunkle Hintergründe von Schwarz auf Creme umgefärbt;
 Fächer und Wortmarke werden über die Farbe voneinander getrennt, weil sich im
