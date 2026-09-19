@@ -85,62 +85,125 @@ def bauchbinde(p_linie=1.0, p_text=1.0, p_rolle=1.0, versatz=0):
     return lay
 
 
-def _hintergrund_karte(vignette=1.0):
-    """Warmer dunkler Grund fuer Titelkarten (Vollbild, nicht transparent)."""
+def _hintergrund_karte(mitte=0.5):
+    """Warmer dunkler Grund fuer Titelkarten (Vollbild, nicht transparent).
+
+    `mitte` ist die Bildhoehe, auf der das Licht sitzt. Es muss konzentrisch zu
+    der Geometrie liegen, die darauf gezeichnet wird - sass das Licht tiefer als
+    die Blume, lag deren obere Haelfte auf dunklerem Grund als die untere und
+    das Auge las sie als nach oben verrutscht.
+    """
     bg = Image.new("RGB", (B.W, B.H), (18, 15, 13))
-    glow = B.verlauf_radial((B.W, B.H), (B.W * 0.5, B.H * 0.52),
+    glow = B.verlauf_radial((B.W, B.H), (B.W * 0.5, B.H * mitte),
                             (B.W * 0.72, B.H * 0.78), (92, 54, 18), 210)
     bg = Image.alpha_composite(bg.convert("RGBA"), glow)
-    warm = B.verlauf_radial((B.W, B.H), (B.W * 0.5, B.H * 0.56),
+    warm = B.verlauf_radial((B.W, B.H), (B.W * 0.5, B.H * mitte),
                             (B.W * 0.34, B.H * 0.40), (150, 96, 30), 120)
     bg = Image.alpha_composite(bg, warm)
     return bg
 
 
-def titel_opener(p_geo=1.0, p_logo=1.0, p_datum=1.0, p_gast=1.0):
-    bg = _hintergrund_karte()
+def _zeile(bg, text, f, track, farbe, y, hoehe=320):
+    """Gesperrte Zeile mittig aufs Bild setzen."""
+    w = B.breite(text, f, track)
+    lay = Image.new("RGBA", (B.W + 900, hoehe), (0, 0, 0, 0))
+    B.gesperrt(ImageDraw.Draw(lay), text, f, 0, 0, track, farbe)
+    bg.alpha_composite(lay.crop((0, 0, int(w) + 10, hoehe)), (int(B.W / 2 - w / 2), int(y)))
+    return w
 
-    # Blume des Lebens ganz dezent hinter allem
+
+def titel_opener(thema="Erkenne deinen Seelenplan", p_geo=1.0, p_logo=1.0,
+                 p_thema=1.0, p_gast=1.0):
+    """Vorspann. Das Thema traegt die Karte, der Kongress ist der Absender.
+
+    Termin und Anmeldehinweis fehlen bewusst: wer das Video sieht, ist bereits
+    beim Kongress angemeldet.
+    """
+    MITTE = 0.545                      # optischer Schwerpunkt des Textblocks
+    bg = _hintergrund_karte(MITTE)
+
     if p_geo > 0:
-        s = int(1500 * (0.96 + 0.04 * p_geo))
-        m = B.blume_des_lebens(s, width=3)
-        geo = B.einfaerben(m, B.GOLD, 0.20 * p_geo)
-        bg.alpha_composite(geo, (int(B.W / 2 - s / 2), int(B.H * 0.50 - s / 2)))
+        s = int(1560 * (0.96 + 0.04 * p_geo))
+        geo = B.einfaerben(B.blume_des_lebens(s, width=3), B.GOLD, 0.20 * p_geo)
+        bg.alpha_composite(geo, (int(B.W / 2 - s / 2), int(B.H * MITTE - s / 2)))
 
-    # Kongress-Logo (Originaldatei, nur verkleinert)
+    # Kongress-Logo klein oben: Absender, nicht Botschaft
     lg = B.ck_logo()
-    zb = 1680
+    zb = 900
     lg = lg.resize((zb, int(lg.height * zb / lg.width)), Image.LANCZOS)
     lg.putalpha(lg.getchannel("A").point(lambda v: int(v * p_logo)))
-    bg.alpha_composite(lg, (int(B.W / 2 - zb / 2), int(B.H * 0.30)))
+    bg.alpha_composite(lg, (int(B.W / 2 - zb / 2), int(B.H * 0.115)))
 
-    d = ImageDraw.Draw(bg)
-    if p_datum > 0:
-        f = B.runalto(72)
-        t = "DAS ONLINE-EVENT  ·  01. – 11. NOVEMBER 2026"
-        w = B.breite(t, f, 11)
-        lay = Image.new("RGBA", (B.W, 160), (0, 0, 0, 0))
-        B.gesperrt(ImageDraw.Draw(lay), t, f, 0, 0, 11, B.CREAM + (int(230 * p_datum),))
-        bg.alpha_composite(lay.crop((0, 0, int(w) + 10, 160)), (int(B.W / 2 - w / 2), int(B.H * 0.585)))
+    _zeile(bg, thema, B.runalto(176), 12, B.CREAM + (int(252 * p_thema),), B.H * 0.415)
 
+    y = int(B.H * 0.575)
+    lw = int(560 * B.ease_out(p_gast))
+    if lw > 2:
+        ImageDraw.Draw(bg).rectangle([B.W / 2 - lw / 2, y, B.W / 2 + lw / 2, y + 3],
+                                     fill=B.GOLD + (200,))
     if p_gast > 0:
-        y = int(B.H * 0.70)
-        lw = int(620 * B.ease_out(p_gast))
-        if lw > 2:
-            d.rectangle([B.W / 2 - lw / 2, y, B.W / 2 + lw / 2, y + 3], fill=B.GOLD + (200,))
-        wort = wortmarke_in(B.CREAM, WORTMARKE.height * 980 / WORTMARKE.width)
+        wort = wortmarke_in(B.CREAM, WORTMARKE.height * 1020 / WORTMARKE.width)
         wort.putalpha(wort.getchannel("A").point(lambda v: int(v * p_gast)))
-        bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), y + 70))
-        f2 = B.runalto(58)
-        t2 = "Medium  |  Speakerin  |  Coach"
-        w2 = B.breite(t2, f2, 7)
-        lay2 = Image.new("RGBA", (B.W, 130), (0, 0, 0, 0))
-        B.gesperrt(ImageDraw.Draw(lay2), t2, f2, 0, 0, 7, B.GOLD_HELL + (int(235 * p_gast),))
-        bg.alpha_composite(lay2.crop((0, 0, int(w2) + 10, 130)),
-                           (int(B.W / 2 - w2 / 2), y + 70 + wort.height + 34))
+        bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), y + 74))
+        _zeile(bg, "MEDIUM  |  SPEAKERIN  |  COACH", B.grotesk(56, "Medium"), 11,
+               (246, 228, 168) + (int(240 * p_gast),), y + 74 + wort.height + 46, 140)
     return bg.convert("RGB")
 
 
+def nachklang(satz="Erkenne deinen Seelenplan.", p=1.0):
+    """Schlusskarte eins: ein ruhiger Satz, der wirken darf."""
+    MITTE = 0.50
+    bg = _hintergrund_karte(MITTE)
+    s = 1560
+    geo = B.einfaerben(B.blume_des_lebens(s, width=3), B.GOLD, 0.18 * p)
+    bg.alpha_composite(geo, (int(B.W / 2 - s / 2), int(B.H * MITTE - s / 2)))
+
+    _zeile(bg, satz, B.runalto(168), 12, B.CREAM + (int(252 * p),), B.H * 0.425)
+
+    y = int(B.H * 0.575)
+    lw = int(440 * B.ease_out(p))
+    if lw > 2:
+        ImageDraw.Draw(bg).rectangle([B.W / 2 - lw / 2, y, B.W / 2 + lw / 2, y + 3],
+                                     fill=B.GOLD + (190,))
+    wort = wortmarke_in(B.CREAM, WORTMARKE.height * 840 / WORTMARKE.width)
+    wort.putalpha(wort.getchannel("A").point(lambda v: int(v * p)))
+    bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), y + 70))
+    return bg.convert("RGB")
+
+
+def kontakt(eintraege=None, p=1.0):
+    """Schlusskarte zwei: wo man sie findet."""
+    eintraege = eintraege or [
+        "vanessa-spaleck.de",
+        "@medium_vanessa_spaleck",
+        "Buch »Ganz normal medial«",
+    ]
+    MITTE = 0.515
+    bg = _hintergrund_karte(MITTE)
+    s = 1460
+    geo = B.einfaerben(B.blume_des_lebens(s, width=3), B.GOLD, 0.16 * p)
+    bg.alpha_composite(geo, (int(B.W / 2 - s / 2), int(B.H * MITTE - s / 2)))
+
+    fae = FAECHER.resize((int(FAECHER.width * 210 / FAECHER.height), 210), Image.LANCZOS)
+    fae.putalpha(fae.getchannel("A").point(lambda v: int(v * p)))
+    bg.alpha_composite(fae, (int(B.W / 2 - fae.width / 2), int(B.H * 0.215)))
+
+    wort = wortmarke_in(B.CREAM, WORTMARKE.height * 1000 / WORTMARKE.width)
+    wort.putalpha(wort.getchannel("A").point(lambda v: int(v * p)))
+    bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), int(B.H * 0.345)))
+
+    _zeile(bg, "WO DU MICH FINDEST", B.grotesk(56, "Medium"), 20,
+           B.GOLD + (int(235 * p),), B.H * 0.455, 140)
+
+    # Adressen in der Groteske, nicht in Runalto: Runalto hat zwar einen
+    # Unterstrich, der ist aber so fein, dass er beim Herunterrechnen auf 1080p
+    # verschwindet - der Instagram-Name fiel dadurch in Einzelwoerter
+    # auseinander. Adressen liest man in einer Groteske ohnehin sicherer.
+    y = B.H * 0.555
+    for i, e in enumerate(eintraege):
+        _zeile(bg, e, B.grotesk(76, "Light"), 4, (243, 234, 218) + (int(248 * p),),
+               y + i * 152, 220)
+    return bg.convert("RGB")
 def kapitelkarte(titel, kennzeichen=None, unterzeile=None, p=1.0, p_titel=None):
     """Kapitel-Zwischentitel: Symbol, Kennzeichnung, Titel, Goldlinie, Unterzeile."""
     p_titel = p if p_titel is None else p_titel

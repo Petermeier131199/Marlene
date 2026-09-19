@@ -28,9 +28,10 @@ ungleichmäßig ruckeln.
 
 | Datei | Dauer | Einsatz |
 |---|---|---|
-| `titel-opener.mp4` | 6,5 s | Vorspann: Kongress-Logo, Termin, Speakerin. |
+| `titel-opener.mp4` | 6,5 s | Vorspann: Thema und Speakerin, Kongress-Logo als Absender. |
 | `kapitel-1-karte.mp4` … `kapitel-6-karte.mp4` | je 4,5 s | Die sechs Kapitel-Zwischentitel. |
-| `outro-anmeldung.mp4` | 8,0 s | Abspann mit Termin und Anmeldehinweis. |
+| `schluss-1-nachklang.mp4` | 6,0 s | Schlusskarte eins: ein ruhiger Satz, der nachwirkt. |
+| `schluss-2-kontakt.mp4` | 7,0 s | Schlusskarte zwei: wo man sie findet. |
 
 ## So platzierst du die Übergänge
 
@@ -127,3 +128,20 @@ Unterzeile. Titel und Kennzeichnung stehen in `kapitel_alle.py`; nach einer
 Die Themen-Bauchbinde ist bewusst anders aufgebaut als die Namens-Bauchbinde –
 Saat des Lebens statt Lotus-Fächer, Titel in Runalto statt Wortmarke – damit
 der Zuschauer beide nicht verwechselt, sie aber erkennbar zusammengehören.
+
+## Warum kein Anmeldehinweis
+
+Wer das Video sieht, ist bereits beim Kongress angemeldet. Ein „Jetzt kostenfrei
+anmelden" am Ende richtet sich an ein Publikum, das hier gar nicht sitzt. Aus
+demselben Grund steht im Vorspann kein Veranstaltungstermin mehr: Der Vorspann
+sagt jetzt, worum es in diesem Beitrag geht und wer spricht, der Kongress ist
+der Absender oben.
+
+## Die Blume des Lebens und das Licht
+
+Die Blume sass von Anfang an pixelgenau mittig, wirkte aber verrutscht. Grund
+war der warme Lichtschein dahinter: Er lag bei 52 bzw. 56 Prozent der Bildhöhe,
+die Blume bei 50. Ihre obere Hälfte lag dadurch auf dunklerem Grund als die
+untere. `_hintergrund_karte(mitte)` nimmt die Höhe jetzt als Parameter, sodass
+Licht und Geometrie konzentrisch liegen – und die Karten setzen beides auf den
+optischen Schwerpunkt ihres Textblocks statt auf die geometrische Bildmitte.

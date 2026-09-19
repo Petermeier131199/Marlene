@@ -325,29 +325,16 @@ def themen_bauchbinde(titel, kennzeichen, name, dauer=6.0):
     encode(name, frame, True, dauer)
 
 
-def outro(dauer=8.0):
-    def bauen():
-        bg = L._hintergrund_karte()
-        s = 1500
-        bg.alpha_composite(B.einfaerben(B.blume_des_lebens(s, 3), B.GOLD, 0.18),
-                           (int(W / 2 - s / 2), int(H * 0.5 - s / 2)))
-        lg = B.ck_logo()
-        zb = 1560
-        lg = lg.resize((zb, int(lg.height * zb / lg.width)), Image.LANCZOS)
-        bg.alpha_composite(lg, (int(W / 2 - zb / 2), int(H * 0.27)))
-        for txt, size, track, farbe, y in [
-            ("01. – 11. NOVEMBER 2026", 84, 14, B.CREAM + (240,), 0.555),
-            ("Jetzt kostenfrei anmelden", 76, 6, B.GOLD_HELL + (245,), 0.665),
-            ("channeling-portal.de", 66, 10, B.CREAM + (210,), 0.745),
-        ]:
-            f = B.runalto(size)
-            w = B.breite(txt, f, track)
-            lay = Image.new("RGBA", (W, 200), (0, 0, 0, 0))
-            B.gesperrt(ImageDraw.Draw(lay), txt, f, 0, 0, track, farbe)
-            bg.alpha_composite(lay.crop((0, 0, int(w) + 10, 200)), (int(W / 2 - w / 2), int(H * y)))
-        return bg.convert("RGB")
+def nachklang(satz="Erkenne deinen Seelenplan.", dauer=6.0):
+    """Schlusskarte eins: ein ruhiger Satz, der nachwirken darf."""
+    _karte_clip("schluss-1-nachklang.mp4", lambda: L.nachklang(satz), dauer,
+                ein=1.6, aus=1.6)
 
-    _karte_clip("outro-anmeldung.mp4", bauen, dauer, ein=1.4, aus=1.4)
+
+def kontakt(eintraege=None, dauer=7.0):
+    """Schlusskarte zwei: wo man sie findet."""
+    _karte_clip("schluss-2-kontakt.mp4", lambda: L.kontakt(eintraege), dauer,
+                ein=1.4, aus=1.4)
 
 
 def logo_eck():
@@ -366,6 +353,7 @@ def logo_eck():
 
 if __name__ == "__main__":
     print("Rendere nach", OUT)
-    for fn in (bauchbinde, lichtbluete, atemblende, faecher, opener, outro, logo_eck):
+    for fn in (bauchbinde, lichtbluete, atemblende, faecher, opener, nachklang,
+               kontakt, logo_eck):
         fn()
     kapitel("Was dein Seelenplan dir zeigt", "Kapitel 2", "kapitelkarte-beispiel.mp4")
