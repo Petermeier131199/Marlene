@@ -127,9 +127,10 @@ def titel_opener(thema="Erkenne deinen Seelenplan", p_geo=1.0, p_logo=1.0,
         geo = B.einfaerben(B.blume_des_lebens(s, width=3), B.GOLD, 0.20 * p_geo)
         bg.alpha_composite(geo, (int(B.W / 2 - s / 2), int(B.H * MITTE - s / 2)))
 
-    # Kongress-Logo klein oben: Absender, nicht Botschaft
-    lg = B.ck_logo()
-    zb = 900
+    # Kongress-Logo klein oben: Absender, nicht Botschaft. Ohne Claim-Zeile,
+    # weil der Claim bereits gross als Thema auf der Karte steht.
+    lg = B.ck_logo(mit_claim=False)
+    zb = 860
     lg = lg.resize((zb, int(lg.height * zb / lg.width)), Image.LANCZOS)
     lg.putalpha(lg.getchannel("A").point(lambda v: int(v * p_logo)))
     bg.alpha_composite(lg, (int(B.W / 2 - zb / 2), int(B.H * 0.115)))

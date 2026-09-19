@@ -135,7 +135,11 @@ Wer das Video sieht, ist bereits beim Kongress angemeldet. Ein „Jetzt kostenfr
 anmelden" am Ende richtet sich an ein Publikum, das hier gar nicht sitzt. Aus
 demselben Grund steht im Vorspann kein Veranstaltungstermin mehr: Der Vorspann
 sagt jetzt, worum es in diesem Beitrag geht und wer spricht, der Kongress ist
-der Absender oben.
+der Absender oben – und zwar ohne seine Claim-Zeile, weil „Erkenne Deinen
+Seelenplan" bereits gross als Thema auf der Karte steht. `ck_logo(mit_claim=False)`
+schneidet sie mittig in der Leerzeile zwischen Wortmarke und Claim ab (y = 296
+bis 308 in der Originaldatei). Falls der Veranstalter eine offizielle Variante
+ohne Zusatzzeile hat, ist die vorzuziehen.
 
 ## Die Blume des Lebens und das Licht
 

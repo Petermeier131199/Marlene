@@ -117,8 +117,18 @@ def vs_logo():
     return _asset("vs-logo.png")
 
 
-def ck_logo():
-    return _asset("ck26-logo.png")
+def ck_logo(mit_claim=True):
+    """Kongress-Logo. Ohne Claim, wenn der Claim schon als Thema auf der Karte steht.
+
+    Die Originaldatei ist eine Sperrschrift-Sperre aus Wortmarke und Claim; die
+    Leerzeile dazwischen liegt bei y = 296 bis 308. Geschnitten wird mittig in
+    dieser Luecke, ergibt also die uebliche Variante ohne Zusatzzeile.
+    """
+    lg = _asset("ck26-logo.png")
+    if mit_claim:
+        return lg
+    oben = lg.crop((0, 0, lg.width, 302))
+    return oben.crop(oben.getchannel("A").getbbox())
 
 
 def lotus_faecher():
