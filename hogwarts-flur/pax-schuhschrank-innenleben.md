@@ -1,6 +1,6 @@
 # PAX 50 × 58 × 236 – Innenleben Schuhschrank
 
-Stand: 2026-09-19 · Preise IKEA Deutschland, geprüft am 18.09.2026
+Stand: 2026-09-19 (Loch 11 vermessen) · Preise IKEA Deutschland, geprüft am 18.09.2026
 
 **Nur Schuhe.** Keine Kleiderstange. Korpus und Tür sind vorhanden und
 nicht eingerechnet.
@@ -15,39 +15,55 @@ nicht eingerechnet.
 | Lichte Innenhöhe | ca. 231,8 cm |
 | Lochraster | 3,2 cm |
 
+## Ankerpunkt
+
+**Erste Schiene: Loch 11, gemessen 43,0 cm über dem Boden.**
+
+Daraus folgt bei 3,2 cm Raster alles Weitere. Loch 1 sitzt damit auf
+11,0 cm. Sollte anders gezählt worden sein, verschiebt sich nur die
+cm-Spalte – die Lochnummern und Abstände stimmen unabhängig davon.
+
+## Die sieben Zahlen
+
+**11 → 19 → 27 → 35 → 43 → 51 → 60**
+
+Jede Schiene acht Löcher über der vorigen, das Brett neun über der
+letzten.
+
 ## Aufbau
 
-| Einbauhöhe | Fachhöhe | Element | Zählschritt | Inhalt |
+| Loch | cm | Fachhöhe | Element | Inhalt |
 |---|---|---|---|---|
-| — | 48,0 cm | nichts montiert, Gummimatte | | Stiefel, nasse Schuhe |
-| 48,0 cm | 25,6 cm | Schuhregal, ausziehbar | einmal messen | 4 Paar |
-| 73,6 cm | 25,6 cm | Schuhregal, ausziehbar | +8 Löcher | 4 Paar |
-| 99,2 cm | 25,6 cm | Schuhregal, ausziehbar | +8 Löcher | 4 Paar |
-| 124,8 cm | 25,6 cm | Schuhregal, ausziehbar | +8 Löcher | 4 Paar |
-| 150,4 cm | 25,6 cm | Schuhregal, ausziehbar | +8 Löcher | 4 Paar |
-| 176,0 cm | 28,8 cm | Schuhregal, ausziehbar | +8 Löcher | 4 Paar |
-| 204,8 cm | 27,0 cm | KOMPLEMENT Boden | +9 Löcher | 1 Kiste |
+| — | 0 | 43,0 cm | nichts montiert, Gummimatte | Stiefel, nasse Schuhe |
+| **11** | 43,0 | 25,6 cm | Schuhregal, ausziehbar (gemessen) | 4 Paar |
+| **19** | 68,6 | 25,6 cm | Schuhregal, ausziehbar (+8) | 4 Paar |
+| **27** | 94,2 | 25,6 cm | Schuhregal, ausziehbar (+8) | 4 Paar |
+| **35** | 119,8 | 25,6 cm | Schuhregal, ausziehbar (+8) | 4 Paar |
+| **43** | 145,4 | 25,6 cm | Schuhregal, ausziehbar (+8) | 4 Paar |
+| **51** | 171,0 | 28,8 cm | Schuhregal, ausziehbar (+8) | 4 Paar |
+| **60** | 199,8 | 32,0 cm | KOMPLEMENT Boden (+9) | 1 Kiste |
 
 **Kapazität: 24 Paar + Stiefelzone.**
 
-## Löcher zählen statt messen
+## Oberzone
 
-Wo die unterste Lochreihe im Korpus genau sitzt, ist von aussen nicht
-bekannt. Deshalb wird **genau einmal gemessen**, danach nur gezählt.
+Über dem Brett auf Loch 60 bleiben 32 cm bis zur Innendecke. Der SKUBB
+ist 19 cm hoch – da ist reichlich Luft. Entweder eine höhere Kiste, oder
+SKUBB plus etwas Flaches obendrauf.
 
-1. **Einmal messen.** Vom Innenboden 48 cm hoch, an beiden Seitenwänden
-   anzeichnen. Nächstgelegene Lochreihe nehmen = Schuhregal 1. Markieren.
-2. **Acht Löcher höher** = Schuhregal 2. Markieren.
-3. **Viermal wiederholen**, jeweils +8 Löcher: Schuhregal 3, 4, 5, 6.
-   Immer beide Seitenwände markieren, bevor etwas festgeschraubt wird.
-4. **Neun Löcher** über Schuhregal 6 sitzt der KOMPLEMENT Boden. Der
-   oberste Auszug bekommt dadurch etwas mehr Luft – dort passen auch
-   höhere Sneaker hinein.
-5. **Gegenprobe von oben:** über dem Brett müssen rund 27 cm bis zur
-   Innendecke frei bleiben. Stimmt das nicht, wurde verzählt.
+**Warum kein siebter Auszug?** Der passte auf Loch 59, darüber blieben
+nur 10 cm – zu wenig für eine Kiste. Sieben Auszüge *oder* das Brett,
+beides geht nicht. Sieben wären 28 Paar statt 24.
 
-Ein Auszug, dessen Schienen links und rechts eine Lochreihe versetzt
-sitzen, klemmt – und das merkt man erst, wenn alles verschraubt ist.
+## Stiefelzone
+
+43 cm lichte Höhe unter der ersten Schiene. Die meisten kniehohen
+Stiefel messen 40–45 cm bis zur Schaftkante – das geht auf, aber knapp.
+
+**Falls der höchste Stiefel nicht passt:** erste Schiene auf **Loch 12**
+statt 11 (46,2 cm). Alles darüber verschiebt sich um genau ein Loch:
+12 · 20 · 28 · 36 · 44 · 52, Brett auf 61. Vor dem Bohren einen Stiefel
+hineinstellen.
 
 ## Warum nur Auszüge
 
@@ -59,21 +75,6 @@ vorderen. Macht 4 Paar pro Ebene.
 Auf einem festen Boden wäre die hintere Reihe unsichtbar und
 unerreichbar. Der Auszug fährt 43 cm heraus – man sieht beide Reihen
 von oben.
-
-**Was das kostet:** Ein Auszug fasst 4 Paar für 25 € (gut 6 €/Paar), ein
-fester Boden dieselben 4 Paar für 10 € (2,50 €/Paar). Die Auszüge sind
-rund zweieinhalbmal so teuer. Sie sind es wert, weil sonst die halbe
-Kapazität nie benutzt wird.
-
-## Stiefelzone
-
-48 cm lichte Höhe, nichts montiert. Ein kniehoher Stiefel steht darin
-aufrecht (die meisten messen 40–45 cm bis zur Schaftkante). Davor passen
-zwei Paar Stiefeletten.
-
-**Ohne hohe Stiefel:** Stiefelzone auf 25,6 cm kürzen (8 statt 15
-Löcher), dann passt ein **siebter Auszug** hinein – 28 Paar statt 24,
-für 25 € mehr. Mehr geht nicht.
 
 ## Einkaufsliste
 
@@ -89,18 +90,20 @@ Baumarkt, ca. 10 €. Die Stiefelzone ist die einzige Ebene ohne
 Metallwanne darunter.
 
 Nur **ein** Kasten oben: Der SKUBB misst 44 × 55 cm bei 46,4 × 56,4 cm
-Innenmaß – ein zweiter passt weder daneben noch dahinter. Die Oberzone
-ist 27 cm hoch, der Kasten 19; es geht auch ein höherer.
+Innenmaß – ein zweiter passt weder daneben noch dahinter.
 
 ## Montagehinweise
 
-1. **Auf "50×58" achten, nicht "50×35".** Es gibt jeden Artikel auch für
+1. **Erst alle sieben Reihen anzeichnen**, links und rechts, dann erst
+   die erste Schiene festschrauben. Ein Auszug mit versetzten Schienen
+   klemmt, und das merkt man erst, wenn alles fest ist.
+2. **Auf "50×58" achten, nicht "50×35".** Es gibt jeden Artikel auch für
    35 cm Tiefe, die Kartons sehen gleich aus.
-2. **Korpus an der Wand sichern.** Ein 236er PAX mit Tür ist deutlich
-   kopflastiger als ein 201er.
-3. **Von oben nach unten montieren.** Das Brett auf 204,8 cm zuerst –
-   dort kommt man nur mit Leiter hin.
-4. **Belastung:** 16 kg je Auszug. Vier Paar Schuhe wiegen 3–4 kg.
+3. **Von oben nach unten montieren.** Das Brett auf Loch 60 zuerst – dort
+   kommt man nur mit Leiter hin.
+4. **Korpus an der Wand sichern**, bevor etwas hineinkommt. Ein 236er PAX
+   mit Tür ist deutlich kopflastiger als ein 201er.
+5. **Belastung:** 16 kg je Auszug. Vier Paar Schuhe wiegen 3–4 kg.
 
 ## Falls die Spiegeltür doch noch dazukommt
 
