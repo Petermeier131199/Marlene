@@ -21,6 +21,7 @@ ungleichmäßig ruckeln.
 | `uebergang-lichtbluete.mov` | 1,0 s | Hauptübergang für Kapitelwechsel. |
 | `uebergang-atemblende.mov` | 0,6 s | Schnitte innerhalb eines Kapitels. |
 | `uebergang-faecher.mov` | 1,2 s | Ihr Lotus-Fächer, sparsam einsetzen – einmal als Höhepunkt. |
+| `kapitel-1-bauchbinde.mov` … `kapitel-6-bauchbinde.mov` | je 6,0 s | Themen-Einblendung unten links, für Stellen ohne harten Schnitt. |
 | `logo-eck.png` | Standbild | Dezente Dauereinblendung oben rechts. |
 
 ### Vollbildkarten (eigener Hintergrund, einfach dazwischenschneiden)
@@ -28,7 +29,7 @@ ungleichmäßig ruckeln.
 | Datei | Dauer | Einsatz |
 |---|---|---|
 | `titel-opener.mp4` | 6,5 s | Vorspann: Kongress-Logo, Termin, Speakerin. |
-| `kapitelkarte-beispiel.mp4` | 4,5 s | Muster für die Kapitel-Zwischentitel. |
+| `kapitel-1-karte.mp4` … `kapitel-6-karte.mp4` | je 4,5 s | Die sechs Kapitel-Zwischentitel. |
 | `outro-anmeldung.mp4` | 8,0 s | Abspann mit Termin und Anmeldehinweis. |
 
 ## So platzierst du die Übergänge
@@ -107,3 +108,22 @@ Kapitelkarten mit eigenen Titeln:
 import render_ck as R
 R.kapitel("Dein Titel hier", "Kapitel 3", "kapitel-03.mp4")
 ```
+
+## Die sechs Kapitel
+
+| | Kennzeichnung | Titel | Unterzeile |
+|---|---|---|---|
+| 1 | Kapitel 1 | Was ist der Seelenplan? | – |
+| 2 | Kapitel 2 | Was heißt es, ehrlich zu leben? | Authentisch im Sinne deines Seelenplans |
+| 3 | Kapitel 3 | Wie findest du deinen Seelenplan? | – |
+| 4 | Übung | Alles darf da sein | Wahrnehmen, was gerade ist |
+| 5 | Kapitel 5 | Annehmen, was ist | Deine Anteile integrieren und ganz werden |
+| 6 | Kapitel 6 | Deine Geistführer | Begleiter durch dein Leben |
+
+Einzeilig passen rund 34 Zeichen auf eine Karte – längere Titel gehören in die
+Unterzeile. Titel und Kennzeichnung stehen in `kapitel_alle.py`; nach einer
+Änderung dort einfach `python3 kapitel_alle.py` laufen lassen.
+
+Die Themen-Bauchbinde ist bewusst anders aufgebaut als die Namens-Bauchbinde –
+Saat des Lebens statt Lotus-Fächer, Titel in Runalto statt Wortmarke – damit
+der Zuschauer beide nicht verwechselt, sie aber erkennbar zusammengehören.
