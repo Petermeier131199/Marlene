@@ -21,7 +21,7 @@ ungleichmäßig ruckeln.
 | `uebergang-lichtbluete.mov` | 1,0 s | Hauptübergang für Kapitelwechsel. |
 | `uebergang-atemblende.mov` | 0,6 s | Schnitte innerhalb eines Kapitels. |
 | `uebergang-faecher.mov` | 1,2 s | Ihr Lotus-Fächer, sparsam einsetzen – einmal als Höhepunkt. |
-| `uebergang-aquarell.mov` | 3,0 s | Langer Kapitelübergang: die Saat des Lebens läuft aus wie Tinte im Wasser. |
+| `uebergang-wasserfarben.mov` | 3,5 s | Langer Kapitelübergang: Farbschleier im Wasser, als kurzer Atemzug. |
 | `kapitel-1-bauchbinde.mov` … `kapitel-6-bauchbinde.mov` | je 6,0 s | Themen-Einblendung unten links, für Stellen ohne harten Schnitt. |
 | `logo-eck.png` | Standbild | Dezente Dauereinblendung oben rechts. |
 
@@ -151,23 +151,25 @@ untere. `_hintergrund_karte(mitte)` nimmt die Höhe jetzt als Parameter, sodass
 Licht und Geometrie konzentrisch liegen – und die Karten setzen beides auf den
 optischen Schwerpunkt ihres Textblocks statt auf die geometrische Bildmitte.
 
-## Der Aquarell-Übergang
+## Der Wasserfarben-Übergang
 
-Keine nachgeahmte Wolke, sondern eine gerechnete Strömung (`aquarell.py`): Die
-Saat des Lebens wird als Farbe in ein Strömungsfeld gegeben und darin
-transportiert. Das Feld hat zwei Anteile – eine radiale Ausbreitung, die mit
-der Zeit nachlässt, und ein Wirbelfeld aus Rauschen, das die Fäden macht.
+Ein kurzer Atemzug: Einatmen, die Schleier treiben zueinander und mischen sich;
+halten, sie decken das Bild; ausatmen, sie sinken auseinander und dünnen aus.
 
-Das Wirbelfeld entsteht als Rotation eines Potentialfeldes und ist dadurch
-quellenfrei. Nimmt man stattdessen direkt Rauschen als Geschwindigkeit,
-entstehen Quellen und Senken, in denen Farbe aus dem Nichts auftaucht oder
-verschwindet – das sieht sofort falsch aus.
+Zwei Dinge machen den Unterschied zum ersten, verworfenen Versuch:
 
-Gerechnet wird auf 960 × 540 und hochskaliert; Tinte hat keine harten Kanten,
-der Unterschied ist unsichtbar, die Rechenzeit ein Viertel.
+**Mehrere Farbfelder statt einem.** Eine einzige Dichte, die durch einen
+Farbverlauf von Dunkelbraun nach Weiß gejagt wird, sieht immer nach Feuer aus.
+Farben verlaufen erst dann sichtbar ineinander, wenn sie getrennt transportiert
+und am Ende gewichtet gemischt werden (`wasser.py`, `Wasser.bild`).
 
-Zeitlicher Ablauf: bis 0,7 s steht die klare Goldzeichnung, dann kriecht die
-Farbe erst in die Fläche, bevor der Druck einsetzt (ohne diesen Anlauf ist das
-Ausbluten der Linien nach zwei Zehnteln vorbei). Bei 1,5 s deckt ein warmer
-Schwall das Bild vollständig ab – nur dadurch passt der Übergang auf jeden
-Schnitt –, danach treiben die Schlieren auseinander.
+**Kein Druck aus der Mitte.** Die radiale Ausbreitung war die schnelle,
+unruhige Geste. Geblieben sind nur große, träge Wirbel und ein leichtes Zu- und
+Auseinanderdriften im Atemrhythmus.
+
+Dazu eine Dichtehülle: Der Atemzug füllt sich erst auf, statt von der ersten
+Sekunde an zu decken. Alle vier Schleier bleiben in der warmen
+Gold-Bernstein-Familie – mischt man ein dunkles Braun darunter, ergibt der
+gewichtete Mittelwert mit dem Gold ein stumpfes Oliv.
+
+Volldeckung liegt bei 1,65 s, also in der Mitte: Mitte auf den Schnitt legen.

@@ -11,6 +11,7 @@ import imageio_ffmpeg
 import brandkit as B
 import layouts as L
 from aquarell import Aquarell
+from wasser import Wasser
 
 FPS = 30            # 60 / 30 geht glatt auf: keine ungleichmaessige
                     # Bildverdopplung in einer 60p-Timeline
@@ -293,6 +294,76 @@ def aquarell(dauer=3.0, name="uebergang-aquarell.mov", gitter=(960, 540)):
             a = max(0.0, (dauer - t) / 0.55)
             lay.putalpha(lay.getchannel("A").point(lambda v: int(v * B.ease_in_out(a))))
         return lay
+
+    encode(name, frame, True, dauer)
+
+
+def wasserfarben(dauer=3.5, name="uebergang-wasserfarben.mov", gitter=(960, 540)):
+    """Kurzer Atemzug: Farbschleier im Wasser, die ineinander verlaufen.
+
+    Einatmen - die Schleier treiben zueinander und mischen sich. Halten - sie
+    decken das Bild. Ausatmen - sie sinken wieder auseinander und duennen aus.
+
+    Kein Druck aus der Mitte und keine Geometrie: beides machte den ersten
+    Versuch unruhig. Die Bewegung besteht nur aus grossen, traegen Wirbeln und
+    einem leichten Zu- und Auseinanderdriften im Atemrhythmus.
+    """
+    gw, gh = gitter
+    sim = Wasser(gw, gh)
+    # vier Schleier, ausserhalb der Mitte und teils ausserhalb des Bildes
+    sim.schleier(B.GOLD,            (gw * 0.30, gh * 0.32), (gw * 0.30, gh * 0.34), 0.95)
+    sim.schleier(B.ORANGE,          (gw * 0.74, gh * 0.66), (gw * 0.32, gh * 0.32), 0.90)
+    sim.schleier((242, 221, 176),   (gw * 0.60, gh * 0.22), (gw * 0.26, gh * 0.24), 0.75)
+    # kein dunkles Braun: gemittelt mit dem Gold ergibt es ein stumpfes Oliv.
+    # Alle vier Schleier bleiben in der warmen Gold-Bernstein-Familie und
+    # unterscheiden sich nur in der Helligkeit.
+    sim.schleier((168,  90,  26),   (gw * 0.24, gh * 0.78), (gw * 0.28, gh * 0.28), 0.70)
+
+    EIN, HALT = 1.4, 1.9
+    MITTE = (EIN + HALT) / 2.0
+
+    zustand = {"t": -1.0}
+
+    def atemwert(t):
+        if t < EIN:
+            return 0.95 * B.ease_in_out(t / EIN)
+        if t < HALT:
+            return 0.12
+        return -0.75 * B.ease_in_out(min(1.0, (t - HALT) / 1.0))
+
+    def frame(t):
+        while zustand["t"] < t - 1e-6:
+            zustand["t"] += 1.0 / (FPS * 2)
+            sim.schritt(zustand["t"], atemwert(zustand["t"]), dt=1.05,
+                        verlaufen=0.85, zerfall=0.9985)
+
+        rgb, dichte = sim.bild()
+        # Dichtehuelle: der Atemzug fuellt sich erst auf. Ohne sie deckt die
+        # Farbe von der ersten Sekunde an und es gibt keinen Verlauf zu sehen.
+        if t < EIN:
+            hd = 0.18 + 0.82 * B.ease_in_out(t / EIN) ** 1.3
+        elif t < HALT:
+            hd = 1.0
+        else:
+            hd = max(0.0, 1.0 - B.ease_in_out(min(1.0, (t - HALT) / 1.45)) * 0.92)
+        a = np.clip(dichte * 1.15 * hd, 0, 1) ** 0.95
+
+        # Volldeckung in der Mitte des Atemzugs - im Farbton der Mischung, nicht
+        # als heller Blitz, sonst wirkt es wieder wie ein Effekt
+        deck = max(0.0, 1.0 - abs(t - MITTE) / 0.42)
+        deck = B.ease_in_out(deck) ** 0.9
+        if deck > 0.001:
+            rgb = rgb * (1 - deck * 0.8) + np.array([226, 182, 104], np.float32) * deck * 0.8
+            a = np.clip(a + deck * 1.35, 0, 1)
+
+        # Anfang und Ende sauber bei null
+        huelle = min(1.0, t / 0.8) * min(1.0, max(0.0, (dauer - t) / 0.8))
+        a = a * B.ease_in_out(huelle)
+
+        rgba = np.empty((gh, gw, 4), np.uint8)
+        rgba[..., :3] = np.clip(rgb, 0, 255).astype(np.uint8)
+        rgba[..., 3] = (a * 255).astype(np.uint8)
+        return Image.fromarray(rgba, "RGBA").resize((W, H), Image.BICUBIC)
 
     encode(name, frame, True, dauer)
 
