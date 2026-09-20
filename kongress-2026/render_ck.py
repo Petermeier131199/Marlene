@@ -10,6 +10,7 @@ from PIL import Image, ImageDraw, ImageFilter
 import imageio_ffmpeg
 import brandkit as B
 import layouts as L
+from aquarell import Aquarell
 
 FPS = 30            # 60 / 30 geht glatt auf: keine ungleichmaessige
                     # Bildverdopplung in einer 60p-Timeline
@@ -213,6 +214,87 @@ def faecher(dauer=1.2):
         return lay
 
     encode("uebergang-faecher.mov", frame, True, dauer)
+
+
+def aquarell(dauer=3.0, name="uebergang-aquarell.mov", gitter=(960, 540)):
+    """Langer Kapiteluebergang: die Saat des Lebens laeuft aus wie Tinte im Wasser.
+
+    Ablauf: die Geometrie steht zuerst als klare Goldzeichnung, faengt dann an zu
+    bluten und wird zu Farbe im Wasser; zur Mitte hin deckt ein warmer Schwall
+    das Bild vollstaendig ab - nur dadurch passt der Uebergang auf jeden Schnitt -
+    danach treiben die Schlieren auseinander und geben das neue Bild frei.
+    """
+    gw, gh = gitter
+    sim = Aquarell(gw, gh)
+
+    # Saat des Lebens als Ausgangsfarbe, in Gittergroesse
+    GEO = 2500
+    geo_maske = B.saat_des_lebens(GEO, width=6)
+    voll = Image.new("L", (W, H), 0)
+    voll.paste(geo_maske, (int(W / 2 - GEO / 2), int(H / 2 - GEO / 2)))
+    sim.einbringen(np.asarray(voll.resize((gw, gh), Image.LANCZOS), np.float32) / 255.0, 0.62)
+
+    # klare Zeichnung fuer die erste Phase
+    klar = B.einfaerben(geo_maske, B.GOLD_HELL, 1.0)
+    klar = Image.alpha_composite(B.schein(klar, 16, 0.8), klar)
+
+    T_BLUTEN, T_MITTE = 0.70, dauer / 2.0
+
+    def farbe_zu_rgba(d, deckung):
+        """Farbdichte in Bild umsetzen: aussen Bernstein, innen Gold bis Creme."""
+        d = np.clip(d, 0, 1.6)
+        a = np.clip(d * 1.05, 0, 1) ** 0.9
+        t1 = np.clip(d * 1.5, 0, 1)[..., None]
+        t2 = np.clip((d - 0.85) * 1.6, 0, 1)[..., None]
+        c = (np.array([132, 68, 16], np.float32) * (1 - t1)
+             + np.array([226, 168, 60], np.float32) * t1)
+        c = c * (1 - t2) + np.array([250, 234, 196], np.float32) * t2
+        # bei voller Deckung Richtung warmes Licht mischen - sonst deckt der
+        # duenne Farbsaum das Bild in einem schmutzigen Braun ab
+        if deckung > 0.001:
+            c = c * (1 - deckung * 0.92) + np.array([250, 226, 180], np.float32) * deckung * 0.92
+        rgba = np.empty((gh, gw, 4), np.uint8)
+        rgba[..., :3] = np.clip(c, 0, 255).astype(np.uint8)
+        rgba[..., 3] = (np.clip(a + deckung * 1.5, 0, 1) * 255).astype(np.uint8)
+        return Image.fromarray(rgba, "RGBA").resize((W, H), Image.BICUBIC)
+
+    zustand = {"t": -1.0}
+
+    def frame(t):
+        # Simulation nachziehen (zwei Teilschritte je Bild, ruhigerer Transport)
+        while zustand["t"] < t - 1e-6:
+            zustand["t"] += 1.0 / (FPS * 2)
+            tn = max(0.0, (zustand["t"] - T_BLUTEN) / max(dauer - T_BLUTEN, 1e-6))
+            if zustand["t"] >= T_BLUTEN:
+                # Anlauf: erst kriecht die Farbe nur in die Flaeche, dann setzt
+                # der Druck ein. Ohne das ist das Ausbluten der Linien - der
+                # eigentliche Moment - nach zwei Zehnteln vorbei.
+                anlauf = min(1.0, (zustand["t"] - T_BLUTEN) / 0.5) ** 1.6
+                sim.schritt(tn, dt=1.2, stiftung=3.6 * anlauf * (1 - tn) ** 1.1,
+                            diffusion=0.5 + 1.4 * tn, zerfall=0.988)
+
+        # Volldeckung genau in der Mitte, damit der Uebergang auf jeden Schnitt passt
+        deck = max(0.0, 1.0 - abs(t - T_MITTE) / 0.38)
+        deck = B.ease_in_out(deck) ** 0.8
+
+        lay = farbe_zu_rgba(sim.farbe, deck)
+
+        # erste Phase: klare Zeichnung, die in die Farbe uebergeht
+        p_klar = 1.0 if t < T_BLUTEN else max(0.0, 1.0 - (t - T_BLUTEN) / 0.62)
+        if p_klar > 0.004:
+            sk = 1.0 + 0.06 * min(1.0, t / T_BLUTEN)
+            gs = int(GEO * sk)
+            k = klar.resize((gs, gs), Image.BILINEAR)
+            k.putalpha(k.getchannel("A").point(lambda v: int(v * p_klar)))
+            lay.alpha_composite(k, (int(W / 2 - gs / 2), int(H / 2 - gs / 2)))
+
+        # letzte Phase: alles sanft ausblenden
+        if t > dauer - 0.55:
+            a = max(0.0, (dauer - t) / 0.55)
+            lay.putalpha(lay.getchannel("A").point(lambda v: int(v * B.ease_in_out(a))))
+        return lay
+
+    encode(name, frame, True, dauer)
 
 
 # ------------------------------------------------------------ Vollbildkarten
