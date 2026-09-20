@@ -172,68 +172,51 @@ def nachklang(satz="Erkenne deinen Seelenplan.", p=1.0):
     return bg.convert("RGB")
 
 
-def kontakt(eintraege=None, p=1.0):
-    """Schlusskarte zwei: wo man sie findet."""
+def kontakt(eintraege=None, hinweis=True, p=1.0):
+    """Schlusskarte zwei: wo man sie findet, plus ein leiser Hinweis.
+
+    Der Workshop steht bewusst unterhalb einer Trennlinie und in kleinerer
+    Schrift: Er wird im Video erwaehnt, soll aber nicht wie eine Werbeflaeche
+    wirken - deshalb abgesetzt statt als vierte gleichwertige Zeile.
+    """
     eintraege = eintraege or [
         "vanessa-spaleck.de",
         "@medium_vanessa_spaleck",
         "Buch »Ganz normal medial«",
     ]
-    MITTE = 0.515
+    MITTE = 0.50
     bg = _hintergrund_karte(MITTE)
-    s = 1460
-    geo = B.einfaerben(B.blume_des_lebens(s, width=3), B.GOLD, 0.16 * p)
+    s = 1520
+    geo = B.einfaerben(B.blume_des_lebens(s, width=3), B.GOLD, 0.15 * p)
     bg.alpha_composite(geo, (int(B.W / 2 - s / 2), int(B.H * MITTE - s / 2)))
 
-    fae = FAECHER.resize((int(FAECHER.width * 210 / FAECHER.height), 210), Image.LANCZOS)
+    fae = FAECHER.resize((int(FAECHER.width * 190 / FAECHER.height), 190), Image.LANCZOS)
     fae.putalpha(fae.getchannel("A").point(lambda v: int(v * p)))
-    bg.alpha_composite(fae, (int(B.W / 2 - fae.width / 2), int(B.H * 0.215)))
+    bg.alpha_composite(fae, (int(B.W / 2 - fae.width / 2), 300))
 
-    wort = wortmarke_in(B.CREAM, WORTMARKE.height * 1000 / WORTMARKE.width)
+    wort = wortmarke_in(B.CREAM, WORTMARKE.height * 960 / WORTMARKE.width)
     wort.putalpha(wort.getchannel("A").point(lambda v: int(v * p)))
-    bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), int(B.H * 0.345)))
+    bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), 560))
 
-    _zeile(bg, "WO DU MICH FINDEST", B.grotesk(56, "Medium"), 20,
-           B.GOLD + (int(235 * p),), B.H * 0.455, 140)
+    _zeile(bg, "WO DU MICH FINDEST", B.grotesk(52, "Medium"), 19,
+           B.GOLD + (int(235 * p),), 730, 140)
 
-    # Adressen in der Groteske, nicht in Runalto: Runalto hat zwar einen
-    # Unterstrich, der ist aber so fein, dass er beim Herunterrechnen auf 1080p
-    # verschwindet - der Instagram-Name fiel dadurch in Einzelwoerter
-    # auseinander. Adressen liest man in einer Groteske ohnehin sicherer.
-    y = B.H * 0.555
     for i, e in enumerate(eintraege):
-        _zeile(bg, e, B.grotesk(76, "Light"), 4, (243, 234, 218) + (int(248 * p),),
-               y + i * 152, 220)
-    return bg.convert("RGB")
-def kapitelkarte(titel, kennzeichen=None, unterzeile=None, p=1.0, p_titel=None):
-    """Kapitel-Zwischentitel: Symbol, Kennzeichnung, Titel, Goldlinie, Unterzeile."""
-    p_titel = p if p_titel is None else p_titel
-    bg = _hintergrund_karte()
+        _zeile(bg, e, B.grotesk(74, "Light"), 4, (243, 234, 218) + (int(248 * p),),
+               880 + i * 140, 220)
 
-    s = 340
-    m = B.saat_des_lebens(s, width=3)
-    sym = B.einfaerben(m, B.ORANGE_HL, 0.85 * p)
-    bg.alpha_composite(B.schein(sym, 26, 0.7), (int(B.W / 2 - s / 2), int(B.H * 0.318 - s / 2)))
-    bg.alpha_composite(sym, (int(B.W / 2 - s / 2), int(B.H * 0.318 - s / 2)))
-
-    def zeile(text, f, track, farbe, y, hoehe=300):
-        w = B.breite(text, f, track)
-        lay = Image.new("RGBA", (B.W + 800, hoehe), (0, 0, 0, 0))
-        B.gesperrt(ImageDraw.Draw(lay), text, f, 0, 0, track, farbe)
-        bg.alpha_composite(lay.crop((0, 0, int(w) + 10, hoehe)), (int(B.W / 2 - w / 2), int(y)))
-
-    if kennzeichen:
-        zeile(kennzeichen.upper(), B.grotesk(58, "Medium"), 20,
-              B.GOLD + (int(235 * p),), B.H * 0.458, 140)
-
-    zeile(titel, B.runalto(152), 12, B.CREAM + (int(252 * p_titel),), B.H * 0.525)
-
-    y = int(B.H * 0.688)
-    lw = int(440 * B.ease_out(p))
-    if lw > 2:
-        ImageDraw.Draw(bg).rectangle([B.W / 2 - lw / 2, y, B.W / 2 + lw / 2, y + 3],
-                                     fill=B.GOLD + (200,))
-    if unterzeile:
-        zeile(unterzeile, B.grotesk(56, "Light"), 8,
-              (238, 228, 208) + (int(230 * p),), B.H * 0.721, 140)
+    if hinweis:
+        y = 1410
+        lw = int(300 * B.ease_out(p))
+        if lw > 2:
+            ImageDraw.Draw(bg).rectangle([B.W / 2 - lw / 2, y, B.W / 2 + lw / 2, y + 2],
+                                         fill=B.GOLD + (150,))
+        _zeile(bg, "ONLINE-VIDEO-WORKSHOP", B.grotesk(44, "Medium"), 16,
+               B.GOLD + (int(210 * p),), 1480, 120)
+        # bewusst kleiner als die Kontaktzeilen darueber: der Hinweis soll
+        # nachgeordnet wirken, nicht die Karte anfuehren
+        _zeile(bg, "Geistführer & Geistiges Haus", B.runalto(82), 5,
+               (238, 230, 214) + (int(232 * p),), 1585, 200)
+        _zeile(bg, "vanessa-spaleck.de/geistfuehrer-und-geistiges-haus",
+               B.grotesk(44, "Light"), 3, (214, 204, 188) + (int(190 * p),), 1735, 140)
     return bg.convert("RGB")

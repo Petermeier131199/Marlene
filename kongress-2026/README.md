@@ -32,7 +32,7 @@ ungleichmäßig ruckeln.
 | `titel-opener.mp4` | 6,5 s | Vorspann: Thema und Speakerin, Kongress-Logo als Absender. |
 | `kapitel-1-karte.mp4` … `kapitel-6-karte.mp4` | je 4,5 s | Die sechs Kapitel-Zwischentitel. |
 | `schluss-1-nachklang.mp4` | 6,0 s | Schlusskarte eins: ein ruhiger Satz, der nachwirkt. |
-| `schluss-2-kontakt.mp4` | 7,0 s | Schlusskarte zwei: wo man sie findet. |
+| `schluss-2-kontakt.mp4` | 8,0 s | Schlusskarte zwei: wo man sie findet, plus Hinweis auf den Workshop. |
 
 ## So platzierst du die Übergänge
 
@@ -173,3 +173,13 @@ Gold-Bernstein-Familie – mischt man ein dunkles Braun darunter, ergibt der
 gewichtete Mittelwert mit dem Gold ein stumpfes Oliv.
 
 Volldeckung liegt bei 1,65 s, also in der Mitte: Mitte auf den Schnitt legen.
+
+## Der Workshop-Hinweis auf der Schlusskarte
+
+Der Online-Video-Workshop „Geistführer & Geistiges Haus" wird im Video erwähnt
+und steht deshalb am Ende – aber unterhalb einer feinen Trennlinie und in
+kleinerer Schrift als die Kontaktzeilen darüber. In der ersten Fassung war der
+Titel größer als alles andere auf der Karte und führte sie damit an; das war
+genau das Gegenteil eines zurückhaltenden Hinweises.
+
+Ausschalten mit `L.kontakt(hinweis=False)`.
