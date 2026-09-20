@@ -79,7 +79,7 @@ def bauchbinde(p_linie=1.0, p_text=1.0, p_rolle=1.0, versatz=0):
         f = B.runalto(62)
         txt = Image.new("RGBA", (B.W, 140), (0, 0, 0, 0))
         dd = ImageDraw.Draw(txt)
-        B.gesperrt(dd, "Medium  |  Speakerin  |  Coach", f, 0, 0, 7,
+        B.gesperrt(dd, "Medium  |  Mentorin  |  Autorin", f, 0, 0, 7,
                    B.GOLD_HELL + (int(255 * p_rolle),))
         lay.alpha_composite(txt, (x0 + 4, basis + 236))
     return lay
@@ -146,7 +146,7 @@ def titel_opener(thema="Erkenne deinen Seelenplan", p_geo=1.0, p_logo=1.0,
         wort = wortmarke_in(B.CREAM, WORTMARKE.height * 1020 / WORTMARKE.width)
         wort.putalpha(wort.getchannel("A").point(lambda v: int(v * p_gast)))
         bg.alpha_composite(wort, (int(B.W / 2 - wort.width / 2), y + 74))
-        _zeile(bg, "MEDIUM  |  SPEAKERIN  |  COACH", B.grotesk(56, "Medium"), 11,
+        _zeile(bg, "MEDIUM  |  MENTORIN  |  AUTORIN", B.grotesk(56, "Medium"), 11,
                (246, 228, 168) + (int(240 * p_gast),), y + 74 + wort.height + 46, 140)
     return bg.convert("RGB")
 

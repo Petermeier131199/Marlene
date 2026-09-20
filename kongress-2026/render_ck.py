@@ -82,7 +82,7 @@ def _bauchbinde_frame():
     fae_r, pad_f = _mit_schatten(fae, 14, 1.4)
     breite = fae.width + 48 + L.wortmarke_in(B.CREAM, 138).width
 
-    rt = "MEDIUM  |  SPEAKERIN  |  COACH"
+    rt = "MEDIUM  |  MENTORIN  |  AUTORIN"
     rf = B.grotesk(58, "Medium")
     rolle = Image.new("RGBA", (int(B.breite(rt, rf, 11)) + 20, 130), (0, 0, 0, 0))
     B.gesperrt(ImageDraw.Draw(rolle), rt, rf, 0, 0, 11, (246, 228, 168) + (255,))
