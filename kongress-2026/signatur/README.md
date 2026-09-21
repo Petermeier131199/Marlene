@@ -7,6 +7,14 @@ Cremeweißer Grund, Kobaltblau und ihr Gelb. Vollbild, kein Alphakanal:
 |---|---|---|
 | `signatur-kurz.mp4` | 4,6 s | Klammer am Anfang und Ende eines Videos. |
 | `signatur-lang.mp4` | 7,9 s | Wenn mehr Ruhe möglich ist, etwa vor einer Meditation. |
+| `signatur-ohne-schnitt.mp4` | 4,8 s | Eine einzige durchgehende Aufnahme, ohne Verbindungsstelle. |
+
+Die ersten beiden Fassungen setzen zwei erzeugte Segmente zusammen. Beide enden
+bzw. beginnen zwar am selben Schlüsselbild, aber die **Bewegungsrichtung** der
+Tinte stimmt dort nicht überein – die Überblendung mischt zwei Aufnahmen, in
+denen sich die Farbe gerade gegenläufig bewegt, und genau das sieht man als
+Stocken in der Mitte. `signatur-ohne-schnitt.mp4` besteht deshalb aus einer
+einzigen Aufnahme und endet auf der Berührung.
 
 ## Ablauf
 
