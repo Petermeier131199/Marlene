@@ -70,3 +70,29 @@ nach Tinte.
 
 Länglich gesät statt als Scheibe, mit anhaltendem Drift, ergibt das Band der
 Referenzen statt einer Wolke, die sich an Ort und Stelle kringelt.
+
+## Markensequenz „Der Punkt" (`signatur-punkt-und-faecher.mp4`)
+
+3,9 Sekunden auf cremeweißem Grund, in ihren Farben – Blau und ihr Gelb.
+Vollbild, kein Alphakanal nötig: vorne und hinten überblenden, fertig.
+
+**Ablauf.** Ein blaues Band zieht von links oben herein, ein gelbes von rechts
+unten. Beide laufen auf einen Punkt zu, verdichten sich – und aus diesem Punkt
+fächert alles nach oben auf, in **dreizehn Blättern**, abwechselnd blau und
+gelb. So viele Blätter hat der Fächer in ihrem Logo. Die Bewegung zeichnet ihr
+Zeichen, ohne dass ein Logo zu sehen ist.
+
+**Zwei Entscheidungen, die technisch erzwungen waren:**
+
+*Die Blätter greifen ineinander, statt übereinanderzuliegen.* Die Farben werden
+nach dem Absorptionsgesetz auf den hellen Grund gerechnet – Tinte auf Papier
+schluckt Licht, sie strahlt nicht. Blau schluckt Rot, Gelb schluckt Blau; liegen
+beide am selben Ort, schlucken sie zusammen alles Licht und der Fächer wird
+schwarz. Abwechselnde Blätter lösen das Problem und sehen zugleich besser aus.
+
+*Der Fächer ist ein eigener Ausbruch, kein weitertransportiertes Band.* Tinte
+sieht nur deshalb nach Tinte aus, weil sie zerläuft – ein lesbarer Fächer
+braucht aber scharfe Strahlen. Transportiert man die Bänder weiter, zerstreut
+die Diffusion den Fächer, bevor er zu sehen ist. Der Ausbruch ist schnell genug,
+um ihr davonzulaufen, und wird dann abgebremst. Die Übergabe verbirgt eine
+Überblendung von drei Zehntelsekunden.

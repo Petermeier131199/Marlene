@@ -6,8 +6,16 @@ W, H = 3840, 2160
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # --- Farben: ihr Gold, sein Orange, warmes Schwarz -------------------------
-GOLD_HELL = (232, 192, 80)
-GOLD      = (224, 176, 32)
+# Ihr Gelb - im Logo abgetastet (#e0b020), im Stylesheet ihrer Website als
+# #e7b428 hinterlegt. Der Abstand zwischen beiden betraegt 2,6 Prozent des
+# Farbraums und ist auf einem Bildschirm nicht unterscheidbar; es ist dieselbe
+# Farbe. Auf dunklem Grund wirkt sie wie Gold, auf hellem eindeutig wie Gelb -
+# daher die alten Namen, die bleiben als Alias bestehen.
+GELB_HELL = (232, 192, 80)
+GELB      = (224, 176, 32)
+GELB_WEB  = (231, 180, 40)
+GOLD_HELL = GELB_HELL
+GOLD      = GELB
 ORANGE    = (196,  99,  18)     # Akzent des Kongress-Logos
 ORANGE_HL = (217, 122,  30)
 CREAM     = (247, 241, 230)
