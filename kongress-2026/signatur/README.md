@@ -7,7 +7,8 @@ Cremeweißer Grund, Kobaltblau und ihr Gelb. Vollbild, kein Alphakanal:
 |---|---|---|
 | `signatur-kurz.mp4` | 4,6 s | Klammer am Anfang und Ende eines Videos. |
 | `signatur-lang.mp4` | 7,9 s | Wenn mehr Ruhe möglich ist, etwa vor einer Meditation. |
-| `signatur-ohne-schnitt.mp4` | 4,8 s | Eine einzige durchgehende Aufnahme, ohne Verbindungsstelle. |
+| `signatur-ohne-schnitt.mp4` | 4,8 s | **Empfehlung.** Durchgehend, endet auf der Berührung. |
+| `signatur-durchgehend.mp4` | 5,4 s | Durchgehend über den ganzen Bogen bis ins Auflösen. |
 
 Die ersten beiden Fassungen setzen zwei erzeugte Segmente zusammen. Beide enden
 bzw. beginnen zwar am selben Schlüsselbild, aber die **Bewegungsrichtung** der
@@ -39,3 +40,17 @@ dazwischen finden.
 
 Die gerechneten Versuche liegen weiterhin im Verlauf des Repositories, falls
 jemand den Weg nachvollziehen will.
+
+## Welche Fassung
+
+`signatur-ohne-schnitt.mp4` ist die beste. Sie ist flüssig, weil sie aus einer
+einzigen Aufnahme besteht, und der Berührungsmoment sieht aus wie das
+Schlüsselbild: seidige Schleier, die sich ineinander verweben.
+
+`signatur-durchgehend.mp4` läuft über den ganzen Bogen bis ins Auflösen und ist
+ebenfalls nahtlos – dort trifft die Tinte aber kompakter und gedrungener
+aufeinander, weniger fein als im Schlüsselbild. Das ist der Preis dafür, dass
+das Modell einen zehn Sekunden langen Weg in einem Zug erfinden musste.
+
+Die zusammengesetzten Fassungen (`kurz`, `lang`) stocken in der Mitte und sind
+nur noch zum Vergleich da.
