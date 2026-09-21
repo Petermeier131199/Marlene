@@ -42,3 +42,31 @@ nicht mittig und nicht symmetrisch – dort, wo der Pinsel das Wasser berührt.
 Das Wirbelfeld in `tinte.py` ist bewusst schwach gehalten: Ohne jede
 Verwirbelung bleiben glatte Säulen statt Fäden, mit zu viel wird es unruhig.
 Die Schwerkraft ist rund fünfmal stärker als der Wirbel.
+
+## Strukturtest Partikel (`strukturtest-partikel.mp4`)
+
+2 Sekunden, Graustufen, keine Choreografie – nur die Frage, ob die feine
+Fadenstruktur der Referenzen überhaupt erreichbar ist.
+
+**Warum ein anderes Verfahren.** Auf einem Gitter transportierte Farbdichte muss
+in jedem Schritt weichgezeichnet werden, sonst zerfällt sie in Treppen. Genau
+diese Weichzeichnung frisst die feinen Fäden weg – damit entstehen zwangsläufig
+Wolken, nie Filigranes. Das war der Grund, warum alle vier Vorversuche
+scheitern mussten, unabhängig von den Parametern.
+
+Hier bewegen sich stattdessen 700.000 einzelne Partikel durch ein quellenfreies
+Strömungsfeld und werden bei jedem Teilschritt additiv aufgezeichnet. Ein Faden
+ist dann die Spur vieler Punkte, die fast denselben Weg nehmen.
+
+**Drei Erkenntnisse aus den Durchgängen:**
+
+Ein kleiner Fleck in einem groben Feld *wandert nur*. Dehnung braucht
+Geschwindigkeitsunterschiede über die Wolke hinweg – also entweder eine große
+Wolke oder ein feines Feld.
+
+Ohne zufälliges Zittern der Partikel (molekulare Diffusion) bleibt der Rand der
+Wolke eine geschlossene Linie: Das Ergebnis sieht nach Marmorpapier aus, nicht
+nach Tinte.
+
+Länglich gesät statt als Scheibe, mit anhaltendem Drift, ergibt das Band der
+Referenzen statt einer Wolke, die sich an Ort und Stelle kringelt.
