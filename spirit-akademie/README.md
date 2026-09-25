@@ -1,8 +1,11 @@
 # Schild für die magnetische Tafel
 
-Gesetzt in ihrer Print-Sprache nach dem Vorbild ihres Briefpapiers: weißer
-Grund, feines Punktraster, goldenes Mandala mit Wortmarke und „medium. coach.
-teacher." oben, die Spirit-Akademie-Marke unten.
+Gesetzt in ihrer Print-Sprache: reines Weiß, goldenes Mandala mit Wortmarke und
+„medium. coach. teacher." oben, die Spirit-Akademie-Marke unten.
+
+Kein Punktraster – das kam vom Blockblatt auf dem Größenvergleichsfoto und war
+nie Teil ihrer Gestaltung. Ohne Raster trägt die Schrift die Fläche allein und
+ist deshalb etwas größer gesetzt.
 
 **Format: 190 × 265 mm, 300 dpi.** Etwas kleiner als A4 – zum Drucken auf A4 in
 Originalgröße („100 %", nicht „an Seite anpassen") und Ausschneiden.

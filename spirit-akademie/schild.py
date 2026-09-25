@@ -41,20 +41,6 @@ def gesperrt(d, text, font, cx, y, track_mm, fill):
     return breite
 
 
-def punktraster(bild, abstand_mm=4.0, radius_px=2):
-    """Feines Punktraster wie auf dem Briefpapier."""
-    d = ImageDraw.Draw(bild)
-    schritt = mm(abstand_mm)
-    y = mm(38)
-    while y < H - mm(26):
-        x = mm(14)
-        while x < W - mm(14):
-            d.ellipse([x - radius_px, y - radius_px, x + radius_px, y + radius_px],
-                      fill=PUNKT)
-            x += schritt
-        y += schritt
-
-
 def logo_oben(bild, breite_mm=58, oben_mm=15):
     lg = Image.open("vs-logo.png").convert("RGBA")
     b = int(mm(breite_mm))
@@ -92,21 +78,20 @@ def spirit_marke(bild, y_mm, groesse_mm=17):
 
 def bauen(kopf, zeile2, jahr, unterzeile=None, datei="schild.png"):
     bild = Image.new("RGBA", (W, H), WEISS + (255,))
-    punktraster(bild)
     unten = logo_oben(bild)
     d = ImageDraw.Draw(bild)
 
     y = mm(112)
-    gesperrt(d, kopf, f("Montserrat.ttf", 12.5, "Light"), W / 2, y, 2.3, GRAU + (255,))
+    gesperrt(d, kopf, f("Montserrat.ttf", 13.5, "Light"), W / 2, y, 2.4, GRAU + (255,))
     if zeile2:
-        gesperrt(d, zeile2, f("Montserrat.ttf", 12.5, "Light"), W / 2, y + mm(18), 2.3,
+        gesperrt(d, zeile2, f("Montserrat.ttf", 13.5, "Light"), W / 2, y + mm(19.5), 2.4,
                  GRAU + (255,))
-        y = y + mm(18)
+        y = y + mm(19.5)
 
     # Goldlinie und Jahr
     ly = y + mm(29)
     d.rectangle([W / 2 - mm(26), ly, W / 2 + mm(26), ly + max(2, int(mm(0.4)))], fill=GOLD)
-    gesperrt(d, jahr, f("Montserrat.ttf", 9.0, "Light"), W / 2, ly + mm(8), 4.0,
+    gesperrt(d, jahr, f("Montserrat.ttf", 9.5, "Light"), W / 2, ly + mm(8), 4.2,
              GOLD + (255,))
 
     if unterzeile:
