@@ -21,6 +21,28 @@ einem rechtlich eigenständigen Arbeitgeber.
 | + Diensthandy mit Privatnutzung | wird zum Filmen ohnehin gebraucht |
 | **Kosten für Poleschak** | ca. 790 € (inkl. ca. 31 % Pauschalabgaben) + ca. 115 € Extras = **ca. 905 €** |
 
+### Stundenaufteilung im Minijob (max. 43 h/Monat ≈ 10 h/Woche)
+| Aufgabe | pro Monat | Stunden |
+|---|---|---|
+| Reels (Idee, Dreh, Schnitt, Text) | 4 × 3 h | 12,0 h |
+| Karussells | 4 × 1,5 h | 6,0 h |
+| Bild-Posts | 4 × 0,75 h | 3,0 h |
+| Story-Tage | 13 × 0,25 h | 3,25 h |
+| Community (Kommentare, DMs, Anfragen weiterleiten) | 1,25 h/Woche | 5,4 h |
+| Planung + Abstimmung mit der Geschäftsführung | 0,75 h/Woche | 3,25 h |
+| Material auf Vorrat (Foto-/Videotag) | 1 h/Woche | 4,3 h |
+| Werbeanzeigen (in Kampagnenmonaten) | 0,5 h/Woche | 2,2 h |
+| Reporting (1 Seite) | 0,5 h/Woche | 2,2 h |
+| **Summe** | | **ca. 41,6 h** (Puffer ca. 1,5 h) |
+
+**Vertragsvorschlag:** „Bis zu 43 Stunden pro Monat, Vergütung in Höhe der jeweils
+geltenden Minijob-Grenze, Leistungsumfang Paket S.“ So steigt die Vergütung 2027
+automatisch mit (Mindestlohn 14,60 € → Grenze 633 €). Die Grenze von ca. 43 h bleibt.
+
+**Monat 1 = Aufbaumonat:** Einrichtung von Profil, Bio und Highlight-Covern, Canva-Vorlagen,
+Nullmessung, Foto-Einwilligungen einholen, Redaktionsplan. Dafür werden nur **2 Reels
+statt 4** produziert, damit die 43 h nicht überschritten werden.
+
 ### Gesamtkosten pro Jahr (Stufe 1)
 | Posten | pro Jahr |
 |---|---|
