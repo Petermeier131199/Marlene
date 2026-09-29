@@ -40,9 +40,22 @@ Recruiting:
 | konkret (Zahlen, Beispiele, Preise als Spanne) | vage („beste Qualität“, „modernste Technik“) |
 | diskret | zeigt Kundenobjekte, Adressen, Kamerapositionen, Codes |
 
-**Ansprache:** Auf Instagram wird **geduzt** („du“), weil das dort üblich ist und die
-Azubi-Zielgruppe es erwartet. Die Website bleibt beim „Sie“.
-→ *Diese Entscheidung sollte die Geschäftsführung bestätigen.*
+**Ansprache: Empfehlung „du“ auf Instagram, und zwar durchgehend.**
+
+| Wo | Ansprache |
+|---|---|
+| Instagram (Posts, Reels, Stories, Anzeigen) und Facebook | **du**: respektvoll, ohne Jugendsprache |
+| Direktnachrichten und Kommentare | **Spiegeln**: Wer „Sie“ schreibt, bekommt „Sie“ zurück |
+| Website, Angebote, E-Mails, Telefon, Beratung vor Ort | **Sie** |
+
+Warum:
+- **Plattform-Norm:** Auf Instagram wirkt „Sie“ wie ein Brief vom Amt. Das passt nicht zu Reels, Humor und Stories.
+- **Recruiting:** 45 % des Contents richten sich an Azubis und Fachkräfte. Ein Azubi-Reel mit „Sie“ funktioniert nicht.
+- **Ein Kanal, eine Stimme:** Ein Wechsel zwischen „du“ im Recruiting-Post und „Sie“ im Kunden-Post wirkt unprofessionell.
+- Das Risiko, dass sich ältere Kunden gestört fühlen, bleibt gering: Die Beratung läuft ohnehin per „Sie“, und in DMs wird gespiegelt.
+- **Stilmittel:** Viele Captions werden in der **Wir-Form** geschrieben („Wir sind wach, damit du schlafen kannst.“). Dadurch fällt die direkte Anrede seltener auf.
+
+→ *Endgültige Entscheidung durch die Geschäftsführung, weil sie die Stimme der Firma ist.*
 
 ---
 
