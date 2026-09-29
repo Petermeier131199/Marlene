@@ -143,3 +143,41 @@ Drehtermine liegen deshalb am späten Nachmittag vor der Schicht oder an freien 
 Für Nachtarbeitnehmer gilt im Schnitt max. 8 h pro Tag, gerechnet über beide Arbeitgeber.
 Vom Lohnbüro prüfen lassen, ob Sachbezug und Internetpauschale bei der SWD schon genutzt
 werden (dann nicht doppelt einplanen).
+
+---
+
+## Nachtrag 3: Ziel 25 € Grundlohn, wie es klappen kann
+
+**Was das für die SWD kostet:** +5 €/h × 110 h = +550 € brutto, dazu Arbeitgeberanteil
+(ca. 21 %) und höherer Nachtzuschlag (+ca. 127 €). Das sind **ca. +790 € pro Monat bzw.
+ca. 9.500 € pro Jahr**. Bei dir kommen davon ca. **+447 € netto** an.
+
+**Wichtige Erkenntnis:** Pro Euro, den die Firma ausgibt, kommt beim Minijob mehr bei dir an:
+| | Kosten Firma | bei dir netto | Anteil, der bei dir ankommt |
+|---|---|---|---|
+| Erhöhung auf 25 € | ca. 790 € | ca. 447 € | 56 % |
+| Minijob Poleschak | ca. 905 € | ca. 703 € | **78 %** |
+
+Beides gleichzeitig bedeutet für die Firmengruppe **ca. 20.000 € Mehrkosten pro Jahr für
+eine Person**. Wenn im Gespräch „entweder – oder“ kommt, ist der Minijob für beide Seiten
+die bessere Wahl.
+
+### Strategie: 25 € als Ziel, aber mit Stufen und neuer Verantwortung
+Ein Sprung von 25 % „für dieselbe Arbeit“ ist schwer durchzusetzen. Leichter geht es, wenn
+**neue Verantwortung** dazukommt:
+- **Stufe A (sofort, z. B. ab 01.11.2026):** 23 € Grundlohn (Firma: ca. +475 €/Monat)
+- **Stufe B (z. B. ab 01.07.2027):** 25 € Grundlohn, verknüpft mit einer zusätzlichen Aufgabe:
+  - Einarbeitung und Patenschaft für neue Leitstellen-Kolleginnen und -Kollegen (die Leitstelle sucht gerade Personal)
+  - Schichtverantwortung bzw. Ansprechperson im Nachtdienst
+  - Dokumentation und Qualitätssicherung der Abläufe (z. B. für Audits)
+  - oder eine Weiterqualifizierung (z. B. IHK-Abschluss im Bereich Schutz und Sicherheit)
+- Die Tariferhöhung 2027 kommt zusätzlich: den Vorbehalt „ohne Anrechnung auf die Tariferhöhung“ schriftlich festhalten.
+
+### Vorbereitung für das Gespräch
+1. **Leistung belegen:** Zeit im Betrieb, Nachtdienste pro Monat, Einspringen und Flexibilität, Fehlerfreiheit, Sonderaufgaben.
+2. **Ersatzkosten:** Die Leitstelle findet schwer Personal. Suche und Einarbeitung einer neuen Nachtkraft dauern Monate.
+3. **Marktwert:** Stellenanzeigen für Leitstellen- bzw. NSL-Personal in der Region (Ingolstadt, München) heraussuchen und ausdrucken.
+4. **Schriftlich festhalten:** Stufen, Termine und Bedingung (Aufgabe X übernommen).
+
+**Reihenfolge:** Das Gehaltsgespräch (SWD) zuerst und getrennt führen, danach den
+Social-Media-Pitch (Poleschak) am 07.10.
