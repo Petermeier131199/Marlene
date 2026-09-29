@@ -1,6 +1,6 @@
 # Phase 2 – Positionierung & Zielgruppen
 
-Stand: 30.09.2026 · Grundlage: [`01-analyse.md`](01-analyse.md) · Zielgruppen A + B + C freigegeben.
+Stand: 29.09.2026 · Grundlage: [`01-analyse.md`](01-analyse.md) · Zielgruppen A + B + C freigegeben.
 
 ---
 

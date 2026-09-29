@@ -37,7 +37,7 @@ die neue Stelle „Social Media“ im Haus.
 | Tag | Inhalt |
 |---|---|
 | Di 29.09. | Arbeitsauftrag + Analyse |
-| Mi 30.09. | Positionierung, Zielgruppen/Personas |
+| Mi 30.09. | Positionierung, Zielgruppen/Personas (✅ bereits am 29.09. erledigt, inkl. Vergütungsmodell) |
 | Do 01.10. | Marken-Kit |
 | Fr 02.10. | Strategie, Stunden- und Kostenplan |
 | Sa 03.–Mo 05.10. | Vorlagen, PowerPoint |

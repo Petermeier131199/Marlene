@@ -1,6 +1,6 @@
 # Ziele, Aufwand & Vergütung
 
-Stand: 30.09.2026 · Vorgezogen aus Phase 6, weil es die Grundlage des Pitches ist.
+Stand: 29.09.2026 · Vorgezogen aus Phase 6, weil es die Grundlage des Pitches ist.
 Alle Zahlen sind **Vorschläge**. Markierte Annahmen bitte prüfen.
 
 ---

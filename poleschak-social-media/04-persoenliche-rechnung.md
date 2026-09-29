@@ -1,6 +1,6 @@
 # Persönliche Rechnung: +700 € netto (intern, nicht für die Präsentation)
 
-Stand: 30.09.2026 · Ausgangslage: 110 h/Monat Alarmdienst in der Leitstelle, Social Media soll
+Stand: 29.09.2026 · Ausgangslage: 110 h/Monat Alarmdienst in der Leitstelle, Social Media soll
 als zusätzliche Aufgabe dazukommen. Ziel: **+700 € netto im Monat**.
 
 Näherungsrechnung für 2026: Steuerklasse I, keine Kinder, gesetzlich versichert.
@@ -67,7 +67,7 @@ Zusammen mit der Leitstelle wären das aber **ca. 179 h/Monat (≈ 41 h/Woche)**
 - **Arbeitszeitgesetz:** Die Stunden bei SWD und Poleschak werden **zusammengezählt**. Im Schnitt sind höchstens 48 h/Woche erlaubt.
 - **Meine Empfehlung:** Wenn die Leitstelle bei der SWD ist, zuerst **Weg 1** prüfen lassen. Für die Firma ist er am billigsten, damit wird die Zusage am leichtesten. Sonst **Weg 2 plus Boni**. Nach 6 Monaten mit Zahlen auf Paket M aufstocken.
 
-## Entscheidung (30.09.2026)
+## Entscheidung (29.09.2026)
 Angestellt bei der **SWD** → **Weg 1 (Minijob bei der Poleschak GmbH)**. Wichtige Details:
 - **Höchstens 43 h/Monat**, weil 603 € ÷ Mindestlohn 13,90 € = 43,4 h. Paket S passt genau hinein, für Zusatzeinsätze bleibt kein Puffer.
 - **Rentenversicherung:** Mit Befreiung bekommst du 603 € netto. Ohne Befreiung sind es 581 € netto (3,6 % Eigenanteil), dafür sammelst du volle Rentenansprüche. Beides ist legitim, du entscheidest.
