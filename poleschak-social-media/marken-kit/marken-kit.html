@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Marken-Kit Social Media – Alarmanlagen Poleschak</title>
+<link href="fonts/poppins.css" rel="stylesheet">
+<style>
+  :root{
+    --orange:#EB5A1B; --orange-hell:#FF7F22; --rost:#722C0D;
+    --schwarz:#010101; --nacht:#111111; --anthrazit:#222222; --grau:#545559;
+    --silber:#B4B5BB; --hellgrau:#F4F4F4; --weiss:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#777}
+  body{font-family:'Poppins',sans-serif;color:var(--anthrazit)}
+  .page{width:1920px;height:1080px;position:relative;overflow:hidden;background:var(--weiss);
+        page-break-after:always;padding:90px 110px}
+  .page.dark{background:var(--nacht);color:var(--weiss)}
+  .kicker{font-weight:300;letter-spacing:.35em;text-transform:uppercase;font-size:22px;color:var(--grau)}
+  .dark .kicker{color:var(--silber)}
+  h1{font-weight:800;font-size:64px;line-height:1.05;margin-top:14px}
+  h2{font-weight:700;font-size:26px;margin-bottom:14px}
+  .bar{width:90px;height:8px;background:var(--orange);margin:26px 0 0}
+  .pnum{position:absolute;right:110px;bottom:60px;font-size:18px;color:var(--silber);letter-spacing:.2em}
+  .footer-logo{position:absolute;left:110px;bottom:52px;height:40px}
+  p,li{font-size:21px;line-height:1.55}
+  ul{list-style:none}
+  li{padding-left:34px;position:relative;margin-bottom:10px}
+  li::before{content:"";position:absolute;left:0;top:11px;width:14px;height:14px;border-radius:50%;background:var(--orange)}
+  li.no::before{background:none;border:3px solid var(--grau);border-radius:0;transform:rotate(45deg);width:10px;height:10px}
+  .dark li.no::before{border-color:var(--silber)}
+  .grid{display:grid;gap:36px}
+  .card{border-radius:14px;padding:30px}
+  .muted{color:var(--grau)}
+  .dark .muted{color:var(--silber)}
+  .o{color:var(--orange)}
+  .waves{position:absolute}
+  /* Cover */
+  .cover-claim{font-size:96px;font-weight:800;line-height:1.02;margin-top:40px;max-width:1150px}
+  /* Farben */
+  .sw{border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px #e3e3e3}
+  .sw .c{height:120px}
+  .sw .t{padding:14px 18px;font-size:16px;line-height:1.45;background:#fff}
+  .sw .t b{font-size:21px;display:block;margin-bottom:4px}
+  .sw.small .c{height:70px}
+  .ratio{display:flex;height:64px;border-radius:12px;overflow:hidden;margin-top:14px}
+  .ratio div{display:flex;align-items:center;padding-left:20px;font-weight:600;font-size:19px}
+  table{border-collapse:collapse;width:100%;font-size:19px}
+  td{padding:9px 10px;border-bottom:1px solid #e6e6e6}
+  .chip{display:inline-block;padding:6px 14px;border-radius:8px;font-weight:600;font-size:17px}
+  /* Mockups */
+  .post{width:432px;height:540px;border-radius:10px;position:relative;overflow:hidden;padding:40px 38px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+  .post .k{font-weight:300;letter-spacing:.3em;font-size:14px;text-transform:uppercase}
+  .post .h{font-weight:800;font-size:44px;line-height:1.05;margin-top:16px}
+  .post .s{font-size:17px;line-height:1.45;margin-top:18px}
+  .post .sig{position:absolute;left:38px;bottom:30px;height:44px}
+  .post .btn{display:inline-block;margin-top:24px;padding:12px 20px;border-radius:8px;font-weight:700;font-size:16px}
+  .story{width:250px;height:444px;border-radius:14px;position:relative;overflow:hidden;padding:26px 22px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+  .hl{display:flex;gap:16px;margin-top:10px}
+  .hl .i{text-align:center;font-size:14px;width:92px}
+  .hl .ring{width:86px;height:86px;border-radius:50%;background:var(--orange);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 4px #fff,0 0 0 6px #ddd;margin-bottom:10px}
+  .ig{width:620px;border-radius:18px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,.18);padding:34px;color:#111}
+  .type-row{display:flex;align-items:baseline;gap:40px;padding:16px 0;border-bottom:1px solid #e6e6e6}
+  .type-row .lab{width:300px;font-size:17px;color:var(--grau)}
+</style>
+</head>
+<body>
+
+<!-- ============ 1 COVER ============ -->
+<section class="page dark">
+  <svg class="waves" style="right:-120px;top:170px" width="900" height="760" viewBox="0 0 900 760" fill="none" stroke="#EB5A1B" stroke-linecap="round">
+    <circle cx="540" cy="380" r="70" fill="#EB5A1B" stroke="none"/>
+    <path d="M390 250 Q350 380 390 510" stroke-width="22" opacity=".95"/>
+    <path d="M320 200 Q260 380 320 560" stroke-width="22" opacity=".7"/>
+    <path d="M250 150 Q170 380 250 610" stroke-width="22" opacity=".45"/>
+    <path d="M180 100 Q80 380 180 660" stroke-width="22" opacity=".22"/>
+  </svg>
+  <div class="kicker">Social-Media-Marken-Kit · Instagram</div>
+  <img src="../assets/logo-negativ.png" style="height:230px;margin-top:70px;margin-left:-8px" alt="Logo">
+  <div class="cover-claim">Wir sind wach,<br>damit du <span class="o">schlafen</span> kannst.</div>
+  <p class="muted" style="position:absolute;left:110px;bottom:70px;font-size:20px">Alarmanlagen Poleschak GmbH · Vorschlag für die Geschäftsführung · Oktober 2026</p>
+</section>
+
+<!-- ============ 2 LOGO ============ -->
+<section class="page">
+  <div class="kicker">01 · Logo</div>
+  <h1>Das Logo bleibt, wie es ist.<br><span class="o">Wir geben ihm klare Regeln.</span></h1>
+  <div class="bar"></div>
+  <div class="grid" style="grid-template-columns:1fr 1fr 0.9fr;margin-top:50px">
+    <div>
+      <div class="card" style="background:#fff;box-shadow:0 0 0 1px #e3e3e3;height:250px;display:flex;align-items:center;justify-content:center">
+        <img src="../assets/logo-transparent.png" style="height:170px"></div>
+      <p style="margin-top:14px"><b>Original</b> – auf Weiß und hellen Flächen</p>
+      <div class="card" style="background:var(--anthrazit);height:250px;display:flex;align-items:center;justify-content:center;margin-top:24px">
+        <img src="../assets/logo-negativ.png" style="height:170px"></div>
+      <p style="margin-top:14px"><b>Negativ</b> – auf Anthrazit, Schwarz und dunklen Fotos</p>
+    </div>
+    <div>
+      <h2>Profilbild-Vorschlag: das Signal</h2>
+      <div style="display:flex;gap:34px;align-items:center">
+        <div style="text-align:center"><img src="../assets/profilbild-weiss.png" style="width:220px;border-radius:50%;box-shadow:0 0 0 1px #ddd"><p style="font-size:17px;margin-top:8px"><b>Empfehlung</b><br>Weiß · wirkt hell &amp; dunkel</p></div>
+        <div style="text-align:center"><img src="../assets/profilbild-anthrazit.png" style="width:220px;border-radius:50%"><p style="font-size:17px;margin-top:8px">Alternative<br>Anthrazit</p></div>
+      </div>
+      <p style="margin-top:26px">Der Schriftzug ist im 110-px-Kreis von Instagram nicht lesbar. Das <b>Signal-Symbol</b> ist es und macht das Profil auf einen Blick wiedererkennbar.</p>
+      <p class="muted" style="font-size:17px;margin-top:10px">Vorschau aus der Web-Grafik. Die Endfassung kommt aus der Vektordatei.</p>
+    </div>
+    <div>
+      <h2>Regeln</h2>
+      <ul>
+        <li>Schutzraum rundum = Höhe des „O“ in POLESCHAK</li>
+        <li>Im Post klein als Absender: unten links, max. 25 % der Breite</li>
+        <li>Nicht jeder Post braucht das Logo, die Signalwellen reichen</li>
+        <li class="no">nie verzerren, drehen, umfärben</li>
+        <li class="no">keine Schatten, Rahmen, Effekte</li>
+        <li class="no">nie direkt auf unruhige Fotos, nur auf ruhige Flächen</li>
+      </ul>
+    </div>
+  </div>
+  <span class="pnum">02</span>
+</section>
+
+<!-- ============ 3 FARBEN ============ -->
+<section class="page">
+  <div class="kicker">02 · Farben</div>
+  <h1>Signal-Orange trifft Nacht.</h1>
+  <div class="bar"></div>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);margin-top:34px;gap:26px">
+    <div class="sw"><div class="c" style="background:#EB5A1B"></div><div class="t"><b>Signal-Orange</b>HEX #EB5A1B<br>RGB 235 · 90 · 27<br>CMYK ≈ 0 · 62 · 89 · 8</div></div>
+    <div class="sw"><div class="c" style="background:#111111"></div><div class="t"><b>Nacht</b>HEX #111111 · Logo #010101<br>RGB 17 · 17 · 17<br>CMYK ≈ 0 · 0 · 0 · 100</div></div>
+    <div class="sw"><div class="c" style="background:#222222"></div><div class="t"><b>Anthrazit</b>HEX #222222<br>RGB 34 · 34 · 34<br>CMYK ≈ 0 · 0 · 0 · 87</div></div>
+    <div class="sw"><div class="c" style="background:#FFFFFF;border-bottom:1px solid #eee"></div><div class="t"><b>Weiß</b>HEX #FFFFFF<br>RGB 255 · 255 · 255<br>CMYK 0 · 0 · 0 · 0</div></div>
+  </div>
+  <div class="grid" style="grid-template-columns:repeat(5,1fr);margin-top:24px;gap:20px">
+    <div class="sw small"><div class="c" style="background:#FF7F22"></div><div class="t"><b>Orange hell</b>#FF7F22 · nur Akzent</div></div>
+    <div class="sw small"><div class="c" style="background:#722C0D"></div><div class="t"><b>Rostbraun</b>#722C0D · Tiefe</div></div>
+    <div class="sw small"><div class="c" style="background:#545559"></div><div class="t"><b>Grau</b>#545559 · Nebentext</div></div>
+    <div class="sw small"><div class="c" style="background:#B4B5BB"></div><div class="t"><b>Silbergrau</b>#B4B5BB · Linien</div></div>
+    <div class="sw small"><div class="c" style="background:#F4F4F4"></div><div class="t"><b>Hellgrau</b>#F4F4F4 · Flächen</div></div>
+  </div>
+  <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:30px;gap:60px">
+    <div>
+      <h2>Mengenverhältnis</h2>
+      <div class="ratio">
+        <div style="width:60%;background:#111;color:#fff">60 % Nacht / Anthrazit oder Weiß</div>
+        <div style="width:30%;background:#F4F4F4">30 % Weiß / Grau</div>
+        <div style="width:10%;background:#EB5A1B;color:#fff;padding-left:12px">10 %</div>
+      </div>
+      <p style="margin-top:12px;font-size:18px">Orange ist das <b>Signal</b>: Es markiert das Wichtigste, nie alles.</p>
+    </div>
+    <div>
+      <h2>Lesbarkeit (Kontrast)</h2>
+      <table>
+        <tr><td><span class="chip" style="background:#222;color:#EB5A1B">Orange auf Anthrazit</span></td><td>4,6 : 1 · Text ✔</td></tr>
+        <tr><td><span class="chip" style="background:#EB5A1B;color:#111">Schwarz auf Orange</span></td><td>6,0 : 1 · Text ✔</td></tr>
+        <tr><td><span class="chip" style="background:#EB5A1B;color:#fff">Weiß auf Orange</span></td><td>3,5 : 1 · nur große, fette Schrift</td></tr>
+        <tr><td><span class="chip" style="background:#fff;color:#FF7F22;box-shadow:0 0 0 1px #ddd">Orange hell auf Weiß</span></td><td>2,4 : 1 · nie für Text ✘</td></tr>
+      </table>
+    </div>
+  </div>
+  <p class="muted" style="position:absolute;left:110px;bottom:40px;font-size:15px">CMYK-Werte sind Näherungen. Für Druckprodukte (Plakat) vom Drucker proofen lassen.</p>
+  <span class="pnum">03</span>
+</section>
+
+<!-- ============ 4 TYPOGRAFIE ============ -->
+<section class="page">
+  <div class="kicker">03 · Schrift</div>
+  <h1>Poppins. Eine Schrift für alles.</h1>
+  <div class="bar"></div>
+  <div class="grid" style="grid-template-columns:1.25fr 0.75fr;gap:80px;margin-top:40px">
+    <div>
+      <div class="type-row"><span class="lab">Kicker · Light 300<br>Sperrung 35 %, VERSALIEN</span><span style="font-weight:300;letter-spacing:.35em;font-size:30px">AUS DER LEITSTELLE</span></div>
+      <div class="type-row"><span class="lab">Headline · ExtraBold 800</span><span style="font-weight:800;font-size:64px;line-height:1">Fast jeder 2. Einbruch scheitert.</span></div>
+      <div class="type-row"><span class="lab">Subline · SemiBold 600</span><span style="font-weight:600;font-size:34px">So hilft gute Technik dabei.</span></div>
+      <div class="type-row"><span class="lab">Fließtext · Regular 400</span><span style="font-size:24px;line-height:1.5;max-width:700px">Wir planen, bauen ein und sind im Ernstfall rund um die Uhr für dich da, mit eigener Leitstelle.</span></div>
+      <div class="type-row" style="border:none"><span class="lab">Hervorhebung</span><span style="font-weight:800;font-size:40px">Wir sind <span class="o">wach.</span></span></div>
+    </div>
+    <div>
+      <h2>Größen im Post (1080 × 1350 px)</h2>
+      <table>
+        <tr><td>Headline</td><td><b>88–110 px</b></td></tr>
+        <tr><td>Subline</td><td>44–52 px</td></tr>
+        <tr><td>Fließtext</td><td>mind. 34 px</td></tr>
+        <tr><td>Kicker</td><td>26–30 px</td></tr>
+      </table>
+      <h2 style="margin-top:36px">Regeln</h2>
+      <ul>
+        <li>Max. <b>12 Wörter</b> auf einer Feed-Grafik</li>
+        <li>Max. 3 Schriftschnitte pro Grafik</li>
+        <li>Hervorheben mit <span class="o"><b>Orange</b></span>, nie unterstreichen</li>
+        <li>Der Kicker greift „A L A R M A N L A G E N“ aus dem Logo auf</li>
+        <li>Poppins ist kostenlos und in Canva vorhanden</li>
+      </ul>
+    </div>
+  </div>
+  <span class="pnum">04</span>
+</section>
+
+<!-- ============ 5 GESTALTUNGSELEMENTE ============ -->
+<section class="page dark">
+  <div class="kicker">04 · Gestaltungselemente</div>
+  <h1>Aus dem Logo abgeleitet: <span class="o">das Signal.</span></h1>
+  <div class="bar"></div>
+  <div class="grid" style="grid-template-columns:repeat(4,1fr);gap:40px;margin-top:60px">
+    <div>
+      <svg width="300" height="220" viewBox="0 0 300 220" fill="none" stroke="#EB5A1B" stroke-width="14" stroke-linecap="round">
+        <path d="M60 40 Q20 110 60 180"/><path d="M110 60 Q80 110 110 160" opacity=".7"/>
+        <circle cx="170" cy="110" r="34" fill="#EB5A1B" stroke="none"/>
+        <path d="M230 60 Q260 110 230 160" opacity=".7"/><path d="M280 40 Q320 110 280 180"/>
+      </svg>
+      <h2 style="margin-top:20px">Signalwellen</h2>
+      <p class="muted">Als Rahmen, Eckdekor oder animierter Übergang in Reels („Alarm geht los“).</p>
+    </div>
+    <div>
+      <svg width="300" height="220" viewBox="0 0 300 220"><circle cx="40" cy="60" r="16" fill="#EB5A1B"/><rect x="72" y="50" width="200" height="20" rx="4" fill="#fff" opacity=".85"/>
+        <circle cx="40" cy="120" r="16" fill="#EB5A1B"/><rect x="72" y="110" width="160" height="20" rx="4" fill="#fff" opacity=".85"/>
+        <circle cx="40" cy="180" r="16" fill="#EB5A1B"/><rect x="72" y="170" width="180" height="20" rx="4" fill="#fff" opacity=".85"/></svg>
+      <h2 style="margin-top:20px">Signal-Punkt</h2>
+      <p class="muted">Aufzählungszeichen und „Live“-Marker. Der kleinste Wiedererkennungswert.</p>
+    </div>
+    <div>
+      <svg width="300" height="220" viewBox="0 0 300 220"><rect x="0" y="60" width="280" height="34" rx="4" fill="#fff" opacity=".9"/><rect x="0" y="112" width="110" height="12" fill="#EB5A1B"/></svg>
+      <h2 style="margin-top:20px">Alarmstreifen</h2>
+      <p class="muted">Kurzer orangener Balken unter jeder Headline. Er zieht sich durch alle Vorlagen.</p>
+    </div>
+    <div>
+      <div style="width:300px;height:220px;border-radius:12px;background:radial-gradient(circle at 80% 20%,rgba(235,90,27,.55),rgba(235,90,27,0) 55%),linear-gradient(160deg,#222,#0a0a0a)"></div>
+      <h2 style="margin-top:20px">Nachtlicht</h2>
+      <p class="muted">Dunkler Verlauf mit orangem Schein: die Stimmung der Leitstelle bei Nacht.</p>
+    </div>
+  </div>
+  <div style="margin-top:70px;display:flex;gap:26px;align-items:center">
+    <span class="kicker" style="margin-right:20px">Icons</span>
+    <!-- simple line icons -->
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg>
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="13" height="10" rx="2"/><path d="M16 11l5-3v8l-5-3"/></svg>
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3 4 5 6 5 10a5 5 0 01-10 0c0-2 1-4 2-5 0 2 1 3 2 3 0-3 0-5 1-8z"/></svg>
+    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg>
+    <p class="muted" style="margin-left:24px;font-size:18px">Linien-Icons, 2 px Strich, runde Enden, Weiß oder Orange</p>
+  </div>
+  <span class="pnum">05</span>
+</section>
+
+<!-- ============ 6 VORLAGEN-WELTEN ============ -->
+<section class="page" style="background:#e9e9ea">
+  <div class="kicker">05 · Drei Vorlagen-Welten</div>
+  <h1>Drei Welten. <span class="o">Eine DNA.</span></h1>
+  <div class="bar"></div>
+  <div style="display:flex;gap:60px;margin-top:46px;align-items:flex-start">
+    <div>
+      <div class="post" style="background:radial-gradient(circle at 90% 8%,rgba(235,90,27,.45),rgba(235,90,27,0) 45%),linear-gradient(165deg,#222,#0b0b0b);color:#fff">
+        <div class="k" style="color:#B4B5BB">Aus der Leitstelle</div>
+        <div class="h">03:12 Uhr.<br>Ein Alarm<br>geht ein.</div>
+        <div style="width:70px;height:7px;background:#EB5A1B;margin-top:18px"></div>
+        <div class="s" style="color:#ddd">Was in den nächsten Minuten passiert, in 4 Schritten →</div>
+        <img class="sig" src="../assets/logo-negativ.png">
+      </div>
+      <h2 style="margin-top:26px">Nachtschicht</h2>
+      <p class="muted" style="font-size:18px">Kunden · Leitstelle · Einsätze<br>dunkel + Orange</p>
+    </div>
+    <div>
+      <div class="post" style="background:#F4F4F4;color:#111">
+        <div class="k" style="color:#545559">Sicher wissen</div>
+        <div class="h">Fast jeder <span style="color:#EB5A1B">2.</span> Einbruch scheitert.</div>
+        <div style="width:70px;height:7px;background:#EB5A1B;margin-top:18px"></div>
+        <div class="s">44,9 % bleiben im Versuch stecken, oft an guter Sicherung.</div>
+        <div class="s" style="font-size:13px;color:#545559;margin-top:10px">Quelle: PKS 2025</div>
+        <img class="sig" src="../assets/logo-transparent.png">
+      </div>
+      <h2 style="margin-top:26px">Wissen</h2>
+      <p class="muted" style="font-size:18px">Tipps · Mythen · Zahlen · Förderung<br>hell + Orange</p>
+    </div>
+    <div>
+      <div class="post" style="background:#EB5A1B;color:#111">
+        <svg style="position:absolute;right:-60px;bottom:40px" width="220" height="220" viewBox="0 0 220 220" fill="none" stroke="#111" stroke-width="12" stroke-linecap="round" opacity=".18"><path d="M150 40 Q190 110 150 180"/><path d="M110 60 Q140 110 110 160"/><circle cx="70" cy="110" r="26" fill="#111" stroke="none"/></svg>
+        <div class="k" style="color:#111;opacity:.75">Karriere</div>
+        <div class="h" style="color:#fff">Mach Alarm.<br><span style="color:#111">Beruflich.</span></div>
+        <div class="s" style="font-weight:500">Ausbildung Elektroniker/in für Energie- und Gebäudetechnik (m/w/d)</div>
+        <div class="btn" style="background:#111;color:#fff">Praktikum per WhatsApp →</div>
+        <div style="position:absolute;left:30px;bottom:24px;background:#fff;border-radius:8px;padding:6px 10px"><img src="../assets/logo-transparent.png" style="height:38px;display:block"></div>
+      </div>
+      <h2 style="margin-top:26px">Karriere</h2>
+      <p class="muted" style="font-size:18px">Azubis · Fachkräfte · Team<br>Orange + Schwarz</p>
+    </div>
+    <div>
+      <div class="story" style="background:linear-gradient(170deg,#222,#0b0b0b);color:#fff">
+        <div style="height:4px;background:rgba(255,255,255,.3);border-radius:2px"><div style="width:60%;height:4px;background:#fff;border-radius:2px"></div></div>
+        <div class="k" style="font-weight:300;letter-spacing:.3em;font-size:11px;color:#B4B5BB;margin-top:26px">UMFRAGE</div>
+        <div style="font-weight:800;font-size:23px;line-height:1.15;margin-top:10px">Wann wird am häufigsten eingebrochen?</div>
+        <div style="background:#fff;color:#111;border-radius:10px;padding:10px 12px;margin-top:22px;font-weight:600;font-size:15px">🌙 Nachts</div>
+        <div style="background:#EB5A1B;color:#fff;border-radius:10px;padding:10px 12px;margin-top:10px;font-weight:600;font-size:15px">☀️ Tagsüber</div>
+        <div style="position:absolute;bottom:22px;left:22px;font-size:12px;color:#B4B5BB">Auflösung morgen in der Story</div>
+      </div>
+      <h2 style="margin-top:26px">Story</h2>
+      <p class="muted" style="font-size:18px">Interaktiv: Umfrage, Quiz,<br>Fragen</p>
+    </div>
+  </div>
+  <span class="pnum">06</span>
+</section>
+
+<!-- ============ 7 BILDSPRACHE & DISKRETION ============ -->
+<section class="page">
+  <div class="kicker">06 · Bildsprache &amp; Diskretion</div>
+  <h1>Echt zeigen. <span class="o">Nie verraten.</span></h1>
+  <div class="bar"></div>
+  <div class="grid" style="grid-template-columns:1fr 1fr;gap:80px;margin-top:46px">
+    <div>
+      <h2>So fotografieren und filmen wir</h2>
+      <ul>
+        <li><b>Echte Menschen</b> aus dem Team, keine Stockfotos</li>
+        <li><b>Hände an der Technik</b>: Nahaufnahmen von Werkzeug, Kabeln, Meldern</li>
+        <li><b>Leitstelle bei Nacht</b>: warmes Monitorlicht, Silhouetten, Kaffeetasse</li>
+        <li>Fahrzeuge, Werkstatt, Azubis bei der Arbeit, Team-Momente</li>
+        <li>Hochformat: <b>4:5</b> für Posts, <b>9:16</b> für Reels und Stories</li>
+        <li>Ruhiger Hintergrund, Tageslicht, einheitlich leicht warm bearbeitet</li>
+        <li>Orange im Bild, wo es natürlich vorkommt (Arbeitskleidung, Fahrzeug)</li>
+      </ul>
+      <h2 style="margin-top:30px">Tonalität</h2>
+      <p>Ruhig statt panisch · Fakten statt Angstmache · nahbar und regional · Humor bei Team &amp; Karriere · <b>„du“</b> auf Instagram, Sie in DMs spiegeln</p>
+    </div>
+    <div class="card" style="background:#111;color:#fff">
+      <h2 style="color:#EB5A1B">Diskretionsregeln: das zeigen wir NIE</h2>
+      <ul class="dark">
+        <li class="no">Adressen, Hausnummern, Straßenschilder, Kennzeichen von Kunden</li>
+        <li class="no">Erkennbare Kundenobjekte ohne schriftliche Freigabe</li>
+        <li class="no">Lesbare Leitstellen-Monitore (Alarmdaten, Namen, Pläne), immer unscharf</li>
+        <li class="no">Bedienteile, Codes, Schlüssel und Schließpläne in Nahaufnahme</li>
+        <li class="no">Kamerapositionen und Sichtfelder konkreter Anlagen</li>
+        <li class="no">Personen ohne schriftliche Einwilligung</li>
+        <li class="no">„Einbrecher mit Sturmhaube“: Angst verkauft, aber beschädigt Vertrauen</li>
+      </ul>
+      <p style="margin-top:16px;color:#B4B5BB;font-size:18px">Faustregel: <b style="color:#fff">Könnte ein Einbrecher aus dem Bild etwas lernen?</b> Dann wird es nicht gepostet.</p>
+    </div>
+  </div>
+  <span class="pnum">07</span>
+</section>
+
+<!-- ============ 8 PROFIL ============ -->
+<section class="page dark">
+  <div class="kicker">07 · Instagram-Profil</div>
+  <h1>Der erste Eindruck in <span class="o">3 Sekunden.</span></h1>
+  <div class="bar"></div>
+  <div style="display:flex;gap:90px;margin-top:46px;align-items:flex-start">
+    <div class="ig">
+      <div style="display:flex;align-items:center;gap:34px">
+        <img src="../assets/profilbild-weiss.png" style="width:150px;border-radius:50%;box-shadow:0 0 0 3px #EB5A1B,0 0 0 6px #fff,0 0 0 7px #ddd">
+        <div style="display:flex;gap:34px;text-align:center;font-size:17px">
+          <div><b style="font-size:24px">—</b><br>Beiträge</div><div><b style="font-size:24px">—</b><br>Follower</div><div><b style="font-size:24px">—</b><br>Gefolgt</div>
+        </div>
+      </div>
+      <div style="margin-top:20px;font-size:18px;line-height:1.5">
+        <b>Alarmanlagen Poleschak</b><br>
+        <span style="color:#8e8e8e">Sicherheitsdienst</span><br>
+        Wir sind wach, damit du schlafen kannst.<br>
+        Alarmanlagen · Video · Brandmelder · 24h-Leitstelle<br>
+        Seit 1975 · Gaimersheim &amp; PAF<br>
+        👇 Kostenlose Beratung<br>
+        <span style="color:#00376b">alarmanlagen-poleschak.de</span>
+      </div>
+      <div style="display:flex;gap:10px;margin-top:18px">
+        <div style="flex:1;background:#EB5A1B;color:#fff;text-align:center;border-radius:8px;padding:9px;font-weight:600">WhatsApp</div>
+        <div style="flex:1;background:#efefef;text-align:center;border-radius:8px;padding:9px;font-weight:600">Anrufen</div>
+        <div style="flex:1;background:#efefef;text-align:center;border-radius:8px;padding:9px;font-weight:600">Route</div>
+      </div>
+      <div class="hl" style="margin-top:24px">
+        <div class="i"><div class="ring"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></div>Über uns</div>
+        <div class="i"><div class="ring"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M4 14v-2a8 8 0 0116 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.5"/><rect x="17" y="14" width="4" height="6" rx="1.5"/></svg></div>Leitstelle</div>
+        <div class="i"><div class="ring"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l3 3M15 8l2 2"/></svg></div>Karriere</div>
+        <div class="i"><div class="ring"><svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>Tipps</div>
+        <div class="i"><div class="ring"><svg width="44" height="44" viewBox="0 0 24 24" fill="#fff"><path d="M12 3.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.9l-5.2 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg></div>Kunden</div>
+      </div>
+    </div>
+    <div style="max-width:720px">
+      <h2>Bio (144 von 150 Zeichen)</h2>
+      <ul>
+        <li>Zeile 1: <b>der Claim</b>, also das Versprechen</li>
+        <li>Zeile 2: <b>Leistungen als Suchbegriffe</b></li>
+        <li>Zeile 3: <b>Vertrauen + Region</b> (seit 1975, beide Standorte)</li>
+        <li>Zeile 4: <b>eine</b> klare Handlung: Beratung anfragen</li>
+      </ul>
+      <h2 style="margin-top:30px">Highlights (orange Kreise, weiße Icons)</h2>
+      <p>Über uns · Leitstelle · Karriere · Tipps · Kunden. So ist jede Zielgruppe mit einem Tipp am richtigen Ort.</p>
+      <h2 style="margin-top:30px">Kontakt-Buttons</h2>
+      <p><b>WhatsApp</b> als Haupt-Button: Das ist die niedrigste Hürde für Azubis <i>und</i> Kunden. Dazu Anrufen und Route.</p>
+      <p class="muted" style="font-size:17px;margin-top:22px">Follower-Zahlen werden nach der Nullmessung eingetragen.</p>
+    </div>
+  </div>
+  <span class="pnum">08</span>
+</section>
+
+</body>
+</html>
