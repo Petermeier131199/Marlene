@@ -25,8 +25,8 @@ die neue Stelle „Social Media“ im Haus.
 | # | Phase | Ergebnis | Status |
 |---|---|---|---|
 | 1 | Analyse | [`01-analyse.md`](01-analyse.md) | ✅ freigegeben |
-| 2 | Positionierung & Zielgruppen | [`02-positionierung-zielgruppen.md`](02-positionierung-zielgruppen.md) | ✅ erstellt, wartet auf Freigabe |
-| 3 | Marken-Kit | [`05-marken-kit.md`](05-marken-kit.md) + [`marken-kit/export/marken-kit.pdf`](marken-kit/export/marken-kit.pdf) | ✅ erstellt, wartet auf Freigabe |
+| 2 | Positionierung & Zielgruppen | [`02-positionierung-zielgruppen.md`](02-positionierung-zielgruppen.md) | ✅ freigegeben |
+| 3 | Marken-Kit | [`05-marken-kit.md`](05-marken-kit.md) + [`marken-kit/export/marken-kit.pdf`](marken-kit/export/marken-kit.pdf) | ✅ freigegeben |
 | 4 | Social-Media-Strategie | Content-Säulen, Formate, Rhythmus, Recruiting-Kampagne, Ads | offen |
 | 5 | Vorlagen | Muster-Posts, Stories, Highlight-Cover, Stellenanzeige | offen |
 | 6 | Umsetzungsplan | Redaktionsplan + [`03-ziele-aufwand-verguetung.md`](03-ziele-aufwand-verguetung.md) | 🟡 Ziele & Vergütung vorgezogen |
