@@ -28,9 +28,9 @@ die neue Stelle „Social Media“ im Haus.
 | 2 | Positionierung & Zielgruppen | [`02-positionierung-zielgruppen.md`](02-positionierung-zielgruppen.md) | ✅ freigegeben |
 | 3 | Marken-Kit | [`05-marken-kit.md`](05-marken-kit.md) + [`marken-kit/export/marken-kit.pdf`](marken-kit/export/marken-kit.pdf) | ✅ freigegeben |
 | 4 | Social-Media-Strategie | [`06-strategie.md`](06-strategie.md) | ✅ freigegeben |
-| 5 | Vorlagen | [`07-vorlagen.md`](07-vorlagen.md) + [`vorlagen/export/`](vorlagen/export/) + [`08-einwilligung-foto-video.md`](08-einwilligung-foto-video.md) | ✅ erstellt, wartet auf Freigabe |
+| 5 | Vorlagen | [`07-vorlagen.md`](07-vorlagen.md) + [`vorlagen/export/`](vorlagen/export/) + [`08-einwilligung-foto-video.md`](08-einwilligung-foto-video.md) | ✅ freigegeben |
 | 6 | Umsetzungsplan | Redaktionsplan + [`03-ziele-aufwand-verguetung.md`](03-ziele-aufwand-verguetung.md) | 🟡 Ziele & Vergütung vorgezogen |
-| 7 | Endprodukt | PPTX + PDF + Plakat | offen |
+| 7 | Endprodukt | [`praesentation/`](praesentation/): PPTX (24 Folien) + PDF ✅ · Plakat offen | 🟡 Deck fertig (mit Platzhaltern) |
 
 ## Zeitplan bis 07.10.
 
