@@ -24,12 +24,12 @@ die neue Stelle „Social Media“ im Haus.
 
 | # | Phase | Ergebnis | Status |
 |---|---|---|---|
-| 1 | Analyse | [`01-analyse.md`](01-analyse.md) | ✅ erstellt, wartet auf Freigabe |
-| 2 | Positionierung & Zielgruppen | Markenkern, Personas | offen |
+| 1 | Analyse | [`01-analyse.md`](01-analyse.md) | ✅ freigegeben |
+| 2 | Positionierung & Zielgruppen | [`02-positionierung-zielgruppen.md`](02-positionierung-zielgruppen.md) | ✅ erstellt, wartet auf Freigabe |
 | 3 | Marken-Kit | Brand Board | offen |
 | 4 | Social-Media-Strategie | Content-Säulen, Formate, Rhythmus, Recruiting-Kampagne, Ads | offen |
 | 5 | Vorlagen | Muster-Posts, Stories, Highlight-Cover, Stellenanzeige | offen |
-| 6 | Umsetzungsplan | Redaktionsplan, Stunden, Kosten, KPIs | offen |
+| 6 | Umsetzungsplan | Redaktionsplan + [`03-ziele-aufwand-verguetung.md`](03-ziele-aufwand-verguetung.md) | 🟡 Ziele & Vergütung vorgezogen |
 | 7 | Endprodukt | PPTX + PDF + Plakat | offen |
 
 ## Zeitplan bis 07.10.

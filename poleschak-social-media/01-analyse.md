@@ -15,7 +15,7 @@ videoueberwachung-ingolstadt.de, ausbildung.de, Kununu, Das Örtliche, Branchenq
 | Führung | Dipl.-Kffr. Sabine Poleschak, Geschäftsführerin in 2. Generation; seit 07/2026 im IHK-Regionalausschuss Eichstätt |
 | Gründung | 1975, 2025 50-jähriges Jubiläum |
 | Schwesterfirma | SWD Sicherheits- und Wachdienst GmbH (40 Jahre) |
-| Größe | Website: 58 Spezialisten, 5.500 Kunden, 13.200 Projekte. ausbildung.de: 25 Mitarbeitende (vermutlich ohne SWD) |
+| Größe | **59 Mitarbeitende gesamt (inkl. SWD), davon 7 Azubis** (intern bestätigt); 5.500 Kunden, 13.200 Projekte (Website) |
 | Leistungen | Einbruchmelde-, Funkalarm-, Video-, Brandmelde-, Zutrittskontroll- und Schließanlagen, 24-h-Notruf-Service-Leitstelle, Alarmverfolgung, Wachdienst/Objektschutz |
 | Kunden | Privatkunden; Gewerbe, Handel, Industrie; öffentliche und kirchliche Einrichtungen; Banken und Sparkassen (z. B. Sparkasse Ingolstadt Eichstätt) |
 | Zertifikate | VdS 3403 (Errichter für EMA und Video, bis 2029), DIN EN 16763, DIN 14675 (Brandmeldeanlagen), DIN EN ISO 9001 (bis 2029), Autorisierter Telenot-Stützpunkt, BHE-Mitglied seit 25 Jahren, BVMW-Mitglied |
@@ -44,7 +44,7 @@ das Versicherungen und Banken bestätigen.
 
 | Kanal | Befund |
 |---|---|
-| **Instagram** @alarmanlagenpoleschak | **(offen)**. Instagram sperrt automatische Abrufe. Follower, Beitragszahl, Frequenz und Reels brauche ich von dir (Screenshot vom Profil und von den Insights der letzten 90 Tage). |
+| **Instagram** @alarmanlagenpoleschak | **(offen)**: Zugang fehlt noch; Nullmessung am ersten Tag mit Zugang. Die bisher zuständige Person (Dominique) betreut den Kanal nicht mehr → Account ohne feste Zuständigkeit. |
 | Facebook | ca. 150 Follower (laut Suchmaschine, Datum unklar) |
 | LinkedIn | 17 Follower |
 | Website-Blog | ca. 1 Beitrag alle 1–2 Monate, mit Lücken (Dez. 2025 → Mai 2026 → Juli 2026) |
