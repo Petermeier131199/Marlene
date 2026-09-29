@@ -108,3 +108,38 @@ Hauptbeschäftigung abgabenfrei ist, egal wie hoch das Hauptgehalt ist. Beispiel
 Leitstelle (SWD, bestehende Leistung), der Minijob ist ein neuer Job mit eigenem Wert
 (Poleschak). Sonst droht: „Du bekommst ja jetzt den Minijob, dann lassen wir die Erhöhung.“
 Am besten wird die Erhöhung vor dem Pitch am 07.10. abgeschlossen oder zumindest fest zugesagt.
+
+---
+
+## Nachtrag 2: Nachtdienst und Wunsch 25 €/h
+
+Heute: 20 € Grundlohn + ca. 23 % Nachtzuschlag = **24,60 €/h effektiv**. Nachtzuschläge
+(§ 3b EStG) sind steuerfrei und bis zu einem Grundlohn von 25 €/h auch sozialabgabenfrei.
+Deshalb liegt das heutige Netto bei **ca. 2.110 €** (1.600 € + ca. 506 € Zuschläge).
+
+| Variante | Grundlohn | effektiv mit Zuschlag | Netto/Monat (110 h) | Plus netto |
+|---|---|---|---|---|
+| heute | 20,00 € | 24,60 € | ca. 2.108 € | – |
+| „25 € effektiv“ | 20,33 € | 25,00 € | ca. 2.137 € | **+29 €** |
+| realistisches Ziel | 22,00 € | 27,06 € | ca. 2.287 € | **+180 €** |
+| Verhandlungsanker | 23,00 € | 28,29 € | ca. 2.377 € | +269 € |
+| „25 € Grundlohn“ | 25,00 € | 30,75 € | ca. 2.554 € | **+447 €** |
+
+**Einordnung (ehrlich):** Laut Tarifvertrag Bayern (LTV Nr. 39, ab 01.01.2026) liegt der
+Stundenlohn in der Notruf- und Service-Leitstelle bei **17,59 €**. Mit 20 € liegst du schon
+ca. 14 % darüber. 25 € Grundlohn wären +25 % Erhöhung und ca. 42 % über Tarif, das ist
+sehr unwahrscheinlich. 25 € effektiv wären dagegen nur +0,40 € und damit zu wenig verlangt.
+
+**Empfehlung:** Mit **23 € Grundlohn** einsteigen (Anker), **22 €** als Ziel, 21 € als
+Untergrenze. Argumente: Nachtdienst-Verlässlichkeit, Erfahrung, Verantwortung in der
+Alarmverfolgung, Fachkräftemangel (die Leitstelle sucht gerade selbst Personal).
+Der Tarif läuft Ende 2026 aus, 2027 kommt ohnehin eine Tariferhöhung obendrauf.
+
+**Mit Minijob zusammen (Ziel 22 €):** ca. 2.287 € + 703 € ≈ **ca. 2.990 € netto/Monat**
+(heute ca. 2.108 €, also **+ ca. 880 €**).
+
+**Nachtdienst + Minijob, Arbeitszeit:** Nach jeder Nachtschicht gelten 11 h Ruhezeit.
+Drehtermine liegen deshalb am späten Nachmittag vor der Schicht oder an freien Tagen.
+Für Nachtarbeitnehmer gilt im Schnitt max. 8 h pro Tag, gerechnet über beide Arbeitgeber.
+Vom Lohnbüro prüfen lassen, ob Sachbezug und Internetpauschale bei der SWD schon genutzt
+werden (dann nicht doppelt einplanen).
