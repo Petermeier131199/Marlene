@@ -78,3 +78,33 @@ Angestellt bei der **SWD** → **Weg 1 (Minijob bei der Poleschak GmbH)**. Wicht
 1. ~~Arbeitgeber~~ → SWD ✅
 2. Wie hoch ist dein aktueller Stundenlohn bzw. dein Brutto?
 3. Steuerklasse, Kirchenmitglied (ja/nein), Kinder (ja/nein)?
+
+---
+
+## Nachtrag: mit echtem Stundenlohn (20 €/h bei der SWD)
+
+| | Brutto | Netto (ca., Stkl. I) |
+|---|---|---|
+| Heute: 110 h × 20 € | 2.200 € | **ca. 1.600 €** |
+| + Minijob Poleschak inkl. Extras | +703 € | **+ ca. 703 €** → **ca. 2.300 € netto** |
+
+**Vergleich, wie viel eine Stunde netto bringt:**
+| | netto pro Stunde | entspricht brutto in der Hauptbeschäftigung |
+|---|---|---|
+| Mehrarbeit bei der SWD zu 20 €/h | ca. 11,80 € | 20 € |
+| Minijob, 43 h, 603 € | 14,00 € | ca. 24 € |
+| Minijob inkl. Sachbezug + Internet (703 €) | 16,35 € | ca. 28 € |
+| dasselbe nach Einarbeitung (ca. 35 h statt 43 h) | ca. 20 € | ca. 34 € |
+
+Ein Euro mehr SWD-Gehalt bringt nur ca. **0,59 € netto**. Für +700 € netto allein über das
+SWD-Gehalt bräuchtest du **ca. 31 €/h** statt 20 €/h. Deshalb ist der Minijob der deutlich
+stärkere Hebel.
+
+**Gehaltserhöhung bei der SWD:** Der Minijob bleibt davon unberührt, weil er neben der
+Hauptbeschäftigung abgabenfrei ist, egal wie hoch das Hauptgehalt ist. Beispiele:
++1 €/h ≈ +64 € netto, +2 €/h ≈ +129 € netto, +3 €/h ≈ +193 € netto im Monat.
+
+**Verhandlungstipp:** Die beiden Themen **getrennt halten**. Die Gehaltserhöhung betrifft die
+Leitstelle (SWD, bestehende Leistung), der Minijob ist ein neuer Job mit eigenem Wert
+(Poleschak). Sonst droht: „Du bekommst ja jetzt den Minijob, dann lassen wir die Erhöhung.“
+Am besten wird die Erhöhung vor dem Pitch am 07.10. abgeschlossen oder zumindest fest zugesagt.
