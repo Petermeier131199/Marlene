@@ -5,6 +5,68 @@ Alle Zahlen sind **Vorschläge**. Markierte Annahmen bitte prüfen.
 
 ---
 
+## ★ Entscheidung für den Pitch: Stufe 1 als Minijob bei der Poleschak GmbH
+
+Ausgangslage: Ich bin bei der **SWD GmbH** im Alarmdienst (Leitstelle) angestellt.
+Social Media übernehme ich zusätzlich als **Minijob bei der Alarmanlagen Poleschak GmbH**,
+einem rechtlich eigenständigen Arbeitgeber.
+
+| | pro Monat |
+|---|---|
+| Umfang | **Paket S**: 1 Reel, 1 Karussell, 1 Bild-Post pro Woche, 3 Story-Tage, Community, Planung, Reporting |
+| Stunden | **max. 43 h** (603 € ÷ Mindestlohn 13,90 € = 43,4 h, mehr ist im Minijob nicht erlaubt) |
+| Vergütung | 603 € (Minijob-Grenze 2026) |
+| + Sachbezug (Gutscheinkarte) | 50 € |
+| + Internetpauschale | 50 € |
+| + Diensthandy mit Privatnutzung | wird zum Filmen ohnehin gebraucht |
+| **Kosten für Poleschak** | ca. 790 € (inkl. ca. 31 % Pauschalabgaben) + ca. 115 € Extras = **ca. 905 €** |
+
+### Gesamtkosten pro Jahr (Stufe 1)
+| Posten | pro Jahr |
+|---|---|
+| Minijob inkl. Abgaben + Extras | ca. 10.900 € |
+| Werbebudget | 3.800 € |
+| Ausstattung (Gimbal, Mikro, Licht; einmalig) + Schnitt-App | ca. 600 € |
+| **Summe** | **ca. 15.300 €** (ca. 1.275 € / Monat) |
+
+→ **Ungefähr die Hälfte** der Kosten von Paket M und **weniger als eine Agentur**
+mit vergleichbarem Umfang plus Werbebudget.
+
+**Break-even:** Bei einem angenommenen Deckungsbeitrag von 1.200 € pro Auftrag (Annahme)
+reicht **ca. 1 zusätzlicher Auftrag pro Monat**. Eine einzige Einstellung über Social Media
+spart zusätzlich 1.500–3.000 € Recruiting-Kosten.
+
+### Ziele Stufe 1 (12 Monate), angepasst an Paket S
+Paket S hat weniger Reels als M (4 statt 9 pro Monat), deshalb liegen die Ziele niedriger:
+
+| # | Ziel | Stufe 1 (S) | Stufe 2 (M, zum Vergleich) |
+|---|---|---|---|
+| 1 | Follower aus der Region | **1.100** (damit knapp vor Pfättisch mit ca. 1.059) | 1.500 |
+| 2 | Qualifizierte Bewerbungen über Social Media | **≥ 20 / Jahr** | ≥ 30 |
+| 3 | Einstellungen über Social Media | **≥ 1 / Jahr** | ≥ 2 |
+| 4 | Qualifizierte Kundenanfragen | **≥ 3 / Monat** ab Monat 4 | ≥ 5 |
+| 5 | Google-Bewertungen | **17 → 40** | 17 → 50 |
+| 6 | Engagement-Rate | **≥ 2 %** | ≥ 2 % |
+
+### Weiterentwicklung nach 6 Monaten
+Wenn die Halbjahresziele erreicht sind, gibt es ein Gespräch über **Stufe 2 (Paket M)**.
+**Wichtig:** Stufe 2 ist nicht einfach „mehr Minijob“. Ein zweites reguläres Arbeitsverhältnis
+würde in **Steuerklasse VI** laufen und brächte kaum Netto. Sinnvoll wäre dann, **Stunden
+zwischen SWD und Poleschak umzuschichten** (weniger Leitstelle, mehr Social Media) oder
+eine Umwandlung in eine Teilzeitstelle bei Poleschak.
+
+### Regeln im Minijob
+- **Höchstens 43 h/Monat**, auch in Monaten mit Azubi-Messe. Arbeitszeit wird dokumentiert (Pflicht).
+- Boni sind im Minijob nur möglich, wenn das Jahresentgelt ≤ 12 × 603 € = 7.236 € bleibt. Deshalb **keine Boni in Stufe 1**. Der Anreiz ist der Aufstieg in Stufe 2.
+- Es darf der **einzige Minijob** neben der Hauptbeschäftigung sein.
+- **Vorab klären** mit Lohnbüro oder Steuerberater: getrennte Arbeitgeber bei gleicher Inhaberin (Risiko „einheitliches Beschäftigungsverhältnis“) und Befreiung von der Rentenversicherungspflicht.
+- Die Stunden bei SWD und Poleschak zählen für das Arbeitszeitgesetz zusammen: 110 + 43 = 153 h/Monat (≈ 35 h/Woche) ✅
+
+*Die folgenden Abschnitte beschreiben die Pakete und Modelle ausführlich. Sie dienen als
+Referenz und als Grundlage für Stufe 2.*
+
+---
+
 ## 1. Das Ziel (12 Monate, Nov. 2026 – Okt. 2027)
 
 > **Poleschak wird der sichtbarste Sicherheitstechnik-Betrieb der Region auf Instagram

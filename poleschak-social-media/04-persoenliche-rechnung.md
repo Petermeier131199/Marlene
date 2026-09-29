@@ -26,7 +26,7 @@ Mit Kirchensteuer braucht es etwa 30–40 € brutto mehr. Steuerklasse V wäre 
 
 ## Drei Wege zu +700 € netto
 
-### Weg 1: Minijob bei der anderen Firma (nur wenn die Leitstelle bei der SWD angestellt ist)
+### ✅ Weg 1: Minijob bei der anderen Firma (GEWÄHLT, ich bin bei der SWD angestellt)
 Poleschak GmbH und SWD GmbH sind **zwei verschiedene Arbeitgeber**. Bist du bei der SWD
 angestellt, kann Poleschak dich zusätzlich auf **Minijob-Basis** beschäftigen. Ein erster
 Minijob neben einer Hauptbeschäftigung ist für dich steuer- und abgabenfrei.
@@ -67,7 +67,14 @@ Zusammen mit der Leitstelle wären das aber **ca. 179 h/Monat (≈ 41 h/Woche)**
 - **Arbeitszeitgesetz:** Die Stunden bei SWD und Poleschak werden **zusammengezählt**. Im Schnitt sind höchstens 48 h/Woche erlaubt.
 - **Meine Empfehlung:** Wenn die Leitstelle bei der SWD ist, zuerst **Weg 1** prüfen lassen. Für die Firma ist er am billigsten, damit wird die Zusage am leichtesten. Sonst **Weg 2 plus Boni**. Nach 6 Monaten mit Zahlen auf Paket M aufstocken.
 
+## Entscheidung (30.09.2026)
+Angestellt bei der **SWD** → **Weg 1 (Minijob bei der Poleschak GmbH)**. Wichtige Details:
+- **Höchstens 43 h/Monat**, weil 603 € ÷ Mindestlohn 13,90 € = 43,4 h. Paket S passt genau hinein, für Zusatzeinsätze bleibt kein Puffer.
+- **Rentenversicherung:** Mit Befreiung bekommst du 603 € netto. Ohne Befreiung sind es 581 € netto (3,6 % Eigenanteil), dafür sammelst du volle Rentenansprüche. Beides ist legitim, du entscheidest.
+- Das darf dein einziger Minijob sein.
+- **Später mehr verdienen:** Ein zweiter regulärer Job bei Poleschak liefe in Steuerklasse VI und lohnt sich kaum. Dann lieber Stunden zwischen SWD und Poleschak umschichten.
+
 ## Offene Angaben für die genaue Rechnung
-1. Bei welcher Firma bist du für die Leitstelle angestellt, Poleschak oder SWD?
+1. ~~Arbeitgeber~~ → SWD ✅
 2. Wie hoch ist dein aktueller Stundenlohn bzw. dein Brutto?
 3. Steuerklasse, Kirchenmitglied (ja/nein), Kinder (ja/nein)?
