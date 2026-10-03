@@ -395,6 +395,11 @@ const GENS=[
 {id:"be",g:"Geld",name:"Break-even in Deals",make(){
   const F=R(15,40)*1000,d=pick([6000,7500,8280,9000]);
   return{q:`Fixkosten ${eur(F)} pro Monat, Deckungsbeitrag ${eur(d)} pro Deal. Wie viele Deals pro Monat brauchst du für den <b>Break-even</b>? (eine Nachkommastelle)`,unit:"Deals",ans:F/d,abs:.06,steps:[`Break-even = Fixkosten ÷ DB pro Deal`,`= ${eur(F)} ÷ ${eur(d)} = ${nf(F/d,1)} Deals`]}}},
+{id:"bee",g:"Geld",name:"Break-even in € (DB-Quote)",make(){
+  const q=pick([45,60,70,75]),F=R(12,40)*1000,be=F/(q/100);
+  if(Math.random()<.5){const deal=pick([7500,9000,12000]);return{q:`Fixkosten ${eur(F)} pro Monat, DB-Quote ${q} %. Wie hoch ist der <b>Break-even-Umsatz</b> in Euro? (Toleranz 1 %)`,unit:"€",ans:be,rel:.01,steps:[`Break-even in € = Fixkosten ÷ DB-Quote`,`= ${eur(F)} ÷ ${nf(q/100,2)} = ${eur(be)}`,`Rückweg in Deals bei ${eur(deal)} Umsatz pro Deal: ${eur(be)} ÷ ${eur(deal)} = ${nf(be/deal,1)} Deals`]}}
+  const d=pick([1500,3000,6300]),m=d/(q/100);
+  return{q:`Du buchst neue Fixkosten von ${eur(d)} pro Monat (Tool oder Mitarbeiter). Deine DB-Quote liegt bei ${q} %. Wie viel <b>zusätzlichen Umsatz</b> musst du pro Monat machen, um die neuen Fixkosten zu decken?`,unit:"€",ans:m,rel:.01,steps:[`Zusätzlicher Umsatz = neue Fixkosten ÷ DB-Quote`,`= ${eur(d)} ÷ ${nf(q/100,2)} = ${eur(m)}`,`Zur Kontrolle: ${eur(m)} × ${q} % = ${eur(d)} Deckungsbeitrag, genau die neuen Fixkosten`]}}},
 {id:"cac",g:"Kunden",name:"CAC aus dem Funnel",make(){
   const cpl=R(20,60,5),tq=R(15,30,5),sh=R(60,80,5),cl=R(20,35,5),ch=tq*sh*cl/1e6,cac=cpl/ch;
   return{q:`CPL ${eur(cpl)}, Lead→Termin ${tq} %, Show-Rate ${sh} %, Abschlussquote ${cl} %. Wie hoch ist der <b>CAC</b>?`,unit:"€",ans:cac,rel:.01,steps:[`Kette = ${tq/100} × ${sh/100} × ${cl/100} = ${nf(ch,4)}`,`CAC = CPL ÷ Kette = ${eur(cpl)} ÷ ${nf(ch,4)} = ${eur(cac)}`]}}},
@@ -428,7 +433,7 @@ const GENS=[
   return{q:`Monatsumsatz ${eur(m)}, DSO ${d} Tage (rechne mit 30 Tagen pro Monat). Wie viel Geld steckt dauerhaft in offenen Forderungen?`,unit:"€",ans:x,rel:.01,steps:[`Umsatz pro Tag = ${eur(m)} ÷ 30 = ${eur(m/30)}`,`Gebunden = ${eur(m/30)} × ${d} Tage = ${eur(x)}`]}}},
 {id:"sich",g:"Finanzen",name:"Sicherheitsabstand",make(){
   const F=R(8,20)*1000,q=pick([40,45,50,60]),be=F/(q/100),ist=Math.round(be*pick([1.2,1.3,1.5])/1000)*1000,s=(ist-be)/ist*100;
-  return{q:`Fixkosten ${eur(F)}, DB-Quote ${q} %, Ist-Umsatz ${eur(ist)}. Wie hoch ist der <b>Sicherheitsabstand</b> in Prozent? (eine Nachkommastelle)`,unit:"%",ans:s,abs:.15,steps:[`Break-even-Umsatz = ${eur(F)} ÷ ${q/100} = ${eur(be)}`,`Abstand = (${eur(ist)} − ${eur(be)}) ÷ ${eur(ist)} = ${nf(s,1)} %`]}}},
+  return{q:`Fixkosten ${eur(F)}, DB-Quote ${q} %, Ist-Umsatz ${eur(ist)}. Wie hoch ist der <b>Sicherheitsabstand</b> in Prozent? (eine Nachkommastelle)`,unit:"%",ans:s,abs:.15,steps:[`Break-even-Umsatz = ${eur(F)} ÷ ${nf(q/100,2)} = ${eur(be)}`,`Abstand = (${eur(ist)} − ${eur(be)}) ÷ ${eur(ist)} = ${nf(s,1)} %`]}}},
 {id:"pipe",g:"Vertrieb",name:"Gewichtete Pipeline",make(){
   const n1=R(10,30,5),n2=R(5,15,5),n3=R(2,8),v=[4000,4000,5000],x=n1*v[0]*.1+n2*v[1]*.25+n3*v[2]*.5;
   return{q:`Pipeline: ${n1} Deals im Status „Termin vereinbart“ (10 %, je 4.000 €), ${n2} Deals „Erstgespräch geführt“ (25 %, je 4.000 €), ${n3} Deals „Konzept präsentiert“ (50 %, je 5.000 €). Wie hoch ist die <b>gewichtete Pipeline</b>?`,unit:"€",ans:x,steps:[`${n1} × 4.000 € × 10 % = ${eur(n1*400)}`,`${n2} × 4.000 € × 25 % = ${eur(n2*1000)}`,`${n3} × 5.000 € × 50 % = ${eur(n3*2500)}`,`Summe = ${eur(x)}`]}}},
