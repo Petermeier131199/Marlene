@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<title>Plakat Kapitel 02 Grundlagen Geld</title>
+<style>
+/*FONTS*/
+@page{size:297mm 420mm;margin:0}
+:root{--ink:#141414;--mute:#6B6660;--line:#E1DBD1;--paper:#FAF6EF;--red:#D42A3F;--green:#1E8A4B;--teal:#1B8A8F;--blue:#2F6FD0;--gold:#B8860B;
+--slab:"Roboto Slab",Georgia,serif;--sans:"Red Hat Text","DejaVu Sans",Arial,sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{background:#fff}
+body{width:1122px;height:1587px;overflow:hidden;font:400 15px/1.35 var(--sans);color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;font-variant-numeric:tabular-nums}
+.poster{width:1122px;height:1587px;position:relative;display:flex;flex-direction:column}
+header{background:#000;color:#F7F2EA;padding:18px 40px 16px;display:flex;justify-content:space-between;align-items:flex-end;gap:30px}
+.eyebrow{font:700 13px/1 var(--slab);letter-spacing:.16em;text-transform:uppercase;color:var(--red)}
+.num{font:800 84px/.9 var(--slab);color:var(--red)}
+.ttl{font:700 46px/1.05 var(--slab)}
+.hl{display:flex;align-items:baseline;gap:18px;margin-top:8px}
+.tag{text-align:right;font:600 19px/1.35 var(--slab);max-width:330px}
+.tag b{display:block}.tag .g{color:#4CC983}.tag .r{color:#F0495C}.tag .b{color:#6C9EF0}
+main{flex:1;padding:16px 40px 0;display:flex;flex-direction:column;gap:12px;min-height:0}
+h2{font:700 18px/1.2 var(--slab);padding-bottom:6px;border-bottom:2.5px solid var(--red);margin-bottom:8px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+h2 small{font:500 13px var(--sans);color:var(--mute)}
+.row{display:grid;gap:20px}
+.card{background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:11px 14px}
+.eq{display:flex;align-items:stretch;gap:12px}
+.blk{flex:1;border-radius:12px;padding:8px 16px;color:#fff}
+.blk b{display:block;font:700 28px/1.1 var(--slab)}.blk span{font-size:15px;opacity:.95}
+.op{align-self:center;font:700 36px/1 var(--slab);color:var(--ink)}
+.chips{display:flex;align-items:center;gap:9px;margin-top:9px;font:700 19px var(--slab);flex-wrap:wrap}
+.chip{padding:4px 12px;border-radius:99px;color:#fff;font:700 18px var(--slab)}
+.chips i{font:400 12px var(--sans);color:var(--mute);font-style:normal;display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fv{border-radius:12px;padding:12px 14px;border:2px solid}
+.fv h3{font:700 18px var(--slab)}.fv p{font-size:13.5px;margin-top:2px}.fv ul{margin:8px 0 0 18px;padding:0;font-size:14px}
+.formula{font:700 17px/1.3 var(--slab);background:#fff;border:2px solid var(--ink);border-radius:10px;padding:6px 11px}
+.ex{font-size:14px;margin-top:5px}
+.ex b{font-weight:700}
+.wf{display:flex;flex-direction:column;gap:5px}
+.wr{display:grid;grid-template-columns:182px 1fr;align-items:center;gap:10px;font-size:14px}
+.wr .t{position:relative;height:28px;background:#fff;border-radius:6px;border:1px solid var(--line)}
+.wr .t i{position:absolute;top:0;bottom:0;border-radius:5px;display:flex;align-items:center;padding:0 9px;font:700 15px var(--slab);color:#fff;white-space:nowrap}
+.wr small{display:block;color:var(--mute);font-size:11.5px;line-height:1.1}
+.tbl{width:100%;border-collapse:collapse;font-size:13px;line-height:1.25}
+.tbl th{background:#000;color:#F7F2EA;text-align:left;padding:4px 9px;font-size:13px}
+.tbl td{padding:4px 9px;border-bottom:1px solid var(--line);background:#fff}
+.six{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.six div{background:var(--paper);border:1.5px solid var(--line);border-radius:10px;padding:8px 10px;font-size:12.5px;line-height:1.25}
+.six b{display:flex;align-items:center;gap:7px;font:700 14px/1.15 var(--slab);margin-bottom:3px}
+.six em{flex:0 0 24px;height:24px;border-radius:50%;background:var(--red);color:#fff;font:700 14px/24px var(--slab);text-align:center;font-style:normal}
+footer{margin:0 40px 22px;background:#000;color:#F7F2EA;border-radius:12px;padding:10px 20px;display:flex;gap:16px;align-items:center;font:600 17px/1.3 var(--slab)}
+footer b{color:#F0495C}
+svg{display:block;width:100%;height:auto}
+svg text{font-family:var(--sans)}
+</style></head>
+<body><div class="poster">
+<header>
+  <div><div class="eyebrow">Inpulse Invest · CEO-Akademie</div><div class="hl"><div class="num">02</div><div class="ttl">Grundlagen Geld</div></div></div>
+  <div class="tag"><b class="g">Was reinkommt = Umsatz</b><b class="r">Was rausgeht = Kosten</b><b class="b">Was übrig bleibt = Gewinn</b></div>
+</header>
+<main>
+
+<section>
+  <h2>Die Grundrechnung jedes Unternehmens <small>Alles andere im Kurs ist eine genauere Version davon.</small></h2>
+  <div class="eq">
+    <div class="blk" style="background:var(--green)"><b>Umsatz</b><span>Was reinkommt</span></div><div class="op">−</div>
+    <div class="blk" style="background:var(--red)"><b>Kosten</b><span>Was rausgeht</span></div><div class="op">=</div>
+    <div class="blk" style="background:var(--blue)"><b>Gewinn</b><span>Was übrig bleibt</span></div>
+  </div>
+  <div class="chips"><i>Beispiel</i>
+    <span class="chip" style="background:var(--green)">30.000 € Umsatz</span><span>−</span>
+    <span class="chip" style="background:#E0707F">9.000 € variabel</span><span>−</span>
+    <span class="chip" style="background:var(--red)">14.000 € fix</span><span>=</span>
+    <span class="chip" style="background:var(--blue)">7.000 € Gewinn</span>
+  </div>
+</section>
+
+<div class="row" style="grid-template-columns:1fr 1fr">
+<section>
+  <h2>Zwei Sorten Kosten <small>Die wichtigste Unterscheidung</small></h2>
+  <div class="two">
+    <div class="fv" style="border-color:var(--red);background:#FDF1F2">
+      <svg viewBox="0 0 100 52" style="width:64px;height:34px"><path d="M8 26 50 4 92 26" fill="none" stroke="#D42A3F" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/><rect x="20" y="26" width="60" height="22" fill="#D42A3F"/><rect x="43" y="32" width="14" height="16" fill="#FDF1F2"/></svg>
+      <h3 style="color:var(--red)">Fix</h3><p><b>Wie die Miete:</b> kommt jeden Monat, egal ob du verkaufst.</p>
+      <p style="margin-top:4px;font-size:13px">Fixum, AG-Anteil, Miete, Tools, GF-Gehalt</p>
+      <p style="margin-top:4px;color:var(--mute);font-size:13px">Auch im schlechten Monat fällig.</p></div>
+    <div class="fv" style="border-color:#C9677A;background:#FDF6F7">
+      <svg viewBox="0 0 100 52" style="width:64px;height:34px"><path d="M12 34 20 18Q22 14 27 14H73Q78 14 80 18L88 34Z" fill="#E0707F"/><rect x="6" y="32" width="88" height="12" rx="4" fill="#E0707F"/><circle cx="26" cy="46" r="6" fill="#141414"/><circle cx="74" cy="46" r="6" fill="#141414"/><rect x="40" y="6" width="20" height="8" rx="2" fill="#141414"/></svg>
+      <h3 style="color:#B04458">Variabel</h3><p><b>Wie Sprit beim Taxi:</b> nur wenn du fährst.</p>
+      <p style="margin-top:4px;font-size:13px">Berater-Provision, Stornoreserve, Tippgeberanteile</p>
+      <p style="margin-top:4px;color:var(--mute);font-size:13px">Sinkt mit dem Umsatz mit.</p></div>
+  </div>
+</section>
+<section>
+  <h2>Von der Wohnung zum Gewinn <small>Diese Kette kommt überall wieder</small></h2>
+  <div class="wf">
+    <div class="wr"><div>Kaufpreis der Wohnung</div><div style="font:700 20px var(--slab)">150.000 €</div></div>
+    <div class="wr"><div>Innenprovision 8 %<small>= dein Umsatz</small></div><div class="t"><i style="left:0;width:100%;background:var(--green)">12.000 €</i></div></div>
+    <div class="wr"><div>− Berater (Junior 25 %)</div><div class="t"><i style="left:75%;width:25%;background:var(--red);padding:0 6px">−3.000</i></div></div>
+    <div class="wr"><div>= Umsatz für die Firma<small>= Deckungsbeitrag, 75 %</small></div><div class="t"><i style="left:0;width:75%;background:var(--teal)">9.000 €</i></div></div>
+    <div class="wr"><div>− Fixkosten<small>anteilig über alle Deals</small></div><div class="t" style="border:2px dashed var(--red);display:flex;align-items:center;padding:0 10px;font:600 14px var(--sans);color:var(--red)">hängt vom Monat ab: Gehälter, Büro, Tools</div></div>
+    <div class="wr"><div><b>= Gewinn</b></div><div class="t" style="border:2px dashed var(--blue);display:flex;align-items:center;padding:0 10px;font:600 14px var(--sans);color:var(--blue)">was nach allen Fixkosten übrig bleibt</div></div>
+  </div>
+</section>
+</div>
+
+<div class="row" style="grid-template-columns:1.55fr 1fr">
+<section>
+  <h2>Der DB-Topf füllt sich <small>9.000 € DB pro Wohnung, Fixkosten 25.000 €</small></h2>
+  <svg id="topf" viewBox="0 0 640 276"></svg>
+</section>
+<section>
+  <h2>Deckungsbeitrag (DB)</h2>
+  <div class="formula">DB = Umsatz − variable Kosten</div>
+  <div class="ex">30.000 € − 9.000 € = <b>21.000 €</b></div>
+  <div class="formula" style="margin-top:9px">DB-Quote = DB ÷ Umsatz</div>
+  <div class="ex">21.000 € ÷ 30.000 € = 0,7 = <b>70 %</b></div>
+  <div class="card" style="margin-top:10px;font-size:13px"><b>Der Topf:</b> Jeder Deal wirft Deckungsbeitrag hinein. Daraus zahlst du am Monatsende alle Fixkosten. Voller als die Fixkosten: <b style="color:var(--blue)">Gewinn</b>. Leerer: <b style="color:var(--red)">Verlust</b>.</div>
+</section>
+</div>
+
+<section>
+  <h2>Break-even: Wie viel musst du mindestens verkaufen? <small>Der Punkt, an dem die Einnahmen genau die Kosten decken</small></h2>
+  <div class="row" style="grid-template-columns:repeat(3,1fr);gap:14px">
+    <div class="card"><div class="lbl" style="font:700 13px var(--slab);color:var(--teal)">IN DEALS</div>
+      <div class="formula" style="margin-top:6px">Fixkosten ÷ DB pro Deal</div>
+      <div class="ex">25.000 € ÷ 9.000 € = <b>2,8 Wohnungen</b> pro Monat</div>
+      <div class="ex" style="color:var(--mute)">Ab der 3. Wohnung verdient die Firma Geld.</div></div>
+    <div class="card"><div class="lbl" style="font:700 13px var(--slab);color:var(--teal)">IN EURO</div>
+      <div class="formula" style="margin-top:6px">Fixkosten ÷ DB-Quote</div>
+      <div class="ex">25.000 € ÷ 0,75 = <b>33.333 € Umsatz</b> pro Monat</div>
+      <div class="ex" style="color:var(--mute)">Probe: 2,8 Wohnungen × 12.000 € = 33.333 €</div></div>
+    <div class="card" style="border-color:var(--red)"><div class="lbl" style="font:700 13px var(--slab);color:var(--red)">NEUE FIXKOSTEN? (Junior +6.300 €)</div>
+      <div class="ex" style="margin-top:8px">In Deals: 6.300 € ÷ 9.000 € = <b>+0,7 Wohnungen</b></div>
+      <div class="ex">In Euro: 6.300 € ÷ 0,75 = <b>+8.400 € Umsatz</b></div>
+      <div class="ex" style="color:var(--mute)">Jede Fixkosten-Erhöhung erhöht deinen Break-even.</div></div>
+  </div>
+</section>
+
+<div class="row" style="grid-template-columns:1.25fr 1fr">
+<section>
+  <h2>Gewinn ≠ Cash <small>Puffer einplanen: zwischen Verkauf und Provision liegen 2–4 Monate</small></h2>
+  <svg id="cash" viewBox="0 0 640 260"></svg>
+</section>
+<section>
+  <h2>Prozent schnell rechnen</h2>
+  <table class="tbl"><tr><th>Frage</th><th>Rechnung</th></tr>
+  <tr><td>Wie viel % ist X von Y?<br><span style="color:var(--mute)">9.000 von 12.000 = <b style="color:var(--ink)">75 %</b></span></td><td>X ÷ Y × 100</td></tr>
+  <tr><td>Wie viel sind P % von Y?<br><span style="color:var(--mute)">8 % von 150.000 = <b style="color:var(--ink)">12.000</b></span></td><td>Y × P ÷ 100</td></tr>
+  <tr><td>Wie viel mal so groß?<br><span style="color:var(--mute)">27.000 ÷ 6.300 = <b style="color:var(--ink)">4,3×</b></span></td><td>X ÷ Y</td></tr>
+  <tr><td>Veränderung in %<br><span style="color:var(--mute)">von 20 auf 25 = <b style="color:var(--ink)">+25 %</b></span></td><td>(neu − alt) ÷ alt × 100</td></tr>
+  <tr><td>Quoten hintereinander<br><span style="color:var(--mute)">20 % × 70 % × 25 % = <b style="color:var(--ink)">3,5 %</b></span></td><td>multiplizieren</td></tr></table>
+</section>
+</div>
+
+<section>
+  <h2>Die 6 Zahlen, die du jeden Monat kennen musst</h2>
+  <div class="six">
+    <div><b><em>1</em>Umsatz</b>mit Datum und Quelle</div>
+    <div><b><em>2</em>Umsatz f. d. Firma</b>nach Berater-Provision</div>
+    <div><b><em>3</em>Fixkosten</b>jeden Monat gleich</div>
+    <div><b><em>4</em>Gewinn</b>Zahl 2 minus Zahl 3</div>
+    <div><b><em>5</em>Kontostand</b>plus Zahlungseingänge der nächsten 13 Wochen</div>
+    <div><b><em>6</em>Break-even</b>in Deals, mit Abstand nach oben oder unten</div>
+  </div>
+</section>
+</main>
+<footer><div style="font:800 40px var(--slab);color:var(--red)">?</div><div>Bei jeder Entscheidung, die Fixkosten erhöht (Einstellung, Büro, Tool): <b>Um wie viele Deals pro Monat steigt dadurch mein Break-even?</b></div></footer>
+</div>
+
+<script>
+const NS="http://www.w3.org/2000/svg";
+const el=(p,t,a,txt)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e};
+const f0=v=>Math.abs(v).toLocaleString("de-DE");
+const sg=v=>(v<0?"−":"+")+f0(v);
+/* Topf-Diagramm */
+(function(){
+  const s=document.getElementById("topf"),L=56,Rm=14,T=26,H=162,W=640,pw=W-L-Rm,band=pw/6,bw=56,max=48000,FIX=25000,DB=9000;
+  const y=v=>T+H*(1-v/max),cx=i=>L+band*(i+.5);
+  [0,10000,20000,30000,40000].forEach(v=>{el(s,"line",{x1:L,x2:W-Rm,y1:y(v),y2:y(v),stroke:"#E1DBD1","stroke-width":1});el(s,"text",{x:L-8,y:y(v)+4,"text-anchor":"end",fill:"#6B6660","font-size":12},v?v/1000+"k":"0")});
+  for(let i=0;i<=5;i++){const v=i*DB,x=cx(i)-bw/2;
+    if(v>0)el(s,"rect",{x,y:y(Math.min(v,FIX)),width:bw,height:y(0)-y(Math.min(v,FIX)),fill:"#1B8A8F",rx:3});
+    if(v>FIX)el(s,"rect",{x,y:y(v),width:bw,height:y(FIX)-y(v),fill:"#2F6FD0",rx:3});
+    if(v<FIX)el(s,"rect",{x,y:y(FIX),width:bw,height:y(v)-y(FIX),fill:"none",stroke:"#D42A3F","stroke-width":1.6,"stroke-dasharray":"4 3",rx:3});
+    el(s,"text",{x:cx(i),y:y(0)+19,"text-anchor":"middle","font-size":14,"font-weight":700,fill:"#141414"},i+(i===1?" Whg":" Whg"));
+    const r=v-FIX;el(s,"text",{x:cx(i),y:y(0)+44,"text-anchor":"middle","font-size":16,"font-weight":700,"font-family":"Roboto Slab, serif",fill:r<0?"#D42A3F":"#2F6FD0"},sg(r)+" €");
+    if(v>0)el(s,"text",{x:cx(i),y:(v<FIX?y(v)+17:y(FIX)+17),"text-anchor":"middle","font-size":12.5,"font-weight":700,fill:"#fff"},f0(v));
+  }
+  el(s,"line",{x1:L,x2:W-Rm,y1:y(FIX),y2:y(FIX),stroke:"#D42A3F","stroke-width":2.6,"stroke-dasharray":"8 5"});
+  el(s,"text",{x:L+6,y:y(FIX)-7,"font-size":14,"font-weight":700,fill:"#D42A3F"},"Fixkosten 25.000 €");
+  const be=FIX/DB,bx=L+band*(be+.5);
+  el(s,"line",{x1:bx,x2:bx,y1:T-4,y2:y(0),stroke:"#141414","stroke-width":1.8,"stroke-dasharray":"2 4"});
+  const g=el(s,"g",{});el(g,"rect",{x:bx-84,y:T-24,width:168,height:24,rx:12,fill:"#141414"});el(g,"text",{x:bx,y:T-7,"text-anchor":"middle",fill:"#fff","font-size":13.5,"font-weight":700},"Break-even: 2,8 Whg");
+  el(s,"text",{x:L,y:y(0)+68,fill:"#6B6660","font-size":12.5},"Unter der roten Linie: Verlust. Darüber: Gewinn. Jede Wohnung danach bringt 9.000 € (vor Steuern).");
+})();
+/* Cash-Diagramm */
+(function(){
+  const s=document.getElementById("cash"),W=640,H=260,L=66,Rm=96,T=12,B=88,mx=24000,mn=-86000,pw=W-L-Rm,ph=H-T-B;
+  const x=i=>L+34+(pw-34)*i/3,y=v=>T+ph*(mx-v)/(mx-mn),X1=W-Rm+40;
+  el(s,"rect",{x:L,y:y(0),width:X1-L,height:y(mn)-y(0),fill:"#D42A3F",opacity:.08});
+  [0,-25000,-50000,-75000].forEach(v=>{el(s,"line",{x1:L,x2:X1,y1:y(v),y2:y(v),stroke:v?"#E1DBD1":"#141414","stroke-width":v?1:1.6});el(s,"text",{x:L-8,y:y(v)+4,"text-anchor":"end",fill:"#6B6660","font-size":12},v?(v/1000)+"k":"0")});
+  const kon=[-25000,-50000,-75000,-73000],gew=[2000,4000,6000,8000];
+  ["Okt","Nov","Dez","Jan"].forEach((m,i)=>{el(s,"text",{x:x(i),y:H-B+22,"text-anchor":"middle","font-size":14,"font-weight":700,fill:"#141414"},m);
+    el(s,"text",{x:x(i),y:H-B+44,"text-anchor":"middle","font-size":13,fill:i===3?"#1E8A4B":"#141414","font-weight":i===3?700:400},i===3?"27.000":"0");
+    el(s,"text",{x:x(i),y:H-B+62,"text-anchor":"middle","font-size":13,fill:"#141414"},"25.000");
+    el(s,"text",{x:x(i),y:H-B+78,"text-anchor":"middle","font-size":11,fill:"#6B6660"},"3 Whg verkauft")});
+  el(s,"text",{x:L-8,y:H-B+44,"text-anchor":"end","font-size":12,fill:"#6B6660"},"Geld rein");
+  el(s,"text",{x:L-8,y:H-B+62,"text-anchor":"end","font-size":12,fill:"#6B6660"},"Geld raus");
+  el(s,"path",{d:gew.map((v,i)=>(i?"L":"M")+x(i)+" "+y(v)).join(" "),fill:"none",stroke:"#1E8A4B","stroke-width":3,"stroke-dasharray":"7 5"});
+  el(s,"path",{d:kon.map((v,i)=>(i?"L":"M")+x(i)+" "+y(v)).join(" "),fill:"none",stroke:"#141414","stroke-width":4,"stroke-linejoin":"round"});
+  kon.forEach((v,i)=>{el(s,"circle",{cx:x(i),cy:y(v),r:6,fill:i===3?"#D42A3F":"#141414"});
+    el(s,"text",{x:i===0?x(i)+10:x(i),y:y(v)-12,"text-anchor":i===0?"start":"middle","font-size":14,"font-weight":700,"font-family":"Roboto Slab, serif",fill:"#D42A3F"},sg(v)+" €")});
+  el(s,"text",{x:L+6,y:T+11,"font-size":13,"font-weight":700,fill:"#1E8A4B"},"Gewinn auf dem Papier: +2.000 pro Monat, sieht gut aus");
+  el(s,"text",{x:x(3)+12,y:y(8000)-7,"font-size":13,"font-weight":700,fill:"#1E8A4B"},"+8.000");
+  ["Im Januar kommt","die Provision: +27.000","Das Konto bleibt im Minus."].forEach((t,k)=>el(s,"text",{x:W-4,y:y(-24000)+k*15,"text-anchor":"end","font-size":12.5,"font-weight":k<2?700:400,fill:"#141414"},t));
+  el(s,"text",{x:x(0)-26,y:y(-83000),"font-size":13,"font-weight":700,fill:"#141414"},"echtes Konto, ohne Puffer: pleite");
+})();
+</script>
+</body></html>
