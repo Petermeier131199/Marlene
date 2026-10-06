@@ -1,0 +1,24 @@
+## Kapitel 3 – Herzfunkeln
+Wörter vorher: ca. 907 · nachher: ca. 810
+
+| # | Art | Original | Neu | Grund |
+|---|---|---|---|---|
+| 1 | Widerspruch | „Der Fluffwusel … zappelte aufgeregt in Wibsis Umhang. ‚Ich kann suchen! Ich bin ein großartiger Finder! Wirklich! Ich habe mal einen Keks in einem Haufen Laub gefunden, der größer war als Krächzbert!‘“ | „‚Fupp!‘, machte er, plusterte sich zu doppelter Größe auf und quiekte stolz.“ | Laut Figurenkanon spricht der Fluffwusel nicht. Er drückt sich mit Lauten und Verhalten aus. |
+| 2 | Widerspruch | „‚Eine überflüssige Information‘, krächzte Krächzbert. ‚Aber mach nur …‘“ | „‚Ich übersetze mal‘, krächzte Krächzbert. ‚Er sagt: ‚Ich kann suchen! Ich bin ein großartiger Finder! Ich habe mal einen Keks in einem Haufen Laub gefunden, der größer war als Krächzbert!‘‘ Er schüttelte empört das Gefieder. ‚Eine überflüssige Information. Aber mach nur …‘“ | Krächzbert „übersetzt“ jetzt spöttisch, was der Fluffwusel angeblich sagt. So bleiben der Keks-Witz und die „überflüssige Information“ erhalten. |
+| 3 | Widerspruch | „Keine fünf Minuten später hörten sie den Fluffwusel triumphierend rufen: ‚Hier! Hier ist es!‘“ | „Keine fünf Minuten später tönte ein triumphierendes ‚Fupp! Fupp! Fupp!‘ durch den Wald.“ | Der Fluffwusel spricht nicht (Kanon). |
+| 4 | Widerspruch | „Die Maus rannte aufgeregt hinter ihm her“ | „Die Maus rannte aufgeregt dem Geräusch nach“ | Anschluss an die neue Stelle: Der Fluffwusel ist schon voraus, die Maus folgt seinem Ruf. |
+| 5 | Kürzung | „Irgendwo in ihrem Herzen fühlte Wibsi, dass sie auf dem richtigen Weg war. Sie hatte vielleicht nicht ihre alte Magie zurück, aber irgendetwas in ihr begann zu leuchten – wie ein winziges Licht, das immer heller wurde.“ | Absatz gestrichen, das Bild vom Licht in den Schluss übernommen | Das Kapitel endete doppelt. |
+| 6 | Kürzung | „…aber sie hatte etwas viel Wertvolleres entdeckt: die Magie, die in den kleinen Momenten des Lebens steckt, in den Herzen, die man berühren kann, und in der Wärme, die man selbst anderen schenkt.“ | „…aber irgendetwas in ihr hatte zu leuchten begonnen, wie ein winziges Licht, das immer heller wurde.“ | Die Moral ist auf eine Formulierung reduziert: Das Bild vom Licht bleibt (Zeigen statt Erklären). Der Schlusssatz „richtig, richtig wohlzufühlen“ bleibt ebenfalls. |
+| 7 | Kürzung | „Aber weißt du, dein Lächeln gerade war Dank genug. Das ist Magie für mich.“ | „Aber weißt du, dein Lächeln gerade war Dank genug.“ | Ausgesprochene Moral gestrichen. Nur noch eine Formulierung pro Kapitel. |
+| 8 | Kürzung | „Mit einem leisen Lächeln und einem wohltuenden Gefühl im Herzen machte sich Wibsi auf den Rückweg. Der Schnee unter ihren Stiefeln knirschte …“ | „Auf dem Rückweg knirschte der Schnee unter ihren Stiefeln …“ | Doppelt mit dem Weiterziehen davor und mit dem Lächeln im Spiegel am Schluss |
+| 9 | Kürzung | „Der Wind hatte nachgelassen, und die Luft war klar und frisch.“ | – | Gestrafft. Die Stimmung tragen die Schneeflocken „wie kleine Sterne“. |
+| 10 | Kürzung | „…durch den Schnee, der unter ihren Stiefeln knirschte.“ (Kapitelanfang) | „…durch den Schnee.“ | Der knirschende Schnee kommt auf dem Rückweg noch einmal vor. |
+| 11 | Kürzung | „…Duft nach heißer Schokolade und Zimt, der ihr sofort den Appetit anregte.“ | „…Duft nach heißer Schokolade und Zimt.“ | Gestrafft |
+| 12 | Kürzung | „sagte Wibsi schnell, während sie das Angebot höflich ablehnte.“ | „sagte Wibsi schnell.“ | Das Ablehnen geht schon aus der Rede hervor. |
+| 13 | Kürzung | „Mit einem Seufzen trat sie durch die knarrende Tür … Die behagliche Wärme des Feuers in ihrem Kamin … in der Nähe des prasselnden Feuers … Wibsi nahm einen tiefen Atemzug und ließ sich mit einem zufriedenen Seufzer …“ | „Sie trat durch die knarrende Tür … Die behagliche Wärme des Kamins … vor dem prasselnden Feuer … Wibsi ließ sich mit einem zufriedenen Seufzer …“ | Doppeltes „Seufzen“ und doppeltes „Feuer“ gestrafft |
+| 14 | Fehler | „ein Trinkgeld zu verlangen damit ich irgendwann Kekse kaufen kann“ | „ein Trinkgeld zu verlangen, damit ich …“ | Komma vor dem Nebensatz |
+| 15 | Fehler | „die Kälte des Außen“ | „die Kälte von draußen“ | Grammatik |
+| 16 | Fehler | Oh je | Oje | Rechtschreibung (Duden) |
+| 17 | Fehler | „vermutlich um besonders magisch auszusehen“ / „eine gewisse... charmante“ / „Ich... ich“ | „vermutlich, um …“ / „eine gewisse … charmante“ / „Ich … ich“ | Komma bei der Infinitivgruppe mit „um“ und Auslassungspunkte vereinheitlicht, 3 Stellen |
+| 18 | Stil | „Wibsi marschierte mit entschlossenen Schritten am Morgen des 3. Dezember durch den Schnee“ | „Wibsi marschierte am Morgen des 3. Dezember mit entschlossenen Schritten durch den Schnee“ | Satzstellung geglättet |
+| 19 | Stil | „„Ein guter Tag“, wiederholte Krächzbert …“ (im selben Absatz wie Wibsis Satz) | eigener Absatz | Neuer Absatz beim Sprecherwechsel |

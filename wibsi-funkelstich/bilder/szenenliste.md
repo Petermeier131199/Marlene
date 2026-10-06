@@ -1,0 +1,33 @@
+# Wibsi Funkelstich – Bildliste (Entwurf zur Freigabe)
+
+Format: ganzseitige Illustration im Hochformat, eine pro Kapitel. Farbig. Stil = Figurenblätter (Disney-artig, Gouache/Buntstift, warmes Licht).
+Referenzen: Wibsi (Original-Türbild + Ansichten/Ausdrücke), Krächzbert (Disney-Ausdrücke), Fluffwusel (Ansichten, ohne Schwanz), Nebenfiguren (Figurenblätter).
+
+| Kap. | Titel | Szene | Figuren | Stimmung / Licht |
+|---|---|---|---|---|
+| 1 | Verschwunden | Wibsi kauert auf ihrem quietschenden Hexenstuhl und starrt ratlos auf den leblosen Zauberstab auf dem Tisch; der Besen liegt schlaff in der Ecke wie ein fauler Kater; Krächzbert auf der Garderobe | Wibsi, Krächzbert | frostiger Morgen, Eisblumen am Fenster, kalte Blautöne mit etwas Kerzenwärme |
+| 2 | Aufbruch | Ein Schneehaufen rutscht auseinander, der Fluffwusel kommt zum Vorschein und niest ein Schneewölkchen; Wibsi staunt, Krächzbert flattert erschrocken auf einen Ast | Wibsi, Krächzbert, Fluffwusel | verschneiter Wald, klares Wintermorgenlicht |
+| 3 | Herzfunkeln | Wibsi kniet hinter einem knorrigen Baumstumpf bei der weinenden Maus; der Fluffwusel plustert sich in ihrem Umhang auf („Fupp!“), Krächzbert schaut skeptisch von oben | Wibsi, Fluffwusel, Krächzbert, Maus | Schnee, Nachmittag, später Rosa am Himmel |
+| 4 | Innendrinnen | Wibsi im Sessel am Kamin, Tasse heiße Schokolade, Augen geschlossen; über ihr wie ein Traumbild der innere Wald mit dem großen warmen Baum in goldenem Licht; Fluffwusel als schnarchende Kugel, Krächzbert döst auf der Lehne | alle drei | Kaminfeuer innen, goldener Traumwald |
+| 5 | Kleinigkeiten | Am kleinen Bach im Schnee taucht Wibsi die Hand ins Wasser; der Fluffwusel kugelt eine Schneewehe hinunter, Krächzbert sitzt auf einem niedrigen Ast | alle drei | Sonne durch Zweige, glitzernde Tropfen |
+| 6 | Seelenplätzchen | Wibsis Küche voller Plätzchen; Wibsi bindet rote Schleifen um kleine Tüten, der Nikolaus sitzt am Tisch, der Fluffwusel auf seinem Schoß; Krächzbert stibitzt Krümel | Wibsi, Nikolaus, Fluffwusel, Krächzbert | warmes Küchenlicht, Mehlstaub, Zimtduft |
+| 7 | Klarheit | Auf einer verborgenen Lichtung kniet Wibsi vor dem uralten knorrigen Baum und hält den leuchtenden Kristall in den Händen, daneben das kleine Pergament mit goldener Schrift | Wibsi (Krächzbert, Fluffwusel optional) | stiller Wald, Sonnenstrahlen, magisches Leuchten |
+| 8 | Kleine Schritte | Morgens stellt Wibsi einen frischen Rosmarinzweig in die Vase; hinter ihr schickt der Kristall auf dem Nachttisch heimlich einen Funken zum Zauberstab – sie merkt es nicht | Wibsi, Krächzbert am Fenster | goldenes Morgenlicht, Eisblumen |
+| 9 | Genug | In Schmottelinas überwucherter Hütte: Räucherschale mit leuchtenden Runen, silbriger Rauch in Spiralen, Wibsi mit geschlossenen Augen; ein kleiner Kuchen läuft unter den Tisch | Wibsi, Schmottelina, Krächzbert, Fluffwusel | Kräuter, Bücher, warmes Licht, violette Akzente |
+| 10 | Verbunden | Wibsi kniet im Schnee, beide Hände auf dem Boden; vor ihr ein einzelner uralter Baum, dessen Äste den Himmel umarmen; der Fluffwusel dreht eine Pirouette, Krächzbert auf einer Astgabel | alle drei | goldenes Nachmittagslicht auf Schnee |
+| 11 | Nadelklappern | Draußen tobt der Sturm, drinnen strickt Wibsi mit blau-silber-weißer Wolle eine Socke; der Fluffwusel spielt mit einem Wollknäuel, Krächzbert hält die kalten Krallen hin | alle drei | gemütliche Stube, Sturm am Fenster |
+| 12 | Chaos | Wibsi stolpert über den Besenstiel und landet kopfüber im Schneehaufen vor der Tür, ihr Hut mit Glöckchen fliegt davon; der Fluffwusel springt begeistert hinterher, Krächzbert schaut trocken zu | alle drei | heller Wintermorgen, Komik |
+| 13 | Lichterglanz | Nebelige Lichtung: die heilige Lucia mit dem Kranz aus vier brennenden Kerzen, Wibsi steht ehrfürchtig vor ihr, der Fluffwusel kauert auf ihrer Schulter | Wibsi, Lucia, Fluffwusel, Krächzbert | grauer Nebel, warmes Kerzenlicht in der Mitte |
+| 14 | Erbschaft | Wibsi mit dem alten Lederbuch und dem Amulett im Kerzenschein; hinter ihr erscheint durchscheinend wie eine Erinnerung die Urgroßmutter Althea mit silbernem Haar | Wibsi, Althea (geisterhaft), Krächzbert | Kerzenlicht, Wind am Fenster |
+| 15 | Morgensorgen | Morgenchaos: Wibsi hüpft auf einem Bein (Zeh gestoßen), Zahnbürste im Mund, um sie ein Berg aus Kleidern und Hüten; der Fluffwusel wuselt zwischen ihren Füßen, Krächzbert lacht sich auf der Stuhllehne kaputt | alle drei | heller Morgen, Komik |
+| 16 | Stärke | Wintermarkt mit Lichterketten: Wibsi steht aufrecht hinter ihrem Kräuterstand, Grethula zeigt mit spitzem Finger auf ihre Bündel; Krächzbert auf Wibsis Schulter, Marktleute halten inne | Wibsi, Grethula, Krächzbert | Abendmarkt, Lichter, Dampf von Punsch |
+| 17 | Köstlichkeiten | Wibsi auf einer Bank am Wintermarkt mit einer Tüte Maronen, Augen geschlossen, genießt; Krächzbert sitzt auf einer Laterne | Wibsi, Krächzbert | goldene Marktlichter, Schneeflocken |
+| 18 | Atmen | Wibsi sitzt im Schnee neben einem kleinen Mädchen im roten Mantel, beide atmen tief; im Hintergrund kommt der kleine Hund Luna angerannt | Wibsi, Mädchen, Luna, Krächzbert | stiller Wald, weiches Licht |
+| 19 | Gaben | Lichtung des Sternenglanzes in der Dämmerung: Hexen im Kreis, Morgana hält Wibsi das alte Buch hin, auf den leeren Seiten leuchtet eine Sternenkarte auf | Wibsi, Morgana, Hexen, Krächzbert | Dämmerung, Sternenlicht, Nebel |
+| 20 | Geduld | Wibsi sitzt mit verschränkten Armen vor dem alten sprechenden Kupferkessel auf dem Herd; Krächzbert flattert aufgeregt („Nicht gucken!“), daneben Zimtstern-Teig | Wibsi, Kessel, Krächzbert, Fluffwusel | Küche, Dampf, Humor |
+| 21 | Jul | Julfeuer auf der Lichtung in der längsten Nacht: Hexenkreis mit Kerzen, Morgana im Sternengewand, Wibsi gibt eine goldene Feder ins Feuer | Wibsi, Morgana, Hexen, Krächzbert, Fluffwusel | tiefe Nacht, Feuerschein |
+| 22 | Verständnis | Dorfplatz im Schnee: ein großer Kreis, Dorfbewohner mit geschlossenen Augen, Wibsi in der Mitte, Kinder schauen zu | Wibsi, Dorfbewohner, Krächzbert | Nachmittag, später Dorflichter |
+| 23 | Liebe | In der Stube des alten Paars: Katrin und Otto stoßen beim Greifen nach der Taschenuhr aneinander und schauen sich an; Krächzbert hält die Uhr im Schnabel, auf dem Tisch dampft die gehexte Teekanne | Wibsi, Katrin, Otto, Krächzbert | warmes Licht, schiefe Fensterläden |
+| 24 | Hoffnung | Wibsi fliegt lachend auf dem Besen über den verschneiten Wald, der Fluffwusel sitzt vorne auf dem Stiel und baumelt mit den Beinchen, Krächzbert fliegt daneben; unten leuchtet ihre Hütte | alle drei | Sternennacht, Schneeglitzern |
+
+Zusätzlich: Motiv für die Buchrückseite (Vorschlag: Wibsi von hinten auf dem Weg in den Winterwald, Krächzbert und Fluffwusel neben ihr).
