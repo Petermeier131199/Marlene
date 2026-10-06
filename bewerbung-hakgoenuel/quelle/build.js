@@ -1,0 +1,170 @@
+// Erzeugt Deckblatt + Anschreiben (PDF) für die dm-Bewerbungen von Fahriye Hakgönül.
+// Aufruf: NODE_PATH=$(npm root -g) node build.js
+const fs = require('fs');
+const path = require('path');
+const { chromium } = require('playwright');
+
+const OUT = path.resolve(__dirname, '..');
+const DATUM = 'Ingolstadt, 6. Oktober 2026';
+
+const ME = {
+  name: 'Fahriye Hakgönül',
+  strasse: 'Herkommerstraße 3',
+  ort: '85057 Ingolstadt',
+  tel: '0162 8894455',
+  mail: 'f.zingal64@gmail.com',
+};
+
+const ERFAHRUNG = `Seit 2022 bin ich als Verkäuferin im Sipl Brot &amp; Kaffeehaus in der Neuburger Straße in Ingolstadt tätig. Dort bediene und berate ich täglich viele Kundinnen und Kunden an der Theke und im Café, kassiere, fülle Ware auf und sorge für eine ansprechende Präsentation. Zuvor war ich von 2016 bis 2022 im Café Brezl in Ingolstadt im Service beschäftigt. Dort habe ich gelernt, auch in hektischen Stoßzeiten freundlich und konzentriert zu bleiben und sorgfältig mit Kasse und Bargeld umzugehen.`;
+
+const FILIALEN = [
+  {
+    datei: 'dm_Ludwigstrasse',
+    firma: 'dm-drogerie markt',
+    filiale: 'Filiale Ingolstadt Ludwigstraße',
+    strasse: 'Ludwigstraße 18',
+    ort: '85049 Ingolstadt',
+    betreff: 'Bewerbung als Verkäuferin in Ihrem dm-Markt in der Ludwigstraße',
+    absaetze: [
+      `seit über 20 Jahren arbeite ich mit Freude im direkten Kontakt mit Kundinnen und Kunden – im Einzelhandel ebenso wie in der Gastronomie. Diese Erfahrung möchte ich gern bei dm einbringen und bewerbe mich daher als Verkäuferin in Ihrem Markt in der Ludwigstraße in Ingolstadt.`,
+      ERFAHRUNG,
+      `Erfahrung im Einzelhandel bringe ich unter anderem aus meiner Zeit bei der Galeria Kaufhof, bei Exit und bei Nordsee mit. Ich weiß daher, worauf es im Verkauf ankommt: ein offenes Ohr für die Wünsche der Kundschaft, ordentlich gepflegte Regale und Kolleginnen und Kollegen, auf die man sich verlassen kann. Genau so arbeite ich – zuverlässig, belastbar und mit anpackender Art.`,
+      `An dm schätze ich, dass der Mensch im Mittelpunkt steht – bei den Kundinnen und Kunden genauso wie im Team. Ihr Markt mitten in der Ingolstädter Innenstadt mit viel Laufkundschaft und einem großen Sortiment auf zwei Etagen reizt mich besonders, denn ich arbeite gern dort, wo viel los ist. Da ich in Ingolstadt wohne, bin ich schnell und zuverlässig vor Ort.`,
+      `Über die Einladung zu einem persönlichen Gespräch oder einen Probearbeitstag freue ich mich sehr.`,
+    ],
+  },
+  {
+    datei: 'dm_Westpark',
+    firma: 'dm-drogerie markt',
+    filiale: 'Filiale Ingolstadt Westpark',
+    strasse: 'Am Westpark 6',
+    ort: '85057 Ingolstadt',
+    betreff: 'Bewerbung als Verkäuferin in Ihrem dm-Markt im Westpark Ingolstadt',
+    absaetze: [
+      `der freundliche Kontakt mit Kundinnen und Kunden begleitet mich seit über 20 Jahren – im Einzelhandel ebenso wie in der Gastronomie. Gern möchte ich diese Erfahrung künftig bei dm einbringen und bewerbe mich daher als Verkäuferin in Ihrem Markt im Westpark Ingolstadt.`,
+      ERFAHRUNG,
+      `Erfahrung im Einzelhandel bringe ich unter anderem aus meiner Zeit bei der Galeria Kaufhof, bei Exit und bei Nordsee mit. Ich weiß daher, worauf es im Verkauf ankommt: ein offenes Ohr für die Wünsche der Kundschaft, ordentlich gepflegte Regale und Kolleginnen und Kollegen, auf die man sich verlassen kann. Genau so arbeite ich – zuverlässig, belastbar und mit anpackender Art.`,
+      `An dm schätze ich das vielseitige Sortiment von Pflege und Gesundheit bis zu Baby- und Bioprodukten und den respektvollen Umgang miteinander – mit der Kundschaft wie im Team. Ihr Markt im Westpark mit seinem lebhaften Einkaufszentrum und vielen Stammkundinnen und Stammkunden passt sehr gut zu mir, denn ich arbeite gern dort, wo viel los ist. Da ich in Ingolstadt wohne, bin ich schnell und zuverlässig vor Ort.`,
+      `Über die Einladung zu einem persönlichen Gespräch oder einen Probearbeitstag freue ich mich sehr.`,
+    ],
+  },
+];
+
+const FONTS = `<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">`;
+
+const ICON = {
+  pin: `<svg viewBox="0 0 24 24" width="9" height="9"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>`,
+  tel: `<svg viewBox="0 0 24 24" width="9" height="9"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>`,
+  mail: `<svg viewBox="0 0 24 24" width="10" height="10"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/></svg>`,
+};
+
+const BASE_CSS = `
+  :root { --teal:#1f4552; --teal-d:#132c35; --gold:#c49a5a; --gold-l:#e8d5b5; --ink:#222b30; --muted:#6b7a82; }
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 210mm; height: 297mm; background: #fff; }
+  body { font-family: 'Lato', sans-serif; color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .serif { font-family: 'Playfair Display', serif; }
+  .spaced { letter-spacing: .32em; text-transform: uppercase; }
+`;
+
+function anschreiben(f) {
+  return `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Anschreiben ${ME.name}</title>${FONTS}<style>
+  ${BASE_CSS}
+  .page { position: relative; width: 210mm; height: 297mm; padding: 14mm 18mm 0 25mm; }
+  .bar { position: absolute; left: 0; top: 0; bottom: 0; width: 9.5mm; background: linear-gradient(180deg, var(--teal), var(--teal-d)); }
+  .bar::after { content: ''; position: absolute; right: -1.6mm; top: 0; bottom: 0; width: 1.6mm; background: var(--gold); }
+  header { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 5.5mm; border-bottom: .6pt solid #9aa6ab; }
+  .kicker { color: var(--gold); font-size: 7pt; font-weight: 700; letter-spacing: .45em; }
+  h1 { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 25pt; color: var(--teal); line-height: 1.15; margin: 1mm 0 .8mm; }
+  .tag { font-size: 7.6pt; color: var(--muted); letter-spacing: .3em; }
+  .contact { text-align: right; font-size: 7.8pt; color: #3d474c; line-height: 2.05; }
+  .contact span { display: inline-flex; align-items: center; gap: 2.2mm; }
+  .contact svg { color: var(--gold); }
+  .sender { margin-top: 11mm; font-size: 6.3pt; color: var(--muted); padding-bottom: 1.3mm; border-bottom: .5pt solid #d4d9db; width: 95mm; }
+  .addr { margin-top: 3.6mm; font-size: 9.4pt; line-height: 1.55; }
+  .addr b { color: var(--teal); }
+  .date { text-align: right; color: var(--muted); font-size: 9.4pt; margin-top: 7mm; }
+  h2 { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 13.2pt; color: var(--teal); margin: 9mm 0 7mm; }
+  .body p { font-size: 9.3pt; line-height: 1.66; text-align: justify; hyphens: auto; margin-bottom: 3.6mm; }
+  .sign { margin-top: 15mm; width: 57mm; border-top: .8pt solid var(--gold); padding-top: 2.4mm; font-family: 'Playfair Display', serif; font-size: 12.5pt; color: var(--teal); }
+  .anlage { margin-top: 7mm; font-size: 7.4pt; color: var(--muted); }
+  .anlage b { color: var(--gold); letter-spacing: .3em; margin-right: 2.5mm; }
+  </style></head><body><div class="page"><div class="bar"></div>
+  <header>
+    <div><div class="kicker">BEWERBUNG</div><h1>${ME.name}</h1><div class="tag">VERKAUF · SERVICE · EINZELHANDEL</div></div>
+    <div class="contact">
+      <span>${ME.strasse}, ${ME.ort} ${ICON.pin}</span><br>
+      <span>${ME.tel} ${ICON.tel}</span><br>
+      <span>${ME.mail} ${ICON.mail}</span>
+    </div>
+  </header>
+  <div class="sender">${ME.name} · ${ME.strasse} · ${ME.ort}</div>
+  <div class="addr"><b>${f.firma}</b><br>${f.filiale}<br>z. Hd. der Filialleitung<br>${f.strasse}<br>${f.ort}</div>
+  <div class="date">${DATUM}</div>
+  <h2>${f.betreff}</h2>
+  <div class="body"><p>Sehr geehrte Damen und Herren,</p>${f.absaetze.map(a => `<p>${a}</p>`).join('')}<p>Mit freundlichen Grüßen</p></div>
+  <div class="sign">${ME.name}</div>
+  <div class="anlage"><b>ANLAGE</b>Lebenslauf</div>
+  </div></body></html>`;
+}
+
+function deckblatt(f) {
+  return `<!doctype html><html lang="de"><head><meta charset="utf-8"><title>Bewerbung ${ME.name}</title>${FONTS}<style>
+  ${BASE_CSS}
+  .page { position: relative; width: 210mm; height: 297mm; overflow: hidden; }
+  .top { position: absolute; inset: 0 0 auto 0; height: 176mm; background: linear-gradient(160deg, #24505e 0%, var(--teal) 45%, var(--teal-d) 100%); border-bottom: 1.6mm solid var(--gold); }
+  .frame { position: absolute; left: 10mm; right: 10mm; top: 10mm; bottom: 9mm; border: .5pt solid rgba(196,154,90,.75); }
+  .center { position: absolute; left: 0; right: 0; top: 57mm; text-align: center; color: #fff; }
+  .kicker { color: var(--gold); font-size: 8pt; font-weight: 700; letter-spacing: .6em; }
+  .rule { display: flex; align-items: center; justify-content: center; gap: 3mm; margin: 4mm 0 2mm; }
+  .rule i { display: block; width: 30mm; height: .7pt; background: linear-gradient(90deg, transparent, var(--gold)); }
+  .rule i:last-child { transform: scaleX(-1); }
+  .rule b { width: 2.4mm; height: 2.4mm; background: var(--gold); transform: rotate(45deg); }
+  .als { font-family: 'Playfair Display', serif; font-size: 37pt; line-height: 1.2; }
+  .als em { color: var(--gold-l); }
+  .bei { margin-top: 10mm; font-size: 7.6pt; letter-spacing: .5em; color: #c7d2d6; }
+  .firma { font-family: 'Playfair Display', serif; font-size: 18pt; margin-top: 3.5mm; }
+  .fil { font-size: 9.5pt; color: var(--gold-l); letter-spacing: .06em; margin-top: 1.5mm; }
+  .seal { position: absolute; left: 50%; top: 158mm; transform: translateX(-50%); width: 41mm; height: 41mm; border-radius: 50%; background: #fff; border: 1mm solid var(--gold); box-shadow: 0 3mm 7mm rgba(0,0,0,.18); display: flex; align-items: center; justify-content: center; }
+  .seal div { width: 35mm; height: 35mm; border-radius: 50%; border: .5pt solid var(--gold); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 25pt; color: var(--teal); }
+  .who { position: absolute; left: 0; right: 0; top: 212mm; text-align: center; }
+  .who h1 { font-family: 'Playfair Display', serif; font-weight: 600; font-size: 27pt; color: var(--teal); }
+  .who .tag { font-size: 7.8pt; color: var(--muted); letter-spacing: .4em; margin-top: 1mm; }
+  .kontakt { margin-top: 8mm; font-size: 8pt; color: #3d474c; line-height: 2.3; }
+  .kontakt span { display: inline-flex; align-items: center; gap: 2mm; margin: 0 4mm; }
+  .kontakt svg { color: var(--gold); }
+  .inhalt { position: absolute; left: 0; right: 0; bottom: 15mm; text-align: center; font-size: 7.6pt; color: var(--muted); }
+  .inhalt b { color: var(--gold); letter-spacing: .3em; margin-right: 2.5mm; }
+  </style></head><body><div class="page">
+  <div class="top"><div class="frame"></div>
+    <div class="center">
+      <div class="kicker">BEWERBUNG</div>
+      <div class="rule"><i></i><b></b><i></i></div>
+      <div class="als">als <em>Verkäuferin</em></div>
+      <div class="bei">BEI</div>
+      <div class="firma">${f.firma}</div>
+      <div class="fil">${f.filiale}</div>
+    </div>
+  </div>
+  <div class="seal"><div>FH</div></div>
+  <div class="who"><h1>${ME.name}</h1><div class="tag">VERKAUF · SERVICE · EINZELHANDEL</div>
+    <div class="kontakt"><span>${ICON.pin} ${ME.strasse}, ${ME.ort}</span><br><span>${ICON.tel} ${ME.tel}</span><span>${ICON.mail} ${ME.mail}</span></div>
+  </div>
+  <div class="inhalt"><b>INHALT</b>Anschreiben · Lebenslauf</div>
+  </div></body></html>`;
+}
+
+(async () => {
+  const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const page = await browser.newPage();
+  for (const f of FILIALEN) {
+    for (const [art, html] of [['Deckblatt', deckblatt(f)], ['Anschreiben', anschreiben(f)]]) {
+      fs.writeFileSync(path.join(__dirname, `${art}_${f.datei}.html`), html);
+      await page.setContent(html, { waitUntil: 'networkidle' });
+      await page.evaluate(() => document.fonts.ready);
+      await page.pdf({ path: path.join(OUT, `${art}_${f.datei}.pdf`), format: 'A4', printBackground: true, preferCSSPageSize: true });
+    }
+  }
+  await browser.close();
+})();
