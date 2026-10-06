@@ -27,3 +27,7 @@
 Titelbild (freigegeben 6.10.2026): Variante B, Higgsfield-Job 21f82f8d-e121-4bf7-af76-8fb8c332e7b6 (4K, 3392x5056, ohne Schrift)
 Schrift: Titel Cinzel Decorative #f3d9a0 (Kontur #5a3d10), Untertitel Cormorant Garamond kursiv #fff6e6,
 "Ein Adventsmärchen in 24 Kapiteln" Cormorant #1f2a4a, "GABI SCHOLZ" Cinzel Decorative Rostrot #8e2f1c (Kontur #5a1c10)
+
+Autorinnenfoto (Varianten, Auswahl offen): Upload KI-Porträt 08430a0b-a48c-4086-96b6-35cb429c0aaf, Originalfoto adc732fd-7e60-45d2-a1de-1afb61a680b3
+  1 = 8cdd0f31-1dd8-410a-8e92-d0ccdd65485a  2 = d777fbab-f0c5-4545-9d6c-d2ae6becbe97
+  3 = 760967e7-f100-476c-bac9-12da34eeb472  4 = 9ae57b10-45a2-4cf2-a36e-d2fc22988257
