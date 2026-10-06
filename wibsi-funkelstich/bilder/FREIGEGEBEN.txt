@@ -32,5 +32,5 @@ Autorinnenfoto (Varianten, Auswahl offen): Upload KI-Porträt 08430a0b-a48c-4086
   1 = 8cdd0f31-1dd8-410a-8e92-d0ccdd65485a  2 = d777fbab-f0c5-4545-9d6c-d2ae6becbe97
   3 = 760967e7-f100-476c-bac9-12da34eeb472  4 = 9ae57b10-45a2-4cf2-a36e-d2fc22988257
 
-Rückseite (Vorschlag): Higgsfield-Job 626a27da-5595-4347-8b15-9abba2c5a4ca (4K, ohne Schrift); Alternative 81925e95-39d4-4836-8318-8048b78f35af
+Rückseite (freigegeben 6.10.2026): Higgsfield-Job 626a27da-5595-4347-8b15-9abba2c5a4ca (4K, ohne Schrift); Alternative 81925e95-39d4-4836-8318-8048b78f35af
 Layout: umschlag/back.html (Playwright-Rendering, Cormorant Garamond 500/600 + Cinzel Decorative), Buchrücken Nachtblau-Verlauf #14204a–#2c3d6e
