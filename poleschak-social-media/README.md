@@ -30,7 +30,7 @@ die neue Stelle „Social Media“ im Haus.
 | 4 | Social-Media-Strategie | [`06-strategie.md`](06-strategie.md) | ✅ freigegeben |
 | 5 | Vorlagen | [`07-vorlagen.md`](07-vorlagen.md) + [`vorlagen/export/`](vorlagen/export/) + [`08-einwilligung-foto-video.md`](08-einwilligung-foto-video.md) | ✅ freigegeben |
 | 6 | Umsetzungsplan | Redaktionsplan + [`03-ziele-aufwand-verguetung.md`](03-ziele-aufwand-verguetung.md) | 🟡 Ziele & Vergütung vorgezogen |
-| 7 | Endprodukt | [`praesentation/`](praesentation/): PPTX (24 Folien) + PDF ✅ · Plakat offen | 🟡 Deck fertig (mit Platzhaltern) |
+| 7 | Endprodukt | [`praesentation/`](praesentation/): PPTX (24 Folien) + PDF · [`plakat/export/`](plakat/export/): Plakat A1 + Handout A3/A4 | ✅ fertig (Platzhalter: Name, Datum, Fotos) |
 
 ## Zeitplan bis 07.10.
 
