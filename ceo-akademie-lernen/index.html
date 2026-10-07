@@ -1,0 +1,849 @@
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"></head><body><title>CEO-Akademie Lernstudio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&family=Roboto+Slab:wght@600;700&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: schwarzer Kopf wie das Heft, darunter eine klebende Tab-Leiste und eine schmale Arbeitsspalte; alles Lernen passiert in Karten, Rechenfeldern und Diagrammen. */
+:root{
+  --bg:#F2F1EE; --card:#FFFFFF; --ink:#141414; --mute:#6B6660; --line:#DDD9D2; --soft:#EAE7E1;
+  --accent:#D42A3F; --on-accent:#FFFFFF;
+  --good:#1E8A4B; --warn:#B27300; --bad:#C62828;
+  --hdr:#000000; --hdr-ink:#F7F2EA;
+  --c-a:#1B8A8F; --c-b:#7A5BC7; --c-c:#2F6FD0; --c-d:#D1731B; --c-e:#3E9B4F; --c-f:#B83280; --c-g:#A8841A; --c-h:#D42A3F;
+  --display:"Roboto Slab",Georgia,serif; --body:"Red Hat Text",system-ui,-apple-system,"Segoe UI",sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E0E0F; --card:#1A1A1C; --ink:#F2EFEA; --mute:#A39D95; --line:#2F2E2C; --soft:#252523;
+  --accent:#F0495C; --on-accent:#14080A; --good:#4CC983; --warn:#E3AE45; --bad:#F37070;
+  --c-a:#4FC3C8; --c-b:#A48BEA; --c-c:#6C9EF0; --c-d:#EE9A4A; --c-e:#6FCB80; --c-f:#E067AE; --c-g:#D9B445; --c-h:#F0495C; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E0E0F; --card:#1A1A1C; --ink:#F2EFEA; --mute:#A39D95; --line:#2F2E2C; --soft:#252523;
+  --accent:#F0495C; --on-accent:#14080A; --good:#4CC983; --warn:#E3AE45; --bad:#F37070;
+  --c-a:#4FC3C8; --c-b:#A48BEA; --c-c:#6C9EF0; --c-d:#EE9A4A; --c-e:#6FCB80; --c-f:#E067AE; --c-g:#D9B445; --c-h:#F0495C; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--body);padding-inline:0}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.2}
+.wrap{width:100%;max-width:880px;margin-inline:auto;padding-inline:16px}
+header.top{background:var(--hdr);color:var(--hdr-ink);padding-block:22px 18px}
+.eyebrow{font:700 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+header.top h1{font-size:clamp(24px,5vw,34px);margin-top:10px;color:var(--hdr-ink)}
+header.top p{margin:6px 0 0;color:#B9B3AA;font-size:14px;max-width:60ch}
+nav.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav.tabs .wrap{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav.tabs button{flex:0 0 auto;background:none;border:0;border-bottom:3px solid transparent;padding:13px 12px 10px;font-weight:700;font-size:15px;color:var(--mute);cursor:pointer}
+nav.tabs button[aria-current="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+nav.tabs button:hover{color:var(--ink)}
+main{padding-block:22px 64px;min-height:60vh}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.sec{display:flex;flex-direction:column;gap:14px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.grow{flex:1 1 0;min-width:0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card.flat{background:transparent}
+.h2{font-size:22px}.h3{font-size:17px}
+.mute{color:var(--mute)} .small{font-size:13px}
+.lbl{font:700 11px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+.btn{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;min-height:44px}
+.btn:hover{border-color:var(--ink)}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.btn.pri:hover{filter:brightness(1.06)}
+.btn.sm{padding:7px 12px;min-height:36px;font-size:14px}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+.chip{border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:500;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.chip[aria-pressed="true"]{border-color:var(--cat,var(--ink));background:color-mix(in srgb,var(--cat,var(--ink)) 13%,var(--card));font-weight:700}
+.chip .dot{width:10px;height:10px;border-radius:50%;background:var(--cat,var(--mute))}
+.chip small{color:var(--mute);font-weight:500}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.tile{display:flex;flex-direction:column;gap:6px;text-align:left;cursor:pointer;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
+.tile:hover{border-color:var(--ink)}
+.tile b{font-family:var(--display);font-size:17px}
+.big{font:700 clamp(40px,10vw,64px)/1 var(--display);font-variant-numeric:tabular-nums}
+.bar{height:10px;border-radius:99px;background:var(--soft);overflow:hidden;display:flex}
+.bar i{display:block;height:100%}
+.pill{font:700 12px/1 var(--body);padding:5px 9px;border-radius:99px;background:color-mix(in srgb,var(--cat,var(--mute)) 16%,var(--card));color:var(--ink);border:1px solid color-mix(in srgb,var(--cat,var(--mute)) 55%,var(--card))}
+.ok{color:var(--good)}.no{color:var(--bad)}.wa{color:var(--warn)}
+/* Karteikarte */
+.fc{--cat:var(--c-a);background:var(--card);border:1px solid var(--line);border-top:6px solid var(--cat);border-radius:12px;padding:20px 20px 22px;min-height:290px;display:flex;flex-direction:column;gap:14px;cursor:pointer;user-select:none}
+.fc .front{font:700 clamp(24px,5.5vw,34px)/1.2 var(--display);text-wrap:balance;overflow-wrap:anywhere}
+.fc .sub{color:var(--mute);font-size:14px;margin-top:-6px}
+.fc .back{border-top:2px dashed var(--line);padding-top:14px;font-size:18px;overflow-wrap:anywhere}
+.fc .back.mono{font-family:var(--mono);font-size:16px;line-height:1.7}
+.fc .hint{margin-top:auto;color:var(--mute);font-size:13px}
+.rate{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rate .btn{border-width:2px}
+.rate .again{border-color:var(--bad)}.rate .hard{border-color:var(--warn)}.rate .good{border-color:var(--good)}
+/* Rechnen */
+.qbox{font-size:18px}
+.ans{display:flex;gap:10px;flex-wrap:wrap}
+.ans input{flex:1 1 140px;min-width:0;font:700 22px var(--mono);padding:10px 14px;border:2px solid var(--line);border-radius:10px;background:var(--card)}
+.ans input:focus{border-color:var(--accent);outline:none}
+.fb{border-radius:10px;padding:14px 16px;border:1.5px solid var(--line);background:var(--soft)}
+.fb.good{border-color:var(--good)}.fb.bad{border-color:var(--bad)}
+.steps{margin:8px 0 0;padding-left:20px;font-family:var(--mono);font-size:14px}
+/* Labor */
+.sl{display:grid;grid-template-columns:1fr auto;gap:2px 10px;align-items:baseline}
+.sl .sl-l{font-size:14px;color:var(--mute)} .sl output{font:700 15px var(--mono)}
+.sl input{grid-column:1/-1;width:100%;accent-color:var(--accent)}
+.sliders{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 22px}
+.frow{display:grid;grid-template-columns:110px 1fr;gap:10px;align-items:center;font-size:14px}
+.frow .tr{background:var(--soft);border-radius:6px;height:30px;position:relative}
+.frow .tr i{position:absolute;inset:0 auto 0 0;border-radius:6px;background:var(--accent);min-width:3px}
+.frow .tr b{position:absolute;right:8px;top:50%;transform:translateY(-50%);font:700 14px var(--mono)}
+.frow .tr b.in{color:var(--on-accent);right:auto;left:8px}
+svg text{font-family:var(--body)}
+.ax{fill:var(--mute);font-size:13px}.axb{fill:var(--ink);font-size:12px;font-weight:700}
+.tree,.tree ul{list-style:none;margin:0;padding-left:18px;border-left:2px solid var(--line)}
+.tree{border-left:0;padding-left:0}
+.tree li{margin:8px 0}
+.node{border:1.5px solid var(--line);background:var(--card);border-radius:8px;padding:6px 10px;font-weight:700;font-size:14px;cursor:pointer;text-align:left}
+.node:hover,.node[aria-pressed="true"]{border-color:var(--accent)}
+.node[aria-pressed="true"]{background:color-mix(in srgb,var(--accent) 12%,var(--card))}
+.node small{color:var(--mute);font-weight:500}
+.zones{position:relative;height:44px;border-radius:8px;overflow:hidden;display:flex}
+.zones i{display:block;height:100%}
+.mark{position:absolute;top:-4px;bottom:-4px;width:4px;background:var(--ink);border-radius:2px;transition:left .15s}
+.scale{position:relative;height:20px;font-size:12px;color:var(--mute)}
+.scale span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.light{display:inline-flex;align-items:center;gap:8px;font:700 18px var(--display)}
+.light i{width:18px;height:18px;border-radius:50%;display:inline-block}
+.opt{display:block;width:100%;text-align:left;margin:0 0 8px;padding:12px 14px;border:2px solid var(--line);background:var(--card);border-radius:10px;cursor:pointer;font-size:16px}
+.opt:hover{border-color:var(--ink)}
+.opt.right{border-color:var(--good);background:color-mix(in srgb,var(--good) 12%,var(--card))}
+.opt.wrong{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,var(--card))}
+textarea{width:100%;min-height:90px;border:2px solid var(--line);border-radius:10px;padding:10px;background:var(--card);font:13px var(--mono)}
+.path{counter-reset:p;list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.path li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.path li::before{counter-increment:p;content:counter(p);flex:0 0 26px;height:26px;border-radius:50%;background:var(--accent);color:var(--on-accent);font:700 14px/26px var(--display);text-align:center}
+.tbl{overflow-x:auto}
+table.t{border-collapse:collapse;font-size:14px;min-width:420px;width:100%}
+table.t th{background:var(--hdr);color:var(--hdr-ink);text-align:left;padding:8px 10px}
+table.t td{padding:8px 10px;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums}
+@media (max-width:480px){.frow{grid-template-columns:84px 1fr}.rate .btn{padding-inline:6px;font-size:14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<header class="top"><div class="wrap">
+  <div class="eyebrow">Inpulse Invest · CEO-Akademie</div>
+  <h1>Lernstudio</h1>
+  <p>Karteikarten, Rechenaufgaben, Diagramme zum Verstellen und Entscheidungsfälle. Alles aus deinem Heft, Stand 10.09.2026.</p>
+</div></header>
+<nav class="tabs" aria-label="Bereiche"><div class="wrap" id="tabs"></div></nav>
+<main><div class="wrap" id="view"></div></main>
+
+<script id="data">
+/* ---------- Hilfsfunktionen ---------- */
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const rich=s=>esc(s).replace(/\n/g,"<br>");
+const nf=(x,d=0)=>Number(x).toLocaleString("de-DE",{minimumFractionDigits:d,maximumFractionDigits:d});
+const eur=x=>nf(x,0)+" €";
+const R=(a,b,s=1)=>a+s*Math.floor(Math.random()*Math.floor((b-a)/s+1));
+const pick=a=>a[Math.floor(Math.random()*a.length)];
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+
+/* ---------- Kategorien ---------- */
+const CATS={
+  A:{n:"Geld & Gewinn",c:"--c-a",dict:true},B:{n:"Kunden & Marketing",c:"--c-b",dict:true},C:{n:"Vertrieb",c:"--c-c",dict:true},
+  D:{n:"Team & Personal",c:"--c-d",dict:true},E:{n:"Führung & Steuerung",c:"--c-e",dict:true},F:{n:"Branche & Recht",c:"--c-f",dict:true},
+  G:{n:"Formeln",c:"--c-g"},H:{n:"Zahlen & Regeln",c:"--c-h"}
+};
+
+/* ---------- Karten: [Begriff, Zusatz, Erklärung, Baustein] ---------- */
+const T={
+A:[
+["Umsatz","Revenue","Alles Geld, das für verkaufte Leistungen reinkommt, bevor irgendwas abgezogen wird.","02"],
+["Innenprovision / Innenumsatz","","Die Provision, die der Bauträger oder die Plattform an Inpulse zahlt. Meist ca. 8 % vom Kaufpreis, minimal ca. 6 %. Bei 150.000 € Kaufpreis und 8 % = 12.000 €.",""],
+["Courtage","","Provision aus Versicherungen (Abschluss- und Bestandscourtage).",""],
+["Umsatz für die Firma (UfF)","","Innenumsatz minus die Provision, die du dem Berater zahlst. Das ist das Geld, mit dem die Firma arbeitet. Deine Ampel misst genau diese Zahl.","05"],
+["Kosten, fix","","Kosten, die jeden Monat gleich anfallen, egal ob du verkaufst: Miete, Gehälter, Tools.","02"],
+["Kosten, variabel","","Kosten, die nur anfallen, wenn du verkaufst, und mit jedem Verkauf wachsen: Berater-Provision, Stornoreserve, Leadkosten.","02"],
+["Deckungsbeitrag (DB)","Contribution Margin","Umsatz minus variable Kosten. Das Geld, das die Fixkosten „deckt“. Erst was danach übrig bleibt, ist Gewinn.","02"],
+["DB-Quote / Marge","","Wie viel Prozent vom Umsatz nach den variablen Kosten bleibt. 9.000 € von 12.000 € = 75 %.",""],
+["Rohertrag / Rohmarge","Gross Profit / Gross Margin","Fast dasselbe wie Deckungsbeitrag: Umsatz minus direkte Kosten. Bei dir: Innenumsatz minus Berateranteil (minus Storno bei Versicherung).",""],
+["Gewinn","Profit","Was nach allen Kosten übrig bleibt. Steht auf dem Papier, heißt aber nicht, dass das Geld schon auf dem Konto ist.",""],
+["EBITDA","","Gewinn vor Zinsen, Steuern und Abschreibungen. Die „operative“ Gewinnzahl, mit der Firmen verglichen und bewertet werden.","07"],
+["Cash / Liquidität","","Das Geld, das wirklich verfügbar ist. Firmen gehen nicht an fehlendem Gewinn pleite, sondern an fehlendem Cash.",""],
+["Cashflow","","Wie viel Geld in einem Zeitraum rein- und rausgeflossen ist.",""],
+["Break-even","","Der Punkt, an dem die Einnahmen genau die Kosten decken. Ab hier verdienst du Geld.","02"],
+["Burn / Burn-Rate","","Wie viel Geld du pro Monat mehr ausgibst als reinkommt.",""],
+["Runway","","Wie viele Monate dein Geld noch reicht: Cash ÷ Burn. Deine Regel: unter 6 Monaten = Stopp.","07"],
+["Stornoreserve","","Geld, das du zurücklegst, weil Versicherungsprovisionen bei Kündigung zurückgefordert werden können (10 %). Bei Immobilien laut aktuellem Stand keine.",""],
+["Stornohaftung","","Zeitraum, in dem eine Versicherung Provision zurückholen kann, wenn der Kunde kündigt.",""],
+["Working Capital / DSO","Days Sales Outstanding","Geld, das in offenen Forderungen „festhängt“. DSO = wie viele Tage du im Schnitt auf dein Geld wartest.","07"],
+["Liquiditätsplan","","Wochen-Tabelle: Was kommt wann rein, was geht wann raus, wie viel ist am Ende da.","07"],
+["Budget","","Der Plan fürs Jahr: geplante Umsätze und Kosten pro Monat.",""],
+["Forecast","","Die aktuelle Prognose: Was passiert realistisch, wenn es so weiterläuft?",""],
+["Plan-Ist-Vergleich","","Plan gegen Wirklichkeit legen und die Abweichungen erklären.",""],
+["Operating Leverage","","Hohe Fixkosten + niedrige variable Kosten: Jeder Mehr-Euro Umsatz landet fast komplett im Gewinn, jeder fehlende Euro auch im Verlust.",""],
+["Multiple","","Faktor, mit dem der Gewinn (meist EBITDA) multipliziert wird, um den Firmenwert zu schätzen.",""]],
+B:[
+["Lead","","Ein Kontakt, der Interesse gezeigt hat (z. B. Formular ausgefüllt). Noch kein Kunde.",""],
+["Qualifizierter Lead","","Ein Lead, der deine Kriterien erfüllt: erreichbar, passendes Einkommen, saubere SCHUFA.",""],
+["CPL","Cost per Lead","Werbekosten ÷ Anzahl Leads. Was ein Kontakt kostet.","03"],
+["qCPL","","Werbekosten ÷ qualifizierte Leads. Die ehrlichere Zahl, meist 2–3× so hoch wie der CPL.",""],
+["CAC","Customer Acquisition Cost","Alle Kosten, um einen Kunden zu gewinnen (Werbung, Setting, Tools) ÷ Anzahl neuer Kunden.","03"],
+["Blended CAC","","CAC über alle Kanäle gemischt. Sieht meist besser aus, weil Empfehlungen gratis sind.",""],
+["LTV","Lifetime Value, CLV","Wie viel Umsatz ein Kunde über die ganze Beziehung bringt: erster Abschluss + weitere Verträge + Empfehlungen.","03"],
+["LTGP","Lifetime Gross Profit","LTV minus variable Kosten (Berateranteil, Storno). Was dir von einem Kunden wirklich bleibt.",""],
+["LTGP:CAC","","Wie oft ein Kunde seine Gewinnungskosten zurückbringt. 3,0x = für 1 € Werbung kommen 3 € Rohertrag zurück. Deine Regel: unter 1,5x nicht skalieren.",""],
+["Payback / CAC-Payback","","Wie lange es dauert, bis das Geld für einen Kunden zurück ist.","03"],
+["AOV / Ticket","","Durchschnittlicher Umsatz pro Abschluss.",""],
+["Cross-Sell","","Einem bestehenden Kunden ein weiteres Produkt verkaufen (Immobilie → BU). Fast ohne CAC.",""],
+["Kohorte","","Eine Kundengruppe aus demselben Zeitraum (z. B. alle Kunden aus Q1). Zeigt, ob Kunden über die Zeit besser oder schlechter werden.",""],
+["CTR","Click-Through-Rate","Wie viel Prozent der Leute, die die Werbung sehen, draufklicken.",""],
+["CPM","","Kosten für 1.000 Werbeeinblendungen.",""],
+["Frequenz","","Wie oft dieselbe Person deine Werbung im Schnitt gesehen hat.",""],
+["ROAS / POAS","","Umsatz (ROAS) bzw. Gewinn (POAS) pro 1 € Werbung.",""],
+["NPS","Net Promoter Score","Kundenzufriedenheit: „Wie wahrscheinlich empfiehlst du uns weiter, 0–10?“",""],
+["Double-Opt-In","","Der Kontakt bestätigt seine Einwilligung zweimal (z. B. per Mail-Link). Pflicht vor Werbe-Mails.",""]],
+C:[
+["Funnel","Trichter","Der Weg vom Lead zum Kunden. Auf jeder Stufe fallen Leute raus.","04"],
+["Terminquote","","Wie viel Prozent der Leads einen Termin vereinbaren.",""],
+["Show-Rate","","Wie viel Prozent der vereinbarten Termine wirklich erscheinen.",""],
+["Abschlussquote","Close Rate","Wie viel Prozent der geführten Gespräche zum Abschluss führen.",""],
+["Speed-to-Lead","","Zeit vom Lead-Eingang bis zum ersten Anruf. Ziel: unter 5 Minuten.",""],
+["Pipeline","","Alle offenen Verkaufschancen mit Stufe und Wert.",""],
+["Opportunity / Deal","","Eine konkrete Verkaufschance in der Pipeline.",""],
+["Gewichtete Pipeline","","Jeder Deal-Wert × Wahrscheinlichkeit, dass er kommt. Realistischer als die Summe.",""],
+["Pipeline Coverage","","Wie viel offene Pipeline du im Verhältnis zum Ziel hast (Faustregel 3×).",""],
+["Win-Rate","","Gewonnene ÷ alle entschiedenen Deals.",""],
+["Sales-Cycle","","Wie viele Tage ein Deal im Schnitt vom ersten Kontakt bis zum Abschluss braucht.",""],
+["Sales Velocity","","Wie viel Euro pro Tag durch die Pipeline fließen.","04"],
+["Reverse Funnel","Rückwärtsplanung","Vom Umsatzziel rückwärts rechnen, wie viele Abschlüsse, Termine, Leads und wie viel Budget du brauchst.",""],
+["Lost Reason","","Pflicht-Grund, warum ein Deal verloren ging. Zeigt, welcher Einwand dich am meisten kostet.",""],
+["Stale Deal","","Ein Deal, der seit Wochen nicht bewegt wurde. Wird geschlossen, damit die Pipeline ehrlich bleibt.",""],
+["SC1 / SC2","","Sales Call 1 (Bedarfsanalyse) und Sales Call 2 (Konzept + Abschluss).",""],
+["Talk-Ratio","","Wie viel Prozent der Gesprächszeit der Berater redet. Im Erstgespräch Ziel 30–43 %.",""],
+["Setter / Closer","","Setter legt Termine, Closer schließt ab. Bei Inpulse: keine Setter, jeder macht beides.",""]],
+D:[
+["Netto / Brutto / AG-Kosten","","Netto = was der Mitarbeiter bekommt. Brutto = vor Steuern und seinen Abgaben. AG-Kosten = Brutto plus der Arbeitgeberanteil (~21 %). Du denkst netto, du zahlst AG-Kosten.","05"],
+["AG-Anteil Sozialversicherung","","Was du als Arbeitgeber zusätzlich zum Brutto für Rente, Kranken-, Pflege-, Arbeitslosen- und Unfallversicherung zahlst (grob 20–21 %).",""],
+["Sachkosten pro Kopf","","Arbeitsplatz, Tools, Telefon, Hardware pro Mitarbeiter. Bei dir ca. 1.380 € im Monat.",""],
+["Break-even pro Kopf","","Wie viel „Umsatz für die Firma“ ein Mitarbeiter bringen muss, damit er seine Kosten deckt.",""],
+["TTP","Time-to-Productivity, Ramp","Wie lange ein neuer Mitarbeiter braucht, bis er voll produktiv ist.","05"],
+["Ramp-Kosten","","Das Geld, das du in der Anlaufzeit drauflegst, bevor er sich trägt.",""],
+["Hiring-Payback","","Nach wie vielen Monaten sich eine Einstellung komplett bezahlt gemacht hat.",""],
+["Cash-Payback pro Kopf","","Dasselbe, aber gerechnet mit dem Tag, an dem die Provision wirklich auf dem Konto ist.",""],
+["Kapazität / Auslastung","","Wie viele Gespräche ein Berater schaffen kann und wie viel davon er nutzt.",""],
+["FTE","Full Time Equivalent","Vollzeitstelle. Zwei Halbtagskräfte = 1 FTE.",""],
+["Umsatz pro Kopf","","Jahresumsatz ÷ FTE. Wichtigste Effizienzzahl eines Teams.",""],
+["Ampel","","Grün/Gelb/Rot-Bewertung pro Mitarbeiter nach festen Umsatzschwellen.","06"],
+["Grün-Quote","","Wie viel Prozent deiner Berater grün sind. Ziel ≥ 60 %. Das Team skaliert über diese Zahl, nicht über Köpfe.",""],
+["Freigabe","","Die Prüfung am Ende der Probezeit. Wer nicht besteht, spricht nicht mit echten Kunden.",""],
+["Probezeit","","Die ersten Monate, in denen beide Seiten leichter trennen können. Bei dir: 3 Monate ohne Titel mit eigener Ampel.",""],
+["Onboarding","","Die strukturierte Einarbeitung neuer Mitarbeiter (30/60/90 Tage).",""],
+["Cost per Hire","","Was eine erfolgreiche Einstellung kostet (Anzeigen + Zeit ÷ Einstellungen).",""],
+["Vollkosten","Fully Loaded Cost","Alles zusammen, was ein Mitarbeiter pro Monat kostet: AG-Kosten + Sachkosten + deine Führungszeit + anteilige Recruitingkosten.",""],
+["Fixum","","Das feste Monatsgehalt, unabhängig vom Umsatz.",""],
+["Provisionsvorschuss / Provisionskonto","","Das Fixum wird mit späteren Provisionen verrechnet. Erst wenn die Provisionen das Fixum übersteigen, gibt es mehr Geld.","06"],
+["Time-to-Hire","","Tage von der Stellenausschreibung bis zum Vertrag.",""],
+["Mis-hire","","Fehleinstellung: jemand, von dem du dich in der Probezeit trennst.",""],
+["Fluktuation / Retention","","Wie viele Mitarbeiter gehen (Fluktuation) bzw. bleiben (Retention) pro Jahr.",""],
+["Quote (Quota)","","Das Umsatzziel eines Verkäufers.",""],
+["OTE","On-Target-Earnings","Gesamtverdienst eines Verkäufers bei 100 % Zielerreichung.",""],
+["Attainment","","Wie viel Prozent seines Ziels jemand erreicht hat.",""],
+["Override","","Zusätzliche Provision für eine Führungskraft auf den Umsatz ihres Teams.",""],
+["Agenturinhaber","","Oberste Stufe: eigener Standort, eigenes Team, Override.","06"],
+["Führungsspanne","","Wie viele Leute eine Führungskraft gut führen kann (Vertrieb: ca. 6–10).",""],
+["Scorecard (Hiring)","","Vor der Einstellung aufgeschrieben: Welche messbaren Ergebnisse muss die Person nach 6–12 Monaten liefern?",""],
+["Who-Methode / Topgrading","","Strukturierte Interview-Methode, die Fehleinstellungen stark senkt.",""],
+["DISG","","Persönlichkeitsmodell: Rot (dominant), Gelb (initiativ), Grün (stetig), Blau (gewissenhaft). Du: Rot-Gelb.",""],
+["Scheinselbständigkeit","","Wenn jemand als „Selbständiger“ läuft, aber wie ein Angestellter arbeitet. Teuer und rechtlich riskant.",""],
+["Mindestlohn","","Gesetzlich garantierter Stundenlohn. Das Fixum muss ihn immer abdecken, egal wie die Provision läuft.",""]],
+E:[
+["KPI","Key Performance Indicator","Eine Kennzahl, mit der du steuerst.",""],
+["Frühindikator / Spätindikator","Leading / Lagging","Früh = zeigt, was kommt (Termine). Spät = zeigt, was war (Umsatz).",""],
+["Scorecard (Firma)","","5–15 Zahlen, die jede Woche angeschaut werden, jede mit Ziel und Besitzer.","08"],
+["North Star","","Die eine Zahl, die am besten zeigt, ob das Geschäft gesund wächst.",""],
+["OKR","","Objective (Ziel in Worten) + Key Results (2–4 messbare Ergebnisse).",""],
+["EOS","","Führungssystem für kleine und mittlere Firmen: Vision, Scorecard, Quartalsziele, Wochenmeeting.",""],
+["Rock","","Ein Quartalsziel in EOS (3–7 pro Person).",""],
+["L10-Meeting","","Wöchentliches 90-Minuten-Führungsmeeting mit fester Agenda.",""],
+["IDS","","Identify, Discuss, Solve: Problem benennen, besprechen, lösen.",""],
+["Accountability Chart","","Organigramm, das zeigt, wer wofür verantwortlich ist. Jede Funktion genau ein Name.",""],
+["RACI","","Wer macht (R), wer entscheidet (A), wer wird gefragt (C), wer informiert (I).",""],
+["SOP","Standard Operating Procedure","Schriftliche Schritt-für-Schritt-Anleitung für einen Prozess.",""],
+["1:1","","Regelmäßiges Einzelgespräch Führungskraft–Mitarbeiter.",""],
+["QBR","Quarterly Business Review","Quartalsrückblick und -planung.",""],
+["Management by Exception","","Nur besprechen, was vom Plan abweicht. Alles Grüne wird nicht diskutiert.",""]],
+F:[
+["Tippgeber","","Darf nur Kontaktdaten mit Einwilligung weitergeben, keine Beratung, keine Produktempfehlung. Dein Status, bis die Erlaubnis da ist.",""],
+["§34c GewO","","Erlaubnis für Makler, u. a. Immobilien-/Wohnungsvermittlung.",""],
+["§34d GewO","","Erlaubnis für Versicherungsvermittlung.",""],
+["§34f / §34i GewO","","Erlaubnis für Finanzanlagen (f) bzw. Immobiliardarlehen/Baufinanzierung (i).",""],
+["DSGVO Art. 22","","Keine vollautomatische Ablehnung von Leads oder Bewerbern. Immer prüft ein Mensch.",""],
+["IHK-Antrag","","Die Erlaubnis wird bei der IHK beantragt. Eine GmbH braucht einen eigenen Antrag.",""],
+["Kaufpreis (KP)","","Preis der Wohnung. Provisionen werden oft in % vom KP angegeben.",""],
+["Innenprovision offenlegen","","Über 15 % Innenprovision muss dem Kunden offengelegt werden (BGH).",""],
+["UWG","","Gesetz gegen unlauteren Wettbewerb: keine Renditeversprechen in Werbung, keine unbelegten Verdienstzahlen in Stellenanzeigen.",""],
+["Befristeter Vertrag (§14 TzBfG)","","Arbeitsvertrag mit Enddatum. Die saubere Form für deine Probezeit statt „Praktikum“.",""],
+["AfA","","Abschreibung: Steuerlicher Wertverlust einer Immobilie. Neubau oft degressiv, Bestand linear.",""]]
+};
+/* Formeln und Regeln: [Frage, Antwort, Baustein] */
+const F_=[
+["Gewinn","Umsatz − Kosten","02"],["Deckungsbeitrag (DB)","Umsatz − variable Kosten","02"],["DB-Quote","DB ÷ Umsatz","02"],
+["Umsatz für die Firma (UfF)","Innenumsatz − Berater-Provision","05"],["Break-even in Deals","Fixkosten ÷ DB pro Deal","02"],["Break-even in €","Fixkosten ÷ DB-Quote","02"],
+["Veränderung in %","(neu − alt) ÷ alt × 100","02"],["CPL / qCPL","Adspend ÷ Leads  bzw.  Adspend ÷ qualifizierte Leads","03"],["CAC","Alle Akquisekosten ÷ Neukunden","03"],
+["CAC aus dem Funnel","CPL ÷ (Terminquote × Show-Rate × Abschlussquote)","03"],
+["LTV im Finanzvertrieb","Erstprovision + Bestand + Cross-Sell + Empfehlung − Storno","03"],["LTGP","LTV − variable Kosten (Berateranteil + Storno + Abwicklung)","03"],
+["LTGP:CAC","LTGP ÷ CAC","03"],["CAC-Payback","CAC ÷ Rohertrag pro Kunde pro Monat","03"],["DB pro Engpassstunde","DB ÷ Beraterstunden (Produkte danach sortieren)","03"],
+["Kunden aus dem Funnel","Leads × Terminquote × Show-Rate × Abschlussquote","04"],["Win-Rate","Gewonnen ÷ (Gewonnen + Verloren)","04"],
+["Gewichtete Pipeline","Σ (Deal-Wert × Wahrscheinlichkeit der Stufe)","04"],["Pipeline Coverage","Ungewichtete Pipeline ÷ Umsatzziel (≈ 3x)","04"],
+["Sales Velocity","(Opportunities × Win-Rate × Ø Deal-Wert) ÷ Sales-Cycle in Tagen","04"],
+["Reverse Funnel","Ziel ÷ Ø Provision = Abschlüsse\n÷ Abschlussquote = Gespräche\n÷ Show-Rate = Termine\n÷ Terminquote = Leads\n× CPL = Budget","04"],
+["Forecast-Genauigkeit","1 − |Ist − Forecast| ÷ Forecast","04"],["AG-Kosten","Brutto × ~1,21","05"],
+["Vollkosten pro Monat","AG-Kosten + Sachkosten (1.380 €) + Führungszeit + Recruiting anteilig","05"],["Break-even pro Kopf","Vollkosten ÷ UfF pro Deal","05"],
+["DB pro Kopf","UfF − Vollkosten","05"],["Kosten einer Fehleinstellung","Recruiting + Vollkosten × Monate bis Trennung + Führungszeit","05"],
+["Benötigte Bewerbungen","Einstellungen ÷ (Bewerbung→Angebot × Angebot→Start × Freigabe-Quote)","06"],
+["Cost per Hire","(Anzeigen + deine Zeit) ÷ erfolgreiche Einstellungen","06"],["Peter-Anteil","Peters Umsatz ÷ Gesamtumsatz (Ziel < 30 %)","05"],
+["Umsatz pro Kopf","Jahres-UfF ÷ FTE","05"],["EBITDA","Umsatz − variable Kosten − Fixkosten (vor Zinsen, Steuern, Abschreibungen)","07"],
+["Sicherheitsabstand","(Ist-Umsatz − Break-even-Umsatz) ÷ Ist-Umsatz","07"],["Net Burn","Monatliche Auszahlungen − monatliche Einzahlungen","07"],
+["Runway","Liquide Mittel ÷ Net Burn (unter 6 Monate = Stopp)","07"],["DSO","Ø offene Forderungen ÷ Umsatz pro Tag","07"],
+["Gebundenes Kapital","Umsatz pro Tag × DSO","07"],["Plan-Ist-Abweichung","(Ist − Plan) ÷ Plan","07"],["Firmenwert (grob)","EBITDA × Multiple","07"],["EBITDA-Marge","EBITDA ÷ Nettoumsatz","07"]];
+const H_=[
+["Runway-Regel","Unter 6 Monaten = STOPP (kein Adspend-Hike, kein Hire). Unter 3 Monaten: alle Tool-Abos über 100 € im Monat kündigen.","07"],
+["LTGP:CAC: ab wann skalieren?","≥ 1,5x ist Pflicht vor jeder Skalierung, ab 3x gesund.","03"],
+["LTGP:CAC in Stufen","< 1,0x vernichtet Geld → stoppen\n1,0–1,5x → nicht skalieren, reparieren\n1,5–3,0x → dünn, vorsichtig skalieren (+20 % alle 48–72 h)\n3,0–5,0x → gesund, skalieren\n> 5,0x → du investierst zu wenig","03"],
+["Ziel für Speed-to-Lead","Unter 5 Minuten (Median). Rot bei über 15 Minuten.","04"],
+["Ziel für die Show-Rate","≥ 75 %. Rot unter 60 %.","08"],
+["Talk-Ratio im Erstgespräch","Ziel 30–43 %. Wer über 55 % redet, erzählt statt zu fragen.","06"],
+["CAC-Ziele","Blended unter 450 €, Lead-Kanal unter 400 €, sonst Kanal pausieren. (Stand: 575 € blended, Lead-Kanal 1.703 €.)","03"],
+["Ziel für den LTV","≥ 2.500 € über Cross-Sell und Bestandsreaktivierung (Stand: ≈ 1.115 €, Definition unklar).","03"],
+["CAC-Payback bewerten","< 3 Monate exzellent · 3–6 Monate gut, braucht Puffer · > 6 Monate nur mit Kapital oder Kreditlinie.","03"],
+["Pipeline Coverage: Faustregel","3×. Gewichtete Pipeline unter 2× des Monatsziels = rot.","04"],
+["Stornoreserve","10 % jedes Innenumsatzes (Versicherung) auf ein separates Konto, nie für laufende Kosten antasten.","07"],
+["Ziel Storno-Quote","Unter 10 %.","04"],
+["Ziel Grün-Quote","≥ 60 % der Berater grün.","05"],
+["Ziel Fehleinstellungsquote","Unter 15 % (Trennungen in der Probezeit).","05"],
+["Ziel Retention Jahr 1","Über 70 % sind nach 12 Monaten noch da.","05"],
+["Ziel Freigabe-Quote","≥ 50 % bestehen Probezeit und Freigabe.","05"],
+["Ziel Zeit bis grün","≤ 4 Monate von Tag 1 bis zur ersten grünen Ampel.","05"],
+["Peter-Anteil am Umsatz","Ziel unter 30 %, aktuell ca. 42 %, rot über 45 %.","05"],
+["Führungsspanne bei dir","Vertrieb allgemein 6–10. Mit einem Begleittag pro Junior und Monat eher 4–5 Junioren pro Führungskraft.","05"],
+["Ampel: Schwellen","Gemessen wird UfF, rollierend über 3 Monate. Boden (rot darunter) 25.000 € für alle. Grün ab 40.000 € Junior · 50.000 € Berater · 65.000 € Senior · 75.000 € Director.","06"],
+["Ampel: Folgen","2× gelb in Folge → eine Stufe runter\n2× rot in Folge → Trennung\nAufstieg = 3 Monate grün auf der Schwelle der nächsten Stufe","06"],
+["Probezeit-Ampel","Gelb / Grün ab (UfF pro Monat):\nMonat 1: 10.000 / 15.000 €\nMonat 2: 15.000 / 20.000 €\nMonat 3: 20.000 / 25.000 €","06"],
+["Probezeit: Gelb in Monat 3","1 Monat Verlängerung. Grün in Monat 3 → Freigabe → Junior. Rot → der Vertrag endet mit der Befristung.","06"],
+["Freigabe-Prüfung","A Kapitalanlage 40 % · B Versicherung 20 % · C Verkaufen 30 % · D Recht & Regeln 10 % (K.O.). Bestanden ab 80 %, Teil D muss zu 100 % sitzen.","06"],
+["Berater-Anteil an der Innenprovision (Immobilie)","Junior 25 % · Berater 31 % · Senior 34 % · Director 37,5 %","05"],
+["UfF pro Wohnung (150.000 € KP, 8 %)","Junior 9.000 € · Berater 8.280 € · Senior 7.920 € · Director 7.500 €","05"],
+["Vollkosten je Stufe","Junior 6.265 € · Berater 7.000 € · Senior 8.680 € · Director 11.730 €","05"],
+["Break-even je Stufe (Wohnungen pro Monat)","Junior 0,7 · Berater 0,85 · Senior 1,1 · Director 1,6","05"],
+["Kette einer Wohnung","150.000 € Kaufpreis → 8 % = 12.000 € Innenprovision → Junior −3.000 € → 9.000 € UfF (75 %) → minus anteilige Fixkosten → Gewinn.","02"],
+["Wohnung gegen Versicherung","1 Wohnung ≈ 10 Versicherungsabschlüsse für die Firma.","05"],
+["Cash-Bedarf pro Junior","Ca. 27.500 € bis zum Cash-Payback (ca. Monat 7). Auf dem Papier rechnet er sich schon in Monat 3.","05"],
+["Kosten einer Fehleinstellung (Junior)","Ca. 21.300 € (2.500 Recruiting + 3 × 6.265 Vollkosten), dazu Zeit und verbrannte Leads.","05"],
+["Sachkosten und AG-Anteil","Sachkosten ca. 1.380 € pro Kopf und Monat. AG-Anteil ca. 21 % auf das Brutto.","05"],
+["Wert deiner Stunde","Ca. 500 € eigener Umsatz. Für die Vollkosten wird Führungszeit mit 150 € pro Stunde angesetzt.","05"],
+["Entscheidungs-Hierarchie","1 Recht → 2 Cash → 3 Unit Economics → 4 Wachstum → 5 Effizienz.","10"],
+["Die 3 Fragen vor jeder Entscheidung","1) Welches Prinzip testet das? 2) Welche Zahl müsste sich ändern, damit wir zurückrollen? 3) Wer trägt die Verantwortung?","10"],
+["Werbebudget erhöhen nur wenn …","LTGP:CAC des Kanals ≥ 1,5x über 4+ Wochen, Runway ≥ 6 Monate, schrittweise (+10–20 %).","10"],
+["Kanal oder Produkt stoppen wenn …","DB II über 2 Monate negativ oder LTGP:CAC unter 1,0x.","10"],
+["Beförderung nur wenn …","3 Monate grün auf der nächsten Stufe. Keine Ausnahmen.","10"],
+["Mitarbeiter einstellen nur wenn …","Erlaubnis da · Vertrag geprüft · Onboarding steht · Cash-Bedarf bis Cash-Payback im Liquiditätsplan gedeckt · Objekte für ihn da.","10"],
+["Tippgeber-Grenze","Keine Beratung, keine Produktempfehlung, keine produktbezogene Werbung im eigenen Namen, bis die Erlaubnis da ist. Gilt auch für Mitarbeiter.","10"],
+["Denkregel 1","Was nicht gemessen wird, existiert nicht. Jede Zahl braucht Datum, Quelle und eine klare Definition.","00"],
+["Denkregel 2","Durchschnitte lügen. Immer aufteilen: pro Kanal, pro Produkt, pro Person.","00"],
+["Denkregel 3","Gewinn ist nicht Cash. Rekord-Umsätze und trotzdem kein Geld auf dem Konto, weil die Provision erst Monate später kommt.","00"],
+["Denkregel 4","Frühindikatoren schlagen Spätindikatoren. Anwahlen, Termine und Shows zeigen die Zukunft und lassen sich diese Woche ändern.","00"],
+["Denkregel 5","System vor Person. Wenn es nur läuft, weil du selbst verkaufst, hast du einen Job, kein Unternehmen.","00"],
+["Die drei CAC-Varianten","Paid CAC (nur Werbung ÷ Neukunden aus Werbung) · Blended CAC (alle Kosten ÷ alle Neukunden) · Fully Loaded CAC (inkl. anteiliger Personalkosten, die ehrlichste Zahl).","03"],
+["Diagnose bei LTGP:CAC unter 1,5x","CAC zu hoch → CPL, Terminquote, Show-Rate oder Abschlussquote prüfen.\nLTGP zu niedrig → Ticket, Storno, Berateranteil oder Cross-Sell prüfen.","03"],
+["Gegenmittel bei niedriger Show-Rate","Reminder-Kette, Pre-Frame-Video, Termin unter 48 Stunden.","03"],
+["Gegenmittel bei niedriger Terminquote","Speed-to-Lead unter 5 Minuten, Setter-Skript, mehr Anwahlversuche.","03"],
+["Forecast-Kategorien","Commit (≥ 90 %, Kopf verwettet) · Best Case (Commit + Chancen ≥ 50 %) · Pipeline (alles andere).","04"],
+["Die drei Finanzberichte","GuV (Haben wir Gewinn gemacht?) · Bilanz (Was besitzen und schulden wir?) · Liquiditätsplan (Reicht das Geld?).","07"],
+["GuV von oben nach unten","Umsatz − Storno = Nettoumsatz − variable Kosten = DB I − direkte Fixkosten = DB II − Gemeinkosten = EBITDA − Abschreibungen = EBIT − Zinsen = EBT − Steuern = Jahresüberschuss.","07"],
+["Die drei Szenarien","Base Case (Quoten bleiben) · Downside (−30 % Umsatz, Zahlungen 2 Monate später: überleben wir?) · Upside (+30 %: haben wir Kapazität und Cash?).","07"],
+["Konten-Prinzip (Profit First)","1 Einnahmen · 2 Steuer-Rücklage · 3 Storno-Reserve (10 %) · 4 Betrieb · 5 Gewinn/Inhaber.","07"],
+["Operating Rhythm","Daily Huddle 10 Min · 1:1 wöchentlich 30 Min · L10 wöchentlich 60–90 Min · Pipeline-Review 45 Min · Monats-Review 2 h · Quartals-Planung 1 Tag · Jahres-Strategie 2 Tage.","08"],
+["L10-Agenda (90 Min)","Gute Nachricht 5 · Scorecard 5 · Rocks 5 · Schlagzeilen 5 · To-dos 5 · IDS 60 · Abschluss 5.","08"],
+["Die 6 EOS-Komponenten","Vision · People · Data · Issues · Process · Traction.","08"],
+["Die 4 Perspektiven der Balanced Scorecard","Finanzen · Kunden · Prozesse · Lernen & Entwicklung.","08"],
+["Die 7 Delegationsstufen","1 Sagen · 2 Verkaufen · 3 Befragen · 4 Einigen · 5 Beraten · 6 Erkundigen · 7 Delegieren.","08"],
+["Regeln für die Firmen-Scorecard","5–15 Zahlen, wöchentlich, überwiegend Frühindikatoren, jede mit Besitzer, Ziel und Ampelschwelle, 13 Wochen Verlauf sichtbar.","08"],
+["Entwicklungsphasen","1 Gründer-Modus (1–3 Leute) · 2 Erstes Team (4–10) · 3 Management-Ebene (10–30) · 4 Organisation (30+). Du bist in Phase 1.","08"],
+["Rechtliche Leitplanken Hiring","Keine unbezahlte Probewoche · kein „Praktikum“ (befristeter Vertrag §14 TzBfG) · kein Handelsvertreter-Modell · Verdienstzahlen nur mit belegtem Median (§16 UWG) · keine automatische Ablehnung (DSGVO Art. 22).","06"],
+["Junior-Fixum und Mindestlohn","1.700 € netto bei 40 h liegt darunter. Lösung: 38 h und 2.550 € brutto, Verträge immer brutto.","05"],
+["Stand Lead-Kanal","CAC 1.703 € (rot), LTGP:CAC 0,93x. Jeder Kunde über diesen Kanal kostet Geld.","03"],
+["Satz 1","Eine Wohnung = ___ € Innenprovision, ___ € für die Firma.\n→ 12.000 € Innenprovision, 7.500–9.000 € für die Firma.","10"],
+["Satz 2","Gewinn ist nicht ___ – Provision kommt Monate später.\n→ Cash.","10"],
+["Satz 3","Runway unter ___ Monaten: Stopp.\n→ 6 Monaten.","10"],
+["Satz 4","Kunden = Leads × ___ × ___ × ___.\n→ Terminquote × Show-Rate × Abschlussquote.","10"],
+["Satz 5","Unter ___ LTGP:CAC wird nicht skaliert.\n→ 1,5x.","10"],
+["Satz 6","Ein Junior kostet ca. ___ € im Monat und ca. ___ € Vorfinanzierung bis zum Cash-Payback.\n→ ca. 6.300 € und ca. 27.500 €.","10"],
+["Satz 7","Das Team skaliert über die ___, nicht über Köpfe.\n→ Grün-Quote.","10"],
+["Satz 8","___ vor Köpfen.\n→ Objekte.","10"],
+["Satz 9","___ vor Rendite – die ___-Grenze ist die höchste Regel.\n→ Recht vor Rendite, Tippgeber-Grenze.","10"],
+["Satz 10","Jede Zahl braucht ___, ___, ___ und einen ___.\n→ Datum, Quelle, Definition, Besitzer.","10"]
+];
+const CARDS=[];
+for(const k of Object.keys(T))T[k].forEach((t,i)=>CARDS.push({id:k+i,cat:k,f:t[0],en:t[1],b:t[2],ref:t[3]}));
+F_.forEach((t,i)=>CARDS.push({id:"G"+i,cat:"G",f:t[0],en:"",b:t[1],ref:t[2],mono:true}));
+H_.forEach((t,i)=>{let b=t[1],f=t[0],en="";
+  if(/^Satz \d+$/.test(f)){const p=b.split("\n→ ");en=f.replace("Satz","Merksatz");f=p[0];b=p[1]}
+  CARDS.push({id:"H"+i,cat:"H",f,en,b,ref:t[2]})});
+
+/* ---------- Rechenaufgaben ---------- */
+const VERDICT=r=>r<1?"unter 1,0x: Kanal stoppen oder radikal umbauen":r<1.5?"1,0–1,5x: nicht skalieren, Funnel und Marge reparieren":r<3?"1,5–3,0x: funktioniert, aber dünn, vorsichtig skalieren":r<5?"3,0–5,0x: gesundes Geschäft, skalieren":"über 5,0x: sehr stark, du investierst eher zu wenig";
+const STUFEN=[["Junior",6265,9000],["Berater",7000,8280],["Senior",8680,7920],["Director",11730,7500]];
+const GENS=[
+{id:"gewinn",g:"Geld",name:"Gewinn & DB-Quote",make(){
+  const U=R(20,60,2)*1000,v=Math.round(U*R(20,40,5)/100/500)*500,F=R(8,20)*1000,DB=U-v;
+  if(Math.random()<.5)return{q:`Umsatz ${eur(U)}, variable Kosten ${eur(v)}, Fixkosten ${eur(F)}. Wie hoch ist der <b>Gewinn</b>?`,unit:"€",ans:DB-F,steps:[`DB = ${eur(U)} − ${eur(v)} = ${eur(DB)}`,`Gewinn = ${eur(DB)} − ${eur(F)} = ${eur(DB-F)}`]};
+  return{q:`Umsatz ${eur(U)}, variable Kosten ${eur(v)}. Wie hoch ist die <b>DB-Quote</b> in Prozent?`,unit:"%",ans:DB/U*100,abs:.15,steps:[`DB = ${eur(U)} − ${eur(v)} = ${eur(DB)}`,`DB-Quote = ${eur(DB)} ÷ ${eur(U)} = ${nf(DB/U*100,1)} %`]}}},
+{id:"be",g:"Geld",name:"Break-even in Deals",make(){
+  const F=R(15,40)*1000,d=pick([6000,7500,8280,9000]);
+  return{q:`Fixkosten ${eur(F)} pro Monat, Deckungsbeitrag ${eur(d)} pro Deal. Wie viele Deals pro Monat brauchst du für den <b>Break-even</b>? (eine Nachkommastelle)`,unit:"Deals",ans:F/d,abs:.06,steps:[`Break-even = Fixkosten ÷ DB pro Deal`,`= ${eur(F)} ÷ ${eur(d)} = ${nf(F/d,1)} Deals`]}}},
+{id:"bee",g:"Geld",name:"Break-even in € (DB-Quote)",make(){
+  const q=pick([45,60,70,75]),F=R(12,40)*1000,be=F/(q/100);
+  if(Math.random()<.5){const deal=pick([7500,9000,12000]);return{q:`Fixkosten ${eur(F)} pro Monat, DB-Quote ${q} %. Wie hoch ist der <b>Break-even-Umsatz</b> in Euro? (Toleranz 1 %)`,unit:"€",ans:be,rel:.01,steps:[`Break-even in € = Fixkosten ÷ DB-Quote`,`= ${eur(F)} ÷ ${nf(q/100,2)} = ${eur(be)}`,`Rückweg in Deals bei ${eur(deal)} Umsatz pro Deal: ${eur(be)} ÷ ${eur(deal)} = ${nf(be/deal,1)} Deals`]}}
+  const d=pick([1500,3000,6300]),m=d/(q/100);
+  return{q:`Du buchst neue Fixkosten von ${eur(d)} pro Monat (Tool oder Mitarbeiter). Deine DB-Quote liegt bei ${q} %. Wie viel <b>zusätzlichen Umsatz</b> musst du pro Monat machen, um die neuen Fixkosten zu decken?`,unit:"€",ans:m,rel:.01,steps:[`Zusätzlicher Umsatz = neue Fixkosten ÷ DB-Quote`,`= ${eur(d)} ÷ ${nf(q/100,2)} = ${eur(m)}`,`Zur Kontrolle: ${eur(m)} × ${q} % = ${eur(d)} Deckungsbeitrag, genau die neuen Fixkosten`]}}},
+{id:"cac",g:"Kunden",name:"CAC aus dem Funnel",make(){
+  const cpl=R(20,60,5),tq=R(15,30,5),sh=R(60,80,5),cl=R(20,35,5),ch=tq*sh*cl/1e6,cac=cpl/ch;
+  return{q:`CPL ${eur(cpl)}, Lead→Termin ${tq} %, Show-Rate ${sh} %, Abschlussquote ${cl} %. Wie hoch ist der <b>CAC</b>?`,unit:"€",ans:cac,rel:.01,steps:[`Kette = ${tq/100} × ${sh/100} × ${cl/100} = ${nf(ch,4)}`,`CAC = CPL ÷ Kette = ${eur(cpl)} ÷ ${nf(ch,4)} = ${eur(cac)}`]}}},
+{id:"ltgp",g:"Kunden",name:"LTGP berechnen",make(){
+  const L=R(3,8)*1000,s=R(30,60,10),b=L*s/100,st=L*.1;
+  return{q:`LTV ${eur(L)}, ${s} % davon gehen als Provision an den Berater, Storno-Reserve 10 % vom LTV. Wie hoch ist der <b>LTGP</b>?`,unit:"€",ans:L-b-st,steps:[`Berater: ${eur(L)} × ${s} % = ${eur(b)}`,`Storno: ${eur(L)} × 10 % = ${eur(st)}`,`LTGP = ${eur(L)} − ${eur(b)} − ${eur(st)} = ${eur(L-b-st)}`]}}},
+{id:"ratio",g:"Kunden",name:"LTGP:CAC",make(){
+  const l=R(8,30)*100,c=R(5,20)*100,r=l/c;
+  return{q:`LTGP ${eur(l)}, CAC ${eur(c)}. Wie hoch ist <b>LTGP:CAC</b>? (zwei Nachkommastellen, ohne „x“)`,unit:"x",ans:r,abs:.02,steps:[`${eur(l)} ÷ ${eur(c)} = ${nf(r,2)}x`,`Einordnung: ${VERDICT(r)}`]}}},
+{id:"vel",g:"Vertrieb",name:"Sales Velocity",make(){
+  const o=R(20,60,5),w=R(20,35,5),d=R(3,6)*1000,c=R(20,50,5),v=o*w/100*d/c;
+  return{q:`${o} Opportunities, Win-Rate ${w} %, Ø Deal ${eur(d)}, Sales-Cycle ${c} Tage. Wie hoch ist die <b>Sales Velocity</b> pro Tag?`,unit:"€/Tag",ans:v,rel:.01,steps:[`${o} × ${w/100} × ${eur(d)} ÷ ${c} Tage`,`= ${eur(v)} pro Tag`]}}},
+{id:"rev",g:"Vertrieb",name:"Rückwärtsplanung",make(){
+  const z=R(30,80,10)*1000,p=pick([4000,5000]),cl=pick([20,25,30]),sh=pick([60,70,80]),tq=pick([15,20,25]),cpl=pick([25,30,35,40]);
+  const a=z/p,g=a/cl*100,t=g/sh*100,l=t/tq*100,b=l*cpl;
+  return{q:`Ziel ${eur(z)} Umsatz im Monat, Ø Provision ${eur(p)}, Abschlussquote ${cl} %, Show-Rate ${sh} %, Terminquote ${tq} %, CPL ${eur(cpl)}. Wie hoch ist das benötigte <b>Werbebudget</b>? (Toleranz 3 %)`,unit:"€",ans:b,rel:.03,steps:[`Abschlüsse = ${eur(z)} ÷ ${eur(p)} = ${nf(a,1)}`,`Gespräche = ${nf(a,1)} ÷ ${cl} % = ${nf(g,1)}`,`Termine = ${nf(g,1)} ÷ ${sh} % = ${nf(t,1)}`,`Leads = ${nf(t,1)} ÷ ${tq} % = ${nf(l,0)}`,`Budget = ${nf(l,0)} × ${eur(cpl)} = ${eur(b)}`]}}},
+{id:"runway",g:"Finanzen",name:"Runway",make(){
+  const cash=R(30,100,10)*1000,fix=R(10,20)*1000,db=R(3,Math.max(3,fix/1000-3))*1000,burn=fix-db,rw=cash/burn;
+  return{q:`Cash ${eur(cash)}, Fixkosten ${eur(fix)} im Monat, Deckungsbeitrag ${eur(db)} im Monat. Wie viele Monate <b>Runway</b>? (eine Nachkommastelle)`,unit:"Monate",ans:rw,abs:.06,steps:[`Net Burn = ${eur(fix)} − ${eur(db)} = ${eur(burn)}`,`Runway = ${eur(cash)} ÷ ${eur(burn)} = ${nf(rw,1)} Monate`,rw<6?"Unter 6 Monaten: STOPP, kein Adspend-Hike, keine Einstellung.":"Mindestens 6 Monate: Regel erfüllt."]}}},
+{id:"bek",g:"Team",name:"Break-even pro Kopf",make(){
+  const s=pick(STUFEN),r=s[1]/s[2];
+  return{q:`${s[0]}: Vollkosten ${eur(s[1])} im Monat, UfF pro Wohnung ${eur(s[2])}. Wie viele Wohnungen pro Monat sind der <b>Break-even</b>? (zwei Nachkommastellen)`,unit:"Wohnungen",ans:r,abs:.02,steps:[`${eur(s[1])} ÷ ${eur(s[2])} = ${nf(r,2)} Wohnungen`]}}},
+{id:"voll",g:"Team",name:"Vollkosten",make(){
+  const ag=R(3000,9000,100),h=pick([0,3,6,12]),v=ag+1380+h*150;
+  return{q:`AG-Kosten ${eur(ag)}, Sachkosten 1.380 €, Führungszeit ${h} Stunden à 150 €. Wie hoch sind die <b>Vollkosten</b> pro Monat?`,unit:"€",ans:v,steps:[`Führung = ${h} × 150 € = ${eur(h*150)}`,`Vollkosten = ${eur(ag)} + 1.380 € + ${eur(h*150)} = ${eur(v)}`]}}},
+{id:"uff",g:"Team",name:"Umsatz für die Firma",make(){
+  const kp=R(120,250,10)*1000,ip=pick([6,7,8]),a=pick([25,31,34,37.5]),i=kp*ip/100,u=i*(1-a/100);
+  return{q:`Kaufpreis ${eur(kp)}, Innenprovision ${ip} %, Berater-Anteil ${nf(a,a%1?1:0)} % der Innenprovision. Wie hoch ist der <b>Umsatz für die Firma</b>?`,unit:"€",ans:u,rel:.002,steps:[`Innenprovision = ${eur(kp)} × ${ip} % = ${eur(i)}`,`Berater = ${eur(i)} × ${nf(a,a%1?1:0)} % = ${eur(i*a/100)}`,`UfF = ${eur(i)} − ${eur(i*a/100)} = ${eur(u)}`]}}},
+{id:"dso",g:"Finanzen",name:"Gebundenes Kapital (DSO)",make(){
+  const m=R(30,90,10)*1000,d=pick([45,60,75,90]),x=m/30*d;
+  return{q:`Monatsumsatz ${eur(m)}, DSO ${d} Tage (rechne mit 30 Tagen pro Monat). Wie viel Geld steckt dauerhaft in offenen Forderungen?`,unit:"€",ans:x,rel:.01,steps:[`Umsatz pro Tag = ${eur(m)} ÷ 30 = ${eur(m/30)}`,`Gebunden = ${eur(m/30)} × ${d} Tage = ${eur(x)}`]}}},
+{id:"sich",g:"Finanzen",name:"Sicherheitsabstand",make(){
+  const F=R(8,20)*1000,q=pick([40,45,50,60]),be=F/(q/100),ist=Math.round(be*pick([1.2,1.3,1.5])/1000)*1000,s=(ist-be)/ist*100;
+  return{q:`Fixkosten ${eur(F)}, DB-Quote ${q} %, Ist-Umsatz ${eur(ist)}. Wie hoch ist der <b>Sicherheitsabstand</b> in Prozent? (eine Nachkommastelle)`,unit:"%",ans:s,abs:.15,steps:[`Break-even-Umsatz = ${eur(F)} ÷ ${nf(q/100,2)} = ${eur(be)}`,`Abstand = (${eur(ist)} − ${eur(be)}) ÷ ${eur(ist)} = ${nf(s,1)} %`]}}},
+{id:"pipe",g:"Vertrieb",name:"Gewichtete Pipeline",make(){
+  const n1=R(10,30,5),n2=R(5,15,5),n3=R(2,8),v=[4000,4000,5000],x=n1*v[0]*.1+n2*v[1]*.25+n3*v[2]*.5;
+  return{q:`Pipeline: ${n1} Deals im Status „Termin vereinbart“ (10 %, je 4.000 €), ${n2} Deals „Erstgespräch geführt“ (25 %, je 4.000 €), ${n3} Deals „Konzept präsentiert“ (50 %, je 5.000 €). Wie hoch ist die <b>gewichtete Pipeline</b>?`,unit:"€",ans:x,steps:[`${n1} × 4.000 € × 10 % = ${eur(n1*400)}`,`${n2} × 4.000 € × 25 % = ${eur(n2*1000)}`,`${n3} × 5.000 € × 50 % = ${eur(n3*2500)}`,`Summe = ${eur(x)}`]}}},
+{id:"chg",g:"Geld",name:"Veränderung in %",make(){
+  const a=R(10,40,5),n=a+pick([-10,-5,5,10,15]),c=(n-a)/a*100;
+  return{q:`Die Show-Rate steigt/fällt von ${a} % auf ${n} %. Wie hoch ist die <b>Veränderung in Prozent</b> (nicht in Prozentpunkten)? (eine Nachkommastelle)`,unit:"%",ans:c,abs:.15,steps:[`(neu − alt) ÷ alt = (${n} − ${a}) ÷ ${a} = ${nf(c,1)} %`]}}},
+{id:"quote",g:"Vertrieb",name:"Quoten hintereinander",make(){
+  const a=pick([20,30,40]),b=pick([50,60,70,80]),c=pick([20,25,30]),x=a*b*c/1e4;
+  return{q:`Terminquote ${a} %, Show-Rate ${b} %, Abschlussquote ${c} %. Wie viel Prozent der Leads werden Kunden? (zwei Nachkommastellen)`,unit:"%",ans:x,abs:.02,steps:[`Quoten multiplizieren: ${a/100} × ${b/100} × ${c/100} = ${nf(x/100,4)}`,`= ${nf(x,2)} %  → jeder ${nf(100/x,0)}. Lead wird Kunde`]}}},
+{id:"cov",g:"Vertrieb",name:"Pipeline-Bedarf",make(){
+  const z=R(40,100,10)*1000,w=pick([20,25,33.3,50]),p=z/(w/100);
+  return{q:`Quartalsziel ${eur(z)}, Win-Rate ${nf(w,w%1?1:0)} %. Wie viel <b>ungewichtete Pipeline</b> brauchst du?`,unit:"€",ans:p,rel:.01,steps:[`${eur(z)} ÷ ${nf(w,w%1?1:0)} % = ${eur(p)}`,`Coverage = ${nf(p/z,1)}×  (Faustregel 3×)`]}}},
+{id:"fehl",g:"Team",name:"Kosten Fehleinstellung",make(){
+  const v=pick([6265,7000]),m=R(2,4),x=2500+v*m;
+  return{q:`Recruiting 2.500 €, Vollkosten ${eur(v)} im Monat, Trennung nach ${m} Monaten ohne Abschluss. Wie hoch sind die <b>Kosten der Fehleinstellung</b> (ohne Führungszeit und verbrannte Leads)?`,unit:"€",ans:x,steps:[`2.500 € + ${m} × ${eur(v)} = ${eur(x)}`]}}},
+{id:"prov",g:"Team",name:"Provision: Anteil vs. % vom KP",make(){
+  const kp=R(150,250,10)*1000,ip=pick([6,7]),d=kp*.03-kp*ip/100*.375;
+  return{q:`Kaufpreis ${eur(kp)}, aber nur ${ip} % Innenprovision. Ein Director bekäme entweder fest 3 % vom Kaufpreis oder 37,5 % der Innenprovision. Wie viel mehr behält die Firma pro Deal mit der <b>Anteils-Variante</b>?`,unit:"€",ans:d,rel:.005,steps:[`3 % vom KP = ${eur(kp*.03)}`,`37,5 % der Innenprovision (${eur(kp*ip/100)}) = ${eur(kp*ip/100*.375)}`,`Differenz = ${eur(d)} zugunsten der Firma`]}}},
+{id:"plan",g:"Finanzen",name:"Plan-Ist-Abweichung",make(){
+  const p=R(40,80,10)*1000,f=pick([.8,.9,1.1,1.2]),i=p*f,a=(i-p)/p*100;
+  return{q:`Plan ${eur(p)}, Ist ${eur(i)}. Wie hoch ist die <b>relative Abweichung</b> in Prozent?`,unit:"%",ans:a,abs:.15,steps:[`(${eur(i)} − ${eur(p)}) ÷ ${eur(p)} = ${nf(a,1)} %`,Math.abs(a)>10?"Über ±10 %: wird im Management by Exception besprochen (Ursache, Maßnahme, Verantwortlicher, Termin).":"Innerhalb ±10 %: wird nicht diskutiert."]}}}
+];
+const GROUPS=["Geld","Kunden","Vertrieb","Team","Finanzen"];
+function parseNum(s){
+  s=String(s).trim().replace(/[€%x\s]/gi,"").replace(/[a-zäöü/]+$/i,"");
+  if(!s)return NaN;
+  if(s.includes(","))s=s.replace(/\./g,"").replace(",",".");
+  else if(/^-?\d{1,3}(\.\d{3})+$/.test(s))s=s.replace(/\./g,"");
+  s=s.replace(/^−/,"-");
+  return Number(s);
+}
+function checkNum(q,input){
+  const x=parseNum(input);if(!isFinite(x))return false;
+  const tol=Math.max(q.abs||0.51,(q.rel||0)*Math.abs(q.ans));
+  return Math.abs(x-q.ans)<=tol;
+}
+
+/* ---------- Entscheidungsfälle ---------- */
+const CASES=[
+{q:"Dein Eigenkanal hat LTGP:CAC 1,2x, der Runway liegt bei 9 Monaten. Ein Mitarbeiter schlägt vor, das Budget um 30 % zu erhöhen, weil der Kanal ja positiv ist.",o:["Budget um 30 % erhöhen, 1,2x ist positiv","Nicht skalieren, erst Funnel und Marge reparieren","Kanal sofort abschalten"],a:1,w:"1,0–1,5x heißt: knapp über null, deckt keine Fixkosten. Mit 1,2x bleiben pro 1.000 € CAC nur 200 € für Miete, Führung und Gewinn. Und beim Skalieren steigt der CAC fast immer."},
+{q:"Der Lead-Kanal liegt bei LTGP:CAC 0,93x und CAC 1.703 €. Was ist die Konsequenz?",o:["Mehr Budget, damit der Algorithmus besser lernt","Stoppen oder radikal umbauen, jeder Kunde kostet Geld","Weiterlaufen lassen, Blended CAC sieht ja ok aus"],a:1,w:"Unter 1,0x vernichtet jeder neue Kunde Geld, Wachstum macht es schlimmer. Der Blended CAC versteckt das, weil Empfehlungen gratis sind. Deshalb immer pro Kanal rechnen."},
+{q:"Cash 40.000 €, Fixkosten 12.000 €, Deckungsbeitrag fällt auf 5.000 € im Monat. Wie lautet das Urteil deiner Decision Engine?",o:["Runway 5,7 Monate: STOPP, kein Adspend-Hike, keine Einstellung","Runway 10 Monate: alles ok","Runway 3 Monate: sofort Tool-Abos kündigen"],a:0,w:"Burn = 12.000 − 5.000 = 7.000 €. Runway = 40.000 ÷ 7.000 = 5,7 Monate. Unter 6 Monaten ist Stopp. Unter 3 Monaten würden zusätzlich alle Tool-Abos über 100 € gekündigt."},
+{q:"Ein Mitarbeiter in der Probezeit macht in Monat 1 12.000 € Umsatz für die Firma. Welche Farbe?",o:["Rot","Gelb","Grün"],a:1,w:"Monat 1: gelb ab 10.000 €, grün ab 15.000 €. Mit 12.000 € ist er gelb."},
+{q:"Probezeit, Monat 3: 22.000 € UfF. Was passiert?",o:["Freigabe-Prüfung und Titel Junior","1 Monat Verlängerung","Trennung"],a:1,w:"Monat 3: gelb ab 20.000 €, grün ab 25.000 €. Gelb in Monat 3 heißt 1 Monat Verlängerung. Grün in Monat 4 führt dann zur Freigabe."},
+{q:"Ein Berater (grün ab 50.000 €) hat die letzten drei Monate 33.000 € UfF im Schnitt gemacht, nun den zweiten Monat in Folge gelb. Was greift?",o:["Nichts, gelb ist ok","Eine Stufe runter","Sofortige Trennung"],a:1,w:"Gelb ist 25.000 € bis unter der grünen Schwelle. 2× gelb in Folge heißt eine Stufe runter, inklusive Fixum der vorigen Stufe. Sonst zahlst du einem gelben Mitarbeiter Vollkosten bei zu geringer Leistung."},
+{q:"Ein Objekt hat nur 6 % Innenprovision bei 200.000 € Kaufpreis. Du hast dem Director 3 % vom Kaufpreis versprochen. Was passiert?",o:["Kein Problem, bei 8 % wäre es dasselbe","Er bekommt 50 % der Innenprovision, die Firma behält nur 6.000 €","Er bekommt 37,5 %, die Firma behält 7.500 €"],a:1,w:"3 % von 200.000 € = 6.000 € = 50 % der Innenprovision von 12.000 €. Mit der Anteils-Variante (37,5 %) wären es 4.500 €. Provision immer als Anteil der Innenprovision festlegen."},
+{q:"Du willst zwei Junioren gleichzeitig einstellen. Cash heute 80.000 €, übrige Fixkosten 20.000 € im Monat. Wie entscheidest du?",o:["Beide einstellen, Junioren verkaufen sich schnell","Nacheinander einstellen oder vorher Liquidität aufbauen","Drei Junioren, dann sinkt der Kostenanteil pro Kopf"],a:1,w:"Pro Junior rund 27.500 € Vorfinanzierung bis zum Cash-Payback, bei zweien etwa 55.000 €. Von 80.000 € blieben 25.000 €, das sind rund 1,2 Monate Puffer. Runway-Regel verletzt."},
+{q:"Die Show-Rate liegt bei 55 %. Was ist der wirksamste und billigste erste Hebel?",o:["Mehr Leads einkaufen","Reminder-Kette und Pre-Frame-Video, Termin unter 48 Stunden","Den Berater austauschen"],a:1,w:"Die Quoten im Funnel sind meist der billigere Hebel als mehr Werbung. Show-Rate von 65 % auf 80 % senkt den CAC im Beispiel um 19 %, ohne einen Euro mehr Werbung."},
+{q:"Die Terminquote ist niedrig. Wo setzt du zuerst an?",o:["Speed-to-Lead unter 5 Minuten, Setter-Skript, mehr Anwahlversuche","Preise senken","Abschlussquote trainieren"],a:0,w:"Die Terminquote entsteht zwischen Lead-Eingang und Termin. Speed-to-Lead, Skript und Anwahlversuche (6–8 über 7–10 Tage) wirken dort."},
+{q:"Der CPL einer Kampagne ist mit 20 € sehr gut. Der qCPL liegt bei 55 €. Worauf optimierst du?",o:["Auf den Roh-CPL, weil er niedrig ist","Auf qCPL oder besser direkt auf CAC","Auf die CTR"],a:1,w:"Wer auf Roh-CPL optimiert, bekommt billige Leads von Leuten, die nie kaufen. Quali-bereinigt ist der CPL meist 2–3× so hoch."},
+{q:"Ein neuer Mitarbeiter möchte in Anzeigen mit einer „Rendite bis zu 5 %“ werben und eine Immobilie empfehlen. Du hast noch keine eigene Erlaubnis.",o:["Ok, „bis zu“ ist ja kein Versprechen","Nein: keine Renditeversprechen und keine Produktempfehlung, solange du Tippgeber bist","Ok, wenn der Mitarbeiter es im eigenen Namen macht"],a:1,w:"Recht vor Rendite. Die Tippgeber-Grenze gilt auch für Mitarbeiter, und Renditeversprechen sind auch mit „bis zu“ nicht erlaubt (UWG). Ads aktuell nur ohne Produktbezug."},
+{q:"Ein Bewerber soll eine Woche unbezahlt „Probe arbeiten“, inklusive 500 Anwahlen.",o:["Gute Auswahlmethode","Unzulässig: bezahlen oder per Rollenspiel auswählen","Nur als Praktikum"],a:1,w:"500 Anwahlen sind echte Arbeit, eine unbezahlte Probewoche ist unzulässig. Ein „Praktikum“ ist es auch nicht. Lösung: Rollenspiel-Auswahl oder befristeter Vertrag (§14 TzBfG)."},
+{q:"Ein Deal wurde seit 45 Tagen nicht bewegt, steht aber noch in der Pipeline.",o:["Stehen lassen, er kann ja noch kommen","Schließen (Stale-Deal-Regel) mit Lost Reason","Wahrscheinlichkeit auf 80 % setzen"],a:1,w:"Deals ohne Aktivität seit 30 Tagen werden automatisch geschlossen. Sonst sehen Win-Rate und Pipeline künstlich gut aus. Und jeder verlorene Deal bekommt einen Pflicht-Grund."},
+{q:"Du verkaufst jeden Monat 3 Wohnungen, Gewinn auf dem Papier +2.000 €, aber das Geld kommt 3 Monate später. Was schaust du an?",o:["Nur die GuV, sie ist positiv","Den 13-Wochen-Liquiditätsplan","Den Umsatz pro Kopf"],a:1,w:"Gewinn ist nicht Cash. Gehälter und Werbung zahlst du sofort, die Provision kommt Monate später. Wachstum kostet erst mal Cash, auch profitables."},
+{q:"Beraterzeit ist dein Engpass. Du sortierst Produkte nach …",o:["Provision pro Abschluss","Deckungsbeitrag pro Beraterstunde","Anzahl der Leads"],a:1,w:"Engpassrechnung: Immobilie ≈ 750 € DB pro Beraterstunde, BU ≈ 182 €, Baufinanzierung ≈ 188 €, ETF-Sparplan ≈ 70 € (Beispielwerte)."},
+{q:"Der Junior soll 1.700 € netto bei 40 Stunden bekommen.",o:["Passt","Liegt unter dem Mindestlohn: 38 h und 2.550 € brutto, Verträge brutto","Nur mit Handelsvertretervertrag"],a:1,w:"1.700 € netto sind ca. 2.381 € brutto und liegen unter dem Mindestlohn bei 40 h (2.410 €). Lösung aus der Hiring-Session: 38 h, 2.550 € brutto. Handelsvertreter ist wegen Scheinselbständigkeit tabu."},
+{q:"Du machst ca. 42 % des Umsatzes. Was ist das Ziel und warum?",o:["Unter 30 %, sonst ist jede Krankheitswoche ein Umsatzloch","Über 50 %, du bist der beste Verkäufer","Egal, Hauptsache der Umsatz stimmt"],a:0,w:"System vor Person. Solange du über 40 % liegst, hängt die Firma an dir. Ziel: unter 30 %, zum Beispiel 5 Junioren à 5 Wohnungen. Objekte müssen aber vor den Köpfen wachsen."},
+{q:"Ein Mitarbeiter hatte zwei sehr starke Monate und will befördert werden. Die nächste Stufe erfordert 65.000 € UfF.",o:["Befördern, die Zahlen sprechen für sich","Nur nach 3 Monaten grün auf der nächsten Stufe, keine Ausnahmen","Befördern, aber ohne Fixum-Erhöhung"],a:1,w:"Aufstieg = 3 Monate grün auf der Schwelle der nächsten Stufe, gemessen rollierend über 3 Monate. So zählt ein einzelner starker Monat nicht über."},
+{q:"Du willst ein Tool für 1.500 € im Monat buchen. Welche Frage stellst du zuerst?",o:["Ist es bei Kollegen beliebt?","Um wie viele Wohnungen pro Monat steigt dadurch mein Break-even, und ist es kündbar?","Wie viele Funktionen hat es?"],a:1,w:"Jede Entscheidung, die Fixkosten erhöht, erhöht den Break-even. Bei 9.000 € DB pro Wohnung sind das +0,17 Wohnungen pro Monat. Rechnen, Kündbarkeit prüfen, dann entscheiden."},
+{q:"Eine Kohortenanalyse zeigt: mehr Kunden pro Quartal, aber Umsatz pro Kunde sinkt und die Storno-Quote steigt. Dein Gesamtumsatz wächst trotzdem. Was ist das?",o:["Normales Wachstum","Qualitäts-Drift, typisch wenn Werbung skaliert und die Lead-Qualität nachlässt","Saisoneffekt"],a:1,w:"Im Gesamtumsatz siehst du das nicht, nur Kohorten zeigen es. Gegenmittel: Lead-Qualität, Einkommens-Check, Nachbetreuung."},
+{q:"Das Team-Meeting dreht sich wieder zwei Stunden um alles, was gut läuft. Welches Prinzip fehlt?",o:["Management by Exception: nur Abweichungen besprechen","Delegationsstufe 7","Balanced Scorecard"],a:0,w:"Alles im grünen Bereich wird nicht diskutiert. In der L10-Agenda ist die Scorecard nur „on/off track“, die Zeit gehört dem IDS (Identify, Discuss, Solve)."}
+];
+</script>
+
+<script id="app">
+/* ---------- Speicher ---------- */
+const KEY="ceo-lernstudio-v1";
+let S={cards:{},days:{},calc:{ok:0,n:0,by:{}},cases:{ok:0,n:0,miss:{}},seen:{}};
+try{const v=localStorage.getItem(KEY);if(v){const o=JSON.parse(v);S=Object.assign(S,o)}}catch(e){}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const dayKey=(t=Date.now())=>{const d=new Date(t);return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")};
+const touch=n=>{const k=dayKey();S.days[k]=(S.days[k]||0)+(n||1);save()};
+const startOfDay=t=>{const d=new Date(t);d.setHours(0,0,0,0);return d.getTime()};
+const INTERVALS=[0,1,3,7,16];
+const isDue=c=>{const s=S.cards[c.id];return !s||s.d<=Date.now()};
+function streak(){let n=0,t=Date.now();if(!S.days[dayKey(t)])t-=864e5;while(S.days[dayKey(t)]){n++;t-=864e5}return n}
+function rate(c,r){
+  const s=S.cards[c.id]||{b:1,n:0};s.n++;
+  if(r==="again"){s.b=1;s.d=Date.now()}
+  else if(r==="hard"){s.d=startOfDay(Date.now())+864e5}
+  else{s.b=Math.min(5,s.b+1);s.d=startOfDay(Date.now())+INTERVALS[s.b-1]*864e5;if(s.b===1)s.d=Date.now()}
+  S.cards[c.id]=s;touch();
+}
+
+/* ---------- Grundgerüst ---------- */
+const $=(s,e=document)=>e.querySelector(s);
+const TABS=[["heute","Heute"],["karten","Karten"],["rechnen","Rechnen"],["labor","Labor"],["faelle","Fälle"],["fortschritt","Fortschritt"]];
+let tab="heute";
+const ACT={};
+document.addEventListener("click",e=>{const t=e.target.closest("[data-act]");if(t&&!/^(INPUT|SELECT|TEXTAREA|OPTION)$/.test(e.target.tagName)&&ACT[t.dataset.act])ACT[t.dataset.act](t,e)});
+function setTab(t,push){tab=TABS.some(x=>x[0]===t)?t:"heute";if(push!==false){try{history.replaceState(null,"","#"+tab)}catch(e){}}
+  $("#tabs").innerHTML=TABS.map(([k,n])=>`<button data-act="tab" data-v="${k}" ${k===tab?'aria-current="true"':""}>${n}</button>`).join("");
+  window.scrollTo(0,0);VIEWS[tab]()}
+ACT.tab=b=>setTab(b.dataset.v);
+const V=html=>{$("#view").innerHTML=html};
+
+/* ---------- Heute ---------- */
+function stats(){
+  const per={};let due=0,mast=0;
+  for(const k of Object.keys(CATS))per[k]={n:0,due:0,box:[0,0,0,0,0,0]};
+  for(const c of CARDS){const s=S.cards[c.id],p=per[c.cat];p.n++;p.box[s?s.b:0]++;if(isDue(c)){p.due++;due++}if(s&&s.b>=4)mast++}
+  return{per,due,mast,total:CARDS.length}
+}
+function viewHeute(){
+  const st=stats(),today=S.days[dayKey()]||0,sk=streak();
+  const done=k=>k;
+  V(`<div class="sec">
+  <div class="card"><div class="row" style="align-items:flex-end;gap:22px">
+    <div><div class="lbl">Heute fällig</div><div class="big">${st.due}</div><div class="mute small">von ${st.total} Karten</div></div>
+    <div class="grow" style="min-width:220px"><div class="mute small" style="margin-bottom:6px">Sicher gelernt (Box 4–5): ${st.mast} von ${st.total}</div>
+      <div class="bar"><i style="width:${st.mast/st.total*100}%;background:var(--good)"></i></div>
+      <div class="row small mute" style="margin-top:10px;gap:18px"><span>Aktionen heute: <b style="color:var(--ink)">${today}</b></span><span>Serie: <b style="color:var(--ink)">${sk} ${sk===1?"Tag":"Tage"}</b></span></div></div>
+  </div>
+  <div class="row" style="margin-top:16px"><button class="btn pri" data-act="startdue">Fällige Karten üben</button><button class="btn" data-act="tab" data-v="karten">Auswahl ändern</button></div></div>
+
+  <h2 class="h2">So lernst du am schnellsten</h2>
+  <ol class="path">
+    <li><div><b>Erst das Bild, dann die Wörter.</b> <span class="mute">Öffne das <a href="#labor" data-act="tab" data-v="labor" style="color:var(--accent)">Labor</a>: Zahlenbaum, Funnel, Cash-Kurve und Ampel zum Verstellen. Wer die Zusammenhänge gesehen hat, behält die Begriffe leichter.</span></div></li>
+    <li><div><b>Kernzahlen zuerst.</b> <span class="mute">Starte die Karten nur mit „Zahlen &amp; Regeln“ und „Formeln“. Das sind die Dinge, die du in Entscheidungen brauchst.</span></div></li>
+    <li><div><b>Wörterbuch in Häppchen.</b> <span class="mute">Eine Kategorie pro Tag, 15–20 Karten. Sag die Antwort laut oder schreib sie auf, bevor du umdrehst.</span></div></li>
+    <li><div><b>Anwenden, bis es automatisch geht.</b> <span class="mute">Täglich 5 Rechenaufgaben und 3 Fälle. Hier entscheidet sich, ob du es nur kennst oder kannst.</span></div></li>
+  </ol>
+
+  <div class="grid2">
+    <button class="tile" data-act="quick" data-v="H"><b>Zahlen &amp; Regeln</b><span class="mute small">${st.per.H.n} Karten · ${st.per.H.due} fällig</span></button>
+    <button class="tile" data-act="quick" data-v="G"><b>Formeln</b><span class="mute small">${st.per.G.n} Karten · ${st.per.G.due} fällig</span></button>
+    <button class="tile" data-act="tab" data-v="rechnen"><b>Rechnen</b><span class="mute small">${GENS.length} Aufgabentypen mit zufälligen Zahlen</span></button>
+    <button class="tile" data-act="tab" data-v="faelle"><b>Entscheidungsfälle</b><span class="mute small">${CASES.length} Fälle aus deinem Geschäft</span></button>
+  </div>
+  <p class="mute small">Dein Fortschritt wird in diesem Browser gespeichert. Auf einem anderen Gerät oder im privaten Fenster fängst du von vorn an. Im Tab Fortschritt kannst du einen Sicherungscode kopieren.</p>
+  <p class="mute small">Hinweis aus dem Heft: Solange die Provisionen keine Zielsystem haben, sind die Inpulse-Zahlen geschätzt. Gehalts- und Rechtsangaben vor Umsetzung vom Lohnbüro bzw. Anwalt bestätigen lassen.</p>
+  </div>`)}
+ACT.startdue=()=>{K.sel=new Set(Object.keys(CATS));K.mode="due";startKarten();setTab("karten")};
+ACT.quick=b=>{K.sel=new Set([b.dataset.v]);K.mode="due";startKarten();setTab("karten")};
+
+/* ---------- Karten ---------- */
+const K={phase:"setup",sel:new Set(Object.keys(CATS)),mode:"due",rev:false,size:20,q:[],i:0,flip:false,res:{again:0,hard:0,good:0}};
+function pool(){return CARDS.filter(c=>K.sel.has(c.cat)&&(K.mode==="all"||isDue(c)))}
+function startKarten(){
+  let p=shuffle(pool());if(K.size>0)p=p.slice(0,K.size);
+  K.q=p.map(c=>c.id);K.i=0;K.flip=false;K.res={again:0,hard:0,good:0};K.phase=p.length?"run":"setup";K.orig=p.length
+}
+const byId=id=>CARDS.find(c=>c.id===id);
+function viewKarten(){
+  if(K.phase==="run"&&K.i>=K.q.length)K.phase="end";
+  if(K.phase==="setup")return setupKarten();
+  if(K.phase==="end")return endKarten();
+  runKarten();
+}
+function setupKarten(){
+  const st=stats(),n=pool().length,cnt=K.size>0?Math.min(K.size,n):n;
+  const chips=Object.entries(CATS).map(([k,c])=>`<button class="chip" style="--cat:var(${c.c})" aria-pressed="${K.sel.has(k)}" data-act="kcat" data-v="${k}"><span class="dot"></span>${c.n} <small>${st.per[k].due}/${st.per[k].n}</small></button>`).join("");
+  V(`<div class="sec"><h2 class="h2">Karteikarten</h2>
+  <p class="mute" style="margin:0;max-width:62ch">Du siehst eine Karte, sagst die Antwort laut oder schreibst sie auf, drehst um und bewertest ehrlich. Karten, die du weißt, kommen in größeren Abständen wieder (1, 3, 7, 16 Tage). Karten, die du nicht weißt, kommen sofort noch einmal.</p>
+  <div class="card"><div class="lbl" style="margin-bottom:10px">Was möchtest du üben? <span style="text-transform:none;letter-spacing:0">(Zahl = fällig / gesamt)</span></div>
+    <div class="row">${chips}</div>
+    <div class="row" style="margin-top:12px"><button class="btn sm" data-act="kpre" data-v="core">Kernzahlen</button><button class="btn sm" data-act="kpre" data-v="dict">Nur Wörterbuch</button><button class="btn sm" data-act="kpre" data-v="all">Alles</button></div></div>
+  <div class="card"><div class="row" style="gap:20px">
+    <label class="row small"><input type="radio" name="kmode" ${K.mode==="due"?"checked":""} data-act="kmode" data-v="due"> Nur fällige und neue</label>
+    <label class="row small"><input type="radio" name="kmode" ${K.mode==="all"?"checked":""} data-act="kmode" data-v="all"> Alle der Auswahl</label>
+    <label class="row small"><input type="checkbox" id="krev" ${K.rev?"checked":""} data-act="krev"> Wörterbuch umgekehrt (Erklärung → Begriff)</label>
+    <label class="row small">Pro Runde <select id="ksize" data-act="ksize">${[10,20,40,0].map(v=>`<option value="${v}" ${K.size===v?"selected":""}>${v||"alle"}</option>`).join("")}</select></label></div></div>
+  <div class="row"><button class="btn pri" data-act="kstart" ${n?"":"disabled"}>${n?`Runde starten (${cnt} Karten)`:"Nichts fällig in dieser Auswahl"}</button>${n?"":`<button class="btn" data-act="kmode" data-v="all">Trotzdem alle üben</button>`}</div></div>`)}
+ACT.kcat=b=>{const v=b.dataset.v;K.sel.has(v)?K.sel.delete(v):K.sel.add(v);if(!K.sel.size)K.sel.add(v);setupKarten()};
+ACT.kpre=b=>{const v=b.dataset.v;K.sel=new Set(v==="core"?["G","H"]:v==="dict"?["A","B","C","D","E","F"]:Object.keys(CATS));setupKarten()};
+ACT.kmode=b=>{K.mode=b.dataset.v;setupKarten()};
+ACT.krev=b=>{K.rev=b.checked};
+ACT.ksize=b=>{K.size=Number(b.value);setupKarten()};
+ACT.kstart=()=>{startKarten();viewKarten()};
+function runKarten(){
+  const c=byId(K.q[K.i]),cat=CATS[c.cat],rev=K.rev&&cat.dict;
+  const frontTxt=rev?c.b:c.f,backTxt=rev?c.f:c.b;
+  const pct=K.i/K.q.length*100;
+  V(`<div class="sec">
+  <div class="row"><button class="btn sm" data-act="kquit">← Auswahl</button><div class="grow"><div class="bar"><i style="width:${pct}%;background:var(--accent)"></i></div></div><span class="mute small">${K.i+1} / ${K.q.length}</span></div>
+  <div class="fc" style="--cat:var(${cat.c})" data-act="kflip" tabindex="0" role="button" aria-label="Karte umdrehen">
+    <div class="row" style="justify-content:space-between"><span class="pill" style="--cat:var(${cat.c})">${cat.n}</span>${c.ref&&c.ref!=="00"?`<span class="mute small">⇒ Baustein ${esc(c.ref)}</span>`:""}</div>
+    <div class="front">${rich(frontTxt)}</div>
+    ${!rev&&c.en?`<div class="sub">${esc(c.en)}</div>`:""}
+    ${K.flip?`<div class="back ${c.mono&&!rev?"mono":""}">${rich(backTxt)}${rev&&c.en?`<div class="mute small" style="margin-top:6px">${esc(c.en)}</div>`:""}</div>`:`<div class="hint">Erst laut sagen oder aufschreiben, dann tippen zum Umdrehen (Leertaste)</div>`}
+  </div>
+  ${K.flip?`<div class="rate"><button class="btn again" data-act="krate" data-v="again">Nochmal<br><small class="mute">1</small></button><button class="btn hard" data-act="krate" data-v="hard">Fast<br><small class="mute">2</small></button><button class="btn good" data-act="krate" data-v="good">Gewusst<br><small class="mute">3</small></button></div>`:`<button class="btn pri" data-act="kflip">Umdrehen</button>`}
+  </div>`)}
+ACT.kflip=()=>{if(!K.flip){K.flip=true;runKarten()}};
+ACT.kquit=()=>{K.phase="setup";viewKarten()};
+ACT.krate=b=>{const r=b.dataset.v,c=byId(K.q[K.i]);K.res[r]++;rate(c,r);if(r==="again")K.q.push(c.id);K.i++;K.flip=false;viewKarten()};
+function endKarten(){
+  const r=K.res;
+  V(`<div class="sec"><h2 class="h2">Runde geschafft</h2>
+  <div class="card"><div class="row" style="gap:28px"><div><div class="lbl">Gewusst</div><div class="big ok">${r.good}</div></div><div><div class="lbl">Fast</div><div class="big wa">${r.hard}</div></div><div><div class="lbl">Nochmal</div><div class="big no">${r.again}</div></div></div></div>
+  <p class="mute" style="margin:0">Karten mit „Nochmal“ kommen heute wieder dran. „Fast“ erscheint morgen, „Gewusst“ wandert in die nächste Box.</p>
+  <div class="row"><button class="btn pri" data-act="kagain">Nächste Runde</button><button class="btn" data-act="tab" data-v="rechnen">Jetzt anwenden: Rechnen</button><button class="btn" data-act="kquit">Auswahl</button></div></div>`)}
+ACT.kagain=()=>{startKarten();viewKarten()};
+document.addEventListener("keydown",e=>{
+  if(tab!=="karten"||K.phase!=="run"||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
+  if(e.key===" "||e.key==="Enter"){if(!K.flip){e.preventDefault();ACT.kflip()}}
+  else if(K.flip&&"123".includes(e.key)){ACT.krate({dataset:{v:["again","hard","good"][Number(e.key)-1]}})}
+});
+
+/* ---------- Rechnen ---------- */
+const Q={sel:new Set(GROUPS),cur:null,done:false,streak:0};
+function nextQ(){
+  const g=GENS.filter(x=>Q.sel.has(x.g)),gen=pick(g.length?g:GENS);
+  Q.cur=Object.assign({gen:gen.id,name:gen.name},gen.make());Q.done=false;viewRechnen()
+}
+function viewRechnen(){
+  if(!Q.cur)return nextQ();
+  const c=Q.cur,chips=GROUPS.map(g=>`<button class="chip" aria-pressed="${Q.sel.has(g)}" data-act="qgrp" data-v="${g}">${g}</button>`).join("");
+  const acc=S.calc.n?Math.round(S.calc.ok/S.calc.n*100):0;
+  V(`<div class="sec"><h2 class="h2">Rechnen</h2>
+  <div class="row">${chips}</div>
+  <div class="card"><div class="row" style="justify-content:space-between;margin-bottom:10px"><span class="pill" style="--cat:var(--c-g)">${esc(c.name)}</span><span class="mute small">Serie ${Q.streak} · Trefferquote ${acc} % (${S.calc.n})</span></div>
+    <div class="qbox">${c.q}</div>
+    <form class="ans" id="qf" style="margin-top:14px" autocomplete="off"><input id="qin" inputmode="decimal" placeholder="Antwort in ${esc(c.unit)}" ${Q.done?"disabled":""} aria-label="Antwort"><button class="btn pri" type="submit" ${Q.done?"disabled":""}>Prüfen</button></form>
+    <div id="qfb" style="margin-top:14px"></div></div>
+  <p class="mute small" style="margin:0">Rechne auf Papier. Eingabe wie 1.231 oder 1231,5. Die Toleranz deckt Rundungen ab.</p></div>`);
+  const f=$("#qf");f.addEventListener("submit",e=>{e.preventDefault();submitQ()});
+  if(Q.done)showFb(Q.last);else setTimeout(()=>{const i=$("#qin");i&&i.focus()},30)
+}
+function showFb(ok){
+  const c=Q.cur;
+  $("#qfb").innerHTML=`<div class="fb ${ok?"good":"bad"}"><b class="${ok?"ok":"no"}">${ok?"Richtig":"Nicht ganz"}</b> · Ergebnis: <b>${nf(c.ans,Math.abs(c.ans)<100&&c.ans%1?2:0)} ${esc(c.unit)}</b>
+  <ol class="steps">${c.steps.map(s=>`<li>${esc(s)}</li>`).join("")}</ol></div><div class="row" style="margin-top:12px"><button class="btn pri" data-act="qnext">Nächste Aufgabe</button></div>`;
+}
+function submitQ(){
+  if(Q.done)return;const v=$("#qin").value;if(!v.trim())return;
+  const ok=checkNum(Q.cur,v);Q.done=true;Q.last=ok;Q.streak=ok?Q.streak+1:0;
+  S.calc.n++;if(ok)S.calc.ok++;const b=S.calc.by[Q.cur.gen]||(S.calc.by[Q.cur.gen]={ok:0,n:0});b.n++;if(ok)b.ok++;touch();
+  $("#qin").disabled=true;$("#qf button").disabled=true;showFb(ok);
+}
+ACT.qnext=()=>nextQ();
+ACT.qgrp=b=>{const v=b.dataset.v;Q.sel.has(v)?Q.sel.delete(v):Q.sel.add(v);if(!Q.sel.size)Q.sel.add(v);nextQ()};
+
+/* ---------- Fälle ---------- */
+const FC={order:[],i:0,ans:null};
+function startFaelle(){
+  const miss=S.cases.miss||{};
+  const all=CASES.map((_,i)=>i);
+  FC.order=shuffle(all.filter(i=>miss[i])).concat(shuffle(all.filter(i=>!miss[i])));
+  FC.i=0;FC.ans=null
+}
+function viewFaelle(){
+  if(!FC.order.length)startFaelle();
+  if(FC.i>=FC.order.length){const acc=S.cases.n?Math.round(S.cases.ok/S.cases.n*100):0;
+    return V(`<div class="sec"><h2 class="h2">Alle Fälle durch</h2><p class="mute">Trefferquote insgesamt ${acc} %. Falsch beantwortete Fälle kommen beim nächsten Durchgang zuerst.</p><div class="row"><button class="btn pri" data-act="fnew">Neuer Durchgang</button></div></div>`)}
+  const idx=FC.order[FC.i],c=CASES[idx];
+  V(`<div class="sec"><div class="row" style="justify-content:space-between"><h2 class="h2">Entscheidungsfall</h2><span class="mute small">${FC.i+1} / ${FC.order.length}</span></div>
+  <div class="card"><p style="margin:0 0 14px;font-size:18px">${esc(c.q)}</p>
+  ${c.o.map((o,k)=>`<button class="opt ${FC.ans!==null?(k===c.a?"right":k===FC.ans?"wrong":""):""}" data-act="fans" data-v="${k}" ${FC.ans!==null?"disabled":""}>${esc(o)}</button>`).join("")}
+  ${FC.ans!==null?`<div class="fb ${FC.ans===c.a?"good":"bad"}" style="margin-top:8px"><b class="${FC.ans===c.a?"ok":"no"}">${FC.ans===c.a?"Richtig":"Nicht ganz"}</b> · ${esc(c.w)}</div><div class="row" style="margin-top:12px"><button class="btn pri" data-act="fnext">Weiter</button></div>`:""}</div></div>`)}
+ACT.fans=b=>{if(FC.ans!==null)return;const k=Number(b.dataset.v),idx=FC.order[FC.i],ok=k===CASES[idx].a;FC.ans=k;S.cases.n++;if(ok){S.cases.ok++;delete S.cases.miss[idx]}else S.cases.miss[idx]=1;touch();viewFaelle()};
+ACT.fnext=()=>{FC.i++;FC.ans=null;viewFaelle()};
+ACT.fnew=()=>{startFaelle();viewFaelle()};
+
+/* ---------- Labor ---------- */
+const FM={eur:v=>nf(v,0)+" €",pct:v=>nf(v,0)+" %",int:v=>nf(v,0),x:v=>nf(v,2)+"x",mon:v=>nf(v,0)+" Mon.",k:v=>nf(v,0)+"k €"};
+const sl=(id,l,min,max,step,val,f)=>`<label class="sl"><span class="sl-l">${l}</span><output id="${id}-o"></output><input type="range" id="${id}" data-f="${f}" min="${min}" max="${max}" step="${step}" value="${val}"></label>`;
+const g=id=>Number($("#"+id).value);
+function bindSliders(root,fn){
+  const upd=()=>{root.querySelectorAll("input[type=range]").forEach(i=>{$("#"+i.id+"-o").textContent=FM[i.dataset.f](Number(i.value))});fn()};
+  root.addEventListener("input",upd);upd()
+}
+const LAB_TABS=[["baum","Zahlenbaum"],["funnel","Funnel & CAC"],["cash","Gewinn vs. Cash"],["ampel","Ampel"],["rueck","Rückwärtsplan"]];
+let labTab="baum";
+function viewLabor(){
+  V(`<div class="sec"><h2 class="h2">Labor</h2><p class="mute" style="margin:0;max-width:62ch">Verstelle die Regler und beobachte, was passiert. Wer die Zusammenhänge gesehen hat, kann die Zahlen später ableiten, statt sie auswendig zu wissen.</p>
+  <div class="row">${LAB_TABS.map(([k,n])=>`<button class="chip" aria-pressed="${k===labTab}" data-act="labtab" data-v="${k}">${n}</button>`).join("")}</div>
+  <div id="lab"></div></div>`);
+  LAB[labTab]($("#lab"))
+}
+ACT.labtab=b=>{labTab=b.dataset.v;viewLabor()};
+const LAB={};
+
+/* Zahlenbaum */
+const TREE=[
+["Geld, das übrig bleibt","freier Cashflow","Die Frucht ganz oben. Jede Entscheidung im Kurs zielt darauf. Stimmt hier etwas nicht, gehst du den Ast runter, bis du den kranken Zweig findest.",[
+ ["Gewinn","","Umsatz für die Firma minus Kosten.",[
+  ["Umsatz für die Firma","Baustein 02","Innenumsatz minus Berater-Provision. Daran misst die Ampel jeden Mitarbeiter.",[
+   ["Anzahl Abschlüsse","","Kunden = Leads × Terminquote × Show-Rate × Abschlussquote.",[
+    ["Leads","Werbung ÷ Kosten pro Lead · Baustein 03","Hebel: CPL, Zielgruppe, Creatives. Meist der teuerste Hebel.",[]],
+    ["× Terminquote × Show-Rate × Abschlussquote","Baustein 04","Die Quoten im Funnel. Meist der billigere Hebel als mehr Werbung (Speed-to-Lead, Reminder, Gesprächsleitfaden).",[]],
+    ["× Anzahl produktiver Berater","Baustein 05 + 06","Team skaliert über die Grün-Quote, nicht über Köpfe. Objekte vor Köpfen.",[]]]],
+   ["Ø Provision pro Abschluss","minus Berateranteil","Wohnung ≈ 10 Versicherungen. Produktmix Richtung Immobilie hebt den Ticket-Wert.",[]]]],
+  ["− Kosten","","Fixe und variable Kosten. Variable sind im Deckungsbeitrag schon abgezogen.",[
+   ["Personal","Fixum, AG-Anteil · Baustein 05","Du denkst netto, du zahlst Vollkosten (Junior ca. 6.265 € im Monat).",[]],
+   ["Werbung, Tools, Büro","","Jede Fixkosten-Erhöhung hebt den Break-even.",[]],
+   ["Geschäftsführung","","Zwei GF à 5.000 € brutto, ca. 12.100 € AG-Kosten.",[]]]]]],
+ ["± Wann kommt das Geld?","Provision erst nach Notar/Kaufpreis · Baustein 07","Zwischen Verkauf und Geld liegen 2–4 Monate. Gehälter und Werbung zahlst du sofort. Deshalb der 13-Wochen-Liquiditätsplan.",[]]]]];
+function treeHTML(list,path){return "<ul>"+list.map((n,i)=>{const p=path+"."+i;return `<li><button class="node" data-act="node" data-p="${p}" aria-pressed="${p===treeSel}">${esc(n[0])}${n[1]?` <small>${esc(n[1])}</small>`:""}</button>${n[3].length?treeHTML(n[3],p):""}</li>`}).join("")+"</ul>"}
+function nodeAt(p){const ix=p.split(".").slice(1).map(Number);let l=TREE,n;for(const i of ix){n=l[i];l=n[3]}return n}
+let treeSel="t.0";
+LAB.baum=el=>{
+  el.innerHTML=`<div class="card"><div class="small mute" style="margin-bottom:10px">Tippe einen Ast an. Oben die Frucht, darunter Äste und Zweige.</div>
+  <div class="tree" id="tree">${treeHTML(TREE,"t")}</div>
+  <div class="fb" id="ninfo" style="margin-top:14px"></div></div>`;
+  const show=()=>{const n=nodeAt(treeSel);$("#ninfo").innerHTML=`<b>${esc(n[0])}</b>${n[1]?` <span class="mute small">· ${esc(n[1])}</span>`:""}<div style="margin-top:4px">${esc(n[2])}</div>`;
+    el.querySelectorAll(".node").forEach(b=>b.setAttribute("aria-pressed",b.dataset.p===treeSel))};
+  ACT.node=b=>{treeSel=b.dataset.p;show()};show()
+};
+
+/* Funnel */
+LAB.funnel=el=>{
+  el.innerHTML=`<div class="card"><div class="sliders">
+  ${sl("fl",'Leads pro Monat',50,500,10,100,"int")}${sl("fc","Kosten pro Lead (CPL)",10,80,1,40,"eur")}
+  ${sl("ft","Terminquote",5,40,1,20,"pct")}${sl("fs","Show-Rate",30,95,1,65,"pct")}${sl("fa","Abschlussquote",10,50,1,25,"pct")}${sl("fg","LTGP pro Kunde",500,4000,50,1500,"eur")}
+  </div><div id="fo" style="margin-top:18px"></div></div>
+  <p class="mute small">Ausgangslage aus dem Heft: CPL 40 €, 20 % × 65 % × 25 %, jeder 31. Lead wird Kunde, CAC ≈ 1.231 €. Setze die Show-Rate auf 80 %: der CAC sinkt auf 1.000 €, ohne einen Euro mehr Werbung.</p>`;
+  bindSliders(el,()=>{
+    const L=g("fl"),cpl=g("fc"),tq=g("ft")/100,sh=g("fs")/100,cl=g("fa")/100,ltgp=g("fg");
+    const T=L*tq,S2=T*sh,K2=S2*cl,cac=K2>0?L*cpl/K2:Infinity,r=ltgp/cac,col=r<1?"var(--bad)":r<1.5?"var(--warn)":"var(--good)";
+    const row=(n,v,w,c)=>`<div class="frow"><span>${n}</span><div class="tr"><i style="width:${Math.max(w,.5)}%;background:${c||"var(--accent)"}"></i><b ${w>25?'class="in"':""}>${nf(v,v<10?1:0)}</b></div></div>`;
+    $("#fo").innerHTML=`<div style="display:flex;flex-direction:column;gap:8px">${row("Leads",L,100)}${row("Termine",T,T/L*100)}${row("Erschienen",S2,S2/L*100)}${row("Kunden",K2,K2/L*100,"var(--good)")}</div>
+    <div class="row" style="margin-top:18px;gap:26px"><div><div class="lbl">CAC</div><div class="big" style="font-size:36px">${isFinite(cac)?eur(cac):"–"}</div></div>
+    <div><div class="lbl">LTGP:CAC</div><div class="big" style="font-size:36px;color:${col}">${isFinite(r)?nf(r,2)+"x":"–"}</div></div>
+    <div class="grow" style="min-width:200px"><div class="lbl">Einordnung</div><div>${isFinite(r)?esc(VERDICT(r)):"–"}</div><div class="mute small" style="margin-top:4px">Jeder ${isFinite(1/(tq*sh*cl))?nf(1/(tq*sh*cl),0):"–"}. Lead wird Kunde.</div></div></div>`;
+  })
+};
+
+/* Gewinn vs Cash */
+LAB.cash=el=>{
+  el.innerHTML=`<div class="card"><div class="sliders">
+  ${sl("cw","Verkaufte Wohnungen pro Monat",0,6,1,3,"int")}${sl("cd","Geld kommt nach (Monate)",0,5,1,3,"mon")}${sl("cf","Fixkosten pro Monat",10,40,1,25,"k")}${sl("cs","Kontostand zum Start",0,100,5,30,"k")}
+  </div><div id="co" style="margin-top:16px"></div></div>
+  <p class="mute small">Jede Wohnung bringt 9.000 € Umsatz für die Firma (Junior). Die Gewinnlinie zeigt, wo dein Konto wäre, wenn die Provision sofort käme. Die dicke Linie ist die Wirklichkeit.</p>`;
+  bindSliders(el,()=>{
+    const w=g("cw"),d=g("cd"),F=g("cf")*1000,s0=g("cs")*1000,U=9000,N=9;
+    const gew=[],kon=[];let a=s0,b=s0;
+    for(let m=1;m<=N;m++){a+=w*U-F;const rein=m-d>=1?w*U:0;b+=rein-F;gew.push(a);kon.push(b)}
+    const all=gew.concat(kon,[0]),mn=Math.min(...all),mx=Math.max(...all),pad=(mx-mn)*.08||1000,lo=mn-pad,hi=mx+pad;
+    const W=420,H=250,l=44,r=12,t=12,bt=28,X=m=>l+(m-1)/(N-1)*(W-l-r),Y=v=>t+(hi-v)/(hi-lo)*(H-t-bt);
+    const step=niceStep((hi-lo)/4),ticks=[];for(let v=Math.ceil(lo/step)*step;v<=hi;v+=step)ticks.push(v);
+    const path=arr=>arr.map((v,i)=>(i?"L":"M")+X(i+1).toFixed(1)+" "+Y(v).toFixed(1)).join(" ");
+    const minK=Math.min(...kon),minM=kon.indexOf(minK)+1,minus=kon.filter(v=>v<0).length;
+    $("#co").innerHTML=`<div class="tbl"><svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;display:block" role="img" aria-label="Kontostand über 9 Monate">
+    <rect x="${l}" y="${Y(0)}" width="${W-l-r}" height="${Math.max(0,Y(lo)-Y(0))}" fill="var(--bad)" opacity=".10"/>
+    ${ticks.map(v=>`<line x1="${l}" x2="${W-r}" y1="${Y(v)}" y2="${Y(v)}" stroke="var(--line)" stroke-width="${v===0?1.6:1}"/><text class="ax" x="${l-6}" y="${Y(v)+4}" text-anchor="end">${nf(v/1000,0)}k</text>`).join("")}
+    ${Array.from({length:N},(_,i)=>`<text class="ax" x="${X(i+1)}" y="${H-8}" text-anchor="middle">M${i+1}</text>`).join("")}
+    <path d="${path(gew)}" fill="none" stroke="var(--good)" stroke-width="2" stroke-dasharray="5 4"/>
+    <path d="${path(kon)}" fill="none" stroke="var(--ink)" stroke-width="3.2" stroke-linejoin="round"/>
+    <circle cx="${X(minM)}" cy="${Y(minK)}" r="5" fill="${minK<0?"var(--bad)":"var(--ink)"}"/>
+    </svg></div>
+    <div class="row small" style="gap:18px;margin-top:6px"><span><b style="color:var(--good)">- - -</b> Konto, wenn Geld sofort käme</span><span><b>━━</b> echtes Konto</span></div>
+    <div class="fb ${minK<0?"bad":"good"}" style="margin-top:12px">Tiefster Kontostand: <b>${eur(minK)}</b> in Monat ${minM}. ${minus?`Das Konto ist ${minus} ${minus===1?"Monat":"Monate"} im Minus.`:"Das Konto bleibt im Plus."} Auf dem Papier ${w*U-F>=0?"verdienst du":"verlierst du"} <b>${eur(Math.abs(w*U-F))}</b> pro Monat.</div>`;
+  })
+};
+function niceStep(x){const p=Math.pow(10,Math.floor(Math.log10(x))),m=x/p;return(m<1.5?1:m<3?2:m<7?5:10)*p}
+
+/* Ampel */
+const AMPEL=[["Junior",40,"Berater"],["Berater",50,"Senior"],["Senior",65,"Director"],["Director",75,null]];
+const NEXT={Junior:50,Berater:65,Senior:75,Director:null};
+LAB.ampel=el=>{
+  el.innerHTML=`<div class="card"><div class="row" style="margin-bottom:12px"><label class="small mute" for="as">Stufe</label><select id="as" class="btn sm">${AMPEL.map(a=>`<option>${a[0]}</option>`).join("")}</select></div>
+  <div class="sliders">${sl("a1","UfF vor 2 Monaten",0,100,1,28,"k")}${sl("a2","UfF vor 1 Monat",0,100,1,34,"k")}${sl("a3","UfF letzter Monat",0,100,1,31,"k")}</div><div id="ao" style="margin-top:18px"></div></div>
+  <p class="mute small">Gemessen wird der Umsatz für die Firma, rollierend über 3 Monate. Boden 25.000 € für alle. Grün ab 40/50/65/75k je nach Stufe. 2× gelb in Folge → eine Stufe runter. 2× rot in Folge → Trennung. Aufstieg = 3 Monate grün auf der nächsten Stufe.</p>`;
+  bindSliders(el,()=>{
+    const st=$("#as").value,gr=AMPEL.find(a=>a[0]===st)[1],avg=(g("a1")+g("a2")+g("a3"))/3,nx=NEXT[st],MAX=100;
+    const col=avg<25?["Rot","var(--bad)","Zwei Monate in Folge rot bedeutet Trennung. Vorher prüfen: Hat das System versagt (Onboarding, Leads, Objekte) oder die Person?"]:avg<gr?["Gelb","var(--warn)","Zwei Monate in Folge gelb bedeutet: eine Stufe runter, mit dem Fixum der vorigen Stufe."]:["Grün","var(--good)","Stufe gehalten."+(nx&&avg>=nx?` Der Schnitt liegt über der Schwelle der nächsten Stufe (${nx}k): drei Monate in Folge bedeuten Beförderung.`:"")];
+    $("#ao").innerHTML=`<div class="row" style="justify-content:space-between"><span class="light"><i style="background:${col[1]}"></i>${col[0]}</span><span class="small">Schnitt der letzten 3 Monate: <b>${eur(avg*1000)}</b></span></div>
+    <div style="position:relative;margin-top:14px"><div class="zones"><i style="width:${25/MAX*100}%;background:var(--bad);opacity:.85"></i><i style="width:${(gr-25)/MAX*100}%;background:var(--warn);opacity:.85"></i><i style="flex:1;background:var(--good);opacity:.85"></i></div><div class="mark" style="left:calc(${Math.min(avg,MAX)/MAX*100}% - 2px)"></div></div>
+    <div class="scale"><span style="left:0;transform:none">0</span><span style="left:${25/MAX*100}%">25k</span><span style="left:${gr/MAX*100}%">${gr}k</span><span style="right:0;left:auto;transform:none">100k</span></div>
+    <div class="fb" style="margin-top:10px">${esc(col[2])}</div>`;
+  });
+  $("#as").addEventListener("change",()=>el.dispatchEvent(new Event("input")))
+};
+
+/* Rückwärtsplan */
+LAB.rueck=el=>{
+  el.innerHTML=`<div class="card"><div class="sliders">
+  ${sl("rz","Umsatzziel pro Monat",20,150,5,50,"k")}${sl("rp","Ø Provision pro Abschluss",2000,8000,500,5000,"eur")}${sl("ra","Abschlussquote",10,50,1,25,"pct")}
+  ${sl("rs","Show-Rate",40,95,1,70,"pct")}${sl("rt","Terminquote",5,40,1,20,"pct")}${sl("rc","CPL",10,80,1,35,"eur")}${sl("rg","Gespräche pro Berater und Monat",10,80,5,40,"int")}
+  </div><div id="ro" style="margin-top:18px"></div></div>
+  <p class="mute small">Beispiel aus dem Heft: 50.000 € Ziel, 5.000 € Ø Provision → 10 Abschlüsse → 40 Gespräche → 58 Termine → 286 Leads → 10.000 € Budget. Das ist deine Budget-, Personal- und Zielplanung in einem.</p>`;
+  bindSliders(el,()=>{
+    const z=g("rz")*1000,p=g("rp"),a=g("ra")/100,s=g("rs")/100,t=g("rt")/100,c=g("rc"),pg=g("rg");
+    const ab=z/p,ge=ab/a,te=ge/s,le=te/t,bu=le*c,cac=bu/ab,mx=le;
+    const row=(n,v,op,col)=>`<div class="frow"><span>${n}</span><div class="tr"><i style="width:${Math.max(v/mx*100,1)}%;background:${col||"var(--accent)"}"></i><b ${v/mx>.3?'class="in"':""}>${nf(v,0)}</b></div></div><div class="mute small" style="margin:-2px 0 0 120px">${op}</div>`;
+    $("#ro").innerHTML=`<div style="display:flex;flex-direction:column;gap:6px">${row("Abschlüsse",ab,`${eur(z)} ÷ ${eur(p)}`,"var(--good)")}${row("Gespräche",ge,`÷ Abschlussquote ${nf(a*100,0)} %`)}${row("Termine",te,`÷ Show-Rate ${nf(s*100,0)} %`)}${row("Leads",le,`÷ Terminquote ${nf(t*100,0)} %`)}</div>
+    <div class="row" style="margin-top:16px;gap:26px"><div><div class="lbl">Werbebudget</div><div class="big" style="font-size:36px">${eur(bu)}</div></div><div><div class="lbl">Berater (Vollzeit)</div><div class="big" style="font-size:36px">${nf(ge/pg,1)}</div></div><div><div class="lbl">CAC vor Setting</div><div class="big" style="font-size:36px">${eur(cac)}</div></div></div>`;
+  })
+};
+
+/* ---------- Fortschritt ---------- */
+function viewFortschritt(){
+  const st=stats(),sk=streak(),days=Object.keys(S.days).length;
+  const COL=["var(--line)","var(--bad)","var(--warn)","#C9B31F","var(--good)","var(--good)"];
+  const bars=Object.entries(CATS).map(([k,c])=>{const p=st.per[k],tot=p.n;
+    const segs=[[p.box[5]+p.box[4],"var(--good)"],[p.box[3],"#C9B31F"],[p.box[2],"var(--warn)"],[p.box[1],"var(--bad)"],[p.box[0],"var(--soft)"]];
+    return `<div><div class="row" style="justify-content:space-between"><span><span class="pill" style="--cat:var(${c.c})">${c.n}</span></span><span class="small mute">${p.due} fällig · ${p.box[4]+p.box[5]}/${tot} sicher</span></div><div class="bar" style="margin-top:6px">${segs.map(s=>`<i style="width:${s[0]/tot*100}%;background:${s[1]}"></i>`).join("")}</div></div>`}).join("");
+  const weak=Object.entries(S.calc.by).filter(([,v])=>v.n>=2).map(([id,v])=>[GENS.find(x=>x.id===id),v.ok/v.n,v.n]).filter(x=>x[0]).sort((a,b)=>a[1]-b[1]).slice(0,3);
+  const code=(()=>{try{return btoa(unescape(encodeURIComponent(JSON.stringify(S))))}catch(e){return ""}})();
+  V(`<div class="sec"><h2 class="h2">Fortschritt</h2>
+  <div class="grid2"><div class="card"><div class="lbl">Serie</div><div class="big">${sk}</div><div class="mute small">${sk===1?"Tag":"Tage"} in Folge · ${days} Lerntage gesamt</div></div>
+  <div class="card"><div class="lbl">Rechnen</div><div class="big">${S.calc.n?Math.round(S.calc.ok/S.calc.n*100):0}<span style="font-size:.5em"> %</span></div><div class="mute small">${S.calc.ok} von ${S.calc.n} richtig</div></div>
+  <div class="card"><div class="lbl">Fälle</div><div class="big">${S.cases.n?Math.round(S.cases.ok/S.cases.n*100):0}<span style="font-size:.5em"> %</span></div><div class="mute small">${S.cases.ok} von ${S.cases.n} richtig · ${Object.keys(S.cases.miss||{}).length} offen</div></div></div>
+  <div class="card"><div class="lbl" style="margin-bottom:12px">Karten pro Kategorie</div><div style="display:flex;flex-direction:column;gap:14px">${bars}</div>
+    <div class="row small mute" style="margin-top:14px;gap:14px"><span><b style="color:var(--good)">■</b> sicher (Box 4–5)</span><span><b style="color:#C9B31F">■</b> Box 3</span><span><b style="color:var(--warn)">■</b> Box 2</span><span><b style="color:var(--bad)">■</b> Box 1</span><span><b>■</b> neu</span></div></div>
+  ${weak.length?`<div class="card"><div class="lbl" style="margin-bottom:8px">Hier lohnt sich mehr Übung</div>${weak.map(w=>`<div>${esc(w[0].name)} <span class="mute small">· ${Math.round(w[1]*100)} % bei ${w[2]} Aufgaben</span></div>`).join("")}</div>`:""}
+  <div class="card"><div class="lbl" style="margin-bottom:8px">Sicherung</div><p class="mute small" style="margin-top:0">Dein Fortschritt liegt nur in diesem Browser. Kopiere den Code, um ihn später oder auf einem anderen Gerät wieder einzufügen.</p>
+    <textarea id="code" readonly aria-label="Sicherungscode">${esc(code)}</textarea>
+    <div class="row" style="margin-top:8px"><button class="btn sm" data-act="copy">Code kopieren</button><button class="btn sm" data-act="import">Aus Feld wiederherstellen</button><span id="cm" class="small mute"></span></div></div>
+  <div class="row"><button class="btn sm" data-act="reset1" id="rb">Fortschritt zurücksetzen</button></div></div>`)}
+ACT.copy=async()=>{const t=$("#code");try{await navigator.clipboard.writeText(t.value);$("#cm").textContent="Kopiert."}catch(e){t.select();$("#cm").textContent="Markiert, bitte mit Strg/Cmd+C kopieren."}};
+ACT.import=()=>{const t=$("#code");t.readOnly=false;try{const o=JSON.parse(decodeURIComponent(escape(atob(t.value.trim()))));if(!o||!o.cards)throw 0;S=Object.assign({cards:{},days:{},calc:{ok:0,n:0,by:{}},cases:{ok:0,n:0,miss:{}}},o);save();$("#cm").textContent="Wiederhergestellt.";setTimeout(viewFortschritt,500)}catch(e){$("#cm").textContent="Zum Wiederherstellen erst den alten Code ins Feld einfügen. Der Code ist ungültig."}};
+ACT.reset1=b=>{b.textContent="Wirklich alles löschen?";b.dataset.act="reset2";b.classList.add("pri")};
+ACT.reset2=()=>{S={cards:{},days:{},calc:{ok:0,n:0,by:{}},cases:{ok:0,n:0,miss:{}}};save();FC.order=[];viewFortschritt()};
+
+const VIEWS={heute:viewHeute,karten:viewKarten,rechnen:viewRechnen,labor:viewLabor,faelle:viewFaelle,fortschritt:viewFortschritt};
+/* Formularelemente ausserhalb von click */
+document.addEventListener("change",e=>{const t=e.target.closest("[data-act]");if(t&&(t.type==="radio"||t.type==="checkbox"||t.tagName==="SELECT")&&ACT[t.dataset.act])ACT[t.dataset.act](t,e)});
+const h0=(location.hash||"").replace("#","");
+setTab(TABS.some(x=>x[0]===h0)?h0:"heute",false);
+</script>
+</body></html>
