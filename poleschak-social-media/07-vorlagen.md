@@ -17,6 +17,7 @@ jeder neue Post in ca. 10 Minuten: Text tauschen, Foto rein, fertig.
 | `karussell-schwachstellen-1…4.png` | 4 × 1080 × 1350 | Wissen → Nacht (CTA) | Do 05.11. |
 | `post-pks-2025.png` | 1080 × 1350 | Wissen | Do 26.11. |
 | `post-karriere-ausbildung.png` | 1080 × 1350 | Karriere | Azubi-Kampagne ab Jan. |
+| `post-karriere-praktikum.png` | 1080 × 1350 | Karriere | Variante ohne Kennzahlen |
 | `post-stelle-servicetechniker.png` | 1080 × 1350 | Nachtschicht/Karriere | So 22.11. |
 | `post-google-bewertung.png` | 1080 × 1350 | Wissen | So 15.11. (Zitat einsetzen) |
 | `post-familie-poleschak.png` | 1080 × 1350 | Nachtschicht | So 29.11. (Teamfoto einsetzen) |
