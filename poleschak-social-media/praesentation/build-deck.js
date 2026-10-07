@@ -87,7 +87,7 @@ function bullets(s, items, o, color = C.anth, size = 14) {
       { text: 'schlafen', options: { color: C.or } },
       { text: ' kannst.', options: { color: C.weiss } },
     ], { x: M, y: 3.2, w: 8.2, h: 2.1, margin: 0, fontFace: F.xb, fontSize: 50, valign: 'top', isTextBox: true });
-    txt(s, 'Vorschlag für die Geschäftsführung · 07.10.2026 · [Dein Name]', { x: M, y: 6.55, w: 9, h: 0.35, fontSize: 14, color: C.silber });
+    txt(s, 'Vorschlag für die Geschäftsführung · 07.10.2026 · Marlene Büder', { x: M, y: 6.55, w: 9, h: 0.35, fontSize: 14, color: C.silber });
     s.addNotes('Einstieg: Der Claim ist die Idee in einem Satz. Unsere Leitstelle ist nachts wach, und genau das zeigen wir auf Instagram. In den nächsten 20 Minuten zeige ich, wie wir damit Kunden und neue Kolleginnen und Kollegen gewinnen und was es kostet.');
   }
 
